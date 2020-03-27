@@ -16,7 +16,7 @@ export default () => (
         <div className="max-w-sm mx-auto">
             <ul className="flex">
                 <li className="flex-1 mr-4">
-                    <a className="text-center block border border-teal-500 rounded hover:border-gray-200 text-teal-500 hover:bg-gray-200 py-2 px-4" onClick={() => navigate('/#playlists')}>
+                    <a className="text-center block border border-teal-500 rounded hover:border-gray-200 text-teal-500 hover:bg-gray-200 py-2 px-4" onClick={() => navigate('/')}>
                         Recorded Playlists
                     </a>
                 </li>

@@ -9,7 +9,7 @@ const LiveSessions = () => {
     }
     return (
         <div className="container mx-auto px-8 pt-16 pb-32" id="liveSessions">
-            <div className="grid gap-8">
+            <div className="grid md:grid-cols-2 gap-8">
                 {renderLiveSessions()} 
             </div>
         </div>

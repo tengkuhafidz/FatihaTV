@@ -16,7 +16,7 @@ export default () => (
                     <a className="text-center block border border-teal-500 rounded py-2 px-4 bg-teal-500 hover:bg-teal-500 text-white" href="#playlists">Recorded Playlists</a>
                 </li>
                 <li className="flex-1">
-                    <a className="text-center block border border-teal-500 rounded hover:border-gray-200 text-teal-500 hover:bg-gray-200 py-2 px-4" href="#" onClick={() => navigate('/live')}>Upcoming Lives</a>
+                    <a className="text-center block border border-teal-500 rounded hover:border-gray-200 text-teal-500 hover:bg-gray-200 py-2 px-4" onClick={() => navigate('/live#liveSessions')}>Upcoming Lives</a>
                 </li>
             </ul>
         </div>

@@ -1,5 +1,6 @@
 import moment from 'moment'
 import React from 'react'
+import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 const SingleLiveSession = ({data}) => {
     const { Time, Mosque, Title, Speaker, Link } = data
@@ -51,12 +52,12 @@ const SingleLiveSession = ({data}) => {
                     <p className="text-gray-700 text-base">{Speaker}, Masjid {Mosque}</p>
                 </div>
                 <div className="flex items-center">
-                    <a className="bg-transparent hover:bg-gray-800 text-gray-700 font-semibold hover:text-white py-2 px-4 border border-gray-500 hover:border-transparent rounded mr-4" target="_blank" href={Link}>
+                    <OutboundLink className="bg-transparent hover:bg-gray-800 text-gray-700 font-semibold hover:text-white py-2 px-4 border border-gray-500 hover:border-transparent rounded mr-4" target="_blank" href={Link}>
                         View Source
-                    </a>
-                    <a className="bg-transparent hover:bg-gray-800 text-gray-700 font-semibold hover:text-white py-2 px-4 border border-gray-500 hover:border-transparent rounded" target="_blank" href={getCalendarLink()}>
+                    </OutboundLink>
+                    <OutboundLink className="bg-transparent hover:bg-gray-800 text-gray-700 font-semibold hover:text-white py-2 px-4 border border-gray-500 hover:border-transparent rounded" target="_blank" href={getCalendarLink()}>
                         Add to Calendar
-                    </a>
+                    </OutboundLink>
                 </div>
             </div>
         </div>

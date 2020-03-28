@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { OutboundLink } from "gatsby-plugin-google-gtag"
+import { gtagEventClick } from '../utils/gtag'
 
 
 const BottomCta = () => {
@@ -9,6 +10,13 @@ const BottomCta = () => {
     const closeCta = () => {
         setHasClosedCta(true)
         localStorage.setItem('hasClosedCta', 'true')
+        trackBottomCtaClose()
+    }
+
+    const trackBottomCtaClose = () => {
+        gtagEventClick({
+            action: "close_bottom_cta"
+        })
     }
 
     if(hasClosedCta) return <></>;

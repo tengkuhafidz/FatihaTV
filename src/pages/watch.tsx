@@ -18,7 +18,7 @@ export default ({ pageContext }) => {
         <Layout>
             <div className="grid xl:grid-cols-4 gap-4 m-8 pb-16">
                 <div className="xl:col-span-3 mb-8">
-                    <VideoPlayer platform={playlist.platform} url={currentVideo.videoUrl} />
+                    <VideoPlayer playlist={playlist} video={currentVideo} />
                     <div className="mt-4">
                         <h1 className="text-3xl">{currentVideo.title}</h1>
                         <h1 className="text-xl">Source: <OutboundLink href={playlist.pageUrl} target="_blank" className="text-teal-500">{playlist.organisation} {playlist.platform}</OutboundLink></h1>

@@ -1,11 +1,22 @@
 import React from 'react'
 import FacebookPlayer from 'react-facebook-player'
+import { gtagEventClick } from '../../utils/gtag'
 
-const VideoPlayer = ({ platform, url }) => {
+const VideoPlayer = ({ playlist, video }) => {
+    const { videoUrl } = video
+    const { platform } = playlist
     const getFbVideoId = () => {
-        const urlSectionsArray = url.split('/')
+        const urlSectionsArray = videoUrl.split('/')
         const finalIndex = urlSectionsArray.length - 1
         return urlSectionsArray[finalIndex] === "" ? urlSectionsArray[finalIndex - 1 ]: urlSectionsArray[finalIndex]
+    }
+
+    const trackFbVideoPlay = () => {
+        gtagEventClick({
+            actions: "play_facebook_video",
+            video,
+            playlist
+        })
     }
 
     const renderFacebookPlayer = () => (
@@ -13,12 +24,13 @@ const VideoPlayer = ({ platform, url }) => {
             appId="1905777919676190"
             videoId={getFbVideoId()}
             allowfullscreen={true}
+            onStartedPlaying={() => trackFbVideoPlay()}
         />
     )
 
     const renderYoutubePlayer = () => (
         <div className="embed-container">
-            <iframe src="https://www.youtube.com/embed/W9GqOS9xAJM" frameborder="0" allowfullscreen></iframe>
+            <iframe src={videoUrl} frameborder="0" allowfullscreen></iframe>
         </div>
     )
 

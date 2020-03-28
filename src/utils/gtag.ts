@@ -3,5 +3,7 @@ declare global {
 }
 
 export const gtagEventClick = (data) => {
-    typeof window !== "undefined" && window.gtag("event", "click", { ...data })
+    const { NODE_ENV } = process.env
+    const isDevEnv =  NODE_ENV === "development"
+    typeof window !== "undefined" && !isDevEnv && window.gtag("event", "click", { ...data })
 }

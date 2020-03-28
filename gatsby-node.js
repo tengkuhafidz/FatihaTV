@@ -6,7 +6,7 @@ exports.createPages = async ({ actions: { createPage } }) => {
             const videoNumber = index + 1
             createPage({
             path: `/watch/${playlist.id}/${videoNumber}`,
-            component: require.resolve("./src/pages/watch.tsx"),
+            component: require.resolve("./src/templates/watch.tsx"),
             context: { playlist, currentVideo },
         })
       })

@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import VideoPlayer from '../components/Watch/player'
 import VideoInPlaylist from '../components/Watch/video-in-playlist'
-
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 export default ({ pageContext }) => {
     const { playlist, currentVideo } = pageContext
@@ -22,7 +22,7 @@ export default ({ pageContext }) => {
                     <VideoPlayer platform={playlist.platform} url={currentVideo.videoUrl} />
                     <div className="mt-4">
                         <h1 className="text-3xl">{currentVideo.title}</h1>
-                        <h1 className="text-xl">Source: <a href={playlist.pageUrl} target="_blank" className="text-teal-500">{playlist.organisation} {playlist.platform}</a></h1>
+                        <h1 className="text-xl">Source: <OutboundLink href={playlist.pageUrl} target="_blank" className="text-teal-500">{playlist.organisation} {playlist.platform}</OutboundLink></h1>
                     </div>
                 </div>
                 <div className="xl:col-span-1 xl:pl-8">

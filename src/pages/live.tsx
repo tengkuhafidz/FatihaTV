@@ -4,7 +4,6 @@ import ScrollableAnchor from 'react-scrollable-anchor'
 
 import Header from '../components/header'
 import Hero from '../components/Home/hero'
-import Playlists from '../components/Home/playlists'
 import Footer from '../components/footer'
 import { navigate } from 'gatsby'
 import LiveSessions from '../components/Live/live-sessions'

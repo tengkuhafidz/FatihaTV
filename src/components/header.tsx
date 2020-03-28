@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaVideo } from 'react-icons/fa';
 import { navigate } from 'gatsby';
+import {FaShare} from 'react-icons/fa'
 
 
 const Header = () => {
@@ -13,7 +14,7 @@ const Header = () => {
             <div className="flex-grow"></div>
             <div className="block">
                 <div>
-                    <a href="#" className="inline-block text-sm px-4 py-2 leading-none border rounded border-gray-300 text-gray-300 hover:border-teal-500 hover:text-white hover:bg-teal-500 lg:mt-0">Submit Playlist</a>
+                    <a href="#" className="inline-block text-sm px-4 py-3 leading-none border rounded border-gray-300 text-gray-300 hover:border-teal-500 hover:text-white hover:bg-teal-500 lg:mt-0 uppercase">Share this page<FaShare className="-mt-1 ml-2 inline align-middle"/></a>
                 </div>
             </div>
          </nav>

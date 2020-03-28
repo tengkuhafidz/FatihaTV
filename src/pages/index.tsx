@@ -1,15 +1,13 @@
-import React from 'react'
-
-import Header from '../components/header'
-import Hero from '../components/Home/hero'
-import Playlists from '../components/Home/playlists'
-import Footer from '../components/footer'
 import { navigate } from 'gatsby'
+import React from 'react'
 import BottomCta from '../components/bottom-cta'
+import Hero from '../components/hero'
+import Playlists from '../components/Home/playlists'
+import Layout from '../components/layout'
+
 
 export default () => (
-    <div className="min-h-screen bg-gray-100">
-        <Header />
+    <Layout>
         <Hero />
         <div className="max-w-sm mx-auto">
             <ul className="flex">
@@ -23,6 +21,5 @@ export default () => (
         </div>
         <Playlists />
         <BottomCta />
-        <Footer />
-    </div>
+    </Layout>
 )

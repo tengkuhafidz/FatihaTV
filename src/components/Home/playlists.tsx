@@ -1,6 +1,6 @@
 import React from 'react'
-import SinglePlaylist from './single-playlist'
 import mergedPlaylistData from '../../data/merged-playlist-video-data.json'
+import SinglePlaylist from './single-playlist'
 
 // import { mergePlaylistData } from '../../utils/index'
 

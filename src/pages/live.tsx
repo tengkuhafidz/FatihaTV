@@ -1,17 +1,14 @@
-import React from 'react'
-import ScrollableAnchor from 'react-scrollable-anchor'
-
-
-import Header from '../components/header'
-import Hero from '../components/Home/hero'
-import Footer from '../components/footer'
 import { navigate } from 'gatsby'
-import LiveSessions from '../components/Live/live-sessions'
+import React from 'react'
 import BottomCta from '../components/bottom-cta'
+import Hero from '../components/hero'
+import Layout from '../components/layout'
+import LiveSessions from '../components/Live/live-sessions'
+
+
 
 export default () => (
-    <div className="min-h-screen bg-gray-100">
-        <Header />
+    <Layout>
         <Hero />
         <div className="max-w-sm mx-auto">
             <ul className="flex">
@@ -29,6 +26,5 @@ export default () => (
         </div>
         <LiveSessions />
         <BottomCta />
-        <Footer />
-    </div>
+    </Layout>
 )

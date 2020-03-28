@@ -1,5 +1,5 @@
-import React from 'react'
 import { navigate } from 'gatsby'
+import React from 'react'
 
 const VideoInPlaylist = ({ playlistId, video, videoIndex, currentVideo }) => {
     const videoNumber = videoIndex + 1

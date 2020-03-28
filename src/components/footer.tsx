@@ -1,5 +1,4 @@
-import React from 'react'
-import { FaHeart } from 'react-icons/fa';
+import React from 'react';
 
 const Footer = () => (
     <div className="px-8 py-4">

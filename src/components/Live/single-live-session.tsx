@@ -1,6 +1,5 @@
-import React from 'react'
 import moment from 'moment'
-
+import React from 'react'
 
 const SingleLiveSession = ({data}) => {
     const { Time, Mosque, Title, Speaker, Link } = data

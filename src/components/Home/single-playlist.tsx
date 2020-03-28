@@ -1,7 +1,7 @@
-import React from 'react'
 import { navigate } from 'gatsby'
-
+import React from 'react'
 import { PlaylistData } from '../../models'
+
 
 interface Props {
     data: PlaylistData

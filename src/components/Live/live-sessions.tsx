@@ -1,8 +1,8 @@
-import React from 'react'
 import moment from 'moment'
-
-import SingleLiveSession from './single-live-session'
+import React from 'react'
 import LiveSessionsData from '../../data/live-sessions-data.json'
+import SingleLiveSession from './single-live-session'
+
 
 const LiveSessions = () => {
     const isUpcoming = (dateWithoutYear: string, time: string) => {

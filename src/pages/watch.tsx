@@ -1,10 +1,8 @@
 import React from 'react'
-import { navigate } from 'gatsby'
-
-import Header from '../components/header'
+import Layout from '../components/layout'
 import VideoPlayer from '../components/Watch/player'
-import Footer from '../components/footer'
 import VideoInPlaylist from '../components/Watch/video-in-playlist'
+
 
 export default ({ pageContext }) => {
     const { playlist, currentVideo } = pageContext
@@ -18,8 +16,7 @@ export default ({ pageContext }) => {
     )}
 
     return (
-        <div className="min-h-screen bg-gray-100">
-            <Header />
+        <Layout>
             <div className="grid xl:grid-cols-4 gap-4 m-8 pb-16">
                 <div className="xl:col-span-3 mb-8">
                     <VideoPlayer platform={playlist.platform} url={currentVideo.videoUrl} />
@@ -35,7 +32,6 @@ export default ({ pageContext }) => {
                     </div>
                 </div>
             </div>
-            <Footer />
-        </div>
+        </Layout>
     )
 }

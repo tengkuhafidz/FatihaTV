@@ -23,7 +23,7 @@ const VideoPlayer = ({ platform, url }) => {
     )
 
     const renderPlayer =() => {
-        return platform !== "Facebook" ? renderFacebookPlayer() : renderYoutubePlayer()
+        return platform === "Facebook" ? renderFacebookPlayer() : renderYoutubePlayer()
     }
 
     return (

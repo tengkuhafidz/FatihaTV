@@ -4,33 +4,17 @@ import { navigate } from 'gatsby'
 import Header from '../components/header'
 import VideoPlayer from '../components/Watch/player'
 import Footer from '../components/footer'
-
+import VideoInPlaylist from '../components/Watch/video-in-playlist'
 
 export default ({ pageContext }) => {
     const { playlist, currentVideo } = pageContext
-    const renderPlaylistVideos = () => {
 
-        return playlist.videos.map((video, index) => {
-            const videoNumber = index + 1;
-            const isCurrentlyPlaying = video.id === currentVideo.id
-            return (
-                <div className={`w-full rounded-lg border-2 mb-4 shadow-sm hover:shadow-lg cursor-pointer w-full shadow-sm hover:shadow-lg ${isCurrentlyPlaying && "border-teal-500"}`} onClick={() => navigate(`/watch/${playlist.id}/${videoNumber}`)}>
-                    <div className="px-6 py-2">
-                        {   
-                            isCurrentlyPlaying && (
-                                <p className="text-teal-500 font-semibold uppercase text-sm">
-                                    Currently Playing
-                                </p>
-                            )
-                        }
-                        <div className="font-bold text-lg">{video.title}</div>
-                        <p className="text-gray-700 text-base">
-                            Ustaz Tamliikhaa
-                        </p>
-                    </div>
-                </div>
-            )
-        }
+    const { videos } = playlist
+
+    const renderPlaylistVideos = () => {
+        return videos.map((video, index) => (
+            <VideoInPlaylist playlistId={playlist.id} video={video} videoIndex={index} currentVideo={currentVideo} key={video.id} />
+        )
     )}
 
     return (
@@ -45,7 +29,7 @@ export default ({ pageContext }) => {
                     </div>
                 </div>
                 <div className="xl:col-span-1 xl:pl-8">
-                    <h1 className="text-3xl font-semibold mb-4">Playlist Videos <span className="text-2xl">({playlist.videos.length})</span></h1>
+                    <h1 className="text-3xl font-semibold mb-4">Playlist Videos <span className="text-2xl">({ videos.length })</span></h1>
                     <div className="h-3/4-screen overflow-auto pb-16">
                         {renderPlaylistVideos()}
                     </div>

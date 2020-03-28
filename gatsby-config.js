@@ -1,25 +1,18 @@
 module.exports = {
   siteMetadata: {
     title: "FatihaTV",
-    titleTemplate: "Watch local Islamic content from the comfort of your home.",
-    description:
-      "Hogwarts Potions master, Head of Slytherin house and former Death Eater.",
-    url: "https://www.doe.com", // No trailing slash allowed!
-    image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
-    twitterUsername: "@occlumency",
+    description: "Watch local Islamic content from the comfort of your home.",
+    url: "https://www.fatihatv.com", // No trailing slash allowed!
+    image: "/images/fatihatv.jpg", // Path to your image you placed in the 'static' folder
   },
   plugins: [
       'gatsby-plugin-typescript',
       'gatsby-plugin-postcss',
-      {
-          resolve: `gatsby-plugin-google-fonts`,
+        {
+          resolve: `gatsby-plugin-google-analytics`,
           options: {
-            fonts: [
-              `Passion One`,
-              `Patrick Hand` // you can also specify font weights and styles
-            ],
-            display: 'swap'
-          }
-        }
+            trackingId: "UA-162017890-1"
+          },
+        },
   ],
 }

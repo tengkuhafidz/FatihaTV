@@ -13,7 +13,7 @@ const SingleLiveSession = ({data}) => {
 
     const getCalendarLink = () => {
         const details = `By+${Speaker},+Masjid+${Mosque}`
-        const dateTime = getDateTime
+        const dateTime = getDateTime()
         return `https://calendar.google.com/calendar/r/eventedit?text=${Title}&dates=${dateTime}/${dateTime}&details=${details}`
     }
 

@@ -5,13 +5,13 @@ import SingleLiveSession from './single-live-session'
 import LiveSessionsData from '../../data/live-sessions-data.json'
 
 const LiveSessions = () => {
-    const isUpcoming = (dateWithoutYear: string) => {
+    const isUpcoming = (dateWithoutYear: string, time: string) => {
         const currentYear = moment().get('year')
-        const dateWithYear = `${dateWithoutYear} ${currentYear}`
-        return moment(dateWithYear).isAfter()
+        const dateTimeWithYear = `${dateWithoutYear} ${currentYear} ${time}`
+        return moment(dateTimeWithYear).isAfter()
     }
     const renderLiveSessions = () => {
-        const upcomingLiveSessionsData = LiveSessionsData.filter((liveSession) => isUpcoming(liveSession.Date))
+        const upcomingLiveSessionsData = LiveSessionsData.filter((session) => isUpcoming(session.Date, session.Time))
         return upcomingLiveSessionsData.map((data) => <SingleLiveSession data={data} />)
     }
     return (

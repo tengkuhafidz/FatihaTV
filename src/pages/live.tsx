@@ -7,6 +7,7 @@ import Hero from '../components/Home/hero'
 import Footer from '../components/footer'
 import { navigate } from 'gatsby'
 import LiveSessions from '../components/Live/live-sessions'
+import BottomCta from '../components/bottom-cta'
 
 export default () => (
     <div className="min-h-screen bg-gray-100">
@@ -15,7 +16,7 @@ export default () => (
         <div className="max-w-sm mx-auto">
             <ul className="flex">
                 <li className="flex-1 mr-4">
-                    <a className="text-center block border border-teal-500 rounded hover:border-gray-200 text-teal-500 hover:bg-gray-200 py-2 px-4" onClick={() => navigate('/')}>
+                    <a className="text-center block border border-teal-500 rounded hover:border-gray-200 text-teal-500 hover:bg-teal-500 hover:text-white py-2 px-4 cursor-pointer" onClick={() => navigate('/')}>
                         Recorded Playlists
                     </a>
                 </li>
@@ -27,6 +28,7 @@ export default () => (
             </ul>
         </div>
         <LiveSessions />
+        <BottomCta />
         <Footer />
     </div>
 )

@@ -7,7 +7,7 @@ import mergedPlaylistData from '../../data/merged-playlist-video-data.json'
 const Playlists = () => {
     const renderPlaylists = () => {
         // console.log("<<<", JSON.stringify(mergePlaylistData()))
-        return mergedPlaylistData.map((data) => <SinglePlaylist data={data}/>)
+        return mergedPlaylistData.map((data) => <SinglePlaylist data={data} key={data.id}/>)
     }
 
     return (

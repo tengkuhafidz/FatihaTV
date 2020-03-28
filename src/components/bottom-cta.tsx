@@ -4,7 +4,9 @@ import { gtagEventClick } from '../utils/gtag'
 
 
 const BottomCta = () => {
-    const localHasClosedCta: boolean = localStorage.getItem('hasClosedCta') === 'true' || false
+    const hasLocalStorageReady = typeof(Storage) !== "undefined"
+
+    const localHasClosedCta: boolean = hasLocalStorageReady && (localStorage.getItem('hasClosedCta') === 'true' || false)
     const [hasClosedCta, setHasClosedCta] = useState(localHasClosedCta)
 
     const closeCta = () => {

@@ -12,7 +12,7 @@ const LiveSessions = () => {
     }
     const renderLiveSessions = () => {
         const upcomingLiveSessionsData = LiveSessionsData.filter((session) => isUpcoming(session.Date, session.Time))
-        return upcomingLiveSessionsData.map((data) => <SingleLiveSession data={data} />)
+        return upcomingLiveSessionsData.map((data, index) => <SingleLiveSession data={data} key={index}/>)
     }
     return (
         <div className="container mx-auto px-8 pt-16 pb-32" id="liveSessions">

@@ -39,7 +39,7 @@ const SingleLiveSession = ({data}) => {
     return (
         <div className="max-w-sm w-full lg:min-w-full lg:flex shadow-lg hover:shadow-2xl">
             <div className="lg:w-48 flex-none rounded-t lg:rounded-t-none lg:rounded-l text-center bg-gray-800 text-gray-200 pt-4 pb-8">
-                <div className="border-l-8 border-r-8 border-white border text-gray-200 p-1 mx-6 mt-1 rounded" role="alert">
+                <div className="border-l-4 border-r-4 border-white border text-gray-200 p-1 mx-6 mt-1 rounded" role="alert">
                     <p className="font-bold">{getFormattedDate().displayDay}</p>
                 </div>
                 <span className="text-6xl">{getFormattedDate().numericDay}<span className="text-3xl"> {getFormattedDate().month}</span></span>

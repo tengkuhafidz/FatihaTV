@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 
 const BottomCta = () => {

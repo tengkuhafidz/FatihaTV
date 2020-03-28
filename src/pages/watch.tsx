@@ -2,11 +2,10 @@ import React from 'react'
 import Layout from '../components/layout'
 import VideoPlayer from '../components/Watch/player'
 import VideoInPlaylist from '../components/Watch/video-in-playlist'
-import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { OutboundLink } from "gatsby-plugin-google-gtag"
 
 export default ({ pageContext }) => {
     const { playlist, currentVideo } = pageContext
-
     const { videos } = playlist
 
     const renderPlaylistVideos = () => {

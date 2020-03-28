@@ -6,13 +6,21 @@ module.exports = {
     image: "/images/fatihatv.jpg", // Path to your image you placed in the 'static' folder
   },
   plugins: [
-      'gatsby-plugin-typescript',
-      'gatsby-plugin-postcss',
-        {
-          resolve: `gatsby-plugin-google-analytics`,
-          options: {
-            trackingId: "UA-162017890-1"
-          },
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-postcss',
+      {
+        resolve: `gatsby-plugin-google-analytics`,
+        options: {
+          trackingId: "UA-162017890-1"
         },
+      },
+      {
+        resolve: `gatsby-plugin-google-gtag`,
+        options: {
+          trackingIds: [
+            "UA-162017890-1",
+          ],
+        },
+      },
   ],
 }

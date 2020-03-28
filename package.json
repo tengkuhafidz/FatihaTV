@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "fatiha-tv",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Watch local Islamic contents from the comfort of your home.",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {

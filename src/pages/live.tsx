@@ -5,8 +5,6 @@ import Hero from '../components/hero'
 import Layout from '../components/layout'
 import LiveSessions from '../components/Live/live-sessions'
 
-
-
 export default () => (
     <Layout>
         <Hero />

@@ -17,3 +17,9 @@ export const mergePlaylistData = () => {
 
     return completePlaylistData
 }
+
+export const enableSmoothScroll = () => {
+    if (typeof window !== 'undefined') {
+        require('smooth-scroll')('a[href*="#"]');
+    }
+}

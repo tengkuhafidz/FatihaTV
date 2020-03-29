@@ -8,8 +8,7 @@ const Header = () => {
     return (
         <nav className="flex items-center justify-between flex-wrap p-6 bg-gray-800 w-full">
             <div className="flex items-center flex-shrink-0 mr-6 cursor-pointer" onClick={() => navigate('/')}>
-                <FaVideo size="2em" className="text-teal-500"/>
-                <span className="font-medium text-2xl tracking-tight ml-2 text-gray-200">FatihaTV</span>
+                <img src="/kuliahsg-logo-long-light.png" className="h-12"/>
             </div>
             <div className="flex-grow"></div>
             <div className="block">

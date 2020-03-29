@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { FaAngleDown, FaFacebookSquare, FaTelegramPlane, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import { getSocialMediaShareUrls } from '../utils';
 import { gtagEventClick } from '../utils/gtag';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 
 
 const Header = () => {
@@ -31,15 +32,24 @@ const Header = () => {
                 <img src="/kuliahsg-logo-long-light.png" className="h-12"/>
             </div>
             <div className="flex-grow"></div>
+
             <div>
-                <button className="block text-sm px-4 py-3 leading-none border rounded border-gray-200 text-gray-200 hover:border-teal-500 hover:text-white hover:bg-teal-500 lg:mt-0 uppercase" onClick={handleShareDropdownClick}>
+                <button className="block text-sm px-4 py-3 border rounded border-gray-200 text-gray-200 hover:border-teal-500 hover:text-white hover:bg-teal-500 lg:mt-0 uppercase" onClick={handleShareDropdownClick}>
                     Share page<FaAngleDown className="-mt-1 ml-2 inline align-middle"/>
                 </button>
                 <div className={`bg-white rounded shadow-xl absolute ${isOpen ? "block" : "hidden"}`} style={{zIndex: 1000}}>
-                    <a href={facebookShareUrl} target="_blank" className="block px-4 py-2 text-gray-800 hover:bg-teal-500 hover:text-gray-100"><FaFacebookSquare className="-mt-1 inline align-middle mr-2"/>Facebook</a>
-                    <a href={whatsappShareUrl} target="_blank" className="block px-4 py-2 text-gray-800 hover:bg-teal-500 hover:text-gray-100"><FaWhatsapp className="-mt-1 inline align-middle mr-2"/>Whatsapp</a>
-                    <a href={telegramShareUrl} target="_blank" className="block px-4 py-2 text-gray-800 hover:bg-teal-500 hover:text-gray-100"><FaTelegramPlane className="-mt-1 inline align-middle mr-2"/>Telegram</a>
-                    <a href={twitterShareUrl} target="_blank" className="block px-4 py-2 text-gray-800 hover:bg-teal-500 hover:text-gray-100"><FaTwitter className="-mt-1 inline align-middle mr-2"/>Twitter</a>
+                    <OutboundLink href={facebookShareUrl} target="_blank" className="block px-4 py-2 text-gray-800 hover:bg-teal-500 hover:text-gray-100"><FaFacebookSquare className="-mt-1 inline align-middle mr-2"/>
+                        Facebook
+                    </OutboundLink>
+                    <OutboundLink href={whatsappShareUrl} target="_blank" className="block px-4 py-2 text-gray-800 hover:bg-teal-500 hover:text-gray-100"><FaWhatsapp className="-mt-1 inline align-middle mr-2"/>
+                        Whatsapp
+                    </OutboundLink>
+                    <OutboundLink href={telegramShareUrl} target="_blank" className="block px-4 py-2 text-gray-800 hover:bg-teal-500 hover:text-gray-100"><FaTelegramPlane className="-mt-1 inline align-middle mr-2"/>
+                        Telegram
+                    </OutboundLink>
+                    <OutboundLink href={twitterShareUrl} target="_blank" className="block px-4 py-2 text-gray-800 hover:bg-teal-500 hover:text-gray-100"><FaTwitter className="-mt-1 inline align-middle mr-2"/>
+                        Twitter
+                    </OutboundLink>
                 </div>
             </div>
          </nav>

@@ -1,10 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: "FatihaTV",
+    title: "kuliah.sg",
+    titleTemplate: "%s | kuliah.sg",
     description: "Watch local Islamic contents from the comfort of your home.",
     author: "Hafidz & Fatiha",
-    url: "https://www.fatihatv.com", // No trailing slash allowed!
-    image: "/images/fatihatv.jpg", // Path to your image you placed in the 'static' folder
+    url: "https://www.kuliah.sg", // No trailing slash allowed!
+    image: "/share-banner.png", // Path to your image you placed in the 'static' folder
   },
   plugins: [
     'gatsby-plugin-typescript',
@@ -22,8 +23,8 @@ module.exports = {
       {
         resolve: `gatsby-plugin-manifest`,
         options: {
-          name: `FatihaTV`,
-          short_name: `FatihaTV`,
+          name: `kuliah.sg`,
+          short_name: `kuliah.sg`,
           start_url: `/`,
           background_color: `#F7FAFC`,
           theme_color: `#38B2AC`,

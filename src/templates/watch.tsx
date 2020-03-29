@@ -17,7 +17,7 @@ export default ({ pageContext }) => {
 
     return (
         <Layout>
-            <SEO title={currentVideo.title} description={`Video by ${currentVideo.asatizah}`}/>
+            <SEO title={currentVideo.title} description={`Video by ${currentVideo.asatizah}`} image={playlist.thumbnailUrl}/>
             <div className="grid xl:grid-cols-4 gap-4 m-8 pb-16">
                 <div className="xl:col-span-3 mb-8">
                     <VideoPlayer playlist={playlist} video={currentVideo} />

@@ -5,8 +5,6 @@ import Hero from '../components/hero'
 import Playlists from '../components/Home/playlists'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import moment from 'moment'
-import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 export default () => (
     <Layout>

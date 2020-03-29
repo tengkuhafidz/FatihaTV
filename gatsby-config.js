@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "FatihaTV",
-    description: "Watch local Islamic content from the comfort of your home.",
+    description: "Watch local Islamic contents from the comfort of your home.",
     author: "Hafidz & Fatiha",
     url: "https://www.fatihatv.com", // No trailing slash allowed!
     image: "/images/fatihatv.jpg", // Path to your image you placed in the 'static' folder

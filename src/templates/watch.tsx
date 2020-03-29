@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import VideoPlayer from '../components/Watch/player'
 import VideoInPlaylist from '../components/Watch/video-in-playlist'
 import { OutboundLink } from "gatsby-plugin-google-gtag"
+import SEO from '../components/seo'
 
 export default ({ pageContext }) => {
     const { playlist, currentVideo } = pageContext
@@ -16,6 +17,7 @@ export default ({ pageContext }) => {
 
     return (
         <Layout>
+            <SEO title={currentVideo.title} />
             <div className="grid xl:grid-cols-4 gap-4 m-8 pb-16">
                 <div className="xl:col-span-3 mb-8">
                     <VideoPlayer playlist={playlist} video={currentVideo} />

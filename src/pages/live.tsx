@@ -4,9 +4,11 @@ import BottomCta from '../components/bottom-cta'
 import Hero from '../components/hero'
 import Layout from '../components/layout'
 import LiveSessions from '../components/Live/live-sessions'
+import SEO from '../components/seo'
 
 export default () => (
     <Layout>
+        <SEO title="Upcoming Lives" description="Check out the list of upcoming live sessions by our asatizah, and save it to you calendar!" />
         <Hero />
         <div className="max-w-sm mx-auto">
             <ul className="flex">

@@ -4,10 +4,11 @@ import BottomCta from '../components/bottom-cta'
 import Hero from '../components/hero'
 import Playlists from '../components/Home/playlists'
 import Layout from '../components/layout'
-
+import SEO from '../components/seo'
 
 export default () => (
     <Layout>
+        <SEO title="Recorded Playlist" />
         <Hero />
         <div className="max-w-sm mx-auto">
             <ul className="flex">

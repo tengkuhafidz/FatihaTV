@@ -24,7 +24,7 @@ const VideoInPlaylist = ({ playlistId, video, videoIndex, currentVideo }) => {
                 { renderCurrentlyPlaying() }
                 <div className="font-bold text-lg">{video.title}</div>
                 <p className="text-gray-700 text-base">
-                    Ustaz Tamliikhaa
+                    { video.asatizah }
                 </p>
             </div>
         </div>

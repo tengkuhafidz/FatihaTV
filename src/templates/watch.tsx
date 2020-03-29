@@ -22,7 +22,7 @@ export default ({ pageContext }) => {
                 <div className="xl:col-span-3 mb-8">
                     <VideoPlayer playlist={playlist} video={currentVideo} />
                     <div className="mt-4">
-                        <h1 className="text-3xl">{currentVideo.title}</h1>
+                        <h1 className="text-3xl leading-none">{currentVideo.title}</h1>
                         <h1 className="text-xl">Source: <OutboundLink href={playlist.pageUrl} target="_blank" className="text-teal-500">{playlist.organisation} {playlist.platform}</OutboundLink></h1>
                     </div>
                 </div>

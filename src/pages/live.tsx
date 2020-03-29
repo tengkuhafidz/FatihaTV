@@ -11,11 +11,11 @@ export default () => (
     <Layout>
         <SEO title="Upcoming Live Sessions" description="Check out the list of upcoming live sessions by our asatizah, and save it to your calendar!" />
         <Hero />
-        <div className="max-w-sm mx-auto">
+        <div className="max-w-xs md:max-w-sm mx-auto">
             <ul className="flex">
                 <li className="flex-1 mr-4">
                     <a className="text-center block border border-teal-500 rounded hover:border-gray-200 text-teal-500 hover:bg-teal-500 hover:text-white py-2 px-4 cursor-pointer" onClick={() => navigate('/')}>
-                        Recorded Playlists
+                        Video Playlists
                     </a>
                 </li>
                 <li className="flex-1">

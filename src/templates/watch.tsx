@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
-import VideoPlayer from '../components/Watch/player'
+import VideoPlayer from '../components/Watch/video-player'
 import VideoInPlaylist from '../components/Watch/video-in-playlist'
 import { OutboundLink } from "gatsby-plugin-google-gtag"
 import SEO from '../components/seo'

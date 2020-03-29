@@ -1,7 +1,6 @@
 import React from 'react'
 import mergedPlaylistData from '../../data/merged-playlist-video-data.json'
 import SinglePlaylist from './single-playlist'
-
 // import { mergePlaylistData } from '../../utils/index'
 
 const Playlists = () => {

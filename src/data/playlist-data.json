@@ -11,26 +11,36 @@
   },
   {
     "id": "p2",
-    "title": "Tazkirah Online",
-    "organisation": "Masjid Al-Istighfar",
+    "title": "Panduan Membaca Al-Fatihah",
+    "organisation": "Masjid Maarof",
     "platform": "Facebook",
-    "pageUrl": "https://www.facebook.com/pg/MasjidAListighfar/",
+    "pageUrl": "https://www.facebook.com/masjidmaarof",
     "durationType": "short",
-    "thumbnailUrl": "https://scontent.fsin9-2.fna.fbcdn.net/v/t15.5256-10/s640x640/81856813_238128373899346_2212279143830126592_n.jpg?_nc_cat=110&_nc_sid=ad6a45&_nc_ohc=oycB2d87ieEAX99XAfM&_nc_ht=scontent.fsin9-2.fna&_nc_tp=7&oh=ceb99d932752de21ed3142a64c7c3b4d&oe=5EA41762",
+    "thumbnailUrl": "https://scontent.fsin9-2.fna.fbcdn.net/v/t15.13418-10/s640x640/82763664_540495256571848_1597902978583363584_n.jpg?_nc_cat=106&_nc_sid=ad6a45&_nc_ohc=wv_t_UE_8AwAX_wIyKK&_nc_ht=scontent.fsin9-2.fna&_nc_tp=7&oh=e7cd80dad889f3176b1995c358452519&oe=5EA3FF68",
     "remarks": ""
   },
   {
     "id": "p3",
-    "title": "Indahnya Hidup Bersyariat",
-    "organisation": "Masjid Al-Istighfar",
+    "title": "Kitab Riyadhus Shalihin - Imam Namawi",
+    "organisation": "Masjid Waktanjong",
     "platform": "Facebook",
-    "pageUrl": "https://www.facebook.com/pg/MasjidAListighfar/",
-    "durationType": "short",
-    "thumbnailUrl": "https://scontent.fsin9-2.fna.fbcdn.net/v/t15.5256-10/s640x640/81856813_238128373899346_2212279143830126592_n.jpg?_nc_cat=110&_nc_sid=ad6a45&_nc_ohc=oycB2d87ieEAX99XAfM&_nc_ht=scontent.fsin9-2.fna&_nc_tp=7&oh=ceb99d932752de21ed3142a64c7c3b4d&oe=5EA41762",
+    "pageUrl": "https://www.facebook.com/nurulasror.mwt",
+    "durationType": "long",
+    "thumbnailUrl": "https://scontent.fsin9-1.fna.fbcdn.net/v/t1.0-0/p206x206/18952927_714565632083325_74963675771335929_n.jpg?_nc_cat=107&_nc_sid=0be424&_nc_ohc=blBw3Zs5OZIAX-8b8U0&_nc_ht=scontent.fsin9-1.fna&_nc_tp=6&oh=b0ff35dc2153a8390d188d387a871d1a&oe=5EA5FEBF",
     "remarks": ""
   },
   {
     "id": "p4",
+    "title": "Hot Bulan Ini Podcast",
+    "organisation": "Munawwarin Youth",
+    "platform": "Youtube",
+    "pageUrl": "https://www.youtube.com/channel/UCd5ND2ei71EbVkVmEU_u-Yg",
+    "durationType": "long",
+    "thumbnailUrl": "",
+    "remarks": ""
+  },
+  {
+    "id": "p5",
     "title": "Mufti Dr Nazirudin Mohd Nasir",
     "organisation": "MuslimSG",
     "platform": "Youtube",
@@ -40,23 +50,13 @@
     "remarks": ""
   },
   {
-    "id": "p5",
-    "title": "Kuliah Dhuha",
-    "organisation": "Masjid Assyakirin",
-    "platform": "Facebook",
-    "pageUrl": "https://www.facebook.com/assyakirinsg/",
-    "durationType": "long",
-    "thumbnailUrl": "https://scontent.fsin9-2.fna.fbcdn.net/v/t15.5256-10/s640x640/83902681_489962431682224_1692086581977939968_n.jpg?_nc_cat=111&_nc_sid=ad6a45&_nc_ohc=5MzT5mQksFAAX9z6lFF&_nc_ht=scontent.fsin9-2.fna&_nc_tp=7&oh=75f5a9d5912128ba336e84ae529259ac&oe=5EA409B5",
-    "remarks": ""
-  },
-  {
     "id": "p6",
-    "title": "Intisari Khutbah Jumaat",
-    "organisation": "Masjid Assyakirin",
+    "title": "Perkongsian Bersama Ustaz Khairul Anwar",
+    "organisation": "Masjid Jamiyah Ar-Rabitah",
     "platform": "Facebook",
-    "pageUrl": "https://www.facebook.com/assyakirinsg/",
-    "durationType": "long",
-    "thumbnailUrl": "https://scontent.fsin9-2.fna.fbcdn.net/v/t15.5256-10/77316842_797363404088195_7315553606990561280_n.jpg?_nc_cat=106&_nc_sid=ad6a45&_nc_ohc=9VXePjw33McAX-dze7u&_nc_ht=scontent.fsin9-2.fna&oh=af3a2b02a79870a0277dc865dce49922&oe=5EA43629",
+    "pageUrl": "https://www.facebook.com/masjidjamiyah.arrabitah",
+    "durationType": "short",
+    "thumbnailUrl": "https://scontent.fsin9-1.fna.fbcdn.net/v/t15.5256-10/s640x640/83902050_208662363537905_419527118368538624_n.jpg?_nc_cat=107&_nc_sid=ad6a45&_nc_ohc=0ZvbjigfaAMAX-6janF&_nc_ht=scontent.fsin9-1.fna&_nc_tp=7&oh=34be66793bf285fb0941585a5c0b1ee8&oe=5EA617D9",
     "remarks": ""
   },
   {
@@ -71,12 +71,12 @@
   },
   {
     "id": "p8",
-    "title": "Riyadhussolihin",
-    "organisation": "Masjid Waktanjong",
+    "title": "Indahnya Hidup Bersyariat",
+    "organisation": "Masjid Al-Istighfar",
     "platform": "Facebook",
-    "pageUrl": "https://www.facebook.com/nurulasror.mwt",
-    "durationType": "long",
-    "thumbnailUrl": "https://scontent.fsin9-1.fna.fbcdn.net/v/t1.0-0/p206x206/18952927_714565632083325_74963675771335929_n.jpg?_nc_cat=107&_nc_sid=0be424&_nc_ohc=blBw3Zs5OZIAX-8b8U0&_nc_ht=scontent.fsin9-1.fna&_nc_tp=6&oh=b0ff35dc2153a8390d188d387a871d1a&oe=5EA5FEBF",
+    "pageUrl": "https://www.facebook.com/pg/MasjidAListighfar/",
+    "durationType": "short",
+    "thumbnailUrl": "https://scontent.fsin9-2.fna.fbcdn.net/v/t15.5256-10/s640x640/81856813_238128373899346_2212279143830126592_n.jpg?_nc_cat=110&_nc_sid=ad6a45&_nc_ohc=oycB2d87ieEAX99XAfM&_nc_ht=scontent.fsin9-2.fna&_nc_tp=7&oh=ceb99d932752de21ed3142a64c7c3b4d&oe=5EA41762",
     "remarks": ""
   },
   {
@@ -91,12 +91,12 @@
   },
   {
     "id": "p10",
-    "title": "Panduan Membaca Al-Fatihah",
-    "organisation": "Masjid Maarof",
+    "title": "Tazkirah Online",
+    "organisation": "Masjid Al-Istighfar",
     "platform": "Facebook",
-    "pageUrl": "https://www.facebook.com/masjidmaarof",
+    "pageUrl": "https://www.facebook.com/pg/MasjidAListighfar/",
     "durationType": "short",
-    "thumbnailUrl": "https://scontent.fsin9-2.fna.fbcdn.net/v/t15.13418-10/s640x640/82763664_540495256571848_1597902978583363584_n.jpg?_nc_cat=106&_nc_sid=ad6a45&_nc_ohc=wv_t_UE_8AwAX_wIyKK&_nc_ht=scontent.fsin9-2.fna&_nc_tp=7&oh=e7cd80dad889f3176b1995c358452519&oe=5EA3FF68",
+    "thumbnailUrl": "https://scontent.fsin9-2.fna.fbcdn.net/v/t15.5256-10/s640x640/81856813_238128373899346_2212279143830126592_n.jpg?_nc_cat=110&_nc_sid=ad6a45&_nc_ohc=oycB2d87ieEAX99XAfM&_nc_ht=scontent.fsin9-2.fna&_nc_tp=7&oh=ceb99d932752de21ed3142a64c7c3b4d&oe=5EA41762",
     "remarks": ""
   },
   {
@@ -111,12 +111,12 @@
   },
   {
     "id": "p12",
-    "title": "Perkongsian Bersama Ustaz Khairul Anwar",
-    "organisation": "Masjid Jamiyah Ar-Rabitah",
+    "title": "Intisari Khutbah Jumaat",
+    "organisation": "Masjid Assyakirin",
     "platform": "Facebook",
-    "pageUrl": "https://www.facebook.com/masjidjamiyah.arrabitah",
-    "durationType": "short",
-    "thumbnailUrl": "https://scontent.fsin9-1.fna.fbcdn.net/v/t15.5256-10/s640x640/83902050_208662363537905_419527118368538624_n.jpg?_nc_cat=107&_nc_sid=ad6a45&_nc_ohc=0ZvbjigfaAMAX-6janF&_nc_ht=scontent.fsin9-1.fna&_nc_tp=7&oh=34be66793bf285fb0941585a5c0b1ee8&oe=5EA617D9",
+    "pageUrl": "https://www.facebook.com/assyakirinsg/",
+    "durationType": "long",
+    "thumbnailUrl": "https://scontent.fsin9-2.fna.fbcdn.net/v/t15.5256-10/77316842_797363404088195_7315553606990561280_n.jpg?_nc_cat=106&_nc_sid=ad6a45&_nc_ohc=9VXePjw33McAX-dze7u&_nc_ht=scontent.fsin9-2.fna&oh=af3a2b02a79870a0277dc865dce49922&oe=5EA43629",
     "remarks": ""
   },
   {
@@ -126,7 +126,7 @@
     "platform": "Facebook",
     "pageUrl": "https://www.facebook.com/pg/alansar.sg",
     "durationType": "long",
-    "thumbnailUrl": "https://scontent.fsin9-2.fna.fbcdn.net/v/t15.5256-10/82063476_218394075963883_3673493486843199488_n.jpg?_nc_cat=111&_nc_sid=ad6a45&_nc_ohc=JhyykuI-qgAAX-41M68&_nc_ht=scontent.fsin9-2.fna&oh=dbd5ec7346946c391ae42be064969b7f&oe=5EA72900",
+    "thumbnailUrl": "https://scontent.fsin9-2.fna.fbcdn.net/v/t15.5256-10/75460269_554183632118477_7433694426293075968_n.jpg?_nc_cat=103&_nc_sid=ad6a45&_nc_ohc=cNndeeM5nfgAX_j2Ean&_nc_ht=scontent.fsin9-2.fna&oh=699b0a825a88c39a21e216ffd73dcc01&oe=5EA539CE",
     "remarks": ""
   },
   {
@@ -161,12 +161,12 @@
   },
   {
     "id": "p17",
-    "title": "Hot Bulan Ini Podcast",
-    "organisation": "Munawwarin Youth",
-    "platform": "Youtube",
-    "pageUrl": "https://www.youtube.com/channel/UCd5ND2ei71EbVkVmEU_u-Yg",
+    "title": "Kuliah Dhuha",
+    "organisation": "Masjid Assyakirin",
+    "platform": "Facebook",
+    "pageUrl": "https://www.facebook.com/assyakirinsg/",
     "durationType": "long",
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://scontent.fsin9-2.fna.fbcdn.net/v/t15.5256-10/s640x640/83902681_489962431682224_1692086581977939968_n.jpg?_nc_cat=111&_nc_sid=ad6a45&_nc_ohc=5MzT5mQksFAAX9z6lFF&_nc_ht=scontent.fsin9-2.fna&_nc_tp=7&oh=75f5a9d5912128ba336e84ae529259ac&oe=5EA409B5",
     "remarks": ""
   }
 ]

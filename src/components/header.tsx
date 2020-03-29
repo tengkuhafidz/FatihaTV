@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
-import { FaVideo } from 'react-icons/fa';
 import { navigate } from 'gatsby';
-import { FaAngleDown, FaFacebookSquare, FaWhatsapp, FaTwitter, FaTelegramPlane } from 'react-icons/fa'
-import { gtagEventClick } from '../utils/gtag';
+import React, { useState } from 'react';
+import { FaAngleDown, FaFacebookSquare, FaTelegramPlane, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import { getSocialMediaShareUrls } from '../utils';
+import { gtagEventClick } from '../utils/gtag';
 
 
 const Header = () => {

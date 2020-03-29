@@ -8,7 +8,7 @@ import SEO from '../components/seo'
 
 export default () => (
     <Layout>
-        <SEO title="Recorded Playlist" />
+        <SEO title="Local Islamic Videos" />
         <Hero />
         <div className="max-w-sm mx-auto">
             <ul className="flex">

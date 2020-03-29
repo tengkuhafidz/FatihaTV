@@ -8,7 +8,7 @@ import SEO from '../components/seo'
 
 export default () => (
     <Layout>
-        <SEO title="Upcoming Lives" description="Check out the list of upcoming live sessions by our asatizah, and save it to you calendar!" />
+        <SEO title="Upcoming Live Sessions" description="Check out the list of upcoming live sessions by our asatizah, and save it to your calendar!" />
         <Hero />
         <div className="max-w-sm mx-auto">
             <ul className="flex">

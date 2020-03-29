@@ -23,3 +23,28 @@ export const enableSmoothScroll = () => {
         require('smooth-scroll')('a[href*="#"]');
     }
 }
+
+export const getSocialMediaShareUrls = (pageUrl: string) => {
+    return {
+        facebookShareUrl: getFacebookShareUrl(pageUrl),
+        whatsappShareUrl: getWhatsappShareUrl(pageUrl),
+        telegramShareUrl: getTelegramShareUrl(pageUrl),
+        twitterShareUrl: getTwitterShareUrl(pageUrl),
+    }
+}
+
+export const getFacebookShareUrl = (pageUrl: string) => {
+    return `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`
+}
+
+export const getWhatsappShareUrl = (pageUrl: string) => {
+    return `https://api.whatsapp.com/send?text=${pageUrl}`
+}
+
+export const getTelegramShareUrl = (pageUrl: string) => {
+    return `https://telegram.me/share/url?url=${pageUrl}`
+}
+
+export const getTwitterShareUrl = (pageUrl: string) => {
+    return `https://twitter.com/share?url=${pageUrl}`
+}

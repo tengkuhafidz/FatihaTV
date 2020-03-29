@@ -15,7 +15,7 @@ const LiveSessions = () => {
         return upcomingLiveSessionsData.map((data, index) => <SingleLiveSession data={data} key={index}/>)
     }
     return (
-        <div className="container mx-auto px-8 pt-16 pb-32" id="liveSessions">
+        <div className="container mx-auto px-8 pt-8 pb-32" id="liveSessions">
             <div className="grid md:grid-cols-2 gap-8">
                 {renderLiveSessions()} 
             </div>

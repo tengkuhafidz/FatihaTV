@@ -11,7 +11,7 @@ const Playlists = () => {
     }
 
     return (
-        <div className="container mx-auto px-8 pt-16 pb-32" id="playlists">
+        <div className="container mx-auto px-8 pt-8 pb-32" id="playlists">
             <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
                 {renderPlaylists()} 
             </div>

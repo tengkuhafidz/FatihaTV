@@ -5,6 +5,7 @@ import Hero from '../components/hero'
 import Layout from '../components/layout'
 import LiveSessions from '../components/Live/live-sessions'
 import SEO from '../components/seo'
+import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 export default () => (
     <Layout>
@@ -24,6 +25,7 @@ export default () => (
                 </li>
             </ul>
         </div>
+        <p className="text-gray-600 text-center mt-8 font-light text-sm">Last Updated: 29 March 2020  &middot; Source: <OutboundLink target="_blank" className="underline" href="https://docs.google.com/spreadsheets/d/1nO1QgB_1FEp-ilYZmNiA8nUvODp7S0E-_8IJVxeCm64/edit#gid=1909209122">MUIS ADIL SG</OutboundLink></p>
         <LiveSessions />
         <BottomCta />
     </Layout>

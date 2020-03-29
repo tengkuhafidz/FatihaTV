@@ -5,6 +5,8 @@ import Hero from '../components/hero'
 import Playlists from '../components/Home/playlists'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import moment from 'moment'
+import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 export default () => (
     <Layout>
@@ -20,6 +22,7 @@ export default () => (
                 </li>
             </ul>
         </div>
+        <p className="text-gray-600 text-center mt-8 font-light text-sm">Last Updated: 29 March 2020</p>
         <Playlists />
         <BottomCta />
     </Layout>

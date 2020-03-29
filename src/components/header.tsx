@@ -37,10 +37,10 @@ const Header = () => {
                     Share page<FaAngleDown className="-mt-1 ml-2 inline align-middle"/>
                 </button>
                 <div className={`bg-white rounded shadow-xl absolute ${isOpen ? "block" : "hidden"}`} style={{zIndex: 1000}}>
-                    <a href={facebookShareUrl} className="block px-4 py-2 text-gray-800 hover:bg-teal-500 hover:text-gray-100"><FaFacebookSquare className="-mt-1 inline align-middle mr-2"/>Facebook</a>
-                    <a href={whatsappShareUrl} className="block px-4 py-2 text-gray-800 hover:bg-teal-500 hover:text-gray-100"><FaWhatsapp className="-mt-1 inline align-middle mr-2"/>Whatsapp</a>
-                    <a href={telegramShareUrl} className="block px-4 py-2 text-gray-800 hover:bg-teal-500 hover:text-gray-100"><FaTelegramPlane className="-mt-1 inline align-middle mr-2"/>Telegram</a>
-                    <a href={twitterShareUrl} className="block px-4 py-2 text-gray-800 hover:bg-teal-500 hover:text-gray-100"><FaTwitter className="-mt-1 inline align-middle mr-2"/>Twitter</a>
+                    <a href={facebookShareUrl} target="_blank" className="block px-4 py-2 text-gray-800 hover:bg-teal-500 hover:text-gray-100"><FaFacebookSquare className="-mt-1 inline align-middle mr-2"/>Facebook</a>
+                    <a href={whatsappShareUrl} target="_blank" className="block px-4 py-2 text-gray-800 hover:bg-teal-500 hover:text-gray-100"><FaWhatsapp className="-mt-1 inline align-middle mr-2"/>Whatsapp</a>
+                    <a href={telegramShareUrl} target="_blank" className="block px-4 py-2 text-gray-800 hover:bg-teal-500 hover:text-gray-100"><FaTelegramPlane className="-mt-1 inline align-middle mr-2"/>Telegram</a>
+                    <a href={twitterShareUrl} target="_blank" className="block px-4 py-2 text-gray-800 hover:bg-teal-500 hover:text-gray-100"><FaTwitter className="-mt-1 inline align-middle mr-2"/>Twitter</a>
                 </div>
             </div>
          </nav>

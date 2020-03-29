@@ -39,7 +39,7 @@ const VideoPlayer = ({ playlist, video }) => {
     }
 
     return (
-        <div className="bg-gray-500 shadow-lg">
+        <div className="bg-gray-500 shadow-lg max-w-xs md:max-w-none">
             {renderPlayer()}
         </div>
     )

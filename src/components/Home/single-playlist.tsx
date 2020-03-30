@@ -5,12 +5,19 @@ import { isPlaylistPinnedOnLocalStorage } from '../../utils'
 
 
 interface Props {
-    playlist: PlaylistData,
+    playlist: any,
     isPlaylistPinnedLocally: boolean
+    handleTagFilterClick: any
 }
 
-const SinglePlaylist: React.FunctionComponent<Props> = ({playlist, isPlaylistPinnedLocally}) => {
-    const { title, thumbnailUrl, organisation, durationType, videos, id } = playlist
+const SinglePlaylist: React.FunctionComponent<Props> = ({playlist, isPlaylistPinnedLocally, handleTagFilterClick}) => {
+    const { title, thumbnailUrl, organisation, durationType, videos, id, tags } = playlist
+    const tagsArray = tags.split(', ');
+    const renderTags = () => {
+        return tagsArray.map(tag => (
+            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 hover:bg-teal-500 hover:text-white" onClick={(e) => handleTagFilterClick(e, tag)} >#{tag}</span>
+        ))
+    }
 
     return (
         <div className={`rounded overflow-hidden shadow-lg hover:shadow-2xl bg-white align-center cursor-pointer  ${ isPlaylistPinnedLocally ? "border-teal-500 border-4" : "" }`} onClick={() => navigate(`/watch/${id}/1`)}>
@@ -20,6 +27,9 @@ const SinglePlaylist: React.FunctionComponent<Props> = ({playlist, isPlaylistPin
                 <p className="text-gray-600 text-base">
                     {organisation} &middot; {videos.length} {durationType} {videos.length === 1 ? "video " : "videos"}
                 </p>
+                <div className="pt-4">
+                    {renderTags()}
+                </div>
             </div>
         </div>
     )

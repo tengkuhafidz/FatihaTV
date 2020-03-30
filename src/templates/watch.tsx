@@ -49,7 +49,13 @@ export default ({ pageContext }) => {
                         <div className="flex flex-wrap">
                             <div className="w-full md:w-4/5">
                                 <h1 className="text-3xl leading-none">{currentVideo.title} by {currentVideo.asatizah}</h1>
-                                <h1 className="text-xl">Source: <OutboundLink href={playlist.pageUrl} target="_blank" className="text-teal-500">{playlist.organisation} {playlist.platform}</OutboundLink></h1>
+                                <p className="text-xl"><span className="font-semibold">Source:</span> <OutboundLink href={playlist.pageUrl} target="_blank" className="text-gray-700 underline">{playlist.organisation} {playlist.platform}</OutboundLink></p>
+                                {
+                                    playlist.donationMethod && (
+                                        <p className="text-xl flex flex-wrap"><span className="font-semibold">To donate: </span> <span className="text-gray-700 ml-1"> {playlist.donationMethod}</span></p>
+                                    )
+
+                                }
                             </div>
                             <div className="w-full md:w-1/5">
                                 <button className={`bg-teal-500 hover:bg-teal-400 text-white py-2 px-4 rounded md:float-right mt-4 md:mt-auto md:w-auto uppercase inline border-b-4 border-teal-700 ${ isPlaylistPinned ? "hidden" : "block" }`} onClick={handlePinPlaylist}>
@@ -58,7 +64,7 @@ export default ({ pageContext }) => {
                                 </button>
                                 <button className={`bg-gray-500 hover:bg-gray-400 text-white py-2 px-4 rounded md:float-right mt-4 md:mt-auto md:w-auto uppercase inline border-b-4 border-gray-700 ${ isPlaylistPinned ? "block" : "hidden" }`} onClick={handleUnpinPlaylist}>
                                     <FaMapPin className="inline -mt-1 mr-2"/>
-                                    UnPin Playlist 
+                                    Unpin Playlist 
                                 </button>
                             </div>
                         </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import FacebookPlayer from 'react-facebook-player'
 import { gtagEventClick } from '../../utils/gtag'
+import { isMobileDevice } from '../../utils'
 
 const VideoPlayer = ({ playlist, video }) => {
     const { videoUrl } = video
@@ -39,7 +40,7 @@ const VideoPlayer = ({ playlist, video }) => {
     }
 
     return (
-        <div className="bg-gray-500 shadow-lg max-w-xs md:max-w-none">
+        <div className={`bg-gray-500 shadow-lg ${ isMobileDevice() ? "max-w-xs" : "max-w-xs md:max-w-none" }`}>
             {renderPlayer()}
         </div>
     )

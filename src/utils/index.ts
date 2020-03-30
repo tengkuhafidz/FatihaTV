@@ -48,3 +48,17 @@ export const getTelegramShareUrl = (pageUrl: string) => {
 export const getTwitterShareUrl = (pageUrl: string) => {
     return `https://twitter.com/share?url=${pageUrl}`
 }
+
+export const isMobileDevice = () => {
+    const toMatch = [
+        /Android/i,
+        /webOS/i,
+        /iPhone/i,
+        /BlackBerry/i,
+        /Windows Phone/i
+    ];
+
+    return toMatch.some((toMatchItem) => {
+        return navigator.userAgent.match(toMatchItem);
+    });
+}

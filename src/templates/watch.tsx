@@ -6,6 +6,7 @@ import { OutboundLink } from "gatsby-plugin-google-gtag"
 import SEO from '../components/seo'
 import { FaMapPin } from 'react-icons/fa'
 import { addToLocalPinnedPlaylist, removeFromLocalPinnedPlaylist, isPlaylistPinnedOnLocalStorage } from '../utils'
+import { gtagEventClick } from '../utils/gtag'
 
 export default ({ pageContext }) => {
     const { playlist, currentVideo } = pageContext
@@ -17,11 +18,19 @@ export default ({ pageContext }) => {
     const handlePinPlaylist = () => {
         setIsPlaylistPinned(true)
         addToLocalPinnedPlaylist(playlist.id)
+        gtagEventClick({
+            action: "pin_playlist",
+            playlist
+        })
     }
 
     const handleUnpinPlaylist = () => {
         setIsPlaylistPinned(false)
         removeFromLocalPinnedPlaylist(playlist.id)
+        gtagEventClick({
+            action: "unpin_playlist",
+            playlist
+        })
     }
 
     const renderPlaylistVideos = () => {

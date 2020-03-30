@@ -62,3 +62,32 @@ export const isMobileDevice = () => {
         return navigator.userAgent.match(toMatchItem);
     });
 }
+
+export const getLocalPinnedPlaylist = () => {
+    const hasLocalStorageReady = typeof(Storage) !== "undefined"
+    if (hasLocalStorageReady) {
+        const localStoragePinnedPlaylists = localStorage.getItem("pinnedPlaylists") || ""
+        return localStoragePinnedPlaylists ? JSON.parse(localStoragePinnedPlaylists) : []
+    }
+    return []
+}
+
+export const addToLocalPinnedPlaylist = (playlistId) => {
+    const localPinnedPlaylists = getLocalPinnedPlaylist()
+    localPinnedPlaylists.push(playlistId)
+    localStorage.setItem("pinnedPlaylists", JSON.stringify(localPinnedPlaylists))
+}
+
+export const removeFromLocalPinnedPlaylist = (playlistId) => {
+    const localPinnedPlaylists = getLocalPinnedPlaylist()
+    const playlistIndex = localPinnedPlaylists.indexOf(playlistId);
+    if (playlistIndex !== -1) localPinnedPlaylists.splice(playlistIndex, 1);
+    localStorage.setItem("pinnedPlaylists", JSON.stringify(localPinnedPlaylists))
+}
+
+export const isPlaylistPinnedOnLocalStorage = (playlistId) => {
+    const localPinnedPlaylists: string[] = getLocalPinnedPlaylist()
+    return localPinnedPlaylists.includes(playlistId)
+}
+
+        

@@ -2,11 +2,11 @@ import React from 'react'
 import mergedPlaylistData from '../../data/merged-playlist-video-data.json'
 import SinglePlaylist from './single-playlist'
 import { isPlaylistPinnedOnLocalStorage, getLocalPinnedPlaylist } from '../../utils'
-// import { mergePlaylistData } from '../../utils/index'
+import { mergePlaylistData } from '../../utils/index'
 
 const Playlists = () => {
+    // console.log("<<<", JSON.stringify(mergePlaylistData()))
     // const renderPlaylists = () => {
-    //     // console.log("<<<", JSON.stringify(mergePlaylistData()))
     //     return mergedPlaylistData.map((playlist) => {
     //         return(
     //             <SinglePlaylist playlist={playlist} key={playlist.id} isPlaylistPinnedLocally={isPlaylistPinnedLocally}/>

@@ -1,17 +1,18 @@
 [
   {
-    "id": "p13",
+    "id": "p1",
     "title": "Kuliah Dhuha Bersama Ustaz Mohamed Fatris Bakaram",
     "organisation": "Masjid Al-Ansar",
+    "donationMethod": "PayNow to UEN S81MQ0009F",
+    "tags": "malay",
     "platform": "Facebook",
     "pageUrl": "https://www.facebook.com/pg/alansar.sg",
-    "durationType": "long",
     "thumbnailUrl": "https://scontent.fsin9-2.fna.fbcdn.net/v/t15.5256-10/75460269_554183632118477_7433694426293075968_n.jpg?_nc_cat=103&_nc_sid=ad6a45&_nc_ohc=cNndeeM5nfgAX_j2Ean&_nc_ht=scontent.fsin9-2.fna&oh=699b0a825a88c39a21e216ffd73dcc01&oe=5EA539CE",
     "remarks": "",
     "videos": [
       {
-        "id": "v54",
-        "playlistId": "p13",
+        "id": "v1",
+        "playlistId": "p1",
         "epidsodeNumber": "e1",
         "title": "Kuliah Dhuha #1",
         "asatizah": "Ustaz Mohamed Fatris Bakaram",
@@ -20,8 +21,8 @@
         "videoUrl": "https://www.facebook.com/alansar.sg/videos/217855499351074/"
       },
       {
-        "id": "v55",
-        "playlistId": "p13",
+        "id": "v2",
+        "playlistId": "p1",
         "epidsodeNumber": "e2",
         "title": "Kuliah Dhuha #2",
         "asatizah": "Ustaz Mohamed Fatris Bakaram",
@@ -30,8 +31,8 @@
         "videoUrl": "https://www.facebook.com/alansar.sg/videos/209515140165656/"
       },
       {
-        "id": "v56",
-        "playlistId": "p13",
+        "id": "v3",
+        "playlistId": "p1",
         "epidsodeNumber": "e3",
         "title": "Kuliah Dhuha #3",
         "asatizah": "Ustaz Mohamed Fatris Bakaram",
@@ -40,8 +41,8 @@
         "videoUrl": "https://www.facebook.com/alansar.sg/videos/553564052180435/"
       },
       {
-        "id": "v57",
-        "playlistId": "p13",
+        "id": "v4",
+        "playlistId": "p1",
         "epidsodeNumber": "e4",
         "title": "Kuliah Dhuha #4",
         "asatizah": "Ustaz Mohamed Fatris Bakaram",
@@ -50,8 +51,8 @@
         "videoUrl": "https://www.facebook.com/alansar.sg/videos/2563565413892347/"
       },
       {
-        "id": "v58",
-        "playlistId": "p13",
+        "id": "v5",
+        "playlistId": "p1",
         "epidsodeNumber": "e5",
         "title": "Kuliah Dhuha #5 (Isra Mikraj)",
         "asatizah": "Ustaz Mohamed Fatris Bakaram",
@@ -60,8 +61,8 @@
         "videoUrl": "https://www.facebook.com/alansar.sg/videos/566442603969525/"
       },
       {
-        "id": "v59",
-        "playlistId": "p13",
+        "id": "v6",
+        "playlistId": "p1",
         "epidsodeNumber": "e6",
         "title": "Kuliah Dhuha #6 (Mikraj - Pertingkatkan Solat)",
         "asatizah": "Ustaz Mohamed Fatris Bakaram",
@@ -72,18 +73,19 @@
     ]
   },
   {
-    "id": "p1",
+    "id": "p2",
     "title": "The Talking Dome",
     "organisation": "Masjid Al-Istighfar",
+    "donationMethod": "PayNow to UEN  S99MQ0014H",
+    "tags": "podcast, malay",
     "platform": "Facebook",
     "pageUrl": "https://www.facebook.com/pg/MasjidAListighfar/",
-    "durationType": "long",
     "thumbnailUrl": "https://scontent.fsin9-1.fna.fbcdn.net/v/t15.13418-10/s640x640/82338394_307284940241297_361939028632666112_n.jpg?_nc_cat=107&_nc_sid=ad6a45&_nc_ohc=8g3jSFiNkkQAX8uGX6M&_nc_ht=scontent.fsin9-1.fna&_nc_tp=7&oh=7e61204e5b2ed54cefac09c8363a979c&oe=5EA26C49",
     "remarks": "",
     "videos": [
       {
-        "id": "v1",
-        "playlistId": "p1",
+        "id": "v7",
+        "playlistId": "p2",
         "epidsodeNumber": "e1",
         "title": "Episode 26 - Masjid tutup, rakyat mengamok!",
         "asatizah": "Ustaz Ma'az Sallim & Ustaz Md Nazeeh Mohamad",
@@ -92,8 +94,8 @@
         "videoUrl": "https://www.facebook.com/MasjidAListighfar/videos/2833190480098622/"
       },
       {
-        "id": "v2",
-        "playlistId": "p1",
+        "id": "v8",
+        "playlistId": "p2",
         "epidsodeNumber": "e2",
         "title": "Episode 27 - “Macam mana saya nak solat kat luar? Saya dah biasa kat masjid..”",
         "asatizah": "Ustaz Ma'az Sallim & Ustaz Md Nazeeh Mohamad",
@@ -102,8 +104,8 @@
         "videoUrl": "https://www.facebook.com/MasjidAListighfar/videos/838384533312632/"
       },
       {
-        "id": "v3",
-        "playlistId": "p1",
+        "id": "v9",
+        "playlistId": "p2",
         "epidsodeNumber": "e3",
         "title": "Episode 28 - Solat Takde Telekung, HOW?",
         "asatizah": "Ustaz Ma'az Sallim, Ustaz Md Nazeeh Mohamad & Ustazah Latifah Yusoff",
@@ -112,8 +114,8 @@
         "videoUrl": "https://www.facebook.com/MasjidAListighfar/videos/223729442336620/"
       },
       {
-        "id": "v4",
-        "playlistId": "p1",
+        "id": "v10",
+        "playlistId": "p2",
         "epidsodeNumber": "e4",
         "title": "Episode 29 - Hi, saya Syaaban!",
         "asatizah": "Ustaz Ma'az Sallim, Ustaz Md Nazeeh Mohamad & Ustaz Raja Lutfil Hadi",
@@ -124,18 +126,19 @@
     ]
   },
   {
-    "id": "p2",
+    "id": "p3",
     "title": "Panduan Membaca Al-Fatihah",
     "organisation": "Masjid Maarof",
+    "donationMethod": "PayNow to UEN T16MQ0001B",
+    "tags": "short, quran, malay",
     "platform": "Facebook",
     "pageUrl": "https://www.facebook.com/masjidmaarof",
-    "durationType": "short",
     "thumbnailUrl": "https://scontent.fsin9-2.fna.fbcdn.net/v/t15.13418-10/s640x640/82763664_540495256571848_1597902978583363584_n.jpg?_nc_cat=106&_nc_sid=ad6a45&_nc_ohc=wv_t_UE_8AwAX_wIyKK&_nc_ht=scontent.fsin9-2.fna&_nc_tp=7&oh=e7cd80dad889f3176b1995c358452519&oe=5EA3FF68",
     "remarks": "",
     "videos": [
       {
-        "id": "v5",
-        "playlistId": "p2",
+        "id": "v11",
+        "playlistId": "p3",
         "epidsodeNumber": "e1",
         "title": "Panduan Membaca Al-Fatihah #1",
         "asatizah": "Ustaz Arif Tan",
@@ -144,8 +147,8 @@
         "videoUrl": "https://www.facebook.com/masjidmaarof/videos/552657592039028/"
       },
       {
-        "id": "v6",
-        "playlistId": "p2",
+        "id": "v12",
+        "playlistId": "p3",
         "epidsodeNumber": "e2",
         "title": "Panduan Membaca Al-Fatihah #2",
         "asatizah": "Ustaz Arif Tan",
@@ -154,8 +157,8 @@
         "videoUrl": "https://www.facebook.com/masjidmaarof/videos/2817587131610009/"
       },
       {
-        "id": "v7",
-        "playlistId": "p2",
+        "id": "v13",
+        "playlistId": "p3",
         "epidsodeNumber": "e3",
         "title": "Panduan Membaca Al-Fatihah #3",
         "asatizah": "Ustaz Arif Tan",
@@ -166,18 +169,19 @@
     ]
   },
   {
-    "id": "p3",
-    "title": "Kitab Riyadhus Shalihin - Imam Namawi",
+    "id": "p4",
+    "title": "Kitab Riyadhus Shalihin - Imam Nawawi",
     "organisation": "Masjid Waktanjong",
+    "donationMethod": "PayNow to UEN S35MQ0068A",
+    "tags": "hadith, malay",
     "platform": "Facebook",
     "pageUrl": "https://www.facebook.com/nurulasror.mwt",
-    "durationType": "long",
     "thumbnailUrl": "https://scontent.fsin9-1.fna.fbcdn.net/v/t1.0-0/p206x206/18952927_714565632083325_74963675771335929_n.jpg?_nc_cat=107&_nc_sid=0be424&_nc_ohc=blBw3Zs5OZIAX-8b8U0&_nc_ht=scontent.fsin9-1.fna&_nc_tp=6&oh=b0ff35dc2153a8390d188d387a871d1a&oe=5EA5FEBF",
     "remarks": "",
     "videos": [
       {
-        "id": "v8",
-        "playlistId": "p3",
+        "id": "v14",
+        "playlistId": "p4",
         "epidsodeNumber": "e1",
         "title": "Kitab Riyadhus Shalihin - Imam Namawi #1",
         "asatizah": "Ustaz Muhammad Mukhtar Habib Mohamed",
@@ -186,8 +190,8 @@
         "videoUrl": "https://www.facebook.com/nurulasror.mwt/videos/1381262365413645/"
       },
       {
-        "id": "v9",
-        "playlistId": "p3",
+        "id": "v15",
+        "playlistId": "p4",
         "epidsodeNumber": "e2",
         "title": "Kitab Riyadhus Shalihin - Imam Namawi #2",
         "asatizah": "Ustaz Muhammad Mukhtar Habib Mohamed",
@@ -196,8 +200,8 @@
         "videoUrl": "https://www.facebook.com/nurulasror.mwt/videos/1387337008139514/"
       },
       {
-        "id": "v10",
-        "playlistId": "p3",
+        "id": "v16",
+        "playlistId": "p4",
         "epidsodeNumber": "e3",
         "title": "Kitab Riyadhus Shalihin - Imam Namawi #3",
         "asatizah": "Ustaz Muhammad Mukhtar Habib Mohamed",
@@ -208,18 +212,19 @@
     ]
   },
   {
-    "id": "p4",
+    "id": "p5",
     "title": "Hot Bulan Ini Podcast",
     "organisation": "Munawwarin Youth",
+    "donationMethod": "PayNow to UEN T06MQ0029K",
+    "tags": "podcast",
     "platform": "Youtube",
     "pageUrl": "https://www.youtube.com/channel/UCd5ND2ei71EbVkVmEU_u-Yg",
-    "durationType": "long",
     "thumbnailUrl": "https://i.ytimg.com/vi/X79oqF7jd40/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAD8K1wiLKeHIplYRWceqqdeuQhdg",
     "remarks": "",
     "videos": [
       {
-        "id": "v11",
-        "playlistId": "p4",
+        "id": "v17",
+        "playlistId": "p5",
         "epidsodeNumber": "e1",
         "title": "Perangai Budak Gemok & Bodyshaming",
         "asatizah": "Ustaz Luqman Hakim Roslan",
@@ -228,8 +233,8 @@
         "videoUrl": "https://www.youtube.com/embed/lHyj792DZyg"
       },
       {
-        "id": "v12",
-        "playlistId": "p4",
+        "id": "v18",
+        "playlistId": "p5",
         "epidsodeNumber": "e2",
         "title": "Mic Test with Ustaz Tajudin",
         "asatizah": "Ustaz Luqman Hakim Roslan",
@@ -238,8 +243,8 @@
         "videoUrl": "https://www.youtube.com/embed/X79oqF7jd40"
       },
       {
-        "id": "v13",
-        "playlistId": "p4",
+        "id": "v19",
+        "playlistId": "p5",
         "epidsodeNumber": "e3",
         "title": "Takut Wuhan Ke Takut Tuhan?",
         "asatizah": "Ustaz Luqman Hakim Roslan",
@@ -250,18 +255,19 @@
     ]
   },
   {
-    "id": "p5",
+    "id": "p6",
     "title": "Mufti Dr Nazirudin Mohd Nasir",
     "organisation": "MuslimSG",
+    "donationMethod": "",
+    "tags": "short, english",
     "platform": "Youtube",
     "pageUrl": "https://www.youtube.com/channel/UCxfs0-rD8VluFXY2Jc5qiTw",
-    "durationType": "short",
     "thumbnailUrl": "https://i.ytimg.com/vi/2McsTgx13n8/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAUw3Uxj9djPjadYnVdEfTrtg761A",
     "remarks": "",
     "videos": [
       {
-        "id": "v14",
-        "playlistId": "p5",
+        "id": "v20",
+        "playlistId": "p6",
         "epidsodeNumber": "e1",
         "title": "Allah Knows We Want To Change",
         "asatizah": "Mufti Dr Nazirudin Mohd Nasir",
@@ -270,8 +276,8 @@
         "videoUrl": "https://www.youtube.com/embed/2McsTgx13n8"
       },
       {
-        "id": "v15",
-        "playlistId": "p5",
+        "id": "v21",
+        "playlistId": "p6",
         "epidsodeNumber": "e2",
         "title": "The Quran Guides Us to Find Answers",
         "asatizah": "Mufti Dr Nazirudin Mohd Nasir",
@@ -280,8 +286,8 @@
         "videoUrl": "https://www.youtube.com/embed/rMcnC2c4JSg"
       },
       {
-        "id": "v16",
-        "playlistId": "p5",
+        "id": "v22",
+        "playlistId": "p6",
         "epidsodeNumber": "e3",
         "title": "Forgiveness Heals The Heart",
         "asatizah": "Mufti Dr Nazirudin Mohd Nasir",
@@ -290,8 +296,8 @@
         "videoUrl": "https://www.youtube.com/embed/AQ8v0s8P1ZY"
       },
       {
-        "id": "v17",
-        "playlistId": "p5",
+        "id": "v23",
+        "playlistId": "p6",
         "epidsodeNumber": "e4",
         "title": "Finding Solutions to Climate Change",
         "asatizah": "Mufti Dr Nazirudin Mohd Nasir",
@@ -302,18 +308,19 @@
     ]
   },
   {
-    "id": "p6",
+    "id": "p7",
     "title": "Perkongsian Bersama Ustaz Khairul Anwar",
     "organisation": "Masjid Jamiyah Ar-Rabitah",
+    "donationMethod": "Transfer to OCBC 591-066352-001",
+    "tags": "short, malay",
     "platform": "Facebook",
     "pageUrl": "https://www.facebook.com/masjidjamiyah.arrabitah",
-    "durationType": "short",
     "thumbnailUrl": "https://scontent.fsin9-1.fna.fbcdn.net/v/t15.5256-10/s640x640/83902050_208662363537905_419527118368538624_n.jpg?_nc_cat=107&_nc_sid=ad6a45&_nc_ohc=0ZvbjigfaAMAX-6janF&_nc_ht=scontent.fsin9-1.fna&_nc_tp=7&oh=34be66793bf285fb0941585a5c0b1ee8&oe=5EA617D9",
     "remarks": "",
     "videos": [
       {
-        "id": "v18",
-        "playlistId": "p6",
+        "id": "v24",
+        "playlistId": "p7",
         "epidsodeNumber": "e1",
         "title": "Apakah Tujuan Hidup Kita?",
         "asatizah": "Ustaz Khairul Anwar",
@@ -322,8 +329,8 @@
         "videoUrl": "https://www.facebook.com/masjidjamiyah.arrabitah/videos/208662110204597/"
       },
       {
-        "id": "v19",
-        "playlistId": "p6",
+        "id": "v25",
+        "playlistId": "p7",
         "epidsodeNumber": "e2",
         "title": "Cara Menjadi Orang Beriman",
         "asatizah": "Ustaz Khairul Anwar",
@@ -334,18 +341,19 @@
     ]
   },
   {
-    "id": "p7",
+    "id": "p8",
     "title": "AARBooster",
     "organisation": "Masjid Ar-Raudhah",
+    "donationMethod": "PayNow to UEN S93MQ0024E",
+    "tags": "short",
     "platform": "Facebook",
     "pageUrl": "https://www.facebook.com/masjid.arraudhahsg/",
-    "durationType": "short",
     "thumbnailUrl": "https://scontent.fsin9-1.fna.fbcdn.net/v/t15.5256-10/s640x640/83144100_503739190311404_4157913583914582016_n.jpg?_nc_cat=108&_nc_sid=ad6a45&_nc_ohc=t4LJ62CBSlAAX-YoGhg&_nc_ht=scontent.fsin9-1.fna&_nc_tp=7&oh=597d9ca6ec552171d5287471c9009308&oe=5EA3BC8A",
     "remarks": "",
     "videos": [
       {
-        "id": "v20",
-        "playlistId": "p7",
+        "id": "v26",
+        "playlistId": "p8",
         "epidsodeNumber": "e1",
         "title": "Ask Allah for 'Afiyah",
         "asatizah": "Ustaz Muhammad  Idris",
@@ -354,8 +362,8 @@
         "videoUrl": "https://www.facebook.com/1449947865227946/videos/503737386978251/"
       },
       {
-        "id": "v21",
-        "playlistId": "p7",
+        "id": "v27",
+        "playlistId": "p8",
         "epidsodeNumber": "e2",
         "title": "Salah kau lah ni!",
         "asatizah": "Ustaz Hanan Farihin",
@@ -364,8 +372,8 @@
         "videoUrl": "https://www.facebook.com/masjid.arraudhahsg/videos/242745190099816/"
       },
       {
-        "id": "v22",
-        "playlistId": "p7",
+        "id": "v28",
+        "playlistId": "p8",
         "epidsodeNumber": "e3",
         "title": "Seeing things positively",
         "asatizah": "Ustazah Atiqah & Ustazah Nur Adila",
@@ -374,8 +382,8 @@
         "videoUrl": "https://www.facebook.com/masjid.arraudhahsg/videos/2503379016642605/"
       },
       {
-        "id": "v23",
-        "playlistId": "p7",
+        "id": "v29",
+        "playlistId": "p8",
         "epidsodeNumber": "e4",
         "title": "Komentar Di Facebook Tentang COVID-19",
         "asatizah": "Ustaz Muhammad Idris & Ustaz Hanan Farihin",
@@ -384,8 +392,8 @@
         "videoUrl": "https://www.facebook.com/masjid.arraudhahsg/videos/587649715162828/"
       },
       {
-        "id": "v24",
-        "playlistId": "p7",
+        "id": "v30",
+        "playlistId": "p8",
         "epidsodeNumber": "e5",
         "title": "“Didn’t I tell you? You won’t have patience for me.”",
         "asatizah": "Ustaz Muhammad  Idris",
@@ -394,8 +402,8 @@
         "videoUrl": "https://www.facebook.com/1449947865227946/videos/199483371344193/"
       },
       {
-        "id": "v25",
-        "playlistId": "p7",
+        "id": "v31",
+        "playlistId": "p8",
         "epidsodeNumber": "e6",
         "title": "Agama Bukan Hanya Di Dalam Masjid",
         "asatizah": "Ustaz Hanan Farihin",
@@ -404,8 +412,8 @@
         "videoUrl": "https://www.facebook.com/masjid.arraudhahsg/videos/498542074164643/"
       },
       {
-        "id": "v26",
-        "playlistId": "p7",
+        "id": "v32",
+        "playlistId": "p8",
         "epidsodeNumber": "e7",
         "title": "3 Ways to Heal Our Iman",
         "asatizah": "Ustazah Atiqah & Ustazah Nur Adila",
@@ -414,30 +422,41 @@
         "videoUrl": "https://www.facebook.com/masjid.arraudhahsg/videos/265723654446237/"
       },
       {
-        "id": "v27",
-        "playlistId": "p7",
+        "id": "v33",
+        "playlistId": "p8",
         "epidsodeNumber": "e8",
         "title": "Adab-Adab di Media Sosial",
         "asatizah": "Ustaz Muhammad Idris & Ustaz Hanan Farihin",
         "language": "malay",
         "addedOn": "29/03/2020",
         "videoUrl": "https://www.facebook.com/masjid.arraudhahsg/videos/2252063531563109/"
+      },
+      {
+        "id": "v34",
+        "playlistId": "p8",
+        "epidsodeNumber": "e9",
+        "title": "Jangan pentingkan diri sendiri!",
+        "asatizah": "Ustaz Muhammad  Idris",
+        "language": "malay",
+        "addedOn": "30/03/2020",
+        "videoUrl": "https://www.facebook.com/1449947865227946/videos/217487692858603/"
       }
     ]
   },
   {
-    "id": "p8",
+    "id": "p9",
     "title": "Indahnya Hidup Bersyariat",
     "organisation": "Masjid Al-Istighfar",
+    "donationMethod": "PayNow to UEN S99MQ0014H",
+    "tags": "short, malay",
     "platform": "Facebook",
     "pageUrl": "https://www.facebook.com/pg/MasjidAListighfar/",
-    "durationType": "short",
     "thumbnailUrl": "https://scontent.fsin9-2.fna.fbcdn.net/v/t15.5256-10/s640x640/81856813_238128373899346_2212279143830126592_n.jpg?_nc_cat=110&_nc_sid=ad6a45&_nc_ohc=oycB2d87ieEAX99XAfM&_nc_ht=scontent.fsin9-2.fna&_nc_tp=7&oh=ceb99d932752de21ed3142a64c7c3b4d&oe=5EA41762",
     "remarks": "",
     "videos": [
       {
-        "id": "v28",
-        "playlistId": "p8",
+        "id": "v35",
+        "playlistId": "p9",
         "epidsodeNumber": "e1",
         "title": "Indahnya Hidup Bersyariat #1",
         "asatizah": "Ustaz Md Nazeeh Mohamad",
@@ -446,8 +465,8 @@
         "videoUrl": "https://www.facebook.com/MasjidAListighfar/videos/213362213249423/"
       },
       {
-        "id": "v29",
-        "playlistId": "p8",
+        "id": "v36",
+        "playlistId": "p9",
         "epidsodeNumber": "e2",
         "title": "Indahnya Hidup Bersyariat #2",
         "asatizah": "Ustaz Md Nazeeh Mohamad",
@@ -456,8 +475,8 @@
         "videoUrl": "https://www.facebook.com/MasjidAListighfar/videos/200826077867511/"
       },
       {
-        "id": "v30",
-        "playlistId": "p8",
+        "id": "v37",
+        "playlistId": "p9",
         "epidsodeNumber": "e3",
         "title": "Indahnya Hidup Bersyariat #3",
         "asatizah": "Ustaz Md Nazeeh Mohamad",
@@ -466,8 +485,8 @@
         "videoUrl": "https://www.facebook.com/MasjidAListighfar/videos/517807482492956/"
       },
       {
-        "id": "v31",
-        "playlistId": "p8",
+        "id": "v38",
+        "playlistId": "p9",
         "epidsodeNumber": "e4",
         "title": "Indahnya Hidup Bersyariat #4",
         "asatizah": "Ustaz Md Nazeeh Mohamad",
@@ -476,8 +495,8 @@
         "videoUrl": "https://www.facebook.com/MasjidAListighfar/videos/2872417876184324/"
       },
       {
-        "id": "v32",
-        "playlistId": "p8",
+        "id": "v39",
+        "playlistId": "p9",
         "epidsodeNumber": "e5",
         "title": "Indahnya Hidup Bersyariat #5",
         "asatizah": "Ustaz Md Nazeeh Mohamad",
@@ -488,18 +507,19 @@
     ]
   },
   {
-    "id": "p9",
+    "id": "p10",
     "title": "Tazkirah Ringkas",
     "organisation": "Masjid Maarof",
+    "donationMethod": "PayNow to UEN T16MQ0001B",
+    "tags": "short",
     "platform": "Facebook",
     "pageUrl": "https://www.facebook.com/masjidmaarof",
-    "durationType": "short",
     "thumbnailUrl": "https://scontent.fsin9-2.fna.fbcdn.net/v/t15.13418-10/s640x640/76908648_2591030434550155_8108935277466091520_n.jpg?_nc_cat=101&_nc_sid=ad6a45&_nc_ohc=95gSUZQsWJIAX_A0-fb&_nc_ht=scontent.fsin9-2.fna&_nc_tp=7&oh=1a5da183d283d7e39af7971ebdb333a6&oe=5EA4E3B0",
     "remarks": "",
     "videos": [
       {
-        "id": "v33",
-        "playlistId": "p9",
+        "id": "v40",
+        "playlistId": "p10",
         "epidsodeNumber": "e1",
         "title": "Tazkirah Ringkas #1",
         "asatizah": "YDO Masjid Maarof Hafiizh",
@@ -508,8 +528,8 @@
         "videoUrl": "https://www.facebook.com/233018766897469/videos/719196051946822/"
       },
       {
-        "id": "v34",
-        "playlistId": "p9",
+        "id": "v41",
+        "playlistId": "p10",
         "epidsodeNumber": "e2",
         "title": "Tazkirah Ringkas #2",
         "asatizah": "Ustazah Wardiah",
@@ -518,8 +538,8 @@
         "videoUrl": "https://www.facebook.com/masjidmaarof/videos/546992605941350/"
       },
       {
-        "id": "v35",
-        "playlistId": "p9",
+        "id": "v42",
+        "playlistId": "p10",
         "epidsodeNumber": "e3",
         "title": "Hikmah Di Sebalik Ujian",
         "asatizah": "Ustaz Ammar Yasir",
@@ -528,8 +548,8 @@
         "videoUrl": "https://www.facebook.com/masjidmaarof/videos/2799075296846333/"
       },
       {
-        "id": "v36",
-        "playlistId": "p9",
+        "id": "v43",
+        "playlistId": "p10",
         "epidsodeNumber": "e4",
         "title": "Panduan Solat di Tempat Awam",
         "asatizah": "YDO Masjid Maarof Hafiizh",
@@ -538,8 +558,8 @@
         "videoUrl": "https://www.facebook.com/masjidmaarof/videos/275182366802375/"
       },
       {
-        "id": "v37",
-        "playlistId": "p9",
+        "id": "v44",
+        "playlistId": "p10",
         "epidsodeNumber": "e5",
         "title": "Adab Menuntut Ilmu #1",
         "asatizah": "Ustazah Wardiah",
@@ -548,8 +568,8 @@
         "videoUrl": "https://www.facebook.com/233018766897469/videos/219969515872118/"
       },
       {
-        "id": "v38",
-        "playlistId": "p9",
+        "id": "v45",
+        "playlistId": "p10",
         "epidsodeNumber": "e6",
         "title": "Tatasusila Solat Berjemaah",
         "asatizah": "Ustaz Ammar Yasir",
@@ -558,8 +578,8 @@
         "videoUrl": "https://www.facebook.com/masjidmaarof/videos/649015055670153/"
       },
       {
-        "id": "v39",
-        "playlistId": "p9",
+        "id": "v46",
+        "playlistId": "p10",
         "epidsodeNumber": "e7",
         "title": "Mentaati Ibu Bapa",
         "asatizah": "Ustazah Wardiah",
@@ -568,8 +588,8 @@
         "videoUrl": "https://www.facebook.com/masjidmaarof/videos/657823605049831/"
       },
       {
-        "id": "v40",
-        "playlistId": "p9",
+        "id": "v47",
+        "playlistId": "p10",
         "epidsodeNumber": "e8",
         "title": "Adab Menuntut Ilmu #2",
         "asatizah": "Ustazah Wardiah",
@@ -578,8 +598,8 @@
         "videoUrl": "https://www.facebook.com/masjidmaarof/videos/267216267620401/"
       },
       {
-        "id": "v41",
-        "playlistId": "p9",
+        "id": "v48",
+        "playlistId": "p10",
         "epidsodeNumber": "e9",
         "title": "Isra’ and Mi’raj",
         "asatizah": "Ustaz Ammar Yasir",
@@ -588,8 +608,8 @@
         "videoUrl": "https://www.facebook.com/masjidmaarof/videos/2259000977734568/"
       },
       {
-        "id": "v42",
-        "playlistId": "p9",
+        "id": "v49",
+        "playlistId": "p10",
         "epidsodeNumber": "e10",
         "title": "Maqasid Syariah",
         "asatizah": "Ustazah Raihana",
@@ -598,8 +618,8 @@
         "videoUrl": "https://www.facebook.com/masjidmaarof/videos/566406413977196/"
       },
       {
-        "id": "v43",
-        "playlistId": "p9",
+        "id": "v50",
+        "playlistId": "p10",
         "epidsodeNumber": "e11",
         "title": "Thoharah",
         "asatizah": "Ustazah Amylya",
@@ -610,18 +630,19 @@
     ]
   },
   {
-    "id": "p10",
+    "id": "p11",
     "title": "Tazkirah Online",
     "organisation": "Masjid Al-Istighfar",
+    "donationMethod": "PayNow to UEN S99MQ0014H",
+    "tags": "short",
     "platform": "Facebook",
     "pageUrl": "https://www.facebook.com/pg/MasjidAListighfar/",
-    "durationType": "short",
     "thumbnailUrl": "https://scontent.fsin9-2.fna.fbcdn.net/v/t15.5256-10/s640x640/81856813_238128373899346_2212279143830126592_n.jpg?_nc_cat=110&_nc_sid=ad6a45&_nc_ohc=oycB2d87ieEAX99XAfM&_nc_ht=scontent.fsin9-2.fna&_nc_tp=7&oh=ceb99d932752de21ed3142a64c7c3b4d&oe=5EA41762",
     "remarks": "",
     "videos": [
       {
-        "id": "v44",
-        "playlistId": "p10",
+        "id": "v51",
+        "playlistId": "p11",
         "epidsodeNumber": "e1",
         "title": "Bersyukur atas Nikmat Allah swt",
         "asatizah": "Ustaz Maznan Haron",
@@ -630,8 +651,8 @@
         "videoUrl": "https://www.facebook.com/MasjidAListighfar/videos/290217738612746/"
       },
       {
-        "id": "v45",
-        "playlistId": "p10",
+        "id": "v52",
+        "playlistId": "p11",
         "epidsodeNumber": "e2",
         "title": "Hikmah Dalam Musibah",
         "asatizah": "Ustaz Md Iza'an Mahat",
@@ -640,8 +661,8 @@
         "videoUrl": "https://www.facebook.com/MasjidAListighfar/videos/1120918324914178/"
       },
       {
-        "id": "v46",
-        "playlistId": "p10",
+        "id": "v53",
+        "playlistId": "p11",
         "epidsodeNumber": "e3",
         "title": "Meraih Pertolongan Allah s.w.t",
         "asatizah": "Ustaz Maznan Haron",
@@ -650,8 +671,8 @@
         "videoUrl": "https://www.facebook.com/MasjidAListighfar/videos/227194055091590/"
       },
       {
-        "id": "v47",
-        "playlistId": "p10",
+        "id": "v54",
+        "playlistId": "p11",
         "epidsodeNumber": "e4",
         "title": "Masjid Di Hati",
         "asatizah": "Ustaz Ma'az Sallim",
@@ -660,8 +681,8 @@
         "videoUrl": "https://www.facebook.com/MasjidAListighfar/videos/831743507327726/"
       },
       {
-        "id": "v48",
-        "playlistId": "p10",
+        "id": "v55",
+        "playlistId": "p11",
         "epidsodeNumber": "e5",
         "title": "Peranan Rumah Dalam Islam #1",
         "asatizah": "Ustaz Ma'az Sallim",
@@ -672,18 +693,19 @@
     ]
   },
   {
-    "id": "p11",
+    "id": "p12",
     "title": "Perkongsian Bersama Ustazah Izzah Khamsani",
     "organisation": "Masjid Jamiyah Ar-Rabitah",
+    "donationMethod": "Transfer to OCBC 591-066352-001",
+    "tags": "short, malay",
     "platform": "Facebook",
     "pageUrl": "https://www.facebook.com/masjidjamiyah.arrabitah",
-    "durationType": "short",
     "thumbnailUrl": "https://scontent.fsin9-1.fna.fbcdn.net/v/t15.5256-10/s640x640/83906013_1423259847856001_4477959329743372288_n.jpg?_nc_cat=102&_nc_sid=ad6a45&_nc_ohc=EgKWo5nSs1sAX8Pl2Md&_nc_ht=scontent.fsin9-1.fna&_nc_tp=7&oh=557ec01ab0ea6de29ab922c9ed8cae50&oe=5EA5F817",
     "remarks": "",
     "videos": [
       {
-        "id": "v49",
-        "playlistId": "p11",
+        "id": "v56",
+        "playlistId": "p12",
         "epidsodeNumber": "e1",
         "title": "Seberat mana pun ujian kita, berat lagi ujian Rasulullah ﷺ",
         "asatizah": "Ustazah Nurul Izzah Khamsani",
@@ -692,8 +714,8 @@
         "videoUrl": "https://www.facebook.com/masjidjamiyah.arrabitah/videos/1423259201189399/"
       },
       {
-        "id": "v50",
-        "playlistId": "p11",
+        "id": "v57",
+        "playlistId": "p12",
         "epidsodeNumber": "e2",
         "title": "Rasa Rindu Rasulullah ﷺ Kepada Kita",
         "asatizah": "Ustazah Nurul Izzah Khamsani",
@@ -704,18 +726,19 @@
     ]
   },
   {
-    "id": "p12",
+    "id": "p13",
     "title": "Intisari Khutbah Jumaat",
     "organisation": "Masjid Assyakirin",
+    "donationMethod": "PayNow to UEN S80MQ0026A",
+    "tags": "malay",
     "platform": "Facebook",
     "pageUrl": "https://www.facebook.com/assyakirinsg/",
-    "durationType": "long",
     "thumbnailUrl": "https://scontent.fsin9-2.fna.fbcdn.net/v/t15.5256-10/77316842_797363404088195_7315553606990561280_n.jpg?_nc_cat=106&_nc_sid=ad6a45&_nc_ohc=9VXePjw33McAX-dze7u&_nc_ht=scontent.fsin9-2.fna&oh=af3a2b02a79870a0277dc865dce49922&oe=5EA43629",
     "remarks": "",
     "videos": [
       {
-        "id": "v51",
-        "playlistId": "p12",
+        "id": "v58",
+        "playlistId": "p13",
         "epidsodeNumber": "e1",
         "title": "Intisari Khutbah Jumaat 13 Mac 2020\nTopik: \"Menjauhi Kebakhilan",
         "asatizah": "Ustaz Muhammad Syahid Abdul Latif",
@@ -724,8 +747,8 @@
         "videoUrl": "https://www.facebook.com/assyakirinsg/videos/797350097422859/"
       },
       {
-        "id": "v52",
-        "playlistId": "p12",
+        "id": "v59",
+        "playlistId": "p13",
         "epidsodeNumber": "e2",
         "title": "Intisari Khutbah Jumaat 20 Mac 2020\nTopik: \"Sifat Mazmumah: Pembaziran",
         "asatizah": "Ustaz Muhammad Syahid Abdul Latif",
@@ -734,8 +757,8 @@
         "videoUrl": "https://www.facebook.com/assyakirinsg/videos/209746806908469/"
       },
       {
-        "id": "v53",
-        "playlistId": "p12",
+        "id": "v60",
+        "playlistId": "p13",
         "epidsodeNumber": "e3",
         "title": "Intisari Khutbah Jumaat 27 Mac 2020\nTopik: \"Rasa Syukur kepada Allah s.w.t.",
         "asatizah": "Ustaz Muhammad Syahid Abdul Latif",
@@ -749,14 +772,15 @@
     "id": "p14",
     "title": "Tazkirah Sebelum Zuhur",
     "organisation": "Masjid Haji Mohd Salleh",
+    "donationMethod": "Transfer to OCBC Current 629-300229-001",
+    "tags": "malay",
     "platform": "Facebook",
     "pageUrl": "https://www.facebook.com/hajimohdsallehmosque/",
-    "durationType": "long",
     "thumbnailUrl": "https://scontent.fsin9-1.fna.fbcdn.net/v/t15.5256-10/83895967_209920753412608_7704076133838356480_n.jpg?_nc_cat=107&_nc_sid=ad6a45&_nc_ohc=9F9OiROSFAAAX8wUKjZ&_nc_ht=scontent.fsin9-1.fna&oh=515f7f75f34f9567c7b335ed8591e5dd&oe=5EA526A2",
     "remarks": "",
     "videos": [
       {
-        "id": "v60",
+        "id": "v61",
         "playlistId": "p14",
         "epidsodeNumber": "e1",
         "title": "Tazkirah Sebelum Zuhur #1",
@@ -766,7 +790,7 @@
         "videoUrl": "https://www.facebook.com/hajimohdsallehmosque/videos/1323480841178288/"
       },
       {
-        "id": "v61",
+        "id": "v62",
         "playlistId": "p14",
         "epidsodeNumber": "e2",
         "title": "Tazkirah Sebelum Zuhur #2",
@@ -776,7 +800,7 @@
         "videoUrl": "https://www.facebook.com/hajimohdsallehmosque/videos/579496912640232/"
       },
       {
-        "id": "v62",
+        "id": "v63",
         "playlistId": "p14",
         "epidsodeNumber": "e3",
         "title": "Tazkirah Sebelum Zuhur #3",
@@ -786,7 +810,7 @@
         "videoUrl": "https://www.facebook.com/hajimohdsallehmosque/videos/632203817633145/"
       },
       {
-        "id": "v63",
+        "id": "v64",
         "playlistId": "p14",
         "epidsodeNumber": "e4",
         "title": "Tazkirah Sebelum Zuhur #4",
@@ -796,7 +820,7 @@
         "videoUrl": "https://www.facebook.com/hajimohdsallehmosque/videos/262331804762579/"
       },
       {
-        "id": "v64",
+        "id": "v65",
         "playlistId": "p14",
         "epidsodeNumber": "e5",
         "title": "Tazkirah Sebelum Zuhur #5",
@@ -806,7 +830,7 @@
         "videoUrl": "https://www.facebook.com/hajimohdsallehmosque/videos/1270435973152576/"
       },
       {
-        "id": "v65",
+        "id": "v66",
         "playlistId": "p14",
         "epidsodeNumber": "e6",
         "title": "Tazkirah Sebelum Zuhur #6",
@@ -816,7 +840,7 @@
         "videoUrl": "https://www.facebook.com/hajimohdsallehmosque/videos/209909483413735/"
       },
       {
-        "id": "v66",
+        "id": "v67",
         "playlistId": "p14",
         "epidsodeNumber": "e7",
         "title": "Tazkirah Sebelum Zuhur #7",
@@ -826,7 +850,7 @@
         "videoUrl": "https://www.facebook.com/hajimohdsallehmosque/videos/239205373879747/"
       },
       {
-        "id": "v67",
+        "id": "v68",
         "playlistId": "p14",
         "epidsodeNumber": "e8",
         "title": "Tazkirah Sebelum Zuhur #8",
@@ -836,7 +860,7 @@
         "videoUrl": "https://www.facebook.com/hajimohdsallehmosque/videos/642137316569903/"
       },
       {
-        "id": "v68",
+        "id": "v69",
         "playlistId": "p14",
         "epidsodeNumber": "e9",
         "title": "Tazkirah Sebelum Zuhur #9",
@@ -851,14 +875,15 @@
     "id": "p15",
     "title": "ONLINE MYIDIA: BELAJAR ASAS TAJWID",
     "organisation": "Masjid Yusof Ishak",
+    "donationMethod": "PayNow to UEN T16MQ0003E",
+    "tags": "short, malay, quran",
     "platform": "Facebook",
     "pageUrl": "https://www.facebook.com/masjidyusofishak",
-    "durationType": "short",
     "thumbnailUrl": "https://scontent.fsin9-2.fna.fbcdn.net/v/t15.13418-10/s640x640/68594717_518567015662197_2146103455964463104_n.jpg?_nc_cat=111&_nc_sid=ad6a45&_nc_ohc=jtuHnvU9EZwAX8yyztU&_nc_ht=scontent.fsin9-2.fna&_nc_tp=7&oh=6e65339ff443994551da299f3d23a42a&oe=5EA53B2E",
     "remarks": "",
     "videos": [
       {
-        "id": "v69",
+        "id": "v70",
         "playlistId": "p15",
         "epidsodeNumber": "e1",
         "title": "Nun & Mim Musyaddadah",
@@ -868,7 +893,7 @@
         "videoUrl": "https://www.facebook.com/459918814109078/videos/964914090299439/"
       },
       {
-        "id": "v70",
+        "id": "v71",
         "playlistId": "p15",
         "epidsodeNumber": "e2",
         "title": "Qalqalah",
@@ -878,7 +903,7 @@
         "videoUrl": "https://www.facebook.com/masjidyusofishak/videos/2630053410344664/"
       },
       {
-        "id": "v71",
+        "id": "v72",
         "playlistId": "p15",
         "epidsodeNumber": "e3",
         "title": "Izhar",
@@ -888,7 +913,7 @@
         "videoUrl": "https://www.facebook.com/masjidyusofishak/videos/333536770610358/"
       },
       {
-        "id": "v72",
+        "id": "v73",
         "playlistId": "p15",
         "epidsodeNumber": "e4",
         "title": "Iqlab",
@@ -898,7 +923,7 @@
         "videoUrl": "https://www.facebook.com/masjidyusofishak/videos/2407190272843304/"
       },
       {
-        "id": "v73",
+        "id": "v74",
         "playlistId": "p15",
         "epidsodeNumber": "e5",
         "title": "Idgham",
@@ -908,7 +933,7 @@
         "videoUrl": "https://www.facebook.com/459918814109078/videos/493454054758500/"
       },
       {
-        "id": "v74",
+        "id": "v75",
         "playlistId": "p15",
         "epidsodeNumber": "e6",
         "title": "Ikhfa'",
@@ -918,7 +943,7 @@
         "videoUrl": "https://www.facebook.com/459918814109078/videos/354456622149764/"
       },
       {
-        "id": "v75",
+        "id": "v76",
         "playlistId": "p15",
         "epidsodeNumber": "e7",
         "title": "Hukum Mim Sakinah",
@@ -928,7 +953,7 @@
         "videoUrl": "https://www.facebook.com/459918814109078/videos/836485823419850/"
       },
       {
-        "id": "v76",
+        "id": "v77",
         "playlistId": "p15",
         "epidsodeNumber": "e8",
         "title": "Nun Sakinah & Tanwin",
@@ -938,7 +963,7 @@
         "videoUrl": "https://www.facebook.com/masjidyusofishak/videos/724076511401447/"
       },
       {
-        "id": "v77",
+        "id": "v78",
         "playlistId": "p15",
         "epidsodeNumber": "e9",
         "title": "Izhar Qamari & Idgham Syamsi",
@@ -953,14 +978,15 @@
     "id": "p16",
     "title": "Terapi Penyakit Hati",
     "organisation": "Masjid An-Nahdhah",
+    "donationMethod": "PayNow to UEN T06MQ0029K",
+    "tags": "malay",
     "platform": "Youtube",
     "pageUrl": "https://www.youtube.com/channel/UCvtYGBMEmEd6rWV98Zt88LA/featured",
-    "durationType": "long",
     "thumbnailUrl": "https://i.ytimg.com/vi/2fMKA-xOvQE/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDv4T8BRGNnfXeZk7JOD_hlWcVi9A",
     "remarks": "",
     "videos": [
       {
-        "id": "v78",
+        "id": "v79",
         "playlistId": "p16",
         "epidsodeNumber": "e1",
         "title": "Kelas Online Ep1: Terapi Penyakit Hati",
@@ -970,7 +996,7 @@
         "videoUrl": "https://www.youtube.com/embed/xfx61xV0_wE"
       },
       {
-        "id": "v79",
+        "id": "v80",
         "playlistId": "p16",
         "epidsodeNumber": "e2",
         "title": "Kelas Online Ep2: Terapi Penyakit Hati",
@@ -985,14 +1011,15 @@
     "id": "p17",
     "title": "Kuliah Dhuha",
     "organisation": "Masjid Assyakirin",
+    "donationMethod": "PayNow to UEN S80MQ0026A",
+    "tags": "malay",
     "platform": "Facebook",
     "pageUrl": "https://www.facebook.com/assyakirinsg/",
-    "durationType": "long",
     "thumbnailUrl": "https://scontent.fsin9-2.fna.fbcdn.net/v/t15.5256-10/s640x640/83902681_489962431682224_1692086581977939968_n.jpg?_nc_cat=111&_nc_sid=ad6a45&_nc_ohc=5MzT5mQksFAAX9z6lFF&_nc_ht=scontent.fsin9-2.fna&_nc_tp=7&oh=75f5a9d5912128ba336e84ae529259ac&oe=5EA409B5",
     "remarks": "",
     "videos": [
       {
-        "id": "v80",
+        "id": "v81",
         "playlistId": "p17",
         "epidsodeNumber": "e1",
         "title": "D.U.I.T (Doa, Usaha, Ikthiyar & Tawakkal)",
@@ -1002,7 +1029,7 @@
         "videoUrl": "https://www.facebook.com/assyakirinsg/videos/627362867813334/"
       },
       {
-        "id": "v81",
+        "id": "v82",
         "playlistId": "p17",
         "epidsodeNumber": "e2",
         "title": "Boleh ke kita Tawakkal tanpa usaha?",
@@ -1012,7 +1039,7 @@
         "videoUrl": "https://www.facebook.com/assyakirinsg/videos/333299210960478/"
       },
       {
-        "id": "v82",
+        "id": "v83",
         "playlistId": "p17",
         "epidsodeNumber": "e3",
         "title": "Social Responsibility: Online & Offline",
@@ -1022,7 +1049,7 @@
         "videoUrl": "https://www.facebook.com/assyakirinsg/videos/1098146097216108/"
       },
       {
-        "id": "v83",
+        "id": "v84",
         "playlistId": "p17",
         "epidsodeNumber": "e4",
         "title": "How to gain pahala even at home?",
@@ -1032,7 +1059,7 @@
         "videoUrl": "https://www.facebook.com/assyakirinsg/videos/548471102444847/"
       },
       {
-        "id": "v84",
+        "id": "v85",
         "playlistId": "p17",
         "epidsodeNumber": "e5",
         "title": "Ancaman COVID-19 Peluang Untuk Bersatu",
@@ -1042,7 +1069,7 @@
         "videoUrl": "https://www.facebook.com/assyakirinsg/videos/252784155879867/"
       },
       {
-        "id": "v85",
+        "id": "v86",
         "playlistId": "p17",
         "epidsodeNumber": "e6",
         "title": "Pintu Masjid tutup namun pintu taubat dan ibadah masih terbuka luas",
@@ -1052,7 +1079,7 @@
         "videoUrl": "https://www.facebook.com/assyakirinsg/videos/212007606725625/"
       },
       {
-        "id": "v86",
+        "id": "v87",
         "playlistId": "p17",
         "epidsodeNumber": "e7",
         "title": "Hati Terpaut Dengan Masjid",
@@ -1062,7 +1089,7 @@
         "videoUrl": "https://www.facebook.com/assyakirinsg/videos/225443685320427/"
       },
       {
-        "id": "v87",
+        "id": "v88",
         "playlistId": "p17",
         "epidsodeNumber": "e8",
         "title": "Fadhilat Membaca Al-Quran",
@@ -1072,7 +1099,7 @@
         "videoUrl": "https://www.facebook.com/assyakirinsg/videos/1131990937136083/"
       },
       {
-        "id": "v88",
+        "id": "v89",
         "playlistId": "p17",
         "epidsodeNumber": "e9",
         "title": "Intention - The foundation of Ibadah",

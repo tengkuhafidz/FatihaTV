@@ -40,7 +40,7 @@ const VideoPlayer = ({ playlist, video }) => {
     }
 
     return (
-        <div className={`bg-gray-500 shadow-lg ${ isMobileDevice() ? "max-w-xs" : "max-w-xs md:max-w-none" }`}>
+        <div className={`bg-gray-500 shadow-lg max-w-xs md:max-w-none`}>
             {renderPlayer()}
         </div>
     )

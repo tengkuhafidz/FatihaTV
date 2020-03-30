@@ -6,7 +6,7 @@ import { enableSmoothScroll } from '../utils'
 enableSmoothScroll()
 
 const Layout = ({ children }) => (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-100 overflow-x-hidden">
         <Header />
             <main>{ children }</main>
         <Footer />

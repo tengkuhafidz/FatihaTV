@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import mergedPlaylistData from '../../data/merged-playlist-video-data.json'
+import { isPlaylistPinnedOnLocalStorage } from '../../utils'
+import { gtagEventClick } from '../../utils/gtag'
 import SinglePlaylist from './single-playlist'
-import { isPlaylistPinnedOnLocalStorage, getLocalPinnedPlaylist } from '../../utils'
-import { mergePlaylistData } from '../../utils/index'
 
 const Playlists = () => {
     // console.log("<<<", JSON.stringify(mergePlaylistData()))
@@ -24,6 +24,10 @@ const Playlists = () => {
     const handleTagFilterClick = (e: any, tag: string) => {
         e.stopPropagation()
         setTagFilter(tag)
+        gtagEventClick({
+            action: 'filter_by_tag',
+            tag: tag
+        })
     }
 
     const renderPinnedPlaylist = () => {

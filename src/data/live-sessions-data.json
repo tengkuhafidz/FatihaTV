@@ -1,538 +1,1026 @@
 [
-    {
-      "Date": "30 Mar",
-      "Time": "6:30 AM",
-      "Mosque": "Al-Istighfar",
-      "Title": "Kuliah Subuh",
-      "Speaker": "Asatizah Dakwah / Pensyarah Kuliah Harian",
-      "Link": "https://www.facebook.com/MasjidAListighfar"
-    },
-    {
-      "Date": "30 Mar",
-      "Time": "11:00 AM",
-      "Mosque": "Al-Amin",
-      "Title": "Fiqh Hadis - Mengenali Prinsip Berhadapan Dengan Hadis Yang Bertentangan",
-      "Speaker": "Ust Md Hafiizh Rapiee",
-      "Link": "https://www.facebook.com/masjidalaminsg"
-    },
-    {
-      "Date": "30 Mar",
-      "Time": "11:00 AM",
-      "Mosque": "Kassim",
-      "Title": "Kuliah Dhuha Muslimah: Tafsir Wanita",
-      "Speaker": "Ustazah Dr Rohana Ithnin",
-      "Link": "https://www.facebook.com/KassimMosque/"
-    },
-    {
-      "Date": "30 Mar",
-      "Time": "12:45 PM",
-      "Mosque": "Haji Mohd Salleh (Geylang)",
-      "Title": "Tazkirah Sejenak Sebelum Zuhur",
-      "Speaker": "Ust Rohmani Arwani",
-      "Link": "https://www.facebook.com/hajimohdsallehmosque"
-    },
-    {
-      "Date": "30 Mar",
-      "Time": "1:00 PM /3:00 PM",
-      "Mosque": "Jamiyah Ar-Rabitah",
-      "Title": "#hidupberlikuhatiterpandu - Tazkirah tentang kehidupan dan hati",
-      "Speaker": "Ust Khairul Anwar",
-      "Link": "https://www.facebook.com/masjidjamiyah.arrabitah/"
-    },
-    {
-      "Date": "30 Mar",
-      "Time": "1:15 PM",
-      "Mosque": "Mujahidin",
-      "Title": "Siri Inspirasi Al-Qaran: Kaitan Al-Quran dan Kehidupan",
-      "Speaker": "Ust Izal Mustafa",
-      "Link": "https://www.facebook.com/mujahidinmosque"
-    },
-    {
-      "Date": "30 Mar",
-      "Time": "1.30 PM",
-      "Mosque": "Al-Amin",
-      "Title": "Memantapkan Kewangan Anda Tips Daripada Sunnah",
-      "Speaker": "Ust Md Kamal Md Mokhtar",
-      "Link": "https://www.facebook.com/masjidalaminsg"
-    },
-    {
-      "Date": "30 Mar",
-      "Time": "1:45 PM",
-      "Mosque": "Hasanah",
-      "Title": "Maka... Ingatlah Kamu Kepadaku",
-      "Speaker": "Ust Badrussalam",
-      "Link": "https://www.facebook.com/masjidhasanahsg/"
-    },
-    {
-      "Date": "30 Mar",
-      "Time": "2:00 PM",
-      "Mosque": "Muhajirin",
-      "Title": "Perkongsian Hadith",
-      "Speaker": "Ust Syaaban Piperdy / Ust Asyraaf Ahmad",
-      "Link": "https://www.facebook.com/muhajirinsg"
-    },
-    {
-      "Date": "30 Mar",
-      "Time": "2:00 PM",
-      "Mosque": "Haji Mohd Salleh (Palmer Road)",
-      "Title": "Fiqh Solat",
-      "Speaker": "Ust Azmi Rabbani",
-      "Link": "https://www.facebook.com/imosque.sg"
-    },
-    {
-      "Date": "30 Mar",
-      "Time": "7:45 PM",
-      "Mosque": "Al-Istighfar",
-      "Title": "Tazkirah Ringkas",
-      "Speaker": "Asatizah Dakwah",
-      "Link": "https://www.facebook.com/MasjidAListighfar"
-    },
-    {
-      "Date": "30 Mar",
-      "Time": "7:45 PM",
-      "Mosque": "Darul Makmur",
-      "Title": "Kajian Kitab: Bagaiman Mendapat Pahala 7,000 Tahun",
-      "Speaker": "Ust Haji Ahmad Haris Suhaimi",
-      "Link": "https://www.facebook.com/darulmakmur.mosque/"
-    },
-    {
-      "Date": "30 Mar",
-      "Time": "8:00 PM",
-      "Mosque": "Haji Mohd Salleh (Geylang)",
-      "Title": "Indahnya Hidup Bersyariat (Enlish & Malay)",
-      "Speaker": "Ustaz Abdussalam Muhamad Ekhsan",
-      "Link": "https://www.facebook.com/hajimohdsallehmosque"
-    },
-    {
-      "Date": "30 Mar",
-      "Time": "8:00 PM",
-      "Mosque": "Kassim",
-      "Title": "Bicara Dakwah di Mana Jua Kita Berada",
-      "Speaker": "Asatizah Kuliah Harian Masjid Kassim",
-      "Link": "https://www.facebook.com/KassimMosque/"
-    },
-    {
-      "Date": "30 Mar",
-      "Time": "8:30 PM",
-      "Mosque": "Hasanah",
-      "Title": "Live Streaming Kuliah Tasawwuf",
-      "Speaker": "Ust TM Fouzy",
-      "Link": "https://www.facebook.com/masjidhasanahsg/"
-    },
-    {
-      "Date": "30 Mar",
-      "Time": "9:00 PM",
-      "Mosque": "Al-Mukminin",
-      "Title": "Kuliah Witir Online",
-      "Speaker": "MRO Masjid Al-Mukminin",
-      "Link": "https://www.facebook.com/almukmininmosque/"
-    },
-    {
-      "Date": "30 Mar",
-      "Time": "9:00 PM",
-      "Mosque": "Darussalam",
-      "Title": "(Tujuan Agama2: Pelihara Nyawa) Bahagian 1: Ustaz, Takut Covid-19 Ke?",
-      "Speaker": "Ust Harunarrashid Zainudin",
-      "Link": "https://www.facebook.com/DarussalamMosqueSG/"
-    },
-    {
-      "Date": "31 Mar",
-      "Time": "6:30 AM",
-      "Mosque": "Al-Istighfar",
-      "Title": "Kuliah Subuh",
-      "Speaker": "Asatizah Dakwah / Pensyarah Kuliah Harian",
-      "Link": "https://www.facebook.com/MasjidAListighfar"
-    },
-    {
-      "Date": "31 Mar",
-      "Time": "12:45 PM",
-      "Mosque": "Haji Mohd Salleh (Geylang)",
-      "Title": "Tazkirah Sejenak Sebelum Zuhur",
-      "Speaker": "Ust Rohmani Arwani",
-      "Link": "https://www.facebook.com/hajimohdsallehmosque"
-    },
-    {
-      "Date": "31 Mar",
-      "Time": "1:00 PM /3:00 PM",
-      "Mosque": "Jamiyah Ar-Rabitah",
-      "Title": "#sayanginabikita - Tazkirah tentang Rasulullah ﷺ",
-      "Speaker": "Ustazah Nurul 'Izzah Khamsani",
-      "Link": "https://www.facebook.com/masjidjamiyah.arrabitah/"
-    },
-    {
-      "Date": "31 Mar",
-      "Time": "1:30 PM",
-      "Mosque": "Hang Jebat",
-      "Title": "Kuliah Zohor - Bimbingan Akhlak Muslim",
-      "Speaker": "Ust Muhassan Ariffin",
-      "Link": "https://www.facebook.com/hangjebatmosquesg/"
-    },
-    {
-      "Date": "31 Mar",
-      "Time": "1:45 PM",
-      "Mosque": "Hasanah",
-      "Title": "Berkatilah Kami di bulan Syaaban",
-      "Speaker": "Ust Syahid Salleh",
-      "Link": "https://www.facebook.com/masjidhasanahsg/"
-    },
-    {
-      "Date": "31 Mar",
-      "Time": "2:00 PM",
-      "Mosque": "Muhajirin",
-      "Title": "Perkongsian Hadith",
-      "Speaker": "Ust Syaaban Piperdy / Ust Asyraaf Ahmad",
-      "Link": "https://www.facebook.com/muhajirinsg"
-    },
-    {
-      "Date": "31 Mar",
-      "Time": "6:30 PM",
-      "Mosque": "Hasanah",
-      "Title": "Bacaan Al Quran Al Anbiya' 82 - 90",
-      "Speaker": "Hj Samsi ( Imam/Bilal)",
-      "Link": "https://www.facebook.com/masjidhasanahsg/"
-    },
-    {
-      "Date": "31 Mar",
-      "Time": "7:30 PM",
-      "Mosque": "Al-Firdaus",
-      "Title": "Amalan Dijamin ke Syurga - Minggu 3",
-      "Speaker": "Ust Ruknuddin Zainor",
-      "Link": "https://www.facebook.com/alfirdausmosque.sg/"
-    },
-    {
-      "Date": "31 Mar",
-      "Time": "7:30 PM",
-      "Mosque": "Mydin",
-      "Title": "Tasawuf - Siyarus Salikin (3)",
-      "Speaker": "Ust TM Fouzy",
-      "Link": "https://www.facebook.com/masjidmydin"
-    },
-    {
-      "Date": "31 Mar",
-      "Time": "7:45 PM",
-      "Mosque": "Al-Istighfar",
-      "Title": "Tazkirah Ringkas",
-      "Speaker": "Asatizah Dakwah",
-      "Link": "https://www.facebook.com/MasjidAListighfar"
-    },
-    {
-      "Date": "31 Mar",
-      "Time": "8:00 PM",
-      "Mosque": "Haji Mohd Salleh (Geylang)",
-      "Title": "Pengetahuan Islam (Akhlak & Fiqh)",
-      "Speaker": "Ust Rohmani Arwani",
-      "Link": "https://www.facebook.com/hajimohdsallehmosque"
-    },
-    {
-      "Date": "31 Mar",
-      "Time": "8:00 PM",
-      "Mosque": "Haji Mohd Salleh (Palmer Road)",
-      "Title": "Amalan Menjauhkan Dari Kesusahan Hidup",
-      "Speaker": "Ust Ahmad Haris",
-      "Link": "https://www.facebook.com/imosque.sg"
-    },
-    {
-      "Date": "31 Mar",
-      "Time": "8:00 PM",
-      "Mosque": "Kassim",
-      "Title": "Bicara Dakwah di Mana Jua Kita Berada",
-      "Speaker": "Asatizah Kuliah Harian Masjid Kassim",
-      "Link": "https://www.facebook.com/KassimMosque/"
-    },
-    {
-      "Date": "31 Mar",
-      "Time": "9:00 PM",
-      "Mosque": "Darussalam",
-      "Title": "(Tujuan Agama2: Pelihara Nyawa) Bahagian 2: Jaga Insan Yang Jaga Kita",
-      "Speaker": "Ust Luqmanul Hakim",
-      "Link": "https://www.facebook.com/DarussalamMosqueSG/"
-    },
-    {
-      "Date": "31 Mar",
-      "Time": "9:00 PM",
-      "Mosque": "Al-Mukminin",
-      "Title": "Kuliah Witir Online",
-      "Speaker": "MRO Masjid Al-Mukminin",
-      "Link": "https://www.facebook.com/almukmininmosque/"
-    },
-    {
-      "Date": " 1 Apr",
-      "Time": "6:30 AM",
-      "Mosque": "Al-Istighfar",
-      "Title": "Kuliah Subuh",
-      "Speaker": "Asatizah Dakwah / Pensyarah Kuliah Harian",
-      "Link": "https://www.facebook.com/MasjidAListighfar"
-    },
-    {
-      "Date": " 1 Apr",
-      "Time": "10:00 AM",
-      "Mosque": "Al-Amin",
-      "Title": "Fiqh Sirah Bahagian ke 3",
-      "Speaker": "Ust Md Hidayat Ismail",
-      "Link": "https://www.facebook.com/masjidalaminsg"
-    },
-    {
-      "Date": " 1 Apr",
-      "Time": "12:45 PM",
-      "Mosque": "Haji Mohd Salleh (Geylang)",
-      "Title": "Tazkirah Sejenak Sebelum Zuhur",
-      "Speaker": "Ust Rohmani Arwani",
-      "Link": "https://www.facebook.com/hajimohdsallehmosque"
-    },
-    {
-      "Date": " 1 Apr",
-      "Time": "1:30 PM",
-      "Mosque": "Hang Jebat",
-      "Title": "Kuliah Zohor - Bimbingan Akhlak Muslim",
-      "Speaker": "Ust Muhassan Ariffin",
-      "Link": "https://www.facebook.com/hangjebatmosquesg/"
-    },
-    {
-      "Date": " 1 Apr",
-      "Time": "1:45 PM",
-      "Mosque": "Hasanah",
-      "Title": "Memasjidkan Rumah",
-      "Speaker": "Ustazah Asiah Awang",
-      "Link": "https://www.facebook.com/masjidhasanahsg/"
-    },
-    {
-      "Date": " 1 Apr",
-      "Time": "2:00 PM",
-      "Mosque": "Muhajirin",
-      "Title": "Perkongsian Hadith",
-      "Speaker": "Ust Syaaban Piperdy / Ust Asyraaf Ahmad",
-      "Link": "https://www.facebook.com/muhajirinsg"
-    },
-    {
-      "Date": " 1 Apr",
-      "Time": "7:45 PM",
-      "Mosque": "Al-Istighfar",
-      "Title": "Tazkirah Ringkas",
-      "Speaker": "Asatizah Dakwah",
-      "Link": "https://www.facebook.com/MasjidAListighfar"
-    },
-    {
-      "Date": " 1 Apr",
-      "Time": "7:45 PM",
-      "Mosque": "Bencoolen",
-      "Title": "Seerah & Quran Tafsir Bayaan (Tamil)",
-      "Speaker": "AlHaj, AlHafiz, Al-Qari, Moulana Abdul Kauyoom Baaqavi",
-      "Link": "https://www.facebook.com/masjid.bencoolen/"
-    },
-    {
-      "Date": " 1 Apr",
-      "Time": "7:45 PM",
-      "Mosque": "Hasanah",
-      "Title": "Kebaikan & Keburukan Adalah Merupakan Ujian",
-      "Speaker": "Ust Badrussalam",
-      "Link": "https://www.facebook.com/masjidhasanahsg/"
-    },
-    {
-      "Date": " 1 Apr",
-      "Time": "8:00 PM",
-      "Mosque": "Haji Mohd Salleh (Geylang)",
-      "Title": "Q & A Anything on IG Live",
-      "Speaker": "Ust Abdussalam Muhamad Ekhsan",
-      "Link": "https://www.instagram.com/hajimohdsallehmosque"
-    },
-    {
-      "Date": " 1 Apr",
-      "Time": "8:00 PM",
-      "Mosque": "Jamiyah Ar-Rabitah",
-      "Title": "LIVE FB : Perkongsian dari Ust Muhd Nuzhan",
-      "Speaker": "Ust Muhd Nuzhan",
-      "Link": "https://www.facebook.com/masjidjamiyah.arrabitah/"
-    },
-    {
-      "Date": " 1 Apr",
-      "Time": "8:00 PM",
-      "Mosque": "Kassim",
-      "Title": "Bicara Dakwah di Mana Jua Kita Berada",
-      "Speaker": "Asatizah Kuliah Harian Masjid Kassim",
-      "Link": "https://www.facebook.com/KassimMosque/"
-    },
-    {
-      "Date": " 1 Apr",
-      "Time": "9:00 PM",
-      "Mosque": "Al-Mukminin",
-      "Title": "Kuliah Witir Online",
-      "Speaker": "MRO Masjid Al-Mukminin",
-      "Link": "https://www.facebook.com/almukmininmosque/"
-    },
-    {
-      "Date": " 1 Apr",
-      "Time": "9:00 PM",
-      "Mosque": "Darussalam",
-      "Title": "(Tujuan Agama3: Pelihara Harta) Borong Tak Ingat Orang Belakang",
-      "Speaker": "TBC",
-      "Link": "https://www.facebook.com/DarussalamMosqueSG/"
-    },
-    {
-      "Date": " 1 Apr",
-      "Time": "9:30 PM",
-      "Mosque": "Al-Amin",
-      "Title": "Kitab Al-Hikam Ibn Ataillah",
-      "Speaker": "Ust Md Kamsari Sanuh",
-      "Link": "https://www.facebook.com/masjidalaminsg"
-    },
-    {
-      "Date": " 2 Apr",
-      "Time": "6:30 AM",
-      "Mosque": "Al-Istighfar",
-      "Title": "Kuliah Subuh",
-      "Speaker": "Asatizah Dakwah / Pensyarah Kuliah Harian",
-      "Link": "https://www.facebook.com/MasjidAListighfar"
-    },
-    {
-      "Date": " 2 Apr",
-      "Time": "10:00 AM",
-      "Mosque": "Al-Amin",
-      "Title": "Kompass Umat Akhir Zaman - Qiraat Syu'bah",
-      "Speaker": "Ust Md Syafiee Md Hassan",
-      "Link": "https://www.facebook.com/masjidalaminsg"
-    },
-    {
-      "Date": " 2 Apr",
-      "Time": "11:00 AM",
-      "Mosque": "Kassim",
-      "Title": "Siri Bicara Solehah: Tahsin Juz 'Amma (Muslimah Only Private Session)",
-      "Speaker": "Ustazah 'Adawiyah Ahmad Din",
-      "Link": "https://www.facebook.com/KassimMosque/"
-    },
-    {
-      "Date": " 2 Apr",
-      "Time": "12:30 PM",
-      "Mosque": "Al-Amin",
-      "Title": "Kisah Para Nabi - Beriman Dengan Para Rasul",
-      "Speaker": "Ust Md Syafiee Md Hassan",
-      "Link": "https://www.facebook.com/masjidalaminsg"
-    },
-    {
-      "Date": " 2 Apr",
-      "Time": "12:45 PM",
-      "Mosque": "Haji Mohd Salleh (Geylang)",
-      "Title": "Tazkirah Sejenak Sebelum Zuhur",
-      "Speaker": "Ust Rohmani Arwani",
-      "Link": "https://www.facebook.com/hajimohdsallehmosque"
-    },
-    {
-      "Date": " 2 Apr",
-      "Time": "1:00 PM /3:00 PM",
-      "Mosque": "Jamiyah Ar-Rabitah",
-      "Title": "#santaisaja - Tazkirah Umum",
-      "Speaker": "Para Asatizah Kuliah Zuhur",
-      "Link": "https://www.facebook.com/masjidjamiyah.arrabitah/"
-    },
-    {
-      "Date": " 2 Apr",
-      "Time": "1:30 PM",
-      "Mosque": "Hang Jebat",
-      "Title": "Kuliah Zohor - Bimbingan Akhlak Muslim",
-      "Speaker": "Ust Muhassan Ariffin",
-      "Link": "https://www.facebook.com/hangjebatmosquesg/"
-    },
-    {
-      "Date": " 2 Apr",
-      "Time": "1:45 PM",
-      "Mosque": "Hasanah",
-      "Title": "Sampaikanlah Kami Bertemu Ramadan",
-      "Speaker": "Ust Syahid Salleh",
-      "Link": "https://www.facebook.com/masjidhasanahsg/"
-    },
-    {
-      "Date": " 2 Apr",
-      "Time": "2:00 PM",
-      "Mosque": "Muhajirin",
-      "Title": "Perkongsian Hadith",
-      "Speaker": "Ust Syaaban Piperdy / Ust Asyraaf Ahmad",
-      "Link": "https://www.facebook.com/muhajirinsg"
-    },
-    {
-      "Date": " 2 Apr",
-      "Time": "2:00 PM",
-      "Mosque": "Haji Mohd Salleh (Palmer Road)",
-      "Title": "Fiqh Puasa",
-      "Speaker": "Ust Abdul Hafiz",
-      "Link": "https://www.facebook.com/imosque.sg"
-    },
-    {
-      "Date": " 2 Apr",
-      "Time": "7:30 PM",
-      "Mosque": "Hang Jebat",
-      "Title": "Bacaan Ratib dan Tahlil",
-      "Speaker": "Ust Syed Ali Alkaff",
-      "Link": "https://www.facebook.com/hangjebatmosquesg/"
-    },
-    {
-      "Date": " 2 Apr",
-      "Time": "7:45 PM",
-      "Mosque": "Al-Istighfar",
-      "Title": "Tazkirah Ringkas",
-      "Speaker": "Asatizah Dakwah",
-      "Link": "https://www.facebook.com/MasjidAListighfar"
-    },
-    {
-      "Date": " 2 Apr",
-      "Time": "7:45 PM",
-      "Mosque": "Haji Mohd Salleh (Geylang)",
-      "Title": "Bacaan Yasin, Tahlil, Doa Selamat",
-      "Speaker": "Ustaz Rohmani Arwani",
-      "Link": "https://www.facebook.com/hajimohdsallehmosque"
-    },
-    {
-      "Date": " 2 Apr",
-      "Time": "7:45 PM",
-      "Mosque": "Hasanah",
-      "Title": "Live Streaming Yasin, Khatmul Quran & Tahlil",
-      "Speaker": "Ust Badrussalam",
-      "Link": "https://www.facebook.com/masjidhasanahsg/"
-    },
-    {
-      "Date": " 2 Apr",
-      "Time": "8:00 PM",
-      "Mosque": "Al-Amin",
-      "Title": "Tahlil Jamai'e",
-      "Speaker": "Ust Samsi MHD Salleh",
-      "Link": "https://www.facebook.com/masjidalaminsg"
-    },
-    {
-      "Date": " 2 Apr",
-      "Time": "8:00 PM",
-      "Mosque": "Kassim",
-      "Title": "Bicara Dakwah di Mana Jua Kita Berada",
-      "Speaker": "Asatizah Kuliah Harian Masjid Kassim",
-      "Link": "https://www.facebook.com/KassimMosque/"
-    },
-    {
-      "Date": " 2 Apr",
-      "Time": "8:00 PM",
-      "Mosque": "Muhajirin",
-      "Title": "Tahlil & Doa Selamat",
-      "Speaker": "Ust Syaaban / Ust Asyraaf",
-      "Link": "https://www.facebook.com/muhajirinsg"
-    },
-    {
-      "Date": " 2 Apr",
-      "Time": "8:30 PM",
-      "Mosque": "Al-Taqua",
-      "Title": "Selections from 40 Hadith of Imam An-Nawawi",
-      "Speaker": "Ust Najib ahmad",
-      "Link": "https://tinyurl.com/EssentialsOnline (registration required)"
-    },
-    {
-      "Date": " 2 Apr",
-      "Time": "9:00 PM",
-      "Mosque": "Al-Mukminin",
-      "Title": "Kuliah Witir Online",
-      "Speaker": "MRO Masjid Al-Mukminin",
-      "Link": "https://www.facebook.com/almukmininmosque/"
-    },
-    {
-      "Date": " 2 Apr",
-      "Time": "9:00 PM",
-      "Mosque": "Darussalam",
-      "Title": "Solat Anywhere",
-      "Speaker": "Ust Luqmanul Hakim",
-      "Link": "https://www.facebook.com/DarussalamMosqueSG/"
-    }
-  ]
+  {
+    "Date": "Tue, 31 Mar",
+    "Time": "6:30 AM",
+    "Mosque": "Al-Istighfar",
+    "Title": "Kuliah Subuh",
+    "Speaker": "Asatizah Dakwah / Pensyarah Kuliah Harian",
+    "Link": "https://www.facebook.com/MasjidAListighfar"
+  },
+  {
+    "Date": "Tue, 31 Mar\n*may be subject to change",
+    "Time": "From 10:00 AM",
+    "Mosque": "Maarof",
+    "Title": "Kuliah Dhuha - Fiqh Sirah",
+    "Speaker": "Ust Mohd Kamal Mokhtar",
+    "Link": "https://www.facebook.com/masjidmaarof/"
+  },
+  {
+    "Date": "Tue, 31 Mar",
+    "Time": "10:30 AM",
+    "Mosque": "Khalid",
+    "Title": "Kuliah Dhuha - Sofwatut Tafasir (Tafsir) [Malay]",
+    "Speaker": "Ust Anwar Hussain",
+    "Link": "https://www.facebook.com/masjidkhalidsg"
+  },
+  {
+    "Date": "Tue, 31 Mar",
+    "Time": "11:30 AM",
+    "Mosque": "Kampung Siglap",
+    "Title": "Hadith Sahih Bukhari",
+    "Speaker": "Ust Hafiizh Rapiee",
+    "Link": "https://www.facebook.com/MasjidKampungSiglap/"
+  },
+  {
+    "Date": "Tue, 31 Mar",
+    "Time": "12:45 PM",
+    "Mosque": "Haji Mohd Salleh (Geylang)",
+    "Title": "Tazkirah Sejenak Sebelum Zuhur",
+    "Speaker": "Ust Rohmani Arwani",
+    "Link": "https://www.facebook.com/hajimohdsallehmosque"
+  },
+  {
+    "Date": "Tue, 31 Mar",
+    "Time": "1:00 PM /3:00 PM",
+    "Mosque": "Jamiyah Ar-Rabitah",
+    "Title": "#sayanginabikita - Tazkirah tentang Rasulullah ﷺ",
+    "Speaker": "Ustazah Nurul 'Izzah Khamsani",
+    "Link": "https://www.facebook.com/masjidjamiyah.arrabitah/"
+  },
+  {
+    "Date": "Tue, 31 Mar",
+    "Time": "1:30 PM",
+    "Mosque": "Hang Jebat",
+    "Title": "Kuliah Zohor - Bimbingan Akhlak Muslim",
+    "Speaker": "Ust Muhassan Ariffin",
+    "Link": "https://www.facebook.com/hangjebatmosquesg/"
+  },
+  {
+    "Date": "Tue, 31 Mar",
+    "Time": "1:45 PM",
+    "Mosque": "Al-Falah",
+    "Title": "Kuliah Zohor : Kitab Mazhab Syafie (Al Fiqh Al-Manhaji)",
+    "Speaker": "Ust Khairani Basiran",
+    "Link": "https://www.facebook.com/pg/Alfalah/videos"
+  },
+  {
+    "Date": "Tue, 31 Mar",
+    "Time": "1:45 PM",
+    "Mosque": "Hasanah",
+    "Title": "Berkatilah Kami di bulan Syaaban",
+    "Speaker": "Ust Syahid Salleh",
+    "Link": "https://www.facebook.com/masjidhasanahsg/"
+  },
+  {
+    "Date": "Tue, 31 Mar",
+    "Time": "2:00 PM",
+    "Mosque": "Muhajirin",
+    "Title": "Perkongsian Hadith",
+    "Speaker": "Ust Syaaban Piperdy / Ust Asyraaf Ahmad",
+    "Link": "https://www.facebook.com/muhajirinsg"
+  },
+  {
+    "Date": "Tue, 31 Mar",
+    "Time": "6:15 PM",
+    "Mosque": "Wak Tanjong",
+    "Title": "Hadrah Basaudan",
+    "Speaker": "Ust Md Mukhtar Habib Mohamed",
+    "Link": "https://www.facebook.com/nurulasror.mwt/videos"
+  },
+  {
+    "Date": "Tue, 31 Mar",
+    "Time": "6:30 PM",
+    "Mosque": "Hasanah",
+    "Title": "Bacaan Al Quran Al Anbiya' 82 - 90",
+    "Speaker": "Hj Samsi ( Imam/Bilal)",
+    "Link": "https://www.facebook.com/masjidhasanahsg/"
+  },
+  {
+    "Date": "Tue, 31 Mar",
+    "Time": "7:30 PM",
+    "Mosque": "Al-Firdaus",
+    "Title": "Amalan Dijamin ke Syurga - Minggu 3",
+    "Speaker": "Ust Ruknuddin Zainor",
+    "Link": "https://www.facebook.com/alfirdausmosque.sg/"
+  },
+  {
+    "Date": "Tue, 31 Mar",
+    "Time": "7:30 PM",
+    "Mosque": "Kampung Siglap",
+    "Title": "Cinta Sunnah, Cinta Sirah",
+    "Speaker": "Ust Jazair Jummat",
+    "Link": "https://www.facebook.com/MasjidKampungSiglap/"
+  },
+  {
+    "Date": "Tue, 31 Mar",
+    "Time": "7:30 PM",
+    "Mosque": "Mydin",
+    "Title": "Tasawuf - Siyarus Salikin (3)",
+    "Speaker": "Ust TM Fouzy",
+    "Link": "https://www.facebook.com/masjidmydin"
+  },
+  {
+    "Date": "Tue, 31 Mar",
+    "Time": "7:45 PM",
+    "Mosque": "Al-Istighfar",
+    "Title": "Tazkirah Ringkas",
+    "Speaker": "Asatizah Dakwah",
+    "Link": "https://www.facebook.com/MasjidAListighfar"
+  },
+  {
+    "Date": "Tue, 31 Mar",
+    "Time": "8:00 PM",
+    "Mosque": "Haji Mohd Salleh (Geylang)",
+    "Title": "Pengetahuan Islam (Akhlak & Fiqh)",
+    "Speaker": "Ust Rohmani Arwani",
+    "Link": "https://www.facebook.com/hajimohdsallehmosque"
+  },
+  {
+    "Date": "Tue, 31 Mar",
+    "Time": "8:00 PM",
+    "Mosque": "Haji Mohd Salleh (Palmer Road)",
+    "Title": "Amalan Menjauhkan Dari Kesusahan Hidup",
+    "Speaker": "Ust Ahmad Haris",
+    "Link": "https://www.facebook.com/imosque.sg"
+  },
+  {
+    "Date": "Tue, 31 Mar",
+    "Time": "8:00 PM",
+    "Mosque": "Kassim",
+    "Title": "Bicara Dakwah di Mana Jua Kita Berada",
+    "Speaker": "Asatizah Kuliah Harian Masjid Kassim",
+    "Link": "https://www.facebook.com/KassimMosque/"
+  },
+  {
+    "Date": "Tue, 31 Mar",
+    "Time": "8:00 PM",
+    "Mosque": "Khalid",
+    "Title": "Bahasa Arab - Al-Muhawwarah [Malay]",
+    "Speaker": "Ust Syed Hassan",
+    "Link": "https://www.facebook.com/masjidkhalidsg"
+  },
+  {
+    "Date": "Tue, 31 Mar\n*may be subject to change",
+    "Time": "9:00 PM",
+    "Mosque": "Al-Islah",
+    "Title": "Kompas Ummat Akhir Zaman",
+    "Speaker": "Ust Asyallehen Ali",
+    "Link": "https://www.facebook.com/alislahmosque/"
+  },
+  {
+    "Date": "Tue, 31 Mar",
+    "Time": "9:00 PM",
+    "Mosque": "Darussalam",
+    "Title": "(Tujuan Agama2: Pelihara Nyawa) Bahagian 2: Jaga Insan Yang Jaga Kita",
+    "Speaker": "Ust Luqmanul Hakim",
+    "Link": "https://www.facebook.com/DarussalamMosqueSG/"
+  },
+  {
+    "Date": "Tue, 31 Mar",
+    "Time": "9:00 PM",
+    "Mosque": "En-Naeem",
+    "Title": "Kuliah Lockdown",
+    "Speaker": "Various asatizah",
+    "Link": "www.facebook.com/ennaeem.sg"
+  },
+  {
+    "Date": "Tue, 31 Mar",
+    "Time": "9:00 PM",
+    "Mosque": "Al-Mukminin",
+    "Title": "Kuliah Witir Online",
+    "Speaker": "MRO Masjid Al-Mukminin",
+    "Link": "https://www.facebook.com/almukmininmosque/"
+  },
+  {
+    "Date": "Wed, 1 Apr",
+    "Time": "6:30 AM",
+    "Mosque": "Al-Istighfar",
+    "Title": "Kuliah Subuh",
+    "Speaker": "Asatizah Dakwah / Pensyarah Kuliah Harian",
+    "Link": "https://www.facebook.com/MasjidAListighfar"
+  },
+  {
+    "Date": "Wed, 1 Apr",
+    "Time": "10:00 AM",
+    "Mosque": "Al-Istighfar",
+    "Title": "Salam Dhuha",
+    "Speaker": "The Talking Dome",
+    "Link": "https://www.facebook.com/MasjidAListighfar"
+  },
+  {
+    "Date": "Wed, 1 Apr",
+    "Time": "10:00 AM",
+    "Mosque": "Al-Amin",
+    "Title": "Fiqh Sirah Bahagian ke 3",
+    "Speaker": "Ust Md Hidayat Ismail",
+    "Link": "https://www.facebook.com/masjidalaminsg"
+  },
+  {
+    "Date": "Wed, 1 Apr\n*may be subject to change",
+    "Time": "From 10:00 AM",
+    "Mosque": "Maarof",
+    "Title": "Kuliah Dhuha - Penghayatan Solat",
+    "Speaker": "Ust Pasuni Maulan",
+    "Link": "https://www.facebook.com/masjidmaarof/"
+  },
+  {
+    "Date": "Wed, 1 Apr",
+    "Time": "10:30 AM",
+    "Mosque": "Khalid",
+    "Title": "Kuliah Dhuha - Muqoddimah Al-Hadhramiyah (Fiqh) \n & Risalah Qusyairiyah (Tassawuf) [Malay]",
+    "Speaker": "Ust Anwar Hussain",
+    "Link": "https://www.facebook.com/masjidkhalidsg"
+  },
+  {
+    "Date": "Wed, 1 Apr",
+    "Time": "12:45 PM",
+    "Mosque": "Haji Mohd Salleh (Geylang)",
+    "Title": "Tazkirah Sejenak Sebelum Zuhur",
+    "Speaker": "Ust Rohmani Arwani",
+    "Link": "https://www.facebook.com/hajimohdsallehmosque"
+  },
+  {
+    "Date": "Wed, 1 Apr",
+    "Time": "1:30 PM",
+    "Mosque": "Hang Jebat",
+    "Title": "Kuliah Zohor - Bimbingan Akhlak Muslim",
+    "Speaker": "Ust Muhassan Ariffin",
+    "Link": "https://www.facebook.com/hangjebatmosquesg/"
+  },
+  {
+    "Date": "Wed, 1 Apr",
+    "Time": "1:45 PM",
+    "Mosque": "Al-Falah",
+    "Title": "Kuliah Zohor: Hadith (Bulughul Maram)",
+    "Speaker": "Ust Mohammed Nazim Rahumma Dolla",
+    "Link": "https://www.facebook.com/pg/Alfalah/videos"
+  },
+  {
+    "Date": "Wed, 1 Apr",
+    "Time": "1:45 PM",
+    "Mosque": "An-Nur",
+    "Title": "Kuliah Express An-Nur",
+    "Speaker": "Ust Jalaluddin Hassan",
+    "Link": "https://www.facebook.com/masjid.annur.sg"
+  },
+  {
+    "Date": "Wed, 1 Apr",
+    "Time": "1:45 PM",
+    "Mosque": "Hasanah",
+    "Title": "Memasjidkan Rumah",
+    "Speaker": "Ustazah Asiah Awang",
+    "Link": "https://www.facebook.com/masjidhasanahsg/"
+  },
+  {
+    "Date": "Wed, 1 Apr",
+    "Time": "2:00 PM",
+    "Mosque": "Muhajirin",
+    "Title": "Perkongsian Hadith",
+    "Speaker": "Ust Syaaban Piperdy / Ust Asyraaf Ahmad",
+    "Link": "https://www.facebook.com/muhajirinsg"
+  },
+  {
+    "Date": "Wed, 1 Apr",
+    "Time": "7:45 PM",
+    "Mosque": "Al-Istighfar",
+    "Title": "Tazkirah Ringkas",
+    "Speaker": "Asatizah Dakwah",
+    "Link": "https://www.facebook.com/MasjidAListighfar"
+  },
+  {
+    "Date": "Wed, 1 Apr",
+    "Time": "7:45 PM",
+    "Mosque": "Bencoolen",
+    "Title": "Seerah & Quran Tafsir Bayaan [Tamil]",
+    "Speaker": "AlHaj, AlHafiz, Al-Qari, Moulana Abdul Kauyoom Baaqavi",
+    "Link": "https://www.facebook.com/masjid.bencoolen/"
+  },
+  {
+    "Date": "Wed, 1 Apr",
+    "Time": "7:45 PM",
+    "Mosque": "Hasanah",
+    "Title": "Kebaikan & Keburukan Adalah Merupakan Ujian",
+    "Speaker": "Ust Badrussalam",
+    "Link": "https://www.facebook.com/masjidhasanahsg/"
+  },
+  {
+    "Date": "Wed, 1 Apr",
+    "Time": "8:00 PM",
+    "Mosque": "An-Nur",
+    "Title": "Kuliah Express An-Nur",
+    "Speaker": "Ust Jalaluddin Hassan",
+    "Link": "https://www.facebook.com/masjid.annur.sg"
+  },
+  {
+    "Date": "Wed, 1 Apr",
+    "Time": "8:00 PM",
+    "Mosque": "Haji Mohd Salleh (Geylang)",
+    "Title": "Q & A Anything on IG Live",
+    "Speaker": "Ust Abdussalam Muhamad Ekhsan",
+    "Link": "https://www.instagram.com/hajimohdsallehmosque"
+  },
+  {
+    "Date": "Wed, 1 Apr",
+    "Time": "8:00 PM",
+    "Mosque": "Jamiyah Ar-Rabitah",
+    "Title": "LIVE FB : Perkongsian dari Ust Muhd Nuzhan",
+    "Speaker": "Ust Muhd Nuzhan",
+    "Link": "https://www.facebook.com/masjidjamiyah.arrabitah/"
+  },
+  {
+    "Date": "Wed, 1 Apr",
+    "Time": "8:00 PM",
+    "Mosque": "Kassim",
+    "Title": "Bicara Dakwah di Mana Jua Kita Berada",
+    "Speaker": "Asatizah Kuliah Harian Masjid Kassim",
+    "Link": "https://www.facebook.com/KassimMosque/"
+  },
+  {
+    "Date": "Wed, 1 Apr",
+    "Time": "8:00 PM",
+    "Mosque": "Khalid",
+    "Title": "Kuliah Maghrib - Tarikh Khulafa' (Seerah) [Malay]",
+    "Speaker": "Ust Hasan Saifouridzal",
+    "Link": "https://www.facebook.com/masjidkhalidsg"
+  },
+  {
+    "Date": "Wed, 1 Apr",
+    "Time": "8:00 PM",
+    "Mosque": "Wak Tanjong",
+    "Title": "The Three Treatises [English]",
+    "Speaker": "Ust Md Mukhtar Habib Mohamed",
+    "Link": "https://www.facebook.com/nurulasror.mwt/videos"
+  },
+  {
+    "Date": "Wed, 1 Apr\n*may be subject to change",
+    "Time": "9:00 PM",
+    "Mosque": "Al-Islah",
+    "Title": "Riyadus Solihin",
+    "Speaker": "Ust Taufiq Ismail",
+    "Link": "https://www.facebook.com/alislahmosque/"
+  },
+  {
+    "Date": "Wed, 1 Apr",
+    "Time": "9:00 PM",
+    "Mosque": "Al-Mukminin",
+    "Title": "Kuliah Witir Online",
+    "Speaker": "MRO Masjid Al-Mukminin",
+    "Link": "https://www.facebook.com/almukmininmosque/"
+  },
+  {
+    "Date": "Wed, 1 Apr",
+    "Time": "9:00 PM",
+    "Mosque": "Darussalam",
+    "Title": "(Tujuan Agama3: Pelihara Harta) Borong Tak Ingat Orang Belakang",
+    "Speaker": "TBC",
+    "Link": "https://www.facebook.com/DarussalamMosqueSG/"
+  },
+  {
+    "Date": "Wed, 1 Apr",
+    "Time": "9:00 PM",
+    "Mosque": "En-Naeem",
+    "Title": "Kuliah Lockdown",
+    "Speaker": "Various asatizah",
+    "Link": "www.facebook.com/ennaeem.sg"
+  },
+  {
+    "Date": "Wed, 1 Apr",
+    "Time": "9:30 PM",
+    "Mosque": "Al-Amin",
+    "Title": "Kitab Al-Hikam Ibn Ataillah",
+    "Speaker": "Ust Md Kamsari Sanuh",
+    "Link": "https://www.facebook.com/masjidalaminsg"
+  },
+  {
+    "Date": "Thu, 2 Apr",
+    "Time": "6:30 AM",
+    "Mosque": "Al-Istighfar",
+    "Title": "Kuliah Subuh",
+    "Speaker": "Asatizah Dakwah / Pensyarah Kuliah Harian",
+    "Link": "https://www.facebook.com/MasjidAListighfar"
+  },
+  {
+    "Date": "Thu, 2 Apr",
+    "Time": "10:00 AM",
+    "Mosque": "Al-Amin",
+    "Title": "Kompass Umat Akhir Zaman - Qiraat Syu'bah",
+    "Speaker": "Ust Md Syafiee Md Hassan",
+    "Link": "https://www.facebook.com/masjidalaminsg"
+  },
+  {
+    "Date": "Thu, 2 Apr",
+    "Time": "11:00 AM",
+    "Mosque": "Kassim",
+    "Title": "Siri Bicara Solehah: Tahsin Juz 'Amma (Muslimah Only Private Session)",
+    "Speaker": "Ustazah 'Adawiyah Ahmad Din",
+    "Link": "https://www.facebook.com/KassimMosque/"
+  },
+  {
+    "Date": "Thu, 2 Apr\n*may be subject to change",
+    "Time": "From 11:30 AM",
+    "Mosque": "Maarof",
+    "Title": "Kuliah Dhuha - Pelita Al-Quran: Tafsir Juz 30",
+    "Speaker": "Ust Md Hafiizh Rapi'ee",
+    "Link": "https://www.facebook.com/masjidmaarof/"
+  },
+  {
+    "Date": "Thu, 2 Apr",
+    "Time": "12:30 PM",
+    "Mosque": "Al-Amin",
+    "Title": "Kisah Para Nabi - Beriman Dengan Para Rasul",
+    "Speaker": "Ust Md Syafiee Md Hassan",
+    "Link": "https://www.facebook.com/masjidalaminsg"
+  },
+  {
+    "Date": "Thu, 2 Apr",
+    "Time": "12:45 PM",
+    "Mosque": "Haji Mohd Salleh (Geylang)",
+    "Title": "Tazkirah Sejenak Sebelum Zuhur",
+    "Speaker": "Ust Rohmani Arwani",
+    "Link": "https://www.facebook.com/hajimohdsallehmosque"
+  },
+  {
+    "Date": "Thu, 2 Apr",
+    "Time": "1:00 PM /3:00 PM",
+    "Mosque": "Jamiyah Ar-Rabitah",
+    "Title": "#santaisaja - Tazkirah Umum",
+    "Speaker": "Para Asatizah Kuliah Zuhur",
+    "Link": "https://www.facebook.com/masjidjamiyah.arrabitah/"
+  },
+  {
+    "Date": "Thu, 2 Apr",
+    "Time": "1:30 PM",
+    "Mosque": "Hang Jebat",
+    "Title": "Kuliah Zohor - Bimbingan Akhlak Muslim",
+    "Speaker": "Ust Muhassan Ariffin",
+    "Link": "https://www.facebook.com/hangjebatmosquesg/"
+  },
+  {
+    "Date": "Thu, 2 Apr",
+    "Time": "1:45 PM",
+    "Mosque": "Al-Falah",
+    "Title": "Kuliah Zohor : Fiqh Al-Sirah",
+    "Speaker": "Ust Hidayat Ismail",
+    "Link": "https://www.facebook.com/pg/Alfalah/videos"
+  },
+  {
+    "Date": "Thu, 2 Apr",
+    "Time": "1:45 PM",
+    "Mosque": "An-Nur",
+    "Title": "Kultum Online",
+    "Speaker": "Ust Md Umaruddin Zainuddin",
+    "Link": "https://www.facebook.com/masjid.annur.sg"
+  },
+  {
+    "Date": "Thu, 2 Apr",
+    "Time": "1:45 PM",
+    "Mosque": "Hasanah",
+    "Title": "Sampaikanlah Kami Bertemu Ramadan",
+    "Speaker": "Ust Syahid Salleh",
+    "Link": "https://www.facebook.com/masjidhasanahsg/"
+  },
+  {
+    "Date": "Thu, 2 Apr",
+    "Time": "2:00 PM",
+    "Mosque": "Muhajirin",
+    "Title": "Perkongsian Hadith",
+    "Speaker": "Ust Syaaban Piperdy / Ust Asyraaf Ahmad",
+    "Link": "https://www.facebook.com/muhajirinsg"
+  },
+  {
+    "Date": "Thu, 2 Apr",
+    "Time": "2:00 PM",
+    "Mosque": "Haji Mohd Salleh (Palmer Road)",
+    "Title": "Fiqh Puasa",
+    "Speaker": "Ust Abdul Hafiz",
+    "Link": "https://www.facebook.com/imosque.sg"
+  },
+  {
+    "Date": "Thu, 2 Apr",
+    "Time": "7:30 PM",
+    "Mosque": "Hang Jebat",
+    "Title": "Bacaan Ratib dan Tahlil",
+    "Speaker": "Ust Syed Ali Alkaff",
+    "Link": "https://www.facebook.com/hangjebatmosquesg/"
+  },
+  {
+    "Date": "Thu, 2 Apr",
+    "Time": "7:30 PM",
+    "Mosque": "Khalid",
+    "Title": "Fiqh Series - Adab Suluk Al-Murid\n& Muqoddimah Al-Hadhramiyah (Fiqh) [English]",
+    "Speaker": "Ust Anwar Hussain",
+    "Link": "https://www.facebook.com/masjidkhalidsg"
+  },
+  {
+    "Date": "Thu, 2 Apr",
+    "Time": "7:45 PM",
+    "Mosque": "Al-Falah",
+    "Title": "Bacaan Surah Yasin dan Tahlil",
+    "Speaker": "Ust Ismail Hashim",
+    "Link": "https://www.facebook.com/pg/Alfalah/videos"
+  },
+  {
+    "Date": "Thu, 2 Apr",
+    "Time": "7:45 PM",
+    "Mosque": "Al-Istighfar",
+    "Title": "Tazkirah Ringkas",
+    "Speaker": "Asatizah Dakwah",
+    "Link": "https://www.facebook.com/MasjidAListighfar"
+  },
+  {
+    "Date": "Thu, 2 Apr",
+    "Time": "7:45 PM",
+    "Mosque": "Haji Mohd Salleh (Geylang)",
+    "Title": "Bacaan Yasin, Tahlil, Doa Selamat",
+    "Speaker": "Ust Rohmani Arwani",
+    "Link": "https://www.facebook.com/hajimohdsallehmosque"
+  },
+  {
+    "Date": "Thu, 2 Apr",
+    "Time": "7:45 PM",
+    "Mosque": "Hasanah",
+    "Title": "Live Streaming Yasin, Khatmul Quran & Tahlil",
+    "Speaker": "Ust Badrussalam",
+    "Link": "https://www.facebook.com/masjidhasanahsg/"
+  },
+  {
+    "Date": "Thu, 2 Apr",
+    "Time": "8:00 PM",
+    "Mosque": "Al-Amin",
+    "Title": "Tahlil Jamai'e",
+    "Speaker": "Ust Samsi MHD Salleh",
+    "Link": "https://www.facebook.com/masjidalaminsg"
+  },
+  {
+    "Date": "Thu, 2 Apr",
+    "Time": "8:00 PM",
+    "Mosque": "Kassim",
+    "Title": "Bicara Dakwah di Mana Jua Kita Berada",
+    "Speaker": "Asatizah Kuliah Harian Masjid Kassim",
+    "Link": "https://www.facebook.com/KassimMosque/"
+  },
+  {
+    "Date": "Thu, 2 Apr",
+    "Time": "8:00 PM",
+    "Mosque": "Muhajirin",
+    "Title": "Tahlil & Doa Selamat",
+    "Speaker": "Ust Syaaban / Ust Asyraaf",
+    "Link": "https://www.facebook.com/muhajirinsg"
+  },
+  {
+    "Date": "Thu, 2 Apr",
+    "Time": "8:30 PM",
+    "Mosque": "Al-Taqua",
+    "Title": "Selections from 40 Hadith of Imam An-Nawawi",
+    "Speaker": "Ust Najib ahmad",
+    "Link": "https://tinyurl.com/EssentialsOnline (registration required)"
+  },
+  {
+    "Date": "Thu, 2 Apr\n*may be subject to change",
+    "Time": "9:00 PM",
+    "Mosque": "Al-Islah",
+    "Title": "Mau'izah Surah Al-Kahfi",
+    "Speaker": "Ust Atiq Hashim",
+    "Link": "https://www.facebook.com/alislahmosque/"
+  },
+  {
+    "Date": "Thu, 2 Apr",
+    "Time": "9:00 PM",
+    "Mosque": "Al-Istighfar",
+    "Title": "Kitab Al-Hikam",
+    "Speaker": "Ust TM Fouzy",
+    "Link": "https://www.facebook.com/MasjidAListighfar"
+  },
+  {
+    "Date": "Thu, 2 Apr",
+    "Time": "9:00 PM",
+    "Mosque": "Al-Mukminin",
+    "Title": "Kuliah Witir Online",
+    "Speaker": "MRO Masjid Al-Mukminin",
+    "Link": "https://www.facebook.com/almukmininmosque/"
+  },
+  {
+    "Date": "Thu, 2 Apr",
+    "Time": "9:00 PM",
+    "Mosque": "Darussalam",
+    "Title": "Solat Anywhere",
+    "Speaker": "Ust Luqmanul Hakim",
+    "Link": "https://www.facebook.com/DarussalamMosqueSG/"
+  },
+  {
+    "Date": "Thu, 2 Apr",
+    "Time": "9:00 PM",
+    "Mosque": "En-Naeem",
+    "Title": "Kuliah Lockdown",
+    "Speaker": "Various asatizah",
+    "Link": "www.facebook.com/ennaeem.sg"
+  },
+  {
+    "Date": "Fri, 3 Apr",
+    "Time": "6:30 AM",
+    "Mosque": "Al-Istighfar",
+    "Title": "Kuliah Subuh",
+    "Speaker": "Asatizah Dakwah / Pensyarah Kuliah Harian",
+    "Link": "https://www.facebook.com/MasjidAListighfar"
+  },
+  {
+    "Date": "Fri, 3 Apr",
+    "Time": "11:00 AM",
+    "Mosque": "Kassim",
+    "Title": "Siri Bicara Solehah: Al-Bidayah Wal Nihayah",
+    "Speaker": "Ustazah Dr Sakinah Saptu",
+    "Link": "https://www.facebook.com/KassimMosque/"
+  },
+  {
+    "Date": "Fri, 3 Apr",
+    "Time": "12:00 PM",
+    "Mosque": "Mydin",
+    "Title": "Bacaan Surah Al-Kahfi",
+    "Speaker": "Ust Muhammad Mustaffa",
+    "Link": "https://www.facebook.com/masjidmydin"
+  },
+  {
+    "Date": "Fri, 3 Apr",
+    "Time": "12.30 PM",
+    "Mosque": "Al-Amin",
+    "Title": "Raikan Jumaat (Isu Praktikal & Semasa)",
+    "Speaker": "Ust Md Syafiee Md Hassan",
+    "Link": "https://www.facebook.com/masjidalaminsg"
+  },
+  {
+    "Date": "Fri, 3 Apr",
+    "Time": "12:45 PM",
+    "Mosque": "Haji Mohd Salleh (Geylang)",
+    "Title": "Tazkirah Sejenak Sebelum Zuhur",
+    "Speaker": "Ust Rohmani Arwani",
+    "Link": "https://www.facebook.com/hajimohdsallehmosque"
+  },
+  {
+    "Date": "Fri, 3 Apr",
+    "Time": "1:00 PM",
+    "Mosque": "An-Nur",
+    "Title": "Nota Jumaat",
+    "Speaker": "Ust Firda & Ust Lutfi",
+    "Link": "https://www.facebook.com/masjid.annur.sg"
+  },
+  {
+    "Date": "Fri, 3 Apr",
+    "Time": "1:00 PM",
+    "Mosque": "Kampung Siglap",
+    "Title": "Virtues and Lessons from Al-Kahf",
+    "Speaker": "Ust Abdullah Hoosen",
+    "Link": "https://www.facebook.com/MasjidKampungSiglap/"
+  },
+  {
+    "Date": "Fri, 3 Apr",
+    "Time": "1:15 PM",
+    "Mosque": "Mujahidin",
+    "Title": "Rasa Syukur Kepada Allah",
+    "Speaker": "Ust Sofyan Yadi",
+    "Link": "https://www.facebook.com/mujahidinmosque\nhttps://www.youtube.com/channel/UCxe2E_nTOikXpK17PKiKWAA"
+  },
+  {
+    "Date": "Fri, 3 Apr",
+    "Time": "1:30 PM",
+    "Mosque": "Hasanah",
+    "Title": "Ringkasan Khutbah Jumaat",
+    "Speaker": "Ust Syahid Salleh",
+    "Link": "https://www.facebook.com/masjidhasanahsg/"
+  },
+  {
+    "Date": "Fri, 3 Apr",
+    "Time": "6:30 PM",
+    "Mosque": "Hasanah",
+    "Title": "Bacaan Al Quran Al Anbiya' 91- 101",
+    "Speaker": "Hj Samsi (Imam/Bilal)",
+    "Link": "https://www.facebook.com/masjidhasanahsg/"
+  },
+  {
+    "Date": "Fri, 3 Apr",
+    "Time": "7:30 PM",
+    "Mosque": "Kampung Siglap",
+    "Title": "Fikih Ehwal Semasa",
+    "Speaker": "Ust Md Syafiee Hassan",
+    "Link": "https://www.facebook.com/MasjidKampungSiglap/"
+  },
+  {
+    "Date": "Fri, 3 Apr",
+    "Time": "7:30 PM",
+    "Mosque": "Mydin",
+    "Title": "Bacaan Ratib Al-Attas",
+    "Speaker": "Ust Muhammad Mustaffa",
+    "Link": "https://www.facebook.com/masjidmydin"
+  },
+  {
+    "Date": "Fri, 3 Apr",
+    "Time": "7:45 PM",
+    "Mosque": "Al-Istighfar",
+    "Title": "Tazkirah Ringkas",
+    "Speaker": "Asatizah Dakwah",
+    "Link": "https://www.facebook.com/MasjidAListighfar"
+  },
+  {
+    "Date": "Fri, 3 Apr",
+    "Time": "8:00 PM",
+    "Mosque": "Kassim",
+    "Title": "Bicara Dakwah di Mana Jua Kita Berada",
+    "Speaker": "Asatizah Kuliah Harian Masjid Kassim",
+    "Link": "https://www.facebook.com/KassimMosque/"
+  },
+  {
+    "Date": "Fri, 3 Apr",
+    "Time": "9:00 PM",
+    "Mosque": "Al-Islah",
+    "Title": "Tafsir Masyarakat",
+    "Speaker": "Ust Kamaruzaman Afandi",
+    "Link": "https://www.facebook.com/alislahmosque/"
+  },
+  {
+    "Date": "Fri, 3 Apr",
+    "Time": "9:00 PM",
+    "Mosque": "Al-Mukminin",
+    "Title": "Kuliah Witir Online",
+    "Speaker": "MRO Masjid Al-Mukminin",
+    "Link": "https://www.facebook.com/almukmininmosque/"
+  },
+  {
+    "Date": "Fri, 3 Apr",
+    "Time": "9:00 PM",
+    "Mosque": "En-Naeem",
+    "Title": "Kuliah Lockdown",
+    "Speaker": "Various asatizah",
+    "Link": "www.facebook.com/ennaeem.sg"
+  },
+  {
+    "Date": "Sat, 4 Apr",
+    "Time": "After Subuh",
+    "Mosque": "Yusof Ishak",
+    "Title": "Kuliah Subuh",
+    "Speaker": "Ust Dr Mohamed Fatris Bakaram",
+    "Link": "https://www.facebook.com/masjidyusofishak"
+  },
+  {
+    "Date": "Sat, 4 Apr",
+    "Time": "6:30 AM",
+    "Mosque": "Al-Istighfar",
+    "Title": "Kuliah Subuh",
+    "Speaker": "Asatizah Dakwah / Pensyarah Kuliah Harian",
+    "Link": "https://www.facebook.com/MasjidAListighfar"
+  },
+  {
+    "Date": "Sat, 4 Apr",
+    "Time": "6:30 AM",
+    "Mosque": "Muhajirin",
+    "Title": "Bimbingan Mukmin",
+    "Speaker": "Ust Mohd Nor Mustaqim Abdullah",
+    "Link": "https://www.facebook.com/muhajirinsg"
+  },
+  {
+    "Date": "Sat, 4 Apr",
+    "Time": "9:00 AM",
+    "Mosque": "Al-Ansar",
+    "Title": "Kuliah Dhuha",
+    "Speaker": "Ust Dr Mohamed Fatris Bakaram",
+    "Link": "https://www.facebook.com/alansar.sg/"
+  },
+  {
+    "Date": "Sat, 4 Apr\n*may be subject to change",
+    "Time": "10:00 AM",
+    "Mosque": "Al-Islah",
+    "Title": "Fiqh Wanita",
+    "Speaker": "Ustazah Shameem",
+    "Link": "https://www.facebook.com/alislahmosque/"
+  },
+  {
+    "Date": "Sat, 4 Apr\n*may be subject to change",
+    "Time": "From 10:00 AM",
+    "Mosque": "Maarof",
+    "Title": "Kuliah Dhuha - Fiqh Kontemporari: Halal dan Haram",
+    "Speaker": "Ust Md Salam Nasip",
+    "Link": "https://www.facebook.com/masjidmaarof/"
+  },
+  {
+    "Date": "Sat, 4 Apr",
+    "Time": "1:45 PM",
+    "Mosque": "Hasanah",
+    "Title": "Ihfadzillaaah Yahfadzka",
+    "Speaker": "Ustazah Rima Khan",
+    "Link": "https://www.facebook.com/masjidhasanahsg/"
+  },
+  {
+    "Date": "Sat, 4 Apr",
+    "Time": "3:00 PM",
+    "Mosque": "Wak Tanjong",
+    "Title": "Imam Ghazali's Forty Principles of the Religion [English]",
+    "Speaker": "Ust Mukhtar Habib Mohamed",
+    "Link": "https://www.facebook.com/nurulasror.mwt/videos"
+  },
+  {
+    "Date": "Sat, 4 Apr",
+    "Time": "7:45 PM",
+    "Mosque": "Al-Istighfar",
+    "Title": "Tazkirah Ringkas",
+    "Speaker": "Asatizah Dakwah",
+    "Link": "https://www.facebook.com/MasjidAListighfar"
+  },
+  {
+    "Date": "Sat, 4 Apr",
+    "Time": "7:45 PM",
+    "Mosque": "Hasanah",
+    "Title": "Ni’mat Manisnya Iman",
+    "Speaker": "Ust Badrussalam",
+    "Link": "https://www.facebook.com/masjidhasanahsg/"
+  },
+  {
+    "Date": "Sat, 4 Apr",
+    "Time": "8:00 PM",
+    "Mosque": "An-Nur",
+    "Title": "Ceramah Khas COVID-19 - Ayuh Kita Atasinya Bersama",
+    "Speaker": "Ust Dr Mohamed Ali",
+    "Link": "https://www.facebook.com/masjid.annur.sg"
+  },
+  {
+    "Date": "Sat, 4 Apr",
+    "Time": "8:00 PM",
+    "Mosque": "Kassim",
+    "Title": "Bicara Dakwah di Mana Jua Kita Berada",
+    "Speaker": "Asatizah Kuliah Harian Masjid Kassim",
+    "Link": "https://www.facebook.com/KassimMosque/"
+  },
+  {
+    "Date": "Sat, 4 Apr",
+    "Time": "8:00 PM",
+    "Mosque": "Mydin",
+    "Title": "Peringatan Umur Insan - Imam Al-Haddad",
+    "Speaker": "Ust Mukhtar Habib",
+    "Link": "https://www.facebook.com/masjidmydin"
+  },
+  {
+    "Date": "Sat, 4 Apr",
+    "Time": "8:00 PM",
+    "Mosque": "Wak Tanjong",
+    "Title": "Imam Al-Haddad Peringatan Tentang Umur Insan [Malay]",
+    "Speaker": "Ust Mukhtar Habib Mohamed",
+    "Link": "https://www.facebook.com/nurulasror.mwt/videos"
+  },
+  {
+    "Date": "Sat, 4 Apr\n*may be subject to change",
+    "Time": "9:00 PM",
+    "Mosque": "Al-Islah",
+    "Title": "R 2 R: Road to Ramadan [English]",
+    "Speaker": "Ust Muhd Khidir Ibrahim",
+    "Link": "https://www.facebook.com/alislahmosque/"
+  },
+  {
+    "Date": "Sat, 4 Apr",
+    "Time": "9:00 PM",
+    "Mosque": "En-Naeem",
+    "Title": "Kuliah Lockdown",
+    "Speaker": "Various asatizah",
+    "Link": "www.facebook.com/ennaeem.sg"
+  },
+  {
+    "Date": "Sun, 5 Apr",
+    "Time": "6:00 AM",
+    "Mosque": "Hasanah",
+    "Title": "Kuliah Subuh minggu Pertama “Bicara Akidah”\n“ Semuanya Ketentuan Allah",
+    "Speaker": "Ust Badrussalam",
+    "Link": "https://www.facebook.com/masjidhasanahsg/"
+  },
+  {
+    "Date": "Sun, 5 Apr",
+    "Time": "6:30 AM",
+    "Mosque": "Al-Istighfar",
+    "Title": "Kuliah Subuh",
+    "Speaker": "Asatizah Dakwah / Pensyarah Kuliah Harian",
+    "Link": "https://www.facebook.com/MasjidAListighfar"
+  },
+  {
+    "Date": "Sun, 5 Apr",
+    "Time": "6:30 AM",
+    "Mosque": "Muhajirin",
+    "Title": "Khuluquna",
+    "Speaker": "Ust Syaaban Piperdy",
+    "Link": "https://www.facebook.com/muhajirinsg"
+  },
+  {
+    "Date": "Sun, 5 Apr\n*may be subject to change",
+    "Time": "6:45 AM",
+    "Mosque": "Al-Islah",
+    "Title": "Bidayatul Hidayah",
+    "Speaker": "Ust Mohd Nor Mustaqim Abdullah",
+    "Link": "https://www.facebook.com/alislahmosque/"
+  },
+  {
+    "Date": "Sun, 5 Apr",
+    "Time": "8:00 AM",
+    "Mosque": "Darul Makmur",
+    "Title": "Kuliah Dhuha",
+    "Speaker": "- Ust Irwan Hadi\n- Ust Kamaruzaman\n- Ustazah Kalthom\n- Ust Mustazah",
+    "Link": "https://www.facebook.com/darulmakmur.mosque/"
+  },
+  {
+    "Date": "Sun, 5 Apr\n*may be subject to change",
+    "Time": "From 9:30 AM",
+    "Mosque": "Maarof",
+    "Title": "Kuliah Dhuha - Tasawuf: Bimbingan Mu'minin",
+    "Speaker": "Ust Kamaruzaman Afandi",
+    "Link": "https://www.facebook.com/masjidmaarof/"
+  },
+  {
+    "Date": "Sun, 5 Apr\n*may be subject to change",
+    "Time": "10:00 AM",
+    "Mosque": "Al-Islah",
+    "Title": "Quranic Sciences [English]",
+    "Speaker": "Ust Muhammad Tarmizi Abdul Wahid",
+    "Link": "https://www.facebook.com/alislahmosque/"
+  },
+  {
+    "Date": "Sun, 5 Apr",
+    "Time": "10:00 AM",
+    "Mosque": "Haji Mohd Salleh (Geylang)",
+    "Title": "Kuliah Dhuha Riyadus Solihin",
+    "Speaker": "Ust Rohmani Arwani",
+    "Link": "https://www.facebook.com/hajimohdsallehmosque"
+  },
+  {
+    "Date": "Sun, 5 Apr",
+    "Time": "10:00 AM",
+    "Mosque": "Jamiyah Ar-Rabitah",
+    "Title": "[ LIVE ] ADIL : Ramadan",
+    "Speaker": "Ust Ahmad Faritz",
+    "Link": "https://www.facebook.com/masjidjamiyah.arrabitah/"
+  },
+  {
+    "Date": "Sun, 5 Apr",
+    "Time": "6:30 PM",
+    "Mosque": "Hasanah",
+    "Title": "Bacaan Al Quran Al Anbiya' 102 - 112",
+    "Speaker": "Hj Samsi ( Imam/Bilal)",
+    "Link": "https://www.facebook.com/masjidhasanahsg/"
+  },
+  {
+    "Date": "Sun, 5 Apr",
+    "Time": "7:30 PM",
+    "Mosque": "Kampung Siglap",
+    "Title": "Mutiara Sabda",
+    "Speaker": "Ust Nabil Johari",
+    "Link": "https://www.facebook.com/MasjidKampungSiglap/"
+  },
+  {
+    "Date": "Sun, 5 Apr",
+    "Time": "7:45 PM",
+    "Mosque": "Al-Istighfar",
+    "Title": "Tazkirah Ringkas",
+    "Speaker": "Asatizah Dakwah",
+    "Link": "https://www.facebook.com/MasjidAListighfar"
+  },
+  {
+    "Date": "Sun, 5 Apr",
+    "Time": "7:45 PM",
+    "Mosque": "Bencoolen",
+    "Title": "Seerah & Quran Tafsir Bayaan [Tamil]",
+    "Speaker": "AlHaj, AlHafiz, Al-Qari, Moulana Abdul Kauyoom Baaqavi",
+    "Link": "https://www.facebook.com/masjid.bencoolen/"
+  },
+  {
+    "Date": "Sun, 5 Apr",
+    "Time": "7:45 PM",
+    "Mosque": "Darul Makmur",
+    "Title": "Kuliah Tafsir",
+    "Speaker": "Ust Dr Mohamed Fatris Bakaram",
+    "Link": "https://www.facebook.com/darulmakmur.mosque/"
+  },
+  {
+    "Date": "Sun, 5 Apr",
+    "Time": "8:00 PM",
+    "Mosque": "Kassim",
+    "Title": "Bicara Dakwah di Mana Jua Kita Berada",
+    "Speaker": "Asatizah Kuliah Harian Masjid Kassim",
+    "Link": "https://www.facebook.com/KassimMosque/"
+  },
+  {
+    "Date": "Sun, 5 Apr",
+    "Time": "8:00 PM",
+    "Mosque": "Wak Tanjong",
+    "Title": "Riyadhussolihin Hadith Imam Nawawi [Malay]",
+    "Speaker": "Ust Mukhtar Habib Mohamed",
+    "Link": "https://www.facebook.com/nurulasror.mwt/videos"
+  },
+  {
+    "Date": "Sun, 5 Apr\n*may be subject to change",
+    "Time": "9:00 PM",
+    "Mosque": "Al-Islah",
+    "Title": "Kitab Al-Azkar",
+    "Speaker": "Ust Islahuddin Jummat",
+    "Link": "https://www.facebook.com/alislahmosque/"
+  },
+  {
+    "Date": "Sun, 5 Apr",
+    "Time": "9:00 PM",
+    "Mosque": "En-Naeem",
+    "Title": "Kuliah Lockdown",
+    "Speaker": "Various Asatizah",
+    "Link": "www.facebook.com/ennaeem.sg"
+  }
+]

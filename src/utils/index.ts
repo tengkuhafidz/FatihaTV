@@ -1,7 +1,7 @@
 import playlistData from '../data/playlist-data.json'
 import videoData from '../data/video-data.json'
 
-export const mergePlaylistData = () => {
+export const getMergePlaylistData = () => {
     let completePlaylistData: any[] = [];
 
     playlistData.forEach((singlePlaylist) => {

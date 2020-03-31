@@ -6,7 +6,7 @@ import { gtagEventClick } from '../../utils/gtag'
 import SinglePlaylist from './single-playlist'
 
 const Playlists = () => {
-    // console.log("<<<", JSON.stringify(mergePlaylistData()))
+    // console.log("<<<", JSON.stringify(getMergePlaylistData()))
     // const renderPlaylists = () => {
     //     return mergedPlaylistData.map((playlist) => {
     //         return(

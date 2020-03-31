@@ -19,8 +19,8 @@ const Playlists = () => {
     const [fuseFilter, setFuseFilter] = useState("");
 
     const getFilteredPlaylists = () => {
-        const playlistFilteredByTag = mergedPlaylistData.filter(playlist => playlist.tags.includes(tagFilter))
-        return getFuseFilterResult(playlistFilteredByTag)
+        const playlistFilteredByTag = tagFilter ? mergedPlaylistData.filter(playlist => playlist.tags.includes(tagFilter)) : mergedPlaylistData
+        return fuseFilter ? getFuseFilterResult(playlistFilteredByTag) : playlistFilteredByTag
     }
 
     const getFuseFilterResult = (playlistFilteredByTag) => {
@@ -47,12 +47,9 @@ const Playlists = () => {
           
         const fuse = new Fuse(playlistFilteredByTag, options)
         const fuseResults = fuse.search(fuseFilter)
-        if (fuseResults.length < 0) {
-            const fuseFilteredPlaylists: any[] = []
-            fuseResults.forEach(result => fuseFilteredPlaylists.push(result.item))
-            return fuseFilteredPlaylists
-        }
-        return playlistFilteredByTag
+        const fuseFilteredPlaylists: any[] = []
+        fuseResults.forEach(result => fuseFilteredPlaylists.push(result.item))
+        return fuseFilteredPlaylists
     }
 
     const filteredPlaylists = !tagFilter && !fuseFilter ? mergedPlaylistData : getFilteredPlaylists()

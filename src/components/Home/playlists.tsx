@@ -47,12 +47,15 @@ const Playlists = () => {
           
         const fuse = new Fuse(playlistFilteredByTag, options)
         const fuseResults = fuse.search(fuseFilter)
-        const fuseFilteredPlaylists: any[] = []
-        fuseResults.forEach(result => fuseFilteredPlaylists.push(result.item))
-        return fuseFilteredPlaylists
+        if (fuseResults.length < 0) {
+            const fuseFilteredPlaylists: any[] = []
+            fuseResults.forEach(result => fuseFilteredPlaylists.push(result.item))
+            return fuseFilteredPlaylists
+        }
+        return playlistFilteredByTag
     }
 
-    const filteredPlaylists = !fuseFilter ? mergedPlaylistData : getFilteredPlaylists()
+    const filteredPlaylists = !tagFilter && !fuseFilter ? mergedPlaylistData : getFilteredPlaylists()
     const handleTagFilterClick = (e: any, tag: string) => {
         e.stopPropagation()
         setTagFilter(tag)

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Fuse from 'fuse.js'
 import mergedPlaylistData from '../../data/merged-playlist-video-data.json'
 import { isPlaylistPinnedOnLocalStorage } from '../../utils'
 import { gtagEventClick } from '../../utils/gtag'
@@ -14,13 +15,44 @@ const Playlists = () => {
     //     })
     // }
 
+    const [tagFilter, setTagFilter] = useState("");
+    const [fuseFilter, setFuseFilter] = useState("");
+
     const getFilteredPlaylists = () => {
-        return mergedPlaylistData.filter(playlist => playlist.tags.includes(tagFilter))
+        const playlistFilteredByTag = mergedPlaylistData.filter(playlist => playlist.tags.includes(tagFilter))
+        return getFuseFilterResult(playlistFilteredByTag)
     }
 
-    const [tagFilter, setTagFilter] = useState("");
-    const filteredPlaylists = !tagFilter ? mergedPlaylistData : getFilteredPlaylists()
+    const getFuseFilterResult = (playlistFilteredByTag) => {
+        const options = {
+            isCaseSensitive: false,
+            findAllMatches: false,
+            includeMatches: false,
+            includeScore: false,
+            useExtendedSearch: false,
+            minMatchCharLength: 1,
+            shouldSort: true,
+            threshold: 0.4,
+            location: 0,
+            distance: 100,
+            keys: [
+              "organisation",
+              "videos.asatizah",
+              "videos.tags",
+              "videos.language",
+              "title",
+              "videos.title"
+            ]
+          }
+          
+        const fuse = new Fuse(playlistFilteredByTag, options)
+        const fuseResults = fuse.search(fuseFilter)
+        const fuseFilteredPlaylists: any[] = []
+        fuseResults.forEach(result => fuseFilteredPlaylists.push(result.item))
+        return fuseFilteredPlaylists
+    }
 
+    const filteredPlaylists = !fuseFilter ? mergedPlaylistData : getFilteredPlaylists()
     const handleTagFilterClick = (e: any, tag: string) => {
         e.stopPropagation()
         setTagFilter(tag)
@@ -30,20 +62,19 @@ const Playlists = () => {
         })
     }
 
+    const handleTextFilter = (e: any) => {
+        e.preventDefault();
+        setFuseFilter(e.target.value)
+    }
+
     const renderPinnedPlaylist = () => {
         const pinnedPlaylists = filteredPlaylists.filter(playlist => isPlaylistPinnedOnLocalStorage(playlist.id))
-
-        return pinnedPlaylists.map(playlist => (
-            <SinglePlaylist playlist={playlist} key={playlist.id} isPlaylistPinnedLocally={true} handleTagFilterClick={handleTagFilterClick}/>
-        ))
+        return pinnedPlaylists.map(playlist => <SinglePlaylist playlist={playlist} key={playlist.id} isPlaylistPinnedLocally={true} handleTagFilterClick={handleTagFilterClick}/>)
     }
 
     const renderUnpinnedPlaylist = () => {
         const unpinnedPlaylists = filteredPlaylists.filter(playlist => !isPlaylistPinnedOnLocalStorage(playlist.id))
-
-        return unpinnedPlaylists.map(playlist => (
-            <SinglePlaylist playlist={playlist} key={playlist.id} isPlaylistPinnedLocally={false} handleTagFilterClick={handleTagFilterClick}/>
-        ))
+        return unpinnedPlaylists.map(playlist => <SinglePlaylist playlist={playlist} key={playlist.id} isPlaylistPinnedLocally={false} handleTagFilterClick={handleTagFilterClick}/>)
     }
 
     const renderCurrentFilter = () => {
@@ -57,6 +88,13 @@ const Playlists = () => {
 
     return (
         <div className="container mx-auto px-8 pt-8 pb-32" id="playlists">
+            <input 
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-8" 
+                id="username" 
+                type="text" 
+                placeholder="Try this shiny new search feature! ^_^"
+                onChange={(e) => handleTextFilter(e)} 
+            />
            {renderCurrentFilter()}
             <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
                 {renderPinnedPlaylist()} 

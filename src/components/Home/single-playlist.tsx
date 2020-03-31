@@ -15,7 +15,7 @@ const SinglePlaylist: React.FunctionComponent<Props> = ({playlist, isPlaylistPin
     const tagsArray = tags.split(', ');
     const renderTags = () => {
         return tagsArray.map(tag => (
-            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 hover:bg-teal-500 hover:text-white" onClick={(e) => handleTagFilterClick(e, tag)} >#{tag}</span>
+            <span key={tag} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 hover:bg-teal-500 hover:text-white" onClick={(e) => handleTagFilterClick(e, tag)} >#{tag}</span>
         ))
     }
 

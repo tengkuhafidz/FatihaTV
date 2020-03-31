@@ -16,11 +16,11 @@ const Playlists = () => {
     // }
 
     const [tagFilter, setTagFilter] = useState("");
-    const [fuseFilter, setFuseFilter] = useState("");
+    const [searchFilter, setSearchFilter] = useState("");
 
     const getFilteredPlaylists = () => {
         const playlistFilteredByTag = tagFilter ? mergedPlaylistData.filter(playlist => playlist.tags.includes(tagFilter)) : mergedPlaylistData
-        return fuseFilter ? getFuseFilterResult(playlistFilteredByTag) : playlistFilteredByTag
+        return searchFilter ? getFuseFilterResult(playlistFilteredByTag) : playlistFilteredByTag
     }
 
     const getFuseFilterResult = (playlistFilteredByTag) => {
@@ -46,13 +46,13 @@ const Playlists = () => {
           }
           
         const fuse = new Fuse(playlistFilteredByTag, options)
-        const fuseResults = fuse.search(fuseFilter)
+        const fuseResults = fuse.search(searchFilter)
         const fuseFilteredPlaylists: any[] = []
         fuseResults.forEach(result => fuseFilteredPlaylists.push(result.item))
         return fuseFilteredPlaylists
     }
 
-    const filteredPlaylists = !tagFilter && !fuseFilter ? mergedPlaylistData : getFilteredPlaylists()
+    const filteredPlaylists = !tagFilter && !searchFilter ? mergedPlaylistData : getFilteredPlaylists()
     const handleTagFilterClick = (e: any, tag: string) => {
         e.stopPropagation()
         setTagFilter(tag)
@@ -62,9 +62,9 @@ const Playlists = () => {
         })
     }
 
-    const handleTextFilter = (e: any) => {
+    const handleSearchFilter = (e: any) => {
         e.preventDefault();
-        setFuseFilter(e.target.value)
+        setSearchFilter(e.target.value)
     }
 
     const renderPinnedPlaylist = () => {
@@ -90,10 +90,10 @@ const Playlists = () => {
         <div className="container mx-auto px-8 pt-8 pb-32" id="playlists">
             <input 
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-8" 
-                id="username" 
+                id="search" 
                 type="text" 
                 placeholder="Try this shiny new search feature! ^_^"
-                onChange={(e) => handleTextFilter(e)} 
+                onChange={(e) => handleSearchFilter(e)} 
             />
            {renderCurrentFilter()}
             <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">

@@ -5,7 +5,7 @@ module.exports = {
     description: "Watch local Islamic contents from the comfort of your home.",
     author: "Hafidz & Fatiha",
     url: "https://www.kuliah.sg", // No trailing slash allowed!
-    image: "/share-banner.png", // Path to your image you placed in the 'static' folder
+    image: "/share-banner.jpg", // Path to your image you placed in the 'static' folder
   },
   plugins: [
     'gatsby-plugin-typescript',

@@ -1,13 +1,18 @@
 import moment from 'moment'
 import React from 'react'
 import { OutboundLink } from 'gatsby-plugin-google-gtag'
+import { LiveSessionModel } from '../../models'
 
-const SingleLiveSession = ({data}) => {
-    const { Time, Mosque, Title, Speaker, Link } = data
+interface Props {
+    liveSession: LiveSessionModel
+}
+
+const SingleLiveSession: React.FC<Props> = ({ liveSession }) => {
+    const { Time, Mosque, Title, Speaker, Link, Date: date } = liveSession
 
     const getDateTime = () => {
         const currentYear = moment().get('year')
-        const dateTime = `${data.Date} ${currentYear} ${data.Time}`
+        const dateTime = `${ date } ${ currentYear } ${ Time }`
         return moment(dateTime).format('YYYYMMDDTHHmmss')
     }
 
@@ -19,7 +24,6 @@ const SingleLiveSession = ({data}) => {
 
     const getFormattedDate = () => {
         const numberOnlyPattern = /\d+/g;
-        const date = data.Date
         const displayDate = moment(getDateTime()).calendar(moment(), {
             sameDay: '[Today]',
             nextDay: '[Tomorrow]',

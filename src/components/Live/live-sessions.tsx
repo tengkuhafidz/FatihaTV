@@ -2,7 +2,8 @@ import moment from 'moment'
 import React, { useState } from 'react'
 import LiveSessionsData from '../../data/live-sessions-data.json'
 import SingleLiveSession from './single-live-session'
-import Fuse from 'fuse.js'
+import Fuse, { IFuseOptions } from 'fuse.js'
+import { LiveSessionModel, InputEvent } from '../../models'
 
 
 const LiveSessions = () => {
@@ -14,16 +15,16 @@ const LiveSessions = () => {
         return moment(dateTimeWithYear).isAfter()
     }
 
-    const upcomingLiveSessions = LiveSessionsData.filter((session) => isUpcoming(session.Date, session.Time))
+    const upcomingLiveSessions: LiveSessionModel[] = LiveSessionsData.filter((session) => isUpcoming(session.Date, session.Time))
 
-    const handleSearchFilter = (e: any) => {
+    const handleSearchFilter = (e: InputEvent) => {
         e.preventDefault();
         setSearchFilter(e.target.value)
     }
 
-    const getFuseFilterResult = (upcomingLiveSessions) => {
-        const options = {
-            isCaseSensitive: false,
+    const getFuseFilterResult = (upcomingLiveSessions: LiveSessionModel[]) => {
+        const options: IFuseOptions<any> = {
+            caseSensitive: false,
             findAllMatches: false,
             includeMatches: false,
             includeScore: false,
@@ -44,17 +45,17 @@ const LiveSessions = () => {
           
         const fuse = new Fuse(upcomingLiveSessions, options)
         const fuseResults = fuse.search(searchFilter)
-        const fuseFilteredPlaylists: any[] = []
-        fuseResults.forEach(result => fuseFilteredPlaylists.push(result.item))
+        const fuseFilteredPlaylists: LiveSessionModel[] = []
+        fuseResults.forEach(result => fuseFilteredPlaylists.push(result.item as LiveSessionModel))
         return fuseFilteredPlaylists
     }
 
-    const filteredSessions = searchFilter ? getFuseFilterResult(upcomingLiveSessions) : upcomingLiveSessions
+    const filteredSessions: LiveSessionModel[] = searchFilter ? getFuseFilterResult(upcomingLiveSessions) : upcomingLiveSessions
 
 
 
     const renderLiveSessions = () => {
-        return filteredSessions.map((data, index) => <SingleLiveSession data={data} key={index}/>)
+        return filteredSessions.map((liveSession: LiveSessionModel, index: number) => <SingleLiveSession liveSession={liveSession} key={index}/>)
     }
     
     return (

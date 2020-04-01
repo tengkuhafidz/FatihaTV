@@ -1,8 +1,9 @@
 import playlistData from '../data/playlist-data.json'
 import videoData from '../data/video-data.json'
+import { PlaylistModel } from '../models';
 
 export const getMergePlaylistData = () => {
-    let completePlaylistData: any[] = [];
+    let completePlaylistData: PlaylistModel[] = [];
 
     playlistData.forEach((singlePlaylist) => {
         const videosInCurrPlaylist = videoData.filter((singleVideo) => singlePlaylist.id === singleVideo.playlistId)
@@ -72,20 +73,20 @@ export const getLocalPinnedPlaylist = () => {
     return []
 }
 
-export const addToLocalPinnedPlaylist = (playlistId) => {
+export const addToLocalPinnedPlaylist = (playlistId: string) => {
     const localPinnedPlaylists = getLocalPinnedPlaylist()
     localPinnedPlaylists.push(playlistId)
     localStorage.setItem("pinnedPlaylists", JSON.stringify(localPinnedPlaylists))
 }
 
-export const removeFromLocalPinnedPlaylist = (playlistId) => {
+export const removeFromLocalPinnedPlaylist = (playlistId: string) => {
     const localPinnedPlaylists = getLocalPinnedPlaylist()
     const playlistIndex = localPinnedPlaylists.indexOf(playlistId);
     if (playlistIndex !== -1) localPinnedPlaylists.splice(playlistIndex, 1);
     localStorage.setItem("pinnedPlaylists", JSON.stringify(localPinnedPlaylists))
 }
 
-export const isPlaylistPinnedOnLocalStorage = (playlistId) => {
+export const isPlaylistPinnedOnLocalStorage = (playlistId: string) => {
     const localPinnedPlaylists: string[] = getLocalPinnedPlaylist()
     return localPinnedPlaylists.includes(playlistId)
 }

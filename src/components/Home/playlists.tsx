@@ -1,29 +1,29 @@
 import React, { useState } from 'react'
 import Fuse from 'fuse.js'
-import mergedPlaylistData from '../../data/merged-playlist-video-data.json'
+import playlistsData from '../../data/merged-playlist-video-data.json'
 import { isPlaylistPinnedOnLocalStorage } from '../../utils'
 import { gtagEventClick } from '../../utils/gtag'
 import SinglePlaylist from './single-playlist'
+import { PlaylistModel, InputEvent, SpanEvent } from '../../models'
 
 const Playlists = () => {
+    // used as a hack to get json of the playlist <> video merged data - to run on first load
     // console.log("<<<", JSON.stringify(getMergePlaylistData()))
-    // const renderPlaylists = () => {
-    //     return mergedPlaylistData.map((playlist) => {
-    //         return(
-    //             <SinglePlaylist playlist={playlist} key={playlist.id} isPlaylistPinnedLocally={isPlaylistPinnedLocally}/>
-    //         )
-    //     })
-    // }
 
     const [tagFilter, setTagFilter] = useState("");
     const [searchFilter, setSearchFilter] = useState("");
 
-    const getFilteredPlaylists = () => {
-        const playlistFilteredByTag = tagFilter ? mergedPlaylistData.filter(playlist => playlist.tags.includes(tagFilter)) : mergedPlaylistData
-        return searchFilter ? getFuseFilterResult(playlistFilteredByTag) : playlistFilteredByTag
+    const getFilteredPlaylists = (): PlaylistModel[] => {
+        const playlistsFilteredByTag: PlaylistModel[] = tagFilter ? 
+            playlistsData.filter(playlist => playlist.tags.includes(tagFilter)) : playlistsData
+
+        const playlistsFilteredBySearch: PlaylistModel[] = searchFilter ? 
+            getFuseFilterResult(playlistsFilteredByTag) : playlistsFilteredByTag
+            
+        return playlistsFilteredBySearch
     }
 
-    const getFuseFilterResult = (playlistFilteredByTag) => {
+    const getFuseFilterResult = (playlistFilteredByTag: PlaylistModel[]): PlaylistModel[]  => {
         const options = {
             isCaseSensitive: false,
             findAllMatches: false,
@@ -44,16 +44,17 @@ const Playlists = () => {
               "videos.title"
             ]
           }
-          
+        
         const fuse = new Fuse(playlistFilteredByTag, options)
         const fuseResults = fuse.search(searchFilter)
-        const fuseFilteredPlaylists: any[] = []
+        const fuseFilteredPlaylists: PlaylistModel[] = []
         fuseResults.forEach(result => fuseFilteredPlaylists.push(result.item))
         return fuseFilteredPlaylists
     }
 
-    const filteredPlaylists = !tagFilter && !searchFilter ? mergedPlaylistData : getFilteredPlaylists()
-    const handleTagFilterClick = (e: any, tag: string) => {
+    const playlistsToDisplay: PlaylistModel[] = !tagFilter && !searchFilter ? playlistsData : getFilteredPlaylists()
+
+    const handleTagFilterClick = (e: SpanEvent, tag: string) => {
         e.stopPropagation()
         setTagFilter(tag)
         gtagEventClick({
@@ -62,25 +63,41 @@ const Playlists = () => {
         })
     }
 
-    const handleSearchFilter = (e: any) => {
+    const handleSearchFilter = (e: InputEvent) => {
         e.preventDefault();
         setSearchFilter(e.target.value)
     }
 
-    const renderPinnedPlaylist = () => {
-        const pinnedPlaylists = filteredPlaylists.filter(playlist => isPlaylistPinnedOnLocalStorage(playlist.id))
-        return pinnedPlaylists.map(playlist => <SinglePlaylist playlist={playlist} key={playlist.id} isPlaylistPinnedLocally={true} handleTagFilterClick={handleTagFilterClick}/>)
+    const renderPlaylists = () => {
+        const playlists = sortPinnedPlaylistFirst(playlistsToDisplay)
+        return playlists.map(playlist => (
+                <SinglePlaylist 
+                    playlist={playlist} 
+                    key={playlist.id} 
+                    isPlaylistPinnedLocally={isPlaylistPinnedOnLocalStorage(playlist.id)} 
+                    handleTagFilterClick={handleTagFilterClick}/>)
+            )
     }
 
-    const renderUnpinnedPlaylist = () => {
-        const unpinnedPlaylists = filteredPlaylists.filter(playlist => !isPlaylistPinnedOnLocalStorage(playlist.id))
-        return unpinnedPlaylists.map(playlist => <SinglePlaylist playlist={playlist} key={playlist.id} isPlaylistPinnedLocally={false} handleTagFilterClick={handleTagFilterClick}/>)
-    }
+    const sortPinnedPlaylistFirst = (playlists: PlaylistModel[]) => {
+        return playlists.sort((currPlaylist, nextPlaylist) => {
+             if(isPlaylistPinnedOnLocalStorage(currPlaylist.id) && isPlaylistPinnedOnLocalStorage(nextPlaylist.id)) return 0;
+             else if(isPlaylistPinnedOnLocalStorage(currPlaylist.id)) return -1;
+             else return 0;
+        })
+     }
 
-    const renderCurrentFilter = () => {
+    const renderCurrentTagFilter = () => {
         if(tagFilter){
             return (
-                <p className="mx-auto mb-8 rounded bg-gray-800 px-2 py-2 w-xs text-white font-semibold text-lg">Current Filter: <span className="text-teal-500">#{tagFilter}</span> &middot; <span className="font-light hover:font-semibold cursor-pointer" onClick={(e) => handleTagFilterClick(e, "")}>clear</span></p>
+                <p className="mx-auto mb-8 rounded bg-gray-800 px-2 py-2 w-xs text-white font-semibold text-lg">
+                    Current Filter: 
+                    <span className="text-teal-500"> #{tagFilter} </span>
+                    &middot;&nbsp;
+                    <span className="font-light hover:font-semibold cursor-pointer" onClick={(e) => handleTagFilterClick(e, "")}>
+                        clear
+                    </span>
+                </p>
             )
         }
         return <></>
@@ -95,10 +112,9 @@ const Playlists = () => {
                 placeholder="Try this shiny new search feature! ^_^"
                 onChange={(e) => handleSearchFilter(e)} 
             />
-           {renderCurrentFilter()}
+           {renderCurrentTagFilter()}
             <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
-                {renderPinnedPlaylist()} 
-                {renderUnpinnedPlaylist()} 
+                {renderPlaylists()} 
             </div>
         </div>
     )

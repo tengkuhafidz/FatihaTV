@@ -1,17 +1,16 @@
 import { navigate } from 'gatsby'
 import React from 'react'
-import { PlaylistData } from '../../models'
-import { isPlaylistPinnedOnLocalStorage } from '../../utils'
+import { PlaylistModel, SpanEvent } from '../../models'
 
 
 interface Props {
-    playlist: any,
+    playlist: PlaylistModel,
     isPlaylistPinnedLocally: boolean
-    handleTagFilterClick: any
+    handleTagFilterClick: (e: SpanEvent, tag: string) => void
 }
 
 const SinglePlaylist: React.FunctionComponent<Props> = ({playlist, isPlaylistPinnedLocally, handleTagFilterClick}) => {
-    const { title, thumbnailUrl, organisation, durationType, videos, id, tags } = playlist
+    const { title, thumbnailUrl, organisation, videos, id, tags } = playlist
     const tagsArray = tags.split(', ');
     const renderTags = () => {
         return tagsArray.map(tag => (
@@ -25,7 +24,7 @@ const SinglePlaylist: React.FunctionComponent<Props> = ({playlist, isPlaylistPin
             <div className="px-6 py-4">
                 <div className="font-bold text-xl leading-tight">{title}</div>
                 <p className="text-gray-600 text-base">
-                    {organisation} &middot; {videos.length} {durationType} {videos.length === 1 ? "video " : "videos"}
+                    {organisation} &middot; {videos.length} {videos.length === 1 ? "video " : "videos"}
                 </p>
                 <div className="pt-4">
                     {renderTags()}

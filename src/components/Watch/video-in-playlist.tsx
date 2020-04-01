@@ -1,7 +1,15 @@
 import { navigate } from 'gatsby'
 import React from 'react'
+import { VideoModel } from '../../models'
 
-const VideoInPlaylist = ({ playlistId, video, videoIndex, currentVideo }) => {
+interface Props {
+    playlistId: string,
+    video: VideoModel,
+    videoIndex: number,
+    currentVideo: VideoModel
+}
+
+const VideoInPlaylist: React.FC<Props> = ({ playlistId, video, videoIndex, currentVideo }) => {
     const videoNumber = videoIndex + 1
     const isCurrentVideo = video.id === currentVideo.id
 

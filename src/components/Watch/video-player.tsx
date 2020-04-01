@@ -1,9 +1,14 @@
 import React from 'react'
 import FacebookPlayer from 'react-facebook-player'
+import { PlaylistModel, VideoModel } from '../../models'
 import { gtagEventClick } from '../../utils/gtag'
-import { isMobileDevice } from '../../utils'
 
-const VideoPlayer = ({ playlist, video }) => {
+interface Props {
+    playlist: PlaylistModel,
+    video: VideoModel,
+}
+
+const VideoPlayer: React.FC<Props> = ({ playlist, video }) => {
     const { videoUrl } = video
     const { platform } = playlist
     const getFbVideoId = () => {

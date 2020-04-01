@@ -83,11 +83,11 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
                         <div className="flex flex-wrap">
                             <div className="w-full md:w-4/5">
                                 <h1 className="text-3xl leading-none">
-                                    {currentVideo.title} by {currentVideo.asatizah}
+                                    {playlist.title}: {currentVideo.title} <span className="text-xl">by {currentVideo.asatizah}</span>
                                 </h1>
                                 <p className="text-xl">
                                     <span className="font-semibold">
-                                        Source:
+                                        Source:&nbsp;
                                     </span>
                                     <OutboundLink 
                                         href={playlist.pageUrl} 

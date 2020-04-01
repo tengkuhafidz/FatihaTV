@@ -29,7 +29,7 @@ export default () => (
                 </li>
             </ul>
         </div>
-        <p className="text-gray-600 text-center mt-8 font-light text-sm">Last Updated: 1st April 2020</p>
+        <p className="text-gray-600 text-center mt-8 font-light text-sm">Last Updated: 2nd April 2020</p>
         <Playlists />
         <BottomCta />
     </Layout>

@@ -17,7 +17,7 @@ export const getMergePlaylistData = () => {
             videos: videosInCurrPlaylist
         }
 
-        completePlaylistData.push(completeSinglePlaylist)
+        completePlaylistData.unshift(completeSinglePlaylist)
     })
 
     return completePlaylistData

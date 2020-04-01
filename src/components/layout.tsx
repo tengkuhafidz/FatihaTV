@@ -5,7 +5,11 @@ import { enableSmoothScroll } from '../utils'
 
 enableSmoothScroll()
 
-const Layout = ({ children }) => (
+interface Props {
+    children: React.ReactNode
+}
+
+const Layout: React.FC<Props> = ({ children }) => (
     <div className="min-h-screen bg-gray-100 overflow-x-hidden">
         <Header />
             <main>{ children }</main>

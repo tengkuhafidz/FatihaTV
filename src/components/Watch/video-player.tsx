@@ -11,6 +11,7 @@ interface Props {
 const VideoPlayer: React.FC<Props> = ({ playlist, video }) => {
     const { videoUrl } = video
     const { platform } = playlist
+    
     const getFbVideoId = () => {
         const urlSectionsArray = videoUrl.split('/')
         const finalIndex = urlSectionsArray.length - 1

@@ -2,6 +2,10 @@ import playlistData from '../data/playlist-data.json'
 import videoData from '../data/video-data.json'
 import { PlaylistModel } from '../models';
 
+/**
+ * MERGE PLAYLIST AND VIDEO JSON
+ */
+
 export const getMergePlaylistData = () => {
     let completePlaylistData: PlaylistModel[] = [];
 
@@ -24,6 +28,10 @@ export const enableSmoothScroll = () => {
         require('smooth-scroll')('a[href*="#"]');
     }
 }
+
+/**
+ * SOCIAL MEDIA URL
+ */
 
 export const getSocialMediaShareUrls = (pageUrl: string) => {
     return {
@@ -63,6 +71,10 @@ export const isMobileDevice = () => {
         return navigator.userAgent.match(toMatchItem);
     });
 }
+
+/**
+ * LOCALLY PINNED PLAYLIST
+ */
 
 export const getLocalPinnedPlaylist = () => {
     const hasLocalStorageReady = typeof(Storage) !== "undefined"

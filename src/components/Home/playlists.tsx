@@ -48,7 +48,7 @@ const Playlists = () => {
         const fuse = new Fuse(playlistFilteredByTag, options)
         const fuseResults = fuse.search(searchFilter)
         const fuseFilteredPlaylists: PlaylistModel[] = []
-        fuseResults.forEach(result => fuseFilteredPlaylists.push(result.item))
+        fuseResults.forEach(result => fuseFilteredPlaylists.push(result.item as PlaylistModel))
         return fuseFilteredPlaylists
     }
 
@@ -88,7 +88,7 @@ const Playlists = () => {
      }
 
     const renderCurrentTagFilter = () => {
-        if(tagFilter){
+        if(tagFilter) {
             return (
                 <p className="mx-auto mb-8 rounded bg-gray-800 px-2 py-2 w-xs text-white font-semibold text-lg">
                     Current Filter: 

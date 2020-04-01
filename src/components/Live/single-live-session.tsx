@@ -43,12 +43,14 @@ const SingleLiveSession: React.FC<Props> = ({ liveSession }) => {
     return (
         <div className="max-w-sm w-full lg:min-w-full lg:flex shadow-lg hover:shadow-2xl">
             <div className="lg:w-48 flex-none rounded-t lg:rounded-t-none lg:rounded-l text-center bg-gray-800 text-gray-200 pt-4 pb-8">
-                <div className="border-l-4 border-r-4 border-white border text-gray-200 p-1 mx-6 mt-1 rounded" role="alert">
+                <div className="border-l-4 border-r-4 border-white border text-gray-200 p-1 mx-6 mt-1 rounded">
                     <p className="font-bold">{getFormattedDate().displayDay}</p>
                 </div>
-                <span className="text-6xl">{getFormattedDate().numericDay}<span className="text-3xl"> {getFormattedDate().month}</span></span>
+                <span className="text-6xl">
+                    {getFormattedDate().numericDay}
+                    <span className="text-3xl"> {getFormattedDate().month} </span>
+                </span>
                 <span className="block text-2xl -mt-4">{Time}</span>
-                
             </div>
             <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal w-full">
                 <div className="mb-8">
@@ -56,10 +58,18 @@ const SingleLiveSession: React.FC<Props> = ({ liveSession }) => {
                     <p className="text-gray-700 text-base">{Speaker}, Masjid {Mosque}</p>
                 </div>
                 <div className="flex items-center">
-                    <OutboundLink className="bg-transparent hover:bg-gray-800 text-gray-700 font-semibold hover:text-white py-2 px-4 border border-gray-500 hover:border-transparent rounded mr-4" target="_blank" href={Link}>
+                    <OutboundLink 
+                        className="bg-transparent hover:bg-gray-800 text-gray-700 font-semibold hover:text-white py-2 px-4 border border-gray-500 hover:border-transparent rounded mr-4" 
+                        target="_blank" 
+                        href={Link}
+                    >
                         View Source
                     </OutboundLink>
-                    <OutboundLink className="bg-transparent hover:bg-gray-800 text-gray-700 font-semibold hover:text-white py-2 px-4 border border-gray-500 hover:border-transparent rounded" target="_blank" href={getCalendarLink()}>
+                    <OutboundLink 
+                        className="bg-transparent hover:bg-gray-800 text-gray-700 font-semibold hover:text-white py-2 px-4 border border-gray-500 hover:border-transparent rounded"
+                        target="_blank" 
+                        href={getCalendarLink()}
+                    >
                         Add to Calendar
                     </OutboundLink>
                 </div>

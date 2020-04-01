@@ -22,7 +22,7 @@ const LiveSessions = () => {
         setSearchFilter(e.target.value)
     }
 
-    const getFuseFilterResult = (upcomingLiveSessions: LiveSessionModel[]) => {
+    const getFuseFilterResult = (upcomingLiveSessions: LiveSessionModel[]): LiveSessionModel[] => {
         const options: IFuseOptions<any> = {
             caseSensitive: false,
             findAllMatches: false,
@@ -51,8 +51,6 @@ const LiveSessions = () => {
     }
 
     const filteredSessions: LiveSessionModel[] = searchFilter ? getFuseFilterResult(upcomingLiveSessions) : upcomingLiveSessions
-
-
 
     const renderLiveSessions = () => {
         return filteredSessions.map((liveSession: LiveSessionModel, index: number) => <SingleLiveSession liveSession={liveSession} key={index}/>)

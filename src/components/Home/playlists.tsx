@@ -67,6 +67,10 @@ const Playlists = () => {
     const handleSearchFilter = (e: InputEvent) => {
         e.preventDefault();
         setSearchFilter(e.target.value)
+        gtagEventClick('search_playlists', {
+            event_category: GtagCategories.Engagement,
+            event_label: e.target.value
+        })
     }
 
     const renderPlaylists = () => {

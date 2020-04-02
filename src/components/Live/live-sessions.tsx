@@ -3,8 +3,9 @@ import React, { useState } from 'react'
 import LiveSessionsData from '../../data/live-sessions-data.json'
 import SingleLiveSession from './single-live-session'
 import Fuse, { IFuseOptions } from 'fuse.js'
-import { LiveSessionModel, InputEvent } from '../../models'
+import { LiveSessionModel, InputEvent, GtagCategories } from '../../models'
 import SearchInput from '../search-input'
+import { gtagEventClick } from '../../utils/gtag'
 
 
 const LiveSessions = () => {
@@ -21,6 +22,10 @@ const LiveSessions = () => {
     const handleSearchFilter = (e: InputEvent) => {
         e.preventDefault();
         setSearchFilter(e.target.value)
+        gtagEventClick('search_live_sessions', {
+            event_category: GtagCategories.Engagement,
+            event_label: e.target.value
+        })
     }
 
     const getFuseFilterResult = (upcomingLiveSessions: LiveSessionModel[]): LiveSessionModel[] => {

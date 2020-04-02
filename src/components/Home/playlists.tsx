@@ -5,6 +5,7 @@ import { isPlaylistPinnedOnLocalStorage } from '../../utils'
 import { gtagEventClick } from '../../utils/gtag'
 import SinglePlaylist from './single-playlist'
 import { PlaylistModel, InputEvent, SpanEvent } from '../../models'
+import SearchInput from '../search-input'
 
 const Playlists = () => {
     // used as a hack to get json of the playlist <> video merged data - to run on first load
@@ -105,13 +106,7 @@ const Playlists = () => {
 
     return (
         <div className="container mx-auto px-8 pt-8 pb-32" id="playlists">
-            <input 
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-8" 
-                id="search" 
-                type="text" 
-                placeholder="Try this shiny new search feature! ^_^"
-                onChange={(e) => handleSearchFilter(e)} 
-            />
+            <SearchInput handleSearchFilter={handleSearchFilter}/>
            {renderCurrentTagFilter()}
             <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
                 {renderPlaylists()} 

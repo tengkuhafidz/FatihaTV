@@ -4,6 +4,7 @@ import LiveSessionsData from '../../data/live-sessions-data.json'
 import SingleLiveSession from './single-live-session'
 import Fuse, { IFuseOptions } from 'fuse.js'
 import { LiveSessionModel, InputEvent } from '../../models'
+import SearchInput from '../search-input'
 
 
 const LiveSessions = () => {
@@ -58,13 +59,7 @@ const LiveSessions = () => {
     
     return (
         <div className="container mx-auto px-8 pt-8 pb-32" id="liveSessions">
-            <input 
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-8" 
-                id="search" 
-                type="text" 
-                placeholder="Try this shiny new search feature! ^_^"
-                onChange={(e) => (handleSearchFilter(e))} 
-            />
+            <SearchInput handleSearchFilter={handleSearchFilter}/>
             <div className="grid md:grid-cols-2 gap-8">
                 {renderLiveSessions()} 
             </div>

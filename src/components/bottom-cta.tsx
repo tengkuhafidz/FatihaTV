@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { OutboundLink } from "gatsby-plugin-google-gtag"
 import { gtagEventClick } from '../utils/gtag'
+import { GtagCategories } from '../models'
 
 
 const BottomCta = () => {
@@ -17,8 +18,9 @@ const BottomCta = () => {
     }
 
     const trackBottomCtaClose = () => {
-        gtagEventClick({
-            action: "close_bottom_cta"
+        gtagEventClick('close_bottom_cta', {
+            event_category: GtagCategories.Engagement,
+            event_label: 'pergas_crowdfunding_cta'
         })
     }
 

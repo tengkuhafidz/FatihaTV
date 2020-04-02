@@ -1,6 +1,6 @@
 import React from 'react'
 import FacebookPlayer from 'react-facebook-player'
-import { PlaylistModel, VideoModel } from '../../models'
+import { PlaylistModel, VideoModel, GtagCategories } from '../../models'
 import { gtagEventClick } from '../../utils/gtag'
 
 interface Props {
@@ -19,10 +19,9 @@ const VideoPlayer: React.FC<Props> = ({ playlist, video }) => {
     }
 
     const trackFbVideoPlay = () => {
-        gtagEventClick({
-            actions: "play_facebook_video",
-            video,
-            playlist
+        gtagEventClick('play_facebook_video', {
+            event_category: GtagCategories.Engagement,
+            event_label: playlist.title + ' ' + video.title
         })
     }
 

@@ -7,7 +7,7 @@ import SEO from '../components/seo'
 import { FaMapPin } from 'react-icons/fa'
 import { addToLocalPinnedPlaylist, removeFromLocalPinnedPlaylist, isPlaylistPinnedOnLocalStorage } from '../utils'
 import { gtagEventClick } from '../utils/gtag'
-import { PlaylistModel, VideoModel } from '../models'
+import { PlaylistModel, VideoModel, GtagCategories } from '../models'
 
 interface Props {
     pageContext: {
@@ -26,18 +26,18 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
     const handlePinPlaylist = () => {
         setIsPlaylistPinned(true)
         addToLocalPinnedPlaylist(playlist.id)
-        gtagEventClick({
-            action: "pin_playlist",
-            playlist
+        gtagEventClick('pin_playlist', {
+            event_category: GtagCategories.Engagement,
+            event_label: playlist.title 
         })
     }
 
     const handleUnpinPlaylist = () => {
         setIsPlaylistPinned(false)
         removeFromLocalPinnedPlaylist(playlist.id)
-        gtagEventClick({
-            action: "unpin_playlist",
-            playlist
+        gtagEventClick('unpin_playlist', { 
+            event_category: GtagCategories.Engagement,
+            event_label: playlist.title  
         })
     }
 

@@ -30,6 +30,10 @@ export interface LiveSessionModel {
     Link: string
 }
 
+export enum GtagCategories {
+    Engagement = 'engagement'
+}
+
 export type InputEvent = React.ChangeEvent<HTMLInputElement>
 export type ButtonEvent = React.MouseEvent<HTMLButtonElement>
 export type SpanEvent = React.MouseEvent<HTMLSpanElement>

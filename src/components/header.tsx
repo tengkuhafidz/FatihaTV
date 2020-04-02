@@ -4,6 +4,7 @@ import { FaAngleDown, FaFacebookSquare, FaTelegramPlane, FaTwitter, FaWhatsapp }
 import { getSocialMediaShareUrls } from '../utils';
 import { gtagEventClick } from '../utils/gtag';
 import { OutboundLink } from 'gatsby-plugin-google-gtag';
+import { GtagCategories } from '../models';
 
 
 const Header = () => {
@@ -21,9 +22,9 @@ const Header = () => {
 
     const trackOpenShareDropdown = () => {
         if(isOpen) {
-            gtagEventClick({
-                action: "open_share_dropdown",
-                pagePath: currentUrl
+            gtagEventClick('open_share_dropdown', {
+                event_category: GtagCategories.Engagement,
+                event_label: currentUrl
             })
         }
     }

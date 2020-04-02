@@ -4,7 +4,7 @@ import playlistsData from '../../data/merged-playlist-video-data.json'
 import { isPlaylistPinnedOnLocalStorage } from '../../utils'
 import { gtagEventClick } from '../../utils/gtag'
 import SinglePlaylist from './single-playlist'
-import { PlaylistModel, InputEvent, SpanEvent } from '../../models'
+import { PlaylistModel, InputEvent, SpanEvent, GtagCategories } from '../../models'
 import SearchInput from '../search-input'
 
 const Playlists = () => {
@@ -58,9 +58,9 @@ const Playlists = () => {
     const handleTagFilterClick = (e: SpanEvent, tag: string) => {
         e.stopPropagation()
         setTagFilter(tag)
-        gtagEventClick({
-            action: 'filter_by_tag',
-            tag: tag
+        gtagEventClick('filter_by_tag', {
+            event_category: GtagCategories.Engagement,
+            event_label: tag
         })
     }
 

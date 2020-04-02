@@ -18,6 +18,12 @@ module.exports = {
           trackingIds: [
             "UA-162017890-1",
           ],
+          gtagConfig: {
+            anonymize_ip: true,
+          },
+          pluginConfig: {
+            head: true,
+          },
         },
       },
       {

@@ -54,38 +54,6 @@
     ]
   },
   {
-    "id": "p24",
-    "title": "Kuliah Harian Bimbingan Mukmin",
-    "organisation": "Masjid Al-Islah",
-    "donationMethod": "PayNow to UEN T13MQ0001J",
-    "tags": "malay",
-    "platform": "Facebook",
-    "pageUrl": "https://www.facebook.com/pg/alislahmosque/",
-    "thumbnailUrl": "https://scontent.fsin9-2.fna.fbcdn.net/v/t15.5256-10/s640x640/75614331_265877457759271_4591129768077819904_n.jpg?_nc_cat=101&_nc_sid=ad6a45&_nc_ohc=uqFR5EF5PcMAX-DIH-V&_nc_ht=scontent.fsin9-2.fna&_nc_tp=7&oh=a492f5e6019302382b8224399735ec2f&oe=5EAA8819",
-    "videos": [
-      {
-        "id": "v114",
-        "playlistId": "p24",
-        "epidsodeNumber": "e1",
-        "title": "#1 - Hidup Berjiran",
-        "asatizah": "Ustaz Maaz Sallim",
-        "language": "malay",
-        "addedOn": "01/04/2020",
-        "videoUrl": "https://www.facebook.com/alislahmosque/videos/2649681008490997/"
-      },
-      {
-        "id": "v115",
-        "playlistId": "p24",
-        "epidsodeNumber": "e2",
-        "title": "#2 - Hidup Berjiran",
-        "asatizah": "Ustaz Maaz Sallim",
-        "language": "malay",
-        "addedOn": "01/04/2020",
-        "videoUrl": "https://www.facebook.com/alislahmosque/videos/511319642850737/"
-      }
-    ]
-  },
-  {
     "id": "p23",
     "title": "Stories From The Quran",
     "organisation": "Masjid Al-Islah",
@@ -124,78 +92,6 @@
         "language": "english",
         "addedOn": "01/04/2020",
         "videoUrl": "https://www.facebook.com/alislahmosque/videos/648190142660258/"
-      }
-    ]
-  },
-  {
-    "id": "p22",
-    "title": "Kuliah Khas Israk Mikraj",
-    "organisation": "Masjid Al-Islah",
-    "donationMethod": "PayNow to UEN T13MQ0001J",
-    "tags": "malay, israk mikraj",
-    "platform": "Facebook",
-    "pageUrl": "https://www.facebook.com/pg/alislahmosque/",
-    "thumbnailUrl": "https://scontent.fsin9-1.fna.fbcdn.net/v/t15.5256-10/s640x640/75599318_225799068572944_1012392167546552320_n.jpg?_nc_cat=104&_nc_sid=ad6a45&_nc_ohc=Nzown6BiMHIAX_diPGV&_nc_ht=scontent.fsin9-1.fna&_nc_tp=7&oh=d53362d3858d5c792f940dedebb5b5e8&oe=5EA99708",
-    "videos": [
-      {
-        "id": "v105",
-        "playlistId": "p22",
-        "epidsodeNumber": "e1",
-        "title": "Keistimewaan Waktu Malam",
-        "asatizah": "Ustaz Atiq Hashim",
-        "language": "malay",
-        "addedOn": "01/04/2020",
-        "videoUrl": "https://www.facebook.com/alislahmosque/videos/1659953214153951/"
-      },
-      {
-        "id": "v106",
-        "playlistId": "p22",
-        "epidsodeNumber": "e2",
-        "title": "Kembali Ke Masa Hadapan",
-        "asatizah": "Ustaz Asysallehan Ali",
-        "language": "malay",
-        "addedOn": "01/04/2020",
-        "videoUrl": "https://www.facebook.com/alislahmosque/videos/2274390499528852/"
-      },
-      {
-        "id": "v107",
-        "playlistId": "p22",
-        "epidsodeNumber": "e3",
-        "title": "Mengemudi Anak Untuk Solat",
-        "asatizah": "Ustaz Taufik Ismail",
-        "language": "malay",
-        "addedOn": "01/04/2020",
-        "videoUrl": "https://www.facebook.com/alislahmosque/videos/539819923579462/"
-      },
-      {
-        "id": "v108",
-        "playlistId": "p22",
-        "epidsodeNumber": "e4",
-        "title": "2S Dalam Kehidupan",
-        "asatizah": "Ustaz Kamarruzaman Afandi",
-        "language": "malay",
-        "addedOn": "01/04/2020",
-        "videoUrl": "https://www.facebook.com/alislahmosque/videos/497134144523926/"
-      },
-      {
-        "id": "v109",
-        "playlistId": "p22",
-        "epidsodeNumber": "e5",
-        "title": "Satu Kisah Kegembiraan Dari Kesedihan",
-        "asatizah": "Ustaz Jazair Jummat",
-        "language": "malay",
-        "addedOn": "01/04/2020",
-        "videoUrl": "https://www.facebook.com/alislahmosque/videos/197997584826402/"
-      },
-      {
-        "id": "v110",
-        "playlistId": "p22",
-        "epidsodeNumber": "e6",
-        "title": "Menghidupkan Solat Dalam Kehidupan",
-        "asatizah": "Ustaz Islahuddin Jummat",
-        "language": "malay",
-        "addedOn": "01/04/2020",
-        "videoUrl": "https://www.facebook.com/alislahmosque/videos/157492942092447/"
       }
     ]
   },
@@ -292,6 +188,110 @@
         "language": "malay",
         "addedOn": "01/04/2020",
         "videoUrl": "https://www.facebook.com/muhammadiyahSG/videos/443127496482513/"
+      }
+    ]
+  },
+  {
+    "id": "p24",
+    "title": "Kuliah Harian Bimbingan Mukmin",
+    "organisation": "Masjid Al-Islah",
+    "donationMethod": "PayNow to UEN T13MQ0001J",
+    "tags": "malay",
+    "platform": "Facebook",
+    "pageUrl": "https://www.facebook.com/pg/alislahmosque/",
+    "thumbnailUrl": "https://scontent.fsin9-2.fna.fbcdn.net/v/t15.5256-10/s640x640/75614331_265877457759271_4591129768077819904_n.jpg?_nc_cat=101&_nc_sid=ad6a45&_nc_ohc=uqFR5EF5PcMAX-DIH-V&_nc_ht=scontent.fsin9-2.fna&_nc_tp=7&oh=a492f5e6019302382b8224399735ec2f&oe=5EAA8819",
+    "videos": [
+      {
+        "id": "v114",
+        "playlistId": "p24",
+        "epidsodeNumber": "e1",
+        "title": "#1 - Hidup Berjiran",
+        "asatizah": "Ustaz Maaz Sallim",
+        "language": "malay",
+        "addedOn": "01/04/2020",
+        "videoUrl": "https://www.facebook.com/alislahmosque/videos/2649681008490997/"
+      },
+      {
+        "id": "v115",
+        "playlistId": "p24",
+        "epidsodeNumber": "e2",
+        "title": "#2 - Hidup Berjiran",
+        "asatizah": "Ustaz Maaz Sallim",
+        "language": "malay",
+        "addedOn": "01/04/2020",
+        "videoUrl": "https://www.facebook.com/alislahmosque/videos/511319642850737/"
+      }
+    ]
+  },
+  {
+    "id": "p22",
+    "title": "Kuliah Khas Israk Mikraj",
+    "organisation": "Masjid Al-Islah",
+    "donationMethod": "PayNow to UEN T13MQ0001J",
+    "tags": "malay, israk mikraj",
+    "platform": "Facebook",
+    "pageUrl": "https://www.facebook.com/pg/alislahmosque/",
+    "thumbnailUrl": "https://scontent.fsin9-1.fna.fbcdn.net/v/t15.5256-10/s640x640/75599318_225799068572944_1012392167546552320_n.jpg?_nc_cat=104&_nc_sid=ad6a45&_nc_ohc=Nzown6BiMHIAX_diPGV&_nc_ht=scontent.fsin9-1.fna&_nc_tp=7&oh=d53362d3858d5c792f940dedebb5b5e8&oe=5EA99708",
+    "videos": [
+      {
+        "id": "v105",
+        "playlistId": "p22",
+        "epidsodeNumber": "e1",
+        "title": "Keistimewaan Waktu Malam",
+        "asatizah": "Ustaz Atiq Hashim",
+        "language": "malay",
+        "addedOn": "01/04/2020",
+        "videoUrl": "https://www.facebook.com/alislahmosque/videos/1659953214153951/"
+      },
+      {
+        "id": "v106",
+        "playlistId": "p22",
+        "epidsodeNumber": "e2",
+        "title": "Kembali Ke Masa Hadapan",
+        "asatizah": "Ustaz Asysallehan Ali",
+        "language": "malay",
+        "addedOn": "01/04/2020",
+        "videoUrl": "https://www.facebook.com/alislahmosque/videos/2274390499528852/"
+      },
+      {
+        "id": "v107",
+        "playlistId": "p22",
+        "epidsodeNumber": "e3",
+        "title": "Mengemudi Anak Untuk Solat",
+        "asatizah": "Ustaz Taufik Ismail",
+        "language": "malay",
+        "addedOn": "01/04/2020",
+        "videoUrl": "https://www.facebook.com/alislahmosque/videos/539819923579462/"
+      },
+      {
+        "id": "v108",
+        "playlistId": "p22",
+        "epidsodeNumber": "e4",
+        "title": "2S Dalam Kehidupan",
+        "asatizah": "Ustaz Kamarruzaman Afandi",
+        "language": "malay",
+        "addedOn": "01/04/2020",
+        "videoUrl": "https://www.facebook.com/alislahmosque/videos/497134144523926/"
+      },
+      {
+        "id": "v109",
+        "playlistId": "p22",
+        "epidsodeNumber": "e5",
+        "title": "Satu Kisah Kegembiraan Dari Kesedihan",
+        "asatizah": "Ustaz Jazair Jummat",
+        "language": "malay",
+        "addedOn": "01/04/2020",
+        "videoUrl": "https://www.facebook.com/alislahmosque/videos/197997584826402/"
+      },
+      {
+        "id": "v110",
+        "playlistId": "p22",
+        "epidsodeNumber": "e6",
+        "title": "Menghidupkan Solat Dalam Kehidupan",
+        "asatizah": "Ustaz Islahuddin Jummat",
+        "language": "malay",
+        "addedOn": "01/04/2020",
+        "videoUrl": "https://www.facebook.com/alislahmosque/videos/157492942092447/"
       }
     ]
   },

@@ -17,7 +17,8 @@ export default () => (
             <ul className="flex">
                 <li className="flex-1 mr-4">
                     <a 
-                        className="text-center block border border-teal-500 rounded py-2 px-4 bg-teal-500 hover:bg-teal-500 text-white cursor-pointer" href="#playlists"
+                        className="text-center block border border-teal-500 rounded py-2 px-4 bg-teal-500 hover:bg-teal-500 text-white cursor-pointer" 
+                        href="#playlists"
                     >
                         Video Playlists
                     </a>

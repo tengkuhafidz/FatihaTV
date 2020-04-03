@@ -30,6 +30,11 @@ export interface LiveSessionModel {
     Link: string
 }
 
+export interface DonationListingModel {
+    organisation: string,
+    paynow: string
+}
+
 export enum GtagCategories {
     Engagement = 'engagement'
 }

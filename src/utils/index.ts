@@ -1,5 +1,6 @@
-import playlistData from '../data/playlist-data.json'
-import videoData from '../data/video-data.json'
+import Fuse from 'fuse.js';
+import playlistData from '../data/playlist-data.json';
+import videoData from '../data/video-data.json';
 import { PlaylistModel } from '../models';
 
 /**
@@ -102,5 +103,28 @@ export const isPlaylistPinnedOnLocalStorage = (playlistId: string) => {
     const localPinnedPlaylists: string[] = getLocalPinnedPlaylist()
     return localPinnedPlaylists.includes(playlistId)
 }
+
+/**
+ * FUSE FILTER
+ */
+
+ export const getFuseFilterResult = (donationListing: any[], filterByKeys: string[], searchTerm: string) => {
+    const options = {
+        isCaseSensitive: false,
+        findAllMatches: false,
+        includeMatches: false,
+        includeScore: false,
+        useExtendedSearch: false,
+        minMatchCharLength: 1,
+        shouldSort: true,
+        threshold: 0.4,
+        location: 0,
+        distance: 100,
+        keys: filterByKeys
+      }
+    
+    const fuse = new Fuse(donationListing, options)
+    return fuse.search(searchTerm)
+ }
 
         

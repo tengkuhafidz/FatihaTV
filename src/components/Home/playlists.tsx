@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Fuse from 'fuse.js'
 import playlistsData from '../../data/merged-playlist-video-data.json'
-import { isPlaylistPinnedOnLocalStorage } from '../../utils'
+import { isPlaylistPinnedOnLocalStorage, getFuseFilterResult } from '../../utils'
 import { gtagEventClick } from '../../utils/gtag'
 import SinglePlaylist from './single-playlist'
 import { PlaylistModel, InputEvent, SpanEvent, GtagCategories } from '../../models'
@@ -12,48 +12,35 @@ const Playlists = () => {
     // console.log("<<<", JSON.stringify(getMergePlaylistData()))
 
     const [tagFilter, setTagFilter] = useState("");
-    const [searchFilter, setSearchFilter] = useState("");
+    const [searchTerm, setSearchTerm] = useState("");
 
     const getFilteredPlaylists = (): PlaylistModel[] => {
         const playlistsFilteredByTag: PlaylistModel[] = tagFilter ? 
             playlistsData.filter(playlist => playlist.tags.includes(tagFilter)) : playlistsData
 
-        const playlistsFilteredBySearch: PlaylistModel[] = searchFilter ? 
-            getFuseFilterResult(playlistsFilteredByTag) : playlistsFilteredByTag
+        const playlistsFilteredBySearch: PlaylistModel[] = searchTerm ? 
+            getSearchFilterResult(playlistsFilteredByTag) : playlistsFilteredByTag
             
         return playlistsFilteredBySearch
     }
 
-    const getFuseFilterResult = (playlistFilteredByTag: PlaylistModel[]): PlaylistModel[]  => {
-        const options = {
-            isCaseSensitive: false,
-            findAllMatches: false,
-            includeMatches: false,
-            includeScore: false,
-            useExtendedSearch: false,
-            minMatchCharLength: 1,
-            shouldSort: true,
-            threshold: 0.4,
-            location: 0,
-            distance: 100,
-            keys: [
-              "organisation",
-              "videos.asatizah",
-              "videos.tags",
-              "videos.language",
-              "title",
-              "videos.title"
-            ]
-          }
+    const getSearchFilterResult = (playlists: PlaylistModel[]): PlaylistModel[]  => {
+        const filterByKeys = [
+            "organisation",
+            "videos.asatizah",
+            "videos.tags",
+            "videos.language",
+            "title",
+            "videos.title"
+          ]
+        const fuseFilterResults = getFuseFilterResult(playlists, filterByKeys, searchTerm)
         
-        const fuse = new Fuse(playlistFilteredByTag, options)
-        const fuseResults = fuse.search(searchFilter)
         const fuseFilteredPlaylists: PlaylistModel[] = []
-        fuseResults.forEach(result => fuseFilteredPlaylists.push(result.item as PlaylistModel))
+        fuseFilterResults.forEach(result => fuseFilteredPlaylists.push(result.item as PlaylistModel))
         return fuseFilteredPlaylists
     }
 
-    const playlistsToDisplay: PlaylistModel[] = !tagFilter && !searchFilter ? playlistsData : getFilteredPlaylists()
+    const playlistsToDisplay: PlaylistModel[] = !tagFilter && !searchTerm ? playlistsData : getFilteredPlaylists()
 
     const handleTagFilterClick = (e: SpanEvent, tag: string) => {
         e.stopPropagation()
@@ -66,7 +53,7 @@ const Playlists = () => {
 
     const handleSearchFilter = (e: InputEvent) => {
         e.preventDefault();
-        setSearchFilter(e.target.value)
+        setSearchTerm(e.target.value)
         gtagEventClick('search_playlists', {
             event_category: GtagCategories.Engagement,
             event_label: e.target.value

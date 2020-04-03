@@ -1,86 +1,86 @@
 [
     {
       "organisation": "Masjid Al Amin",
-      "paynow": "S91MQ0008B001"
+      "paynow_uen": "S91MQ0008B001"
     },
     {
       "organisation": "Masjid al Ansar",
-      "paynow": "S81MQ0009F"
+      "paynow_uen": "S81MQ0009F"
     },
     {
       "organisation": "Masjid Al-Falah",
-      "paynow": "S83MQ0010B"
+      "paynow_uen": "S83MQ0010B"
     },
     {
       "organisation": "Masjid Al-Iman",
-      "paynow": "T03MQ0013C"
+      "paynow_uen": "T03MQ0013C"
     },
     {
       "organisation": "Masjid Al Islah",
-      "paynow": "T13MQ0001J"
+      "paynow_uen": "T13MQ0001J"
     },
     {
       "organisation": "Masjid Al-Khair",
-      "paynow": "S97MQ0018D"
+      "paynow_uen": "S97MQ0018D"
     },
     {
       "organisation": "Masjid Angullia",
-      "paynow": "S70MQ0022C"
+      "paynow_uen": "S70MQ0022C"
     },
     {
       "organisation": "Masjid An-Nur",
-      "paynow": "S80MQ0023B"
+      "paynow_uen": "S80MQ0023B"
     },
     {
       "organisation": "Masjid An Nahdhah",
-      "paynow": "T06MQ0029K"
+      "paynow_uen": "T06MQ0029K"
     },
     {
       "organisation": "Masjid Ar Raudhah",
-      "paynow": "S93MQ0024E"
+      "paynow_uen": "S93MQ0024E"
     },
     {
       "organisation": "Masjid Assyakirin",
-      "paynow": "S80MQ0026A"
+      "paynow_uen": "S80MQ0026A"
     },
     {
       "organisation": "Masjid Darul Makmur",
-      "paynow": "S87MQ0033J"
+      "paynow_uen": "S87MQ0033J"
     },
     {
       "organisation": "Masjid Darul Ghufran",
-      "paynow": "S91MQ0031A"
+      "paynow_uen": "S91MQ0031A"
     },
     {
       "organisation": "Masjid En-Naeem",
-      "paynow": "S83MQ0035C"
+      "paynow_uen": "S83MQ0035C"
     },
     {
       "organisation": "Masjid Mujahidin",
-      "paynow": "S77MQ0056D"
+      "paynow_uen": "S77MQ0056D"
     },
     {
       "organisation": "Masjid Pusara Aman",
-      "paynow": "S75MQ0062D"
+      "paynow_uen": "S75MQ0062D"
     },
     {
       "organisation": "Masjid Sallim Mattar",
-      "paynow": "S60MQ0063E"
+      "paynow_uen": "S60MQ0063E"
     },
     {
       "organisation": "Masjid Maarof",
-      "paynow": "T16MQ0001B"
+      "paynow_uen": "T16MQ0001B"
     },
     {
       "organisation": "Masjid Kampong Siglap",
-      "paynow": "S02MQ0050D"
+      "paynow_uen": "S02MQ0050D"
     },
     {
       "organisation": "Masjid Yusof Ishak",
-      "paynow": "T16MQ0003E"
+      "paynow_uen": "T16MQ0003E"
     },
     {
       "organisation": "Masjid Abdul Aleem Siddique",
-      "paynow": "S57MQ0001D"
+      "paynow_uen": "S57MQ0001D"
     }
   ]

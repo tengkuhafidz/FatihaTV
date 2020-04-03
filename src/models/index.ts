@@ -32,7 +32,7 @@ export interface LiveSessionModel {
 
 export interface DonationListingModel {
     organisation: string,
-    paynow: string
+    paynow_uen: string
 }
 
 export enum GtagCategories {

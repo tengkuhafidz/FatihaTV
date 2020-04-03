@@ -37,7 +37,7 @@ const DonationLists = () => {
     return (
         <div className="container mx-auto px-8 pt-8 pb-32" id="donation-listing">
             <SearchInput handleSearchFilter={handleSearchFilter}/>
-            <div className="grid md:grid-cols-4 gap-8 ">
+            <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-8 ">
                 { renderDonationCards() } 
             </div>
         </div>

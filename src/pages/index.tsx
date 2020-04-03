@@ -1,4 +1,4 @@
-import { Link } from 'gatsby'
+import { Link, navigate } from 'gatsby'
 import React from 'react'
 import BottomCta from '../components/bottom-cta'
 import Hero from '../components/hero'
@@ -7,7 +7,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 export default () => (
-    <Layout>
+    <Layout showBanner>
         <SEO title="Local Islamic Videos" />
         <Hero 
             title="Watch local Islamic content"

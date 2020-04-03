@@ -8,7 +8,7 @@ import SEO from '../components/seo'
 import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 export default () => (
-    <Layout>
+    <Layout showBanner>
         <SEO 
             title="Upcoming Live Talks" 
             description="Check out the list of upcoming live sessions by our asatizah, and save it to your calendar!" 

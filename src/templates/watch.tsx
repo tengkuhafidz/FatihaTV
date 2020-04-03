@@ -97,7 +97,7 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
                                         {playlist.organisation} {playlist.platform}
                                     </OutboundLink>
                                 </p>
-                                {/* { renderDonationMethod() } */}
+                                { renderDonationMethod() }
                             </div>
                             <div className="w-full md:w-1/5">
                                 <button 

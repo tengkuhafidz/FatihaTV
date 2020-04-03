@@ -1,18 +1,21 @@
 import React from 'react'
+import { enableSmoothScroll } from '../utils'
+import DonationBanner from './banner'
 import Footer from './footer'
 import Header from './header'
-import { enableSmoothScroll } from '../utils'
 
 enableSmoothScroll()
 
 interface Props {
     children: React.ReactNode
+    showBanner?: boolean
 }
 
-const Layout: React.FC<Props> = ({ children }) => (
+const Layout: React.FC<Props> = ({ children, showBanner = false }) => (
     <div className="min-h-screen bg-gray-100 overflow-x-hidden">
         <Header />
-            <main>{ children }</main>
+        <DonationBanner showBanner={showBanner} />
+        <main>{ children }</main>
         <Footer />
     </div>
 )

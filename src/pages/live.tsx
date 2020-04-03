@@ -10,10 +10,10 @@ import { OutboundLink } from 'gatsby-plugin-google-gtag'
 export default () => (
     <Layout>
         <SEO 
-            title="Upcoming Live Sessions" 
+            title="Upcoming Live Talks" 
             description="Check out the list of upcoming live sessions by our asatizah, and save it to your calendar!" 
         />
-        <Hero />
+        <Hero title="Browse upcoming live talks" subtext="Our mosques have planned many live talks for us to benefit from. Check out this long list of upcoming ones that have been officially listed by MUIS, and save it to your calendar!"/>
         <div className="max-w-xs md:max-w-sm mx-auto">
             <ul className="flex">
                 <li className="flex-1 mr-4">

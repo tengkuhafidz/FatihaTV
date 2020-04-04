@@ -11,7 +11,7 @@ const DonationLists = () => {
     const [searchTerm, setSearchTerm] = useState("")
 
     const getSearchFilterResult = (donationListing: DonationListingModel[]): DonationListingModel[]  => {
-        const filterByKeys = [ "organisation" ]
+        const filterByKeys = [ "organisation_name" ]
         const fuseFilterResults = getFuseFilterResult(donationListing, filterByKeys, searchTerm)
         
         const fuseFilteredPlaylists: DonationListingModel[] = []

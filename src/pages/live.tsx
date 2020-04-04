@@ -34,7 +34,7 @@ export default () => (
             </ul>
         </div>
         <p className="text-gray-600 text-center mt-8 font-light text-sm">
-            Last Updated: 1st April 2020  &middot; 
+            Last Updated: 4th April 2020  &middot; 
             Source: &nbsp;
             <OutboundLink 
                 target="_blank" 

@@ -180,7 +180,7 @@
     "bank_account": "OCBC Account 591-066352-001"
   },
   {
-    "organisation_name": "Masjid Kampong Siglap",
+    "organisation_name": "Masjid Kampung Siglap",
     "paynow_uen": "S02MQ0050D",
     "bank_account": "OCBC Account 534-326822-001"
   },
@@ -208,11 +208,6 @@
     "organisation_name": "Masjid Muhajirin",
     "paynow_uen": "S77MQ0055H",
     "bank_account": "OCBC Account 581-749694-001"
-  },
-  {
-    "organisation_name": "Masjid Mujahidin",
-    "paynow_uen": "S77MQ0056D",
-    "bank_account": "OCBC Account 591-8741-10001"
   },
   {
     "organisation_name": "Masjid Mujahidin",

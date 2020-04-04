@@ -22,7 +22,7 @@ const DonationLists = () => {
     const handleSearchFilter = (e: InputEvent) => {
         e.preventDefault();
         setSearchTerm(e.target.value)
-        gtagEventClick('search_playlists', {
+        gtagEventClick('search_donation_list', {
             event_category: GtagCategories.Engagement,
             event_label: e.target.value
         })

@@ -1,43 +1,43 @@
 export interface PlaylistModel {
-    id: string,
-    title: string,
-    organisation: string,
-    donationMethod: string,
-    tags: string,
-    platform: string,
-    pageUrl: string,
-    thumbnailUrl: string,
-    videos: VideoModel[]
+  id: string
+  title: string
+  organisation: string
+  donationMethod: string
+  tags: string
+  platform: string
+  pageUrl: string
+  thumbnailUrl: string
+  videos: VideoModel[]
 }
 
 export interface VideoModel {
-    id: string,
-    playlistId: string,
-    episodeNumber?: string,
-    title: string,
-    asatizah: string,
-    language: string,
-    addedOn: string,
-    videoUrl: string
+  id: string
+  playlistId: string
+  episodeNumber?: string
+  title: string
+  asatizah: string
+  language: string
+  addedOn: string
+  videoUrl: string
 }
 
 export interface LiveSessionModel {
-    Date: string,
-    Time: string,
-    Mosque: string,
-    Title: string,
-    Speaker: string,
-    Link: string
+  Date: string
+  Time: string
+  Mosque: string
+  Title: string
+  Speaker: string
+  Link: string
 }
 
 export interface DonationListingModel {
-    organisation_name: string,
-    paynow_uen: string,
-    bank_account: string
+  organisation_name: string
+  paynow_uen: string
+  bank_account: string
 }
 
 export enum GtagCategories {
-    Engagement = 'engagement'
+  Engagement = 'engagement',
 }
 
 export type InputEvent = React.ChangeEvent<HTMLInputElement>

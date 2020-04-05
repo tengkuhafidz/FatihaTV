@@ -1,32 +1,43 @@
 module.exports = {
   extends: [
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
   ],
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: "module",
+    sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
     },
   },
   rules: {
-    "indent": ["error", 2],
-    "quotes": ["error", "single"],
-    "@typescript-eslint/interface-name-prefix": ["error", { "prefixWithI": "always" }],
+    'indent': ['error', 2],
+    'quotes': ['error', 'single'],
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/member-delimiter-style': ['error', {
+      'multiline': {
+        'delimiter': 'none',
+        'requireLast': true,
+      },
+      'singleline': {
+        'delimiter': 'semi',
+        'requireLast': false,
+      },
+    }],
   },
   settings: {
     react: {
-      version: "detect",
+      version: 'detect',
     },
   },
   overrides: [
     {
-      files: ["*.js", "*.jsx"],
+      files: ['*.js', '*.jsx'],
       rules: {
-        "@typescript-eslint/explicit-function-return-type": "off",
+        'semi': ['error', 'never'],
+        '@typescript-eslint/explicit-function-return-type': 'off',
       },
     },
   ],

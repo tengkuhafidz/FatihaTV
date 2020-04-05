@@ -1,1 +1,1 @@
-declare module 'react-facebook-player';
+declare module 'react-facebook-player'

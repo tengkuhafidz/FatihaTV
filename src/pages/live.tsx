@@ -1,5 +1,5 @@
-import { navigate, Link } from "gatsby";
-import React from "react";
+import { Link, navigate } from "gatsby";
+import React, { ReactElement } from "react";
 import BottomCta from "../components/bottom-cta";
 import Hero from "../components/hero";
 import Layout from "../components/layout";
@@ -7,7 +7,7 @@ import LiveSessions from "../components/Live/live-sessions";
 import SEO from "../components/seo";
 import { OutboundLink } from "gatsby-plugin-google-gtag";
 
-export default () => (
+export default (): ReactElement => (
   <Layout showBanner>
     <SEO
       title="Upcoming Live Talks"
@@ -23,7 +23,7 @@ export default () => (
           <Link
             to={"/"}
             className="text-center block border border-teal-500 rounded hover:border-gray-200 text-teal-500 hover:bg-teal-500 hover:text-white py-2 px-4 cursor-pointer"
-            onClick={() => navigate("/")}
+            onClick={(): void => navigate("/")}
           >
             Video Playlists
           </Link>

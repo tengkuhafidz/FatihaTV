@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import BottomCta from "../components/bottom-cta";
 import DonationLists from "../components/Donation/donation-lists";
 import Hero from "../components/hero";
@@ -6,7 +6,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { OutboundLink } from "gatsby-plugin-google-gtag";
 
-export default () => (
+export default (): ReactElement => (
   <Layout>
     <SEO title="Donate to Our Mosques" />
     <Hero

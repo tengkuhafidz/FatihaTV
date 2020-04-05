@@ -1,7 +1,7 @@
 import { navigate } from "gatsby";
 import { useEffect } from "react";
 
-export default () => {
+export default (): null => {
   useEffect(() => {
     navigate("/");
   }, []);

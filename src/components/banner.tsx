@@ -8,7 +8,7 @@ interface Props {
 }
 
 const DonationBanner: React.FC<Props> = ({ showBanner }) => {
-  const handleBannerClick = () => {
+  const handleBannerClick = (): void => {
     navigate("/donation-listing");
     gtagEventClick("click_donation_anner", {
       event_category: GtagCategories.Engagement,

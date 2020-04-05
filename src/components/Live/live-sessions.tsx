@@ -1,16 +1,16 @@
 import moment from "moment";
-import React, { useState } from "react";
+import React, { ReactElement, useState } from "react";
 import LiveSessionsData from "../../data/live-sessions-data.json";
 import SingleLiveSession from "./single-live-session";
-import { LiveSessionModel, InputEvent, GtagCategories } from "../../models";
+import { GtagCategories, InputEvent, LiveSessionModel } from "../../models";
 import SearchInput from "../search-input";
 import { gtagEventClick } from "../../utils/gtag";
 import { getFuseFilterResult } from "../../utils";
 
-const LiveSessions = () => {
+const LiveSessions = (): ReactElement => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const isUpcoming = (dateWithoutYear: string, time: string) => {
+  const isUpcoming = (dateWithoutYear: string, time: string): boolean => {
     const currentYear = moment().get("year");
     const dateTimeWithYear = `${dateWithoutYear} ${currentYear} ${time}`;
     return moment(dateTimeWithYear).isAfter();
@@ -20,7 +20,7 @@ const LiveSessions = () => {
     session => isUpcoming(session.Date, session.Time)
   );
 
-  const handleSearchFilter = (e: InputEvent) => {
+  const handleSearchFilter = (e: InputEvent): void => {
     e.preventDefault();
     setSearchTerm(e.target.value);
     gtagEventClick("search_live_sessions", {
@@ -50,7 +50,7 @@ const LiveSessions = () => {
     ? getSearchFilterResult(upcomingLiveSessions)
     : upcomingLiveSessions;
 
-  const renderLiveSessions = () => {
+  const renderLiveSessions = (): ReactElement[] => {
     return filteredSessions.map(
       (liveSession: LiveSessionModel, index: number) => (
         <SingleLiveSession liveSession={liveSession} key={index} />

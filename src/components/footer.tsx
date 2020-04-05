@@ -1,7 +1,7 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { OutboundLink } from "gatsby-plugin-google-gtag";
 
-const Footer = () => (
+const Footer = (): ReactElement => (
   <div className="px-8 py-4">
     <p className="text-center font-light text-sm text-gray-800">
       Built from the comfort of our own home in Woodlands &hearts;

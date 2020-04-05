@@ -7,22 +7,28 @@ interface Props {
   liveSession: LiveSessionModel;
 }
 
+interface FormattedDate {
+  displayDay: string;
+  numericDay: RegExpMatchArray | null;
+  month: string;
+}
+
 const SingleLiveSession: React.FC<Props> = ({ liveSession }) => {
   const { Time, Mosque, Title, Speaker, Link, Date: date } = liveSession;
 
-  const getDateTime = () => {
+  const getDateTime = (): string => {
     const currentYear = moment().get("year");
     const dateTime = `${date} ${currentYear} ${Time}`;
     return moment(dateTime).format("YYYYMMDDTHHmmss");
   };
 
-  const getCalendarLink = () => {
+  const getCalendarLink = (): string => {
     const details = `By+${Speaker},+Masjid+${Mosque}`;
     const dateTime = getDateTime();
     return `https://calendar.google.com/calendar/r/eventedit?text=${Title}&dates=${dateTime}/${dateTime}&details=${details}`;
   };
 
-  const getFormattedDate = () => {
+  const getFormattedDate = (): FormattedDate => {
     const numberOnlyPattern = /\d+/g;
     const displayDate = moment(getDateTime()).calendar(moment(), {
       sameDay: "[Today]",

@@ -11,7 +11,7 @@ const SearchInput: React.FC<Props> = ({ handleSearchFilter }) => (
     id="search"
     type="text"
     placeholder="Try this shiny new search feature! ^_^"
-    onChange={e => handleSearchFilter(e)}
+    onChange={(e): void => handleSearchFilter(e)}
   />
 );
 

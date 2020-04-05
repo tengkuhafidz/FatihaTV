@@ -6,12 +6,14 @@ interface Props {
 }
 
 const DonationMethod: React.FC<Props> = ({ methodKey, methodValue }) => {
-  const getMethodLabel = () => {
+  const getMethodLabel = (): string => {
     switch (methodKey) {
       case "paynow_uen":
         return "Paynow UEN";
       case "bank_account":
         return "Bank Account";
+      default:
+        throw new Error(`What donation method is this? ${methodKey}`);
     }
   };
 

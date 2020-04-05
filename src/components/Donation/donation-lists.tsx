@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { ReactElement, useState } from "react";
 import donationListingData from "../../data/donation-methods-data.json";
 import SingleDonationCard from "./single-donation-card";
 import SearchInput from "../search-input";
@@ -6,7 +6,7 @@ import { gtagEventClick } from "../../utils/gtag";
 import { DonationListingModel, GtagCategories, InputEvent } from "../../models";
 import { getFuseFilterResult } from "../../utils";
 
-const DonationLists = () => {
+const DonationLists = (): ReactElement => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const getSearchFilterResult = (
@@ -26,7 +26,7 @@ const DonationLists = () => {
     return fuseFilteredPlaylists;
   };
 
-  const handleSearchFilter = (e: InputEvent) => {
+  const handleSearchFilter = (e: InputEvent): void => {
     e.preventDefault();
     setSearchTerm(e.target.value);
     gtagEventClick("search_donation_list", {
@@ -39,7 +39,7 @@ const DonationLists = () => {
     ? getSearchFilterResult(donationListingData as DonationListingModel[])
     : donationListingData;
 
-  const renderDonationCards = () => {
+  const renderDonationCards = (): ReactElement[] => {
     return donationsListingToBeDisplayed.map(donationData => (
       <SingleDonationCard
         donationData={donationData}

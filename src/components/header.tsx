@@ -1,5 +1,5 @@
 import { navigate } from "gatsby";
-import React, { useState } from "react";
+import React, { ReactElement, useState } from "react";
 import {
   FaAngleDown,
   FaFacebookSquare,
@@ -12,7 +12,7 @@ import { gtagEventClick } from "../utils/gtag";
 import { OutboundLink } from "gatsby-plugin-google-gtag";
 import { GtagCategories } from "../models";
 
-const Header = () => {
+const Header = (): ReactElement => {
   // check if the site is on client side to ensure window is available
   const hasWindow = typeof window !== "undefined";
   const currentUrl = hasWindow ? window.location.href : "https://kuliah.sg";
@@ -25,7 +25,7 @@ const Header = () => {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const trackOpenShareDropdown = () => {
+  const trackOpenShareDropdown = (): void => {
     if (isOpen) {
       gtagEventClick("open_share_dropdown", {
         event_category: GtagCategories.Engagement,
@@ -34,7 +34,7 @@ const Header = () => {
     }
   };
 
-  const handleShareDropdownClick = () => {
+  const handleShareDropdownClick = (): void => {
     setIsOpen(!isOpen);
     trackOpenShareDropdown();
   };
@@ -43,7 +43,7 @@ const Header = () => {
     <nav className="flex items-center justify-between flex-wrap p-6 bg-gray-800 w-full">
       <div
         className="flex items-center flex-shrink-0 mr-6 cursor-pointer"
-        onClick={() => navigate("/")}
+        onClick={(): void => navigate("/")}
       >
         <img src="/kuliahsg-logo-long-light.png" className="h-12" />
       </div>

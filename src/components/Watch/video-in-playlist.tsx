@@ -1,5 +1,5 @@
 import { navigate } from "gatsby";
-import React from "react";
+import React, { ReactElement } from "react";
 import { VideoModel } from "../../models";
 
 interface Props {
@@ -18,9 +18,10 @@ const VideoInPlaylist: React.FC<Props> = ({
   const videoNumber = videoIndex + 1;
   const isCurrentVideo = video.id === currentVideo.id;
 
-  const openVideo = () => navigate(`/watch/${playlistId}/${videoNumber}`);
+  const openVideo = (): Promise<void> =>
+    navigate(`/watch/${playlistId}/${videoNumber}`);
 
-  const renderCurrentlyPlaying = () => {
+  const renderCurrentlyPlaying = (): ReactElement | boolean => {
     return (
       isCurrentVideo && (
         <p className="text-teal-500 font-semibold uppercase text-sm">
@@ -34,7 +35,7 @@ const VideoInPlaylist: React.FC<Props> = ({
     <div
       className={`w-full rounded-lg border-2 mb-4 shadow-sm hover:shadow-lg cursor-pointer w-full shadow-sm hover:shadow-lg ${isCurrentVideo &&
         "border-teal-500"}`}
-      onClick={() => openVideo()}
+      onClick={(): Promise<void> => openVideo()}
     >
       <div className="px-6 py-2">
         {renderCurrentlyPlaying()}

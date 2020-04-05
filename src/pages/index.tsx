@@ -1,12 +1,12 @@
 import { Link } from "gatsby";
-import React from "react";
+import React, { ReactElement } from "react";
 import BottomCta from "../components/bottom-cta";
 import Hero from "../components/hero";
 import Playlists from "../components/Home/playlists";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-export default () => (
+export default (): ReactElement => (
   <Layout showBanner>
     <SEO title="Local Islamic Videos" />
     <Hero

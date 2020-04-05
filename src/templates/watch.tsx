@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { ReactElement, useState } from "react";
 import Layout from "../components/layout";
 import VideoPlayer from "../components/Watch/video-player";
 import VideoInPlaylist from "../components/Watch/video-in-playlist";
@@ -7,11 +7,11 @@ import SEO from "../components/seo";
 import { FaMapPin } from "react-icons/fa";
 import {
   addToLocalPinnedPlaylist,
-  removeFromLocalPinnedPlaylist,
   isPlaylistPinnedOnLocalStorage,
+  removeFromLocalPinnedPlaylist,
 } from "../utils";
 import { gtagEventClick } from "../utils/gtag";
-import { PlaylistModel, VideoModel, GtagCategories } from "../models";
+import { GtagCategories, PlaylistModel, VideoModel } from "../models";
 
 interface Props {
   pageContext: {
@@ -31,7 +31,7 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
     isPlaylistPinnedLocally
   );
 
-  const handlePinPlaylist = () => {
+  const handlePinPlaylist = (): void => {
     setIsPlaylistPinned(true);
     addToLocalPinnedPlaylist(playlist.id);
     gtagEventClick("pin_playlist", {
@@ -40,7 +40,7 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
     });
   };
 
-  const handleUnpinPlaylist = () => {
+  const handleUnpinPlaylist = (): void => {
     setIsPlaylistPinned(false);
     removeFromLocalPinnedPlaylist(playlist.id);
     gtagEventClick("unpin_playlist", {
@@ -49,7 +49,7 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
     });
   };
 
-  const renderPlaylistVideos = () => {
+  const renderPlaylistVideos = (): ReactElement[] => {
     return videos.map((video, index) => (
       <VideoInPlaylist
         playlistId={playlist.id}
@@ -61,7 +61,7 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
     ));
   };
 
-  const renderDonationMethod = () => {
+  const renderDonationMethod = (): ReactElement => {
     if (donationMethod) {
       return (
         <p className="text-xl flex flex-wrap">

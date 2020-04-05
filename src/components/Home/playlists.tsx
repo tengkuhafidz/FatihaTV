@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { ReactElement, useState } from "react";
 import playlistsData from "../../data/merged-playlist-video-data.json";
 import {
   getFuseFilterResult,
@@ -14,7 +14,7 @@ import {
 } from "../../models";
 import SearchInput from "../search-input";
 
-const Playlists = () => {
+const Playlists = (): ReactElement => {
   // used as a hack to get json of the playlist <> video merged data - to run on first load
   // console.log("<<<", JSON.stringify(getMergePlaylistData()))
 
@@ -60,7 +60,7 @@ const Playlists = () => {
   const playlistsToDisplay: PlaylistModel[] =
     !tagFilter && !searchTerm ? playlistsData : getFilteredPlaylists();
 
-  const handleTagFilterClick = (e: SpanEvent, tag: string) => {
+  const handleTagFilterClick = (e: SpanEvent, tag: string): void => {
     e.stopPropagation();
     setTagFilter(tag);
     gtagEventClick("filter_by_tag", {
@@ -69,7 +69,7 @@ const Playlists = () => {
     });
   };
 
-  const handleSearchFilter = (e: InputEvent) => {
+  const handleSearchFilter = (e: InputEvent): void => {
     e.preventDefault();
     setSearchTerm(e.target.value);
     gtagEventClick("search_playlists", {
@@ -78,7 +78,9 @@ const Playlists = () => {
     });
   };
 
-  const sortPinnedPlaylistFirst = (playlists: PlaylistModel[]) => {
+  const sortPinnedPlaylistFirst = (
+    playlists: PlaylistModel[]
+  ): PlaylistModel[] => {
     return playlists.sort((currPlaylist, nextPlaylist) => {
       if (
         isPlaylistPinnedOnLocalStorage(currPlaylist.id) &&
@@ -90,7 +92,7 @@ const Playlists = () => {
     });
   };
 
-  const renderPlaylists = () => {
+  const renderPlaylists = (): ReactElement[] => {
     const playlists = sortPinnedPlaylistFirst(playlistsToDisplay);
     return playlists.map(playlist => (
       <SinglePlaylist
@@ -102,7 +104,7 @@ const Playlists = () => {
     ));
   };
 
-  const renderCurrentTagFilter = () => {
+  const renderCurrentTagFilter = (): ReactElement => {
     if (tagFilter) {
       return (
         <p className="mx-auto mb-8 rounded bg-gray-800 px-2 py-2 w-xs text-white font-semibold text-lg">
@@ -111,7 +113,7 @@ const Playlists = () => {
           &middot;&nbsp;
           <span
             className="font-light hover:font-semibold cursor-pointer"
-            onClick={e => handleTagFilterClick(e, "")}
+            onClick={(e): void => handleTagFilterClick(e, "")}
           >
             clear
           </span>

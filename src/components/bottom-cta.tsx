@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { ReactElement, useState } from "react";
 import { OutboundLink } from "gatsby-plugin-google-gtag";
 import { gtagEventClick } from "../utils/gtag";
 import { GtagCategories } from "../models";
 
-const BottomCta = () => {
+const BottomCta = (): ReactElement => {
   // check if the site is on client side to ensure local storage is available
   const hasLocalSotrage: boolean = typeof Storage !== "undefined";
   const localHasClosedCta: boolean =
@@ -12,14 +12,14 @@ const BottomCta = () => {
 
   const [hasClosedCta, setHasClosedCta] = useState(localHasClosedCta);
 
-  const trackBottomCtaClose = () => {
+  const trackBottomCtaClose = (): void => {
     gtagEventClick("close_bottom_cta", {
       event_category: GtagCategories.Engagement,
       event_label: "pergas_crowdfunding_cta",
     });
   };
 
-  const closeCta = () => {
+  const closeCta = (): void => {
     setHasClosedCta(true);
     localStorage.setItem("hasClosedCta", "true");
     trackBottomCtaClose();
@@ -38,7 +38,7 @@ const BottomCta = () => {
         </span>
         <button
           className="p-1 float-right ml-2 -mt-1"
-          onClick={() => closeCta()}
+          onClick={(): void => closeCta()}
         >
           <svg
             className="h-6 w-6 text-white"

@@ -15,15 +15,15 @@ export const getMergePlaylistData = (): PlaylistModel[] => {
   playlistData.forEach(singlePlaylist => {
     const videosInCurrPlaylist = videoData.filter(
       singleVideo => singlePlaylist.id === singleVideo.playlistId
-    )
+    );
 
     const completeSinglePlaylist = {
       ...singlePlaylist,
       videos: videosInCurrPlaylist,
-    }
+    };
 
     completePlaylistData.unshift(completeSinglePlaylist);
-  })
+  });
 
   return completePlaylistData;
 };

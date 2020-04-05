@@ -20,7 +20,7 @@ export const getMergePlaylistData = (): PlaylistModel[] => {
     const completeSinglePlaylist = {
       ...singlePlaylist,
       videos: videosInCurrPlaylist,
-    };
+    }
 
     completePlaylistData.unshift(completeSinglePlaylist);
   });

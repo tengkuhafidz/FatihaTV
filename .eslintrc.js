@@ -15,17 +15,6 @@ module.exports = {
   rules: {
     'indent': ['error', 2],
     'quotes': ['error', 'single'],
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/member-delimiter-style': ['error', {
-      'multiline': {
-        'delimiter': 'none',
-        'requireLast': true,
-      },
-      'singleline': {
-        'delimiter': 'semi',
-        'requireLast': false,
-      },
-    }],
   },
   settings: {
     react: {
@@ -36,9 +25,8 @@ module.exports = {
     {
       files: ['*.js', '*.jsx'],
       rules: {
-        'semi': ['error', 'never'],
         '@typescript-eslint/explicit-function-return-type': 'off',
       },
     },
   ],
-}
+};

@@ -6,7 +6,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { OutboundLink } from "gatsby-plugin-google-gtag";
 
-export default (): ReactElement => (
+const DonationListingPage = (): ReactElement => (
   <Layout>
     <SEO title="Donate to Our Mosques" />
     <Hero
@@ -27,3 +27,5 @@ export default (): ReactElement => (
     <BottomCta />
   </Layout>
 );
+
+export default DonationListingPage;

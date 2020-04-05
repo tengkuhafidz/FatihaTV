@@ -7,7 +7,7 @@ import LiveSessions from "../components/Live/live-sessions";
 import SEO from "../components/seo";
 import { OutboundLink } from "gatsby-plugin-google-gtag";
 
-export default (): ReactElement => (
+const LivePage = (): ReactElement => (
   <Layout showBanner>
     <SEO
       title="Upcoming Live Talks"
@@ -52,3 +52,5 @@ export default (): ReactElement => (
     <BottomCta />
   </Layout>
 );
+
+export default LivePage;

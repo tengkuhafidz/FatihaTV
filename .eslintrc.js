@@ -15,7 +15,6 @@ module.exports = {
   rules: {
     'react/prop-types': 'off',
     '@typescript-eslint/camelcase': 'off',
-    'react/display-name': 'off',
     '@typescript-eslint/explicit-function-return-type': 'error',
   },
   settings: {

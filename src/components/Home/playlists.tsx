@@ -1,17 +1,16 @@
 import React, { useState } from "react";
-import Fuse from "fuse.js";
 import playlistsData from "../../data/merged-playlist-video-data.json";
 import {
-  isPlaylistPinnedOnLocalStorage,
   getFuseFilterResult,
+  isPlaylistPinnedOnLocalStorage,
 } from "../../utils";
 import { gtagEventClick } from "../../utils/gtag";
 import SinglePlaylist from "./single-playlist";
 import {
-  PlaylistModel,
-  InputEvent,
-  SpanEvent,
   GtagCategories,
+  InputEvent,
+  PlaylistModel,
+  SpanEvent,
 } from "../../models";
 import SearchInput from "../search-input";
 

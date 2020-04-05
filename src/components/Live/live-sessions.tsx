@@ -2,7 +2,6 @@ import moment from "moment";
 import React, { useState } from "react";
 import LiveSessionsData from "../../data/live-sessions-data.json";
 import SingleLiveSession from "./single-live-session";
-import Fuse, { IFuseOptions } from "fuse.js";
 import { LiveSessionModel, InputEvent, GtagCategories } from "../../models";
 import SearchInput from "../search-input";
 import { gtagEventClick } from "../../utils/gtag";

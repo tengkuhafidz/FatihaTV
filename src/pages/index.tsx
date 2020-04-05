@@ -1,4 +1,4 @@
-import { Link, navigate } from "gatsby";
+import { Link } from "gatsby";
 import React from "react";
 import BottomCta from "../components/bottom-cta";
 import Hero from "../components/hero";

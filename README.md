@@ -4,8 +4,9 @@ This site's creation was inspired by the observation of how adaptive our local a
 
 As such, to support their work, my wife and I have curated some of their videos and upcoming live sessions so that we can find them in one place.
 
-This is also my first tech project with my wife - hence the name dedication. Thank you wifey for layaning! hehe <3
+This is also my first tech project with my wife - hence the name dedication. :P
 
 ## Support our asatizah
 
-Contribute to Pergas fundraising: https://www.giving.sg/pergas/gracious_package
+- Contribute to Pergas fundraising: https://www.giving.sg/pergas/gracious_package
+- Contribute to mosques: https://kuliah.sg/donation-listing

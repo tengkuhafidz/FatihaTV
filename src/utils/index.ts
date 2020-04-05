@@ -3,8 +3,6 @@ import playlistData from "../data/playlist-data.json";
 import videoData from "../data/video-data.json";
 import { PlaylistModel } from "../models";
 
-import SmoothScroll from "smooth-scroll";
-
 /**
  * MERGE PLAYLIST AND VIDEO JSON
  */
@@ -30,7 +28,9 @@ export const getMergePlaylistData = (): PlaylistModel[] => {
 
 export const enableSmoothScroll = (): void => {
   if (typeof window !== "undefined") {
-    new SmoothScroll('a[href*="#"]');
+    // new SmoothScroll('a[href*="#"]');
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    require("smooth-scroll")('a[href*="#"]');
   }
 };
 

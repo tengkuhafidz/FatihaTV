@@ -12,7 +12,7 @@ const DonationLists = (): ReactElement => {
   const getSearchFilterResult = (
     donationListing: DonationListingModel[]
   ): DonationListingModel[] => {
-    const filterByKeys = ["organisation_name"];
+    const filterByKeys = ["organisationName"];
     const fuseFilterResults = getFuseFilterResult(
       donationListing,
       filterByKeys,
@@ -43,7 +43,7 @@ const DonationLists = (): ReactElement => {
     return donationsListingToBeDisplayed.map(donationData => (
       <SingleDonationCard
         donationData={donationData}
-        key={donationData.paynow_uen}
+        key={donationData.paynowUen}
       />
     ));
   };

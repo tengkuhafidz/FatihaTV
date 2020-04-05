@@ -6,7 +6,7 @@ import Playlists from "../components/Home/playlists";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-export default (): ReactElement => (
+const HomePage = (): ReactElement => (
   <Layout showBanner>
     <SEO title="Local Islamic Videos" />
     <Hero
@@ -40,3 +40,5 @@ export default (): ReactElement => (
     <BottomCta />
   </Layout>
 );
+
+export default HomePage;

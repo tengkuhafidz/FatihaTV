@@ -1,4 +1,5 @@
-import allPlaylistWithVideos from "./src/data/merged-playlist-video-data.json";
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const allPlaylistWithVideos = require("./src/data/merged-playlist-video-data.json");
 
 exports.createPages = async ({ actions: { createPage } }) => {
   allPlaylistWithVideos.forEach(playlist => {

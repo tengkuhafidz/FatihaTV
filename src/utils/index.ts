@@ -23,7 +23,7 @@ export const getMergePlaylistData = (): PlaylistModel[] => {
     }
 
     completePlaylistData.unshift(completeSinglePlaylist);
-  });
+  })
 
   return completePlaylistData;
 };

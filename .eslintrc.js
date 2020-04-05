@@ -1,32 +1,37 @@
 module.exports = {
   extends: [
-    'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
   ],
-  parser: '@typescript-eslint/parser',
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: 'module',
+    sourceType: "module",
     ecmaFeatures: {
       jsx: true,
     },
   },
   rules: {
-    'react/prop-types': 'off',
-    '@typescript-eslint/camelcase': 'off',
-    '@typescript-eslint/explicit-function-return-type': 'error',
+    "react/prop-types": "off",
+    "@typescript-eslint/camelcase": [
+      "error",
+      {
+        allow: ['event_category','event_label']
+      },
+    ],
+    "@typescript-eslint/explicit-function-return-type": "error",
   },
   settings: {
     react: {
-      version: 'detect',
+      version: "detect",
     },
   },
   overrides: [
     {
-      files: ['*.js', '*.jsx'],
+      files: ["*.js", "*.jsx"],
       rules: {
-        '@typescript-eslint/explicit-function-return-type': 'off',  // JS files how to have return type, you tell me
+        "@typescript-eslint/explicit-function-return-type": "off", // JS files how to have return type, you tell me
       },
     },
   ],

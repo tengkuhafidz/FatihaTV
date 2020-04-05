@@ -31,9 +31,9 @@ export interface LiveSessionModel {
 }
 
 export interface DonationListingModel {
-  organisation_name: string;
-  paynow_uen: string;
-  bank_account: string;
+  organisationName: string;
+  paynowUen: string;
+  bankAccount: string;
 }
 
 export enum GtagCategories {

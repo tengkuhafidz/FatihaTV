@@ -1,9 +1,9 @@
-import Fuse from 'fuse.js';
-import playlistData from '../data/playlist-data.json';
-import videoData from '../data/video-data.json';
-import { PlaylistModel } from '../models';
+import Fuse from "fuse.js";
+import playlistData from "../data/playlist-data.json";
+import videoData from "../data/video-data.json";
+import { PlaylistModel } from "../models";
 
-import SmoothScroll from 'smooth-scroll';
+import SmoothScroll from "smooth-scroll";
 
 /**
  * MERGE PLAYLIST AND VIDEO JSON
@@ -29,7 +29,7 @@ export const getMergePlaylistData = (): PlaylistModel[] => {
 };
 
 export const enableSmoothScroll = (): void => {
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     new SmoothScroll('a[href*="#"]');
   }
 };
@@ -89,10 +89,10 @@ export const isMobileDevice = (): boolean => {
  */
 
 export const getLocalPinnedPlaylist = (): string[] => {
-  const hasLocalStorageReady = typeof Storage !== 'undefined';
+  const hasLocalStorageReady = typeof Storage !== "undefined";
   if (hasLocalStorageReady) {
     const localStoragePinnedPlaylists =
-      localStorage.getItem('pinnedPlaylists') || '';
+      localStorage.getItem("pinnedPlaylists") || "";
     return localStoragePinnedPlaylists
       ? JSON.parse(localStoragePinnedPlaylists)
       : [];
@@ -103,14 +103,14 @@ export const getLocalPinnedPlaylist = (): string[] => {
 export const addToLocalPinnedPlaylist = (playlistId: string): void => {
   const localPinnedPlaylists = getLocalPinnedPlaylist();
   localPinnedPlaylists.push(playlistId);
-  localStorage.setItem('pinnedPlaylists', JSON.stringify(localPinnedPlaylists));
+  localStorage.setItem("pinnedPlaylists", JSON.stringify(localPinnedPlaylists));
 };
 
 export const removeFromLocalPinnedPlaylist = (playlistId: string): void => {
   const localPinnedPlaylists = getLocalPinnedPlaylist();
   const playlistIndex = localPinnedPlaylists.indexOf(playlistId);
   if (playlistIndex !== -1) localPinnedPlaylists.splice(playlistIndex, 1);
-  localStorage.setItem('pinnedPlaylists', JSON.stringify(localPinnedPlaylists));
+  localStorage.setItem("pinnedPlaylists", JSON.stringify(localPinnedPlaylists));
 };
 
 export const isPlaylistPinnedOnLocalStorage = (playlistId: string): boolean => {

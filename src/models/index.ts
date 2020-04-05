@@ -37,7 +37,7 @@ export interface DonationListingModel {
 }
 
 export enum GtagCategories {
-  Engagement = 'engagement',
+  Engagement = "engagement",
 }
 
 export type InputEvent = React.ChangeEvent<HTMLInputElement>;

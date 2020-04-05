@@ -9,8 +9,8 @@ export const gtagEventClick = (
   parameters?: Record<string, object>
 ): void => {
   const { NODE_ENV } = process.env;
-  const isDevEnv = NODE_ENV === 'development';
-  typeof window !== 'undefined' &&
+  const isDevEnv = NODE_ENV === "development";
+  typeof window !== "undefined" &&
     !isDevEnv &&
-    window.gtag('event', action, parameters);
+    window.gtag("event", action, parameters);
 };

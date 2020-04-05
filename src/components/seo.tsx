@@ -1,16 +1,22 @@
-import { graphql, useStaticQuery } from 'gatsby'
-import React from 'react'
-import Helmet from 'react-helmet'
+import { graphql, useStaticQuery } from "gatsby";
+import React from "react";
+import Helmet from "react-helmet";
 
 interface Props {
-  description?: string
-  lang?: string
-  meta?: any[]
-  title: string
-  image?: string
+  description?: string;
+  lang?: string;
+  meta?: string[];
+  title: string;
+  image?: string;
 }
 
-const SEO: React.FC<Props> = ({ description = '', lang = 'en', meta = [], title, image }) => {
+const SEO: React.FC<Props> = ({
+  description = "",
+  lang = "en",
+  meta = [],
+  title,
+  image,
+}) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -24,10 +30,10 @@ const SEO: React.FC<Props> = ({ description = '', lang = 'en', meta = [], title,
         }
       }
     `
-  )
+  );
 
-  const metaDescription = description || site.siteMetadata.description
-  const metaImage = image || site.siteMetadata.image
+  const metaDescription = description || site.siteMetadata.description;
+  const metaImage = image || site.siteMetadata.image;
 
   return (
     <Helmet
@@ -80,10 +86,10 @@ const SEO: React.FC<Props> = ({ description = '', lang = 'en', meta = [], title,
         {
           name: `twitter:image`,
           content: metaImage,
-        }
+        },
       ].concat(meta)}
     />
-  )
-}
+  );
+};
 
-export default SEO
+export default SEO;

@@ -12,9 +12,7 @@ module.exports = {
       jsx: true,
     },
   },
-  rules: {
-    'indent': ['error', 2],
-  },
+  rules: {},
   settings: {
     react: {
       version: 'detect',
@@ -24,7 +22,7 @@ module.exports = {
     {
       files: ['*.js', '*.jsx'],
       rules: {
-        '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/explicit-function-return-type': 'off',  // JS files how to have return type, you tell me
       },
     },
   ],

@@ -31,17 +31,17 @@ export class Youtube {
     // For ease of calculating quota cost.
     const part = [
       // "auditDetails", //4 - Requires special perms
-      "contentDetails", //2
-      "brandingSettings", //2
-      "contentOwnerDetails", //2
+      // "contentDetails", //2
+      // "brandingSettings", //2
+      // "contentOwnerDetails", //2
       "id", //0
-      "localizations", //2
+      // "localizations", //2
       "snippet", //2
-      "status", //2
-      "topicDetails", //2
-      "statistics", //2
+      // "status", //2
+      // "topicDetails", //2
+      // "statistics", //2
     ];
-    const cost = 16;
+    const cost = 2;
     // Valid params: categoryId, forUsername, id, managedByMe, mine, maxResults.
     const params = {
       id: channelId,
@@ -54,14 +54,14 @@ export class Youtube {
 
   getChannelPlaylists = async (channelId: string): Promise<void> => {
     const part = [
-      "contentDetails", //2,
+      // "contentDetails", //2,
       "id", //0,
-      "localizations", //2,
-      "player", //0,
+      // "localizations", //2,
+      // "player", //0,
       "snippet", //2,
-      "status", //2,
+      // "status", //2,
     ];
-    const cost = 8;
+    const cost = 2;
     const params = {
       channelId,
       maxResults: "50",
@@ -84,12 +84,12 @@ export class Youtube {
 
   getPlaylistVideos = async (playlistId: string): Promise<void> => {
     const part = [
-      "contentDetails", //2,
+      // "contentDetails", //2,
       "id", //0,
       "snippet", //2,
-      "status", //2,
+      // "status", //2,
     ];
-    const cost = 6;
+    const cost = 2;
     const params = {
       playlistId,
       maxResults: "50",

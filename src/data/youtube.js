@@ -68,17 +68,14 @@ var Youtube = /** @class */ (function () {
                     case 0:
                         part = [
                             // "auditDetails", //4 - Requires special perms
-                            "contentDetails",
-                            "brandingSettings",
-                            "contentOwnerDetails",
+                            // "contentDetails", //2
+                            // "brandingSettings", //2
+                            // "contentOwnerDetails", //2
                             "id",
-                            "localizations",
+                            // "localizations", //2
                             "snippet",
-                            "status",
-                            "topicDetails",
-                            "statistics",
                         ];
-                        cost = 16;
+                        cost = 2;
                         params = {
                             id: channelId,
                             maxResults: "50"
@@ -97,14 +94,13 @@ var Youtube = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         part = [
-                            "contentDetails",
+                            // "contentDetails", //2,
                             "id",
-                            "localizations",
-                            "player",
+                            // "localizations", //2,
+                            // "player", //0,
                             "snippet",
-                            "status",
                         ];
-                        cost = 8;
+                        cost = 2;
                         params = {
                             channelId: channelId,
                             maxResults: "50"
@@ -133,12 +129,11 @@ var Youtube = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         part = [
-                            "contentDetails",
+                            // "contentDetails", //2,
                             "id",
                             "snippet",
-                            "status",
                         ];
-                        cost = 6;
+                        cost = 2;
                         params = {
                             playlistId: playlistId,
                             maxResults: "50"

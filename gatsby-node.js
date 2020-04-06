@@ -68,18 +68,10 @@ const getAllPlaylistWithVideos = async () => {
   return allPlaylistWithVideos;
 };
 
-// (async () => {
-//   console.log(await allPlaylistWithVideos());
-//   // console.log(yt.usedQuota);
-// })();
-
 exports.createPages = async ({ actions: { createPage } }) => {
   const allPlaylistWithVideos = await getAllPlaylistWithVideos();
   allPlaylistWithVideos.forEach(playlist => {
     playlist.videos.forEach(currentVideo => {
-      console.log(
-        "Creating page: " + `/watch/${playlist.id}/${currentVideo.id}`
-      );
       createPage({
         path: `/watch/${playlist.id}/${currentVideo.id}`,
         component: require.resolve("./src/templates/watch.tsx"),

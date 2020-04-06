@@ -45,7 +45,7 @@ export class Youtube {
       // "topicDetails", //2
       // "statistics", //2
     ];
-    const cost = 2;
+    const cost = 3;
     // Valid params: categoryId, forUsername, id, managedByMe, mine, maxResults.
     const params = {
       id: channelId,
@@ -65,7 +65,7 @@ export class Youtube {
       "snippet", //2,
       // "status", //2,
     ];
-    const cost = 2;
+    const cost = 3;
     const params = {
       channelId,
       maxResults: "50",
@@ -93,7 +93,7 @@ export class Youtube {
       "snippet", //2,
       // "status", //2,
     ];
-    const cost = 2;
+    const cost = 3;
     const params = {
       playlistId,
       maxResults: "50",
@@ -115,27 +115,3 @@ export class Youtube {
     return videos;
   };
 }
-
-// (async (): Promise<void> => {
-//   const yt = new Youtube();
-//   await Promise.all([
-//     yt.getChannel("UCnqD9EhaRuKIhHY_pHPyxcA"),
-//     yt.getChannelPlaylists("UCnqD9EhaRuKIhHY_pHPyxcA"),
-//     yt.getPlaylistVideos("PLoBuEb7Cp3UPmrc4IqSU_N68sNELPFAjh"),
-//   ]);
-//   console.log(yt.usedQuota);
-// })();
-
-// const yt = new Youtube();
-
-// (async (): Promise<void> => {
-//   console.log(await yt.getChannel("UCnqD9EhaRuKIhHY_pHPyxcA"));
-// })();
-
-// (async (): Promise<void> => {
-//   console.log(await yt.getChannelPlaylists("UCnqD9EhaRuKIhHY_pHPyxcA"));
-// })();
-
-// (async (): Promise<void> => {
-//   console.log(await yt.getPlaylistVideos("PLoBuEb7Cp3UPmrc4IqSU_N68sNELPFAjh"));
-// })();

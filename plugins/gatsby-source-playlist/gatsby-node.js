@@ -17,7 +17,7 @@ const getAllPlaylistWithVideos = async apiKey => {
         tags: "tags,to,be,implemented",       // TODO: Parse from description?
         platform: "YouTube",
         pageUrl: channel.pageUrl,
-        thumbnailUrl: playlist.snippet.thumbnails.standard.url,
+        thumbnailUrl: playlist.snippet.thumbnails.medium.url, // Encountered error: thumbnails key (i.e. thumbnails.standard) may not exist.
       };
       const playlistVideos = await yt.getPlaylistVideos(playlist.id);
       const videosArr = playlistVideos.map(video => {
@@ -38,7 +38,7 @@ const getAllPlaylistWithVideos = async apiKey => {
     }
     allPlaylistWithVideos = [...allPlaylistWithVideos, ...playlistArr];
   }
-  console.log("YouTube API Quota used: ", yt.usedQuota + "~ish");
+  console.log("YouTube API Quota Units used: ", yt.usedQuota);
   return allPlaylistWithVideos;
 };
 

@@ -88,7 +88,7 @@ var Youtube = /** @class */ (function () {
                             // "localizations", //2
                             "snippet",
                         ];
-                        cost = 2;
+                        cost = 3;
                         params = {
                             id: channelId,
                             maxResults: "50"
@@ -113,7 +113,7 @@ var Youtube = /** @class */ (function () {
                             // "player", //0,
                             "snippet",
                         ];
-                        cost = 2;
+                        cost = 3;
                         params = {
                             channelId: channelId,
                             maxResults: "50"
@@ -146,7 +146,7 @@ var Youtube = /** @class */ (function () {
                             "id",
                             "snippet",
                         ];
-                        cost = 2;
+                        cost = 3;
                         params = {
                             playlistId: playlistId,
                             maxResults: "50"
@@ -174,22 +174,3 @@ var Youtube = /** @class */ (function () {
     return Youtube;
 }());
 exports.Youtube = Youtube;
-// (async (): Promise<void> => {
-//   const yt = new Youtube();
-//   await Promise.all([
-//     yt.getChannel("UCnqD9EhaRuKIhHY_pHPyxcA"),
-//     yt.getChannelPlaylists("UCnqD9EhaRuKIhHY_pHPyxcA"),
-//     yt.getPlaylistVideos("PLoBuEb7Cp3UPmrc4IqSU_N68sNELPFAjh"),
-//   ]);
-//   console.log(yt.usedQuota);
-// })();
-// const yt = new Youtube();
-// (async (): Promise<void> => {
-//   console.log(await yt.getChannel("UCnqD9EhaRuKIhHY_pHPyxcA"));
-// })();
-// (async (): Promise<void> => {
-//   console.log(await yt.getChannelPlaylists("UCnqD9EhaRuKIhHY_pHPyxcA"));
-// })();
-// (async (): Promise<void> => {
-//   console.log(await yt.getPlaylistVideos("PLoBuEb7Cp3UPmrc4IqSU_N68sNELPFAjh"));
-// })();

@@ -43,7 +43,7 @@ const getAllPlaylistWithVideos = async apiKey => {
 };
 
 exports.sourceNodes = async (
-  { actions, createNodeId, createContentDigest },
+  { actions, createContentDigest },
   configOptions
 ) => {
   const { createNode } = actions;
@@ -51,7 +51,7 @@ exports.sourceNodes = async (
 
   const processDatum = playlist => {
     const nodeData = Object.assign({}, playlist, {
-      id: createNodeId(`youtube-playlist-${playlist.id}`),
+      // id: createNodeId(`youtube-playlist-${playlist.id}`), // Use youtube playlist id instead.
       parent: null,
       children: [],
       internal: {

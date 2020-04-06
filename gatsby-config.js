@@ -27,7 +27,7 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-youtube",
+      resolve: "gatsby-source-playlist",
       options: {
         apiKey: process.env.GATSBY_YOUTUBE_API_KEY,
       },

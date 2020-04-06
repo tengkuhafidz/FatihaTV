@@ -96,7 +96,7 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
                     target="_blank"
                     className="text-gray-700 underline"
                   >
-                    {playlist.organisation} {playlist.platform}
+                    {playlist.organisation}
                   </OutboundLink>
                 </p>
                 {renderDonationMethod()}

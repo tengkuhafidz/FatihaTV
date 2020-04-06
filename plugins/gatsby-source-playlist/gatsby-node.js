@@ -13,10 +13,10 @@ const getAllPlaylistWithVideos = async apiKey => {
         id: playlist.id,
         title: playlist.snippet.title,
         organisation: playlist.snippet.channelTitle,
-        donationMethod: "<Donation Method>",
-        tags: "tags,to,be,implemented",
+        donationMethod: "<Donation Method>",  // TODO: Pull from some nap.
+        tags: "tags,to,be,implemented",       // TODO: Parse from description?
         platform: "YouTube",
-        pageUrl: "<Page URL>",
+        pageUrl: channel.pageUrl,
         thumbnailUrl: playlist.snippet.thumbnails.standard.url,
       };
       const playlistVideos = await yt.getPlaylistVideos(playlist.id);
@@ -25,7 +25,7 @@ const getAllPlaylistWithVideos = async apiKey => {
           id: video.snippet.resourceId.videoId,
           playlistId: video.snippet.playlistId,
           title: video.snippet.title,
-          asatizah: "<Asatizah name>",
+          asatizah: "<Asatizah name>",        // TODO: Parse from description/title?
           language: "english",
           addedOn: video.snippet.publishedAt,
           videoUrl:

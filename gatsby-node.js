@@ -4,7 +4,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(
     `
       {
-        __typename
         allPlaylist {
           edges {
             node {

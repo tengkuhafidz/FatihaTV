@@ -5,21 +5,18 @@ import { VideoModel } from "../../models";
 interface Props {
   playlistId: string;
   video: VideoModel;
-  videoIndex: number;
   currentVideo: VideoModel;
 }
 
 const VideoInPlaylist: React.FC<Props> = ({
   playlistId,
   video,
-  videoIndex,
   currentVideo,
 }) => {
-  const videoNumber = videoIndex + 1;
   const isCurrentVideo = video.id === currentVideo.id;
 
   const openVideo = (): Promise<void> =>
-    navigate(`/watch/${playlistId}/${videoNumber}`);
+    navigate(`/watch/${playlistId}/${video.id}`);
 
   const renderCurrentlyPlaying = (): ReactElement | boolean => {
     return (

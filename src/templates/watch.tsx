@@ -50,11 +50,10 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
   };
 
   const renderPlaylistVideos = (): ReactElement[] => {
-    return videos.map((video, index) => (
+    return videos.map(video => (
       <VideoInPlaylist
         playlistId={playlist.id}
         video={video}
-        videoIndex={index}
         currentVideo={currentVideo}
         key={video.id}
       />

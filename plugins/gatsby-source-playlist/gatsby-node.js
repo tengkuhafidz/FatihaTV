@@ -14,10 +14,10 @@ const getAllPlaylistWithVideos = async apiKey => {
         title: playlist.snippet.title,
         organisation: playlist.snippet.channelTitle,
         donationMethod: "<Donation Method>",
-        tags: "<Tags>",
+        tags: "tags,to,be,implemented",
         platform: "YouTube",
         pageUrl: "<Page URL>",
-        thumbnailUrl: playlist.snippet.thumbnails.default.url,
+        thumbnailUrl: playlist.snippet.thumbnails.standard.url,
       };
       const playlistVideos = await yt.getPlaylistVideos(playlist.id);
       const videosArr = playlistVideos.map(video => {
@@ -29,7 +29,7 @@ const getAllPlaylistWithVideos = async apiKey => {
           language: "english",
           addedOn: video.snippet.publishedAt,
           videoUrl:
-            "https://www.youtube.com/watch?v=" +
+            "https://www.youtube.com/embed/" +
             video.snippet.resourceId.videoId,
         };
       });
@@ -38,7 +38,7 @@ const getAllPlaylistWithVideos = async apiKey => {
     }
     allPlaylistWithVideos = [...allPlaylistWithVideos, ...playlistArr];
   }
-  console.log("Quota used: ", yt.usedQuota);
+  console.log("YouTube API Quota used: ", yt.usedQuota + "~ish");
   return allPlaylistWithVideos;
 };
 

@@ -15,7 +15,7 @@ const SinglePlaylist: React.FunctionComponent<Props> = ({
 }) => {
   const { title, thumbnailUrl, organisation, videos, id, tags } = playlist;
 
-  const tagsArray = tags.split(", ");
+  const tagsArray = tags.split(",");
 
   const renderTags = (): ReactElement[] => {
     return tagsArray.map(tag => (
@@ -34,7 +34,7 @@ const SinglePlaylist: React.FunctionComponent<Props> = ({
       className={`rounded overflow-hidden shadow-lg hover:shadow-2xl bg-white align-center cursor-pointer  ${
         isPlaylistPinnedLocally ? "border-teal-500 border-4" : ""
       }`}
-      onClick={(): void => navigate(`/watch/${id}/1`)}
+      onClick={(): void => navigate(`/watch/${id}/${playlist.videos[0].id}`)}
     >
       <img className="w-full z-10" src={thumbnailUrl} alt={title} />
       <div className="px-6 py-4">

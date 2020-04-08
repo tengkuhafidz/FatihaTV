@@ -27,6 +27,12 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-source-playlist",
+      options: {
+        apiKey: process.env.GATSBY_YOUTUBE_API_KEY,
+      },
+    },
+    {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: "kuliah.sg",

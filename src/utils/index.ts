@@ -1,30 +1,4 @@
 import Fuse from "fuse.js";
-import playlistData from "../data/playlist-data.json";
-import videoData from "../data/video-data.json";
-import { PlaylistModel } from "../models";
-
-/**
- * MERGE PLAYLIST AND VIDEO JSON
- */
-
-export const getMergePlaylistData = (): PlaylistModel[] => {
-  const completePlaylistData: PlaylistModel[] = [];
-
-  playlistData.forEach(singlePlaylist => {
-    const videosInCurrPlaylist = videoData.filter(
-      singleVideo => singlePlaylist.id === singleVideo.playlistId
-    );
-
-    const completeSinglePlaylist = {
-      ...singlePlaylist,
-      videos: videosInCurrPlaylist,
-    };
-
-    completePlaylistData.unshift(completeSinglePlaylist);
-  });
-
-  return completePlaylistData;
-};
 
 export const enableSmoothScroll = (): void => {
   if (typeof window !== "undefined") {

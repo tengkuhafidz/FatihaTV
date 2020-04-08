@@ -1,5 +1,6 @@
 import React, { ReactElement, useState } from "react";
-import playlistsData from "../../data/merged-playlist-video-data.json";
+// import playlistsData from "../../data/merged-playlist-video-data.json";
+import { useStaticQuery, graphql } from "gatsby";
 import {
   getFuseFilterResult,
   isPlaylistPinnedOnLocalStorage,
@@ -15,11 +16,39 @@ import {
 import SearchInput from "../search-input";
 
 const Playlists = (): ReactElement => {
-  // used as a hack to get json of the playlist <> video merged data - to run on first load
-  // console.log("<<<", JSON.stringify(getMergePlaylistData()))
-
   const [tagFilter, setTagFilter] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
+  const data = useStaticQuery(graphql`
+    query AllPlaylistsQuery {
+      allPlaylist {
+        edges {
+          node {
+            donationMethod
+            id
+            organisation
+            pageUrl
+            platform
+            tags
+            thumbnailUrl
+            title
+            videos {
+              addedOn
+              asatizah
+              id
+              language
+              playlistId
+              title
+              videoUrl
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const playlistsData = data.allPlaylist.edges.map(datum => {
+    return datum.node;
+  });
 
   const getSearchFilterResult = (
     playlists: PlaylistModel[]

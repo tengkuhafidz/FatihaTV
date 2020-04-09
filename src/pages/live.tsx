@@ -23,7 +23,7 @@ const LivePage = (): ReactElement => (
           <Link
             to={"/"}
             className="text-center block border border-teal-500 rounded hover:border-gray-200 text-teal-500 hover:bg-teal-500 hover:text-white py-2 px-4 cursor-pointer"
-            onClick={(): void => navigate("/")}
+            onClick={(): Promise<void> => navigate("/")}
           >
             Video Playlists
           </Link>

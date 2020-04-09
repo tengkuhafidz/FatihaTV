@@ -58,23 +58,23 @@ const SingleLiveSession: React.FC<Props> = ({ liveSession }) => {
         </span>
         <span className="block text-2xl -mt-4">{Time}</span>
       </div>
-      <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal w-full">
+      <div className="border-r border-b border-l border-gray-200 lg:border-l-0 lg:border-t lg:border-gray-200 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal w-full">
         <div className="mb-8">
-          <div className="text-gray-900 font-bold text-xl mb-2">{Title}</div>
-          <p className="text-gray-700 text-base">
+          <div className="text-gray-800 font-bold text-xl mb-2">{Title}</div>
+          <p className="text-gray-600 text-base">
             {Speaker}, Masjid {Mosque}
           </p>
         </div>
         <div className="flex items-center">
           <OutboundLink
-            className="bg-transparent hover:bg-gray-800 text-gray-700 font-semibold hover:text-white py-2 px-4 border border-gray-500 hover:border-transparent rounded mr-4"
+            className="bg-transparent hover:bg-gray-800 text-gray-600 font-semibold hover:text-white py-2 px-4 border border-gray-600 hover:border-transparent rounded mr-4"
             target="_blank"
             href={Link}
           >
             View Source
           </OutboundLink>
           <OutboundLink
-            className="bg-transparent hover:bg-gray-800 text-gray-700 font-semibold hover:text-white py-2 px-4 border border-gray-500 hover:border-transparent rounded"
+            className="bg-transparent hover:bg-gray-800 text-gray-600 font-semibold hover:text-white py-2 px-4 border border-gray-600 hover:border-transparent rounded"
             target="_blank"
             href={getCalendarLink()}
           >

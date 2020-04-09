@@ -37,7 +37,7 @@ const VideoInPlaylist: React.FC<Props> = ({
       <div className="px-6 py-2">
         {renderCurrentlyPlaying()}
         <div className="font-bold text-lg">{video.title}</div>
-        <p className="text-gray-700 text-base">{video.asatizah}</p>
+        <p className="text-gray-600 text-base">{video.asatizah}</p>
       </div>
     </div>
   );

@@ -22,7 +22,7 @@ const DonationMethod: React.FC<Props> = ({ methodKey, methodValue }) => {
   }
 
   return (
-    <p className="text-gray-700  text-base mt-1">
+    <p className="text-gray-800  text-base mt-1">
       <span className="text-gray-800 font-semibold">{getMethodLabel()}:</span>{" "}
       {methodValue}
     </p>

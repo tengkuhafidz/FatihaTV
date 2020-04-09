@@ -65,7 +65,7 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
       return (
         <p className="text-xl flex flex-wrap">
           <span className="font-semibold">To donate:</span>
-          <span className="text-gray-700 ml-1">{playlist.donationMethod}</span>
+          <span className="text-gray-600 ml-1">{playlist.donationMethod}</span>
         </p>
       );
     }
@@ -103,7 +103,7 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
               </div>
               <div className="w-full md:w-1/5">
                 <button
-                  className={`bg-teal-500 hover:bg-teal-400 text-white py-2 px-4 rounded md:float-right mt-4 md:mt-auto md:w-auto uppercase inline border-b-4 border-teal-700 ${
+                  className={`bg-teal-500 hover:bg-teal-400 text-white py-2 px-4 rounded md:float-right mt-4 md:mt-auto md:w-auto uppercase inline border-b-4 border-teal-600 ${
                     isPlaylistPinned ? "hidden" : "block"
                   }`}
                   onClick={handlePinPlaylist}
@@ -112,7 +112,7 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
                   Pin Playlist
                 </button>
                 <button
-                  className={`bg-gray-500 hover:bg-gray-400 text-white py-2 px-4 rounded md:float-right mt-4 md:mt-auto md:w-auto uppercase inline border-b-4 border-gray-700 ${
+                  className={`bg-gray-500 hover:bg-gray-400 text-white py-2 px-4 rounded md:float-right mt-4 md:mt-auto md:w-auto uppercase inline border-b-4 border-gray-800 ${
                     isPlaylistPinned ? "block" : "hidden"
                   }`}
                   onClick={handleUnpinPlaylist}

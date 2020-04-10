@@ -6,6 +6,23 @@ As such, to support their work, my wife and I have curated some of their videos 
 
 This is also my first tech project with my wife - hence the name dedication. :P
 
+## Environment Variables
+
+### `GATSBY_YOUTUBE_API_KEY` 
+
+Set this to an API KEY with access to Google's Youtube Data API v3
+
+### `GATSBY_USE_LOCAL_DATA`
+
+Set this to true if you want to cache YouTube data and use it instead of calling the API at every build. It will use the API if local file does not exist (i.e. first time.) Default is false, and will call YouTube on build every time (i.e. for production).
+
+After setting up env variables, run:
+
+```bash
+$ npm run develop
+```
+
+
 ## Support our asatizah
 
 - Contribute to Pergas fundraising: https://www.giving.sg/pergas/gracious_package

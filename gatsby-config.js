@@ -30,6 +30,7 @@ module.exports = {
       resolve: "gatsby-source-playlist",
       options: {
         apiKey: process.env.GATSBY_YOUTUBE_API_KEY,
+        useLocal: process.env.GATSBY_USE_LOCAL_DATA || false,
       },
     },
     {

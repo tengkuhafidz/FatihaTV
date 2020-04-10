@@ -34,9 +34,12 @@ const BackToTop: React.FC<{}> = () => {
         visible ? "opacity-50 hover:opacity-100 cursor-pointer" : "opacity-0"
       }`}
     >
-      <div className="rounded-lg bg-gray-500 hover:bg-gray-700">
+      <button
+        aria-label="Back to top"
+        className="rounded-lg bg-gray-500 hover:bg-gray-700"
+      >
         <FaCaretUp className="text-5xl text-white" />
-      </div>
+      </button>
     </div>
   );
 };

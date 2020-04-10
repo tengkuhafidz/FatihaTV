@@ -3,6 +3,7 @@ import { enableSmoothScroll } from "../utils";
 import DonationBanner from "./banner";
 import Footer from "./footer";
 import Header from "./header";
+import BackToTop from "./back-to-top";
 
 enableSmoothScroll();
 
@@ -17,6 +18,7 @@ const Layout: React.FC<Props> = ({ children, showBanner = false }) => (
     <DonationBanner showBanner={showBanner} />
     <main>{children}</main>
     <Footer />
+    <BackToTop />
   </div>
 );
 

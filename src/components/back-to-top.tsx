@@ -5,7 +5,7 @@ const BackToTop: React.FC<{}> = () => {
   const [visible, setVisible] = useState(false);
 
   const listener: EventListener = () => {
-    if (window.scrollY > 0) {
+    if (window.pageYOffset > 0) {
       setVisible(true);
     } else {
       setVisible(false);

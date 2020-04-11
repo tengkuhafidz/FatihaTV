@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 /* eslint-disable @typescript-eslint/camelcase */
 
 module.exports = {

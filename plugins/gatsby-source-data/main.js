@@ -33,6 +33,7 @@ const getLiveSessionsFromSheets = async apiKey => {
     for (let i=0; i < val.length; i++){
       obj[keys[i]] = val[i]
     }
+    obj['Date'] = obj['Date'].split(', ')[1] // Remove the day
     arr.push(obj)
   }
   return arr;

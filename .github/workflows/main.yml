@@ -7,5 +7,7 @@ jobs:
     name: Build on netlify
     runs-on: ubuntu-latest
     steps:
-      - name: Curl request
-        run: curl -X POST -d {} https://api.netlify.com/build_hooks/{BUILD_HOOK_TBD}
+      - name: Build on production
+        run: curl -X POST -d {} https://api.netlify.com/build_hooks/5e919541396d2408b0f67fe9
+      - name: Build on staging
+        run: curl -X POST -d {} https://api.netlify.com/build_hooks/5e919591802adaf8928bcf04

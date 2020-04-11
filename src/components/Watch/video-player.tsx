@@ -1,56 +1,44 @@
-import React, { ReactElement } from "react";
-import FacebookPlayer from "react-facebook-player";
-import { GtagCategories, PlaylistModel, VideoModel } from "../../models";
+import React from "react";
+import YouTube from "react-youtube";
+import { GtagCategories, VideoModel } from "../../models";
 import { gtagEventClick } from "../../utils/gtag";
 
 interface Props {
-  playlist: PlaylistModel;
   video: VideoModel;
 }
 
-const VideoPlayer: React.FC<Props> = ({ playlist, video }) => {
-  const { videoUrl } = video;
-  const { platform } = playlist;
+const VideoPlayer: React.FC<Props> = ({ video }) => {
+  const { id } = video;
 
-  const getFbVideoId = (): string => {
-    const urlSectionsArray = videoUrl.split("/");
-    const finalIndex = urlSectionsArray.length - 1;
-    return urlSectionsArray[finalIndex] === ""
-      ? urlSectionsArray[finalIndex - 1]
-      : urlSectionsArray[finalIndex];
-  };
-
-  const trackFbVideoPlay = (): void => {
-    gtagEventClick("play_facebook_video", {
+  const trackVideoPlay = (): void => {
+    gtagEventClick("play_video", {
       event_category: GtagCategories.Engagement,
-      event_label: playlist.title + " " + video.title,
+      event_label: video.title,
     });
   };
 
-  const renderFacebookPlayer = (): ReactElement => (
-    <FacebookPlayer
-      appId="1905777919676190"
-      videoId={getFbVideoId()}
-      allowfullscreen={true}
-      onStartedPlaying={(): void => trackFbVideoPlay()}
-    />
-  );
+  const trackVideoEnded = (): void => {
+    gtagEventClick("ended_video", {
+      event_category: GtagCategories.Engagement,
+      event_label: video.title,
+    });
+  };
 
-  const renderYoutubePlayer = (): ReactElement => (
-    <div className="embed-container">
-      <iframe src={videoUrl} frameBorder="0" allowFullScreen></iframe>
-    </div>
-  );
+  const handleVideoPlayed = (): void => {
+    trackVideoPlay();
+  };
 
-  const renderPlayer = (): ReactElement => {
-    return platform === "Facebook"
-      ? renderFacebookPlayer()
-      : renderYoutubePlayer();
+  const handleVideoEnded = (): void => {
+    trackVideoEnded();
   };
 
   return (
-    <div className={`bg-gray-500 shadow-lg max-w-xs md:max-w-none`}>
-      {renderPlayer()}
+    <div className="bg-gray-500 shadow-lg max-w-xs md:max-w-none embed-container">
+      <YouTube
+        videoId={id}
+        onPlay={handleVideoPlayed}
+        onEnd={handleVideoEnded}
+      />
     </div>
   );
 };

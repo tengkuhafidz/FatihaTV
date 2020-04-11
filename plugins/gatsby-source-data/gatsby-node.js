@@ -1,5 +1,4 @@
-const { getPlaylists, getOrganisationData } = require('./main')
-
+const { getPlaylists, getOrganisationData, getLiveSessions } = require('./main')
 
 exports.sourceNodes = async (
   { actions, createNodeId, createContentDigest },
@@ -35,11 +34,26 @@ exports.sourceNodes = async (
     return nodeData;
   };
 
+  const processLiveSessionDatum = (datum) => {
+    const nodeData = Object.assign({}, datum, {
+      id: createNodeId(`live-session-${datum.title}`), // Use youtube playlist id instead.
+      parent: null,
+      children: [],
+      internal: {
+        type: 'LiveSession',
+        content: JSON.stringify(datum),
+        contentDigest: createContentDigest(datum),
+      },
+    });
+    return nodeData;
+  }
+
   const orgData = await getOrganisationData(configOptions.sheetsApiKey, configOptions.useLocal);
   const playlists = await getPlaylists(orgData, configOptions.youtubeApiKey, configOptions.useLocal);
+  const liveSessionData = await getLiveSessions(configOptions.sheetsApiKey, configOptions.useLocal);
 
-  // Creates a new node for each playlist in array.
+  // Creates a new node for each data source.
   playlists.forEach(datum => createNode(processPlaylistDatum(datum)));
-  // Creates a new node for each organisation in array.
-  orgData.forEach(datum => createNode(processOrgDatum(datum)))
+  orgData.forEach(datum => createNode(processOrgDatum(datum)));
+  liveSessionData.forEach(datum => createNode(processLiveSessionDatum(datum)))
 };

@@ -12,6 +12,10 @@ This is also my first tech project with my wife - hence the name dedication. :P
 
 Set this to an API KEY with access to Google's Youtube Data API v3
 
+### `GATSBY_SHEETS_API_KEY` 
+
+Set this to an API KEY with access to Google Sheets API. Can be the same as `GATSBY_YOUTUBE_API_KEY`, but must be explicitly set.
+
 ### `GATSBY_USE_LOCAL_DATA`
 
 Set this to true if you want to cache YouTube data and use it instead of calling the API at every build. It will use the API if local file does not exist (i.e. first time.) Default is false, and will call YouTube on build every time (i.e. for production).

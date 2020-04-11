@@ -76,6 +76,17 @@ var Sheets = /** @class */ (function () {
                 }
             });
         }); };
+        this.getLiveSessions = function () { return __awaiter(_this, void 0, void 0, function () {
+            var res;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, axios_1["default"].get(this.url('1nO1QgB_1FEp-ilYZmNiA8nUvODp7S0E-_8IJVxeCm64', 'A:F'))];
+                    case 1:
+                        res = _a.sent();
+                        return [2 /*return*/, res.data.values];
+                }
+            });
+        }); };
         this.API_KEY = apiKey;
     }
     return Sheets;

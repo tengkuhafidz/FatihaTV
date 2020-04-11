@@ -22,10 +22,46 @@ const loadJSON = path => {
   }
 };
 
+const getLiveSessionsFromSheets = async apiKey => {
+  const sheets = new Sheets(apiKey);
+  const values = await sheets.getLiveSessions();
+  values.shift() // Get rid of the first row which is just the title
+  const keys = values.shift().map(s => s.toLowerCase());
+  let arr = [];
+  for (let val of values){
+    const obj = {}
+    for (let i=0; i < val.length; i++){
+      obj[keys[i]] = val[i]
+    }
+    arr.push(obj)
+  }
+  return arr;
+}
+
+
+const getLiveSessions = async (apiKey, useLocal) => {
+  const dataPath = "./src/data/live_sessions.json";
+  let orgData = [];
+  if (useLocal && fs.existsSync(dataPath)) {
+    console.log(">>> Found local live sessions data files.");
+    orgData = loadJSON(dataPath);
+  } else {
+    if (useLocal) console.log(">>> Local live sessions data not found.");
+    console.log(">>> Retrieving data from Google Sheets.");
+    orgData = await getLiveSessionsFromSheets(apiKey);
+    if (useLocal) {
+      saveJSON(orgData, dataPath)
+      console.log(">>> Live sessions data saved locally for future use.");
+    }
+  }
+
+  return orgData;
+}
+
 
 const getOrganisationDataFromSheets = async apiKey => {
   const sheets = new Sheets(apiKey);
-  const values = await sheets.getOrganisationData(apiKey);
+  const values = await sheets.getOrganisationData();
   const keys = values.shift();
   let arr = []
   for (let val of values){
@@ -39,17 +75,17 @@ const getOrganisationDataFromSheets = async apiKey => {
 }
 
 const getOrganisationData = async (apiKey, useLocal) => {
-  const org_data_path = "./src/data/organisations.json";
+  const dataPath = "./src/data/organisations.json";
   let orgData = [];
-  if (useLocal && fs.existsSync(org_data_path)) {
-    console.log(">>> Found local organisation data files. Using this instead of calling external APIs.");
-    orgData = loadJSON(org_data_path);
+  if (useLocal && fs.existsSync(dataPath)) {
+    console.log(">>> Found local organisation data files.");
+    orgData = loadJSON(dataPath);
   } else {
     if (useLocal) console.log(">>> Local organisation data not found.");
     console.log(">>> Retrieving data from Google Sheets.");
     orgData = await getOrganisationDataFromSheets(apiKey);
     if (useLocal) {
-      saveJSON(orgData, org_data_path)
+      saveJSON(orgData, dataPath)
       console.log(">>> Organisation data saved locally for future use.");
     }
   }
@@ -106,19 +142,19 @@ const getPlaylistsFromYoutube = async (orgData, apiKey) => {
 
 const getPlaylists = async (orgData, youtubeApiKey, useLocal) => {
   // This path is relative to the root "gatsby-node.js" file calling it.
-  const playlist_data_path = "./src/data/playlists.json";
+  const dataPath = "./src/data/playlists.json";
   let playlists = {};
 
-  if (useLocal && fs.existsSync(playlist_data_path)) {
-    console.log(">>> Found local playlist data files. Using this instead of calling external APIs.");
-    playlists = loadJSON(playlist_data_path);
+  if (useLocal && fs.existsSync(dataPath)) {
+    console.log(">>> Found local playlist data files.");
+    playlists = loadJSON(dataPath);
   } else {
     if (useLocal) console.log(">>> Local playlist data not found.");
 
     console.log(">>> Retrieving data from YouTube.");
     playlists = await getPlaylistsFromYoutube(orgData, youtubeApiKey);
     if (useLocal) {
-      saveJSON(playlists, playlist_data_path);
+      saveJSON(playlists, dataPath);
       console.log(">>> Youtube data saved locally for future use.");
     }
   }
@@ -128,3 +164,4 @@ const getPlaylists = async (orgData, youtubeApiKey, useLocal) => {
 
 exports.getPlaylists = getPlaylists;
 exports.getOrganisationData = getOrganisationData
+exports.getLiveSessions = getLiveSessions

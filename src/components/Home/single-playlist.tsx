@@ -35,7 +35,9 @@ const SinglePlaylist: React.FunctionComponent<Props> = ({
       className={`rounded overflow-hidden shadow-lg hover:shadow-2xl bg-white align-center cursor-pointer  ${
         isPlaylistPinnedLocally ? "border-teal-500 border-4" : ""
       }`}
-      onClick={(): Promise<void> => navigate(`/watch/${id}/${playlist.videos[0].id}`)}
+      onClick={(): Promise<void> =>
+        navigate(`/watch/${id}/${playlist.videos[0].id}`)
+      }
     >
       <img className="w-full z-10" src={thumbnailUrl} alt={title} />
       <div className="px-6 py-4">

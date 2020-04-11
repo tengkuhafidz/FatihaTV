@@ -22,7 +22,7 @@ exports.sourceNodes = async (
 
   const processOrgDatum = (datum) => {
     const nodeData = Object.assign({}, datum, {
-      id: createNodeId(`organisation-${datum.name}`), // Use youtube playlist id instead.
+      id: createNodeId(`organisation-${datum['organisationName']}`),
       parent: null,
       children: [],
       internal: {
@@ -36,7 +36,7 @@ exports.sourceNodes = async (
 
   const processLiveSessionDatum = (datum) => {
     const nodeData = Object.assign({}, datum, {
-      id: createNodeId(`live-session-${datum.title}`), // Use youtube playlist id instead.
+      id: createNodeId(`live-session-${datum['Title']}`),
       parent: null,
       children: [],
       internal: {

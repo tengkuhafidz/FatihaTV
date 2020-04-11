@@ -26,7 +26,7 @@ const getLiveSessionsFromSheets = async apiKey => {
   const sheets = new Sheets(apiKey);
   const values = await sheets.getLiveSessions();
   values.shift() // Get rid of the first row which is just the title
-  const keys = values.shift().map(s => s.toLowerCase());
+  const keys = values.shift();
   let arr = [];
   for (let val of values){
     const obj = {}
@@ -98,8 +98,8 @@ const getPlaylistsFromYoutube = async (orgData, apiKey) => {
   let allPlaylistWithVideos = [];
 
   for (org of orgData) {
-    if(org.channel_id){
-      const channelPlaylists = await yt.getChannelPlaylists(org.channel_id);
+    if(org.youtubeId){
+      const channelPlaylists = await yt.getChannelPlaylists(org.youtubeId);
       const playlistArr = [];
 
       for (playlist of channelPlaylists) {
@@ -110,7 +110,7 @@ const getPlaylistsFromYoutube = async (orgData, apiKey) => {
           donationMethod: "<Donation Method>", // TODO: Pull from some nap.
           tags: "tags,to,be,implemented", // TODO: Parse from description?
           platform: "YouTube",
-          pageUrl: org.page_url || "",
+          pageUrl: org.youtubeUrl || "",
           thumbnailUrl: playlist.snippet.thumbnails.medium.url, // Encountered error: thumbnails key (i.e. thumbnails.standard) may not exist.
         };
 

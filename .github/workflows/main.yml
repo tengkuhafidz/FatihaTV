@@ -17,10 +17,10 @@ jobs:
         env:
           GATSBY_YOUTUBE_API_KEY: ${{ secrets.STG_YOUTUBE_API_KEY }}
       - uses: actions/upload-artifact@v1
-          if: failure()
-          with:
-        name: cypress-screenshots
-        path: cypress/screenshots
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
       # Test run video was always captured, so this action uses "always()" condition
       - uses: actions/upload-artifact@v1
         if: always()

@@ -13,7 +13,8 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "e2e": "cypress run"
   },
   "dependencies": {
     "@types/react-helmet": "^5.0.15",
@@ -41,12 +42,14 @@
     "@types/react": "^16.9.25",
     "@types/react-dom": "^16.9.5",
     "@types/smooth-scroll": "^16.1.0",
+    "cypress": "^4.3.0",
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-prettier": "^3.1.2",
     "husky": "^4.2.3",
     "lint-staged": "^10.1.1",
     "prettier": "^1.19.1",
-    "tailwindcss": "^1.2.0"
+    "tailwindcss": "^1.2.0",
+    "wait-on": "^4.0.2"
   },
   "repository": {
     "type": "git",

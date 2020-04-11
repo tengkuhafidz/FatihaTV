@@ -31,6 +31,7 @@ const SinglePlaylist: React.FunctionComponent<Props> = ({
 
   return (
     <div
+      data-cy="playlist-card"
       className={`rounded overflow-hidden shadow-lg hover:shadow-2xl bg-white align-center cursor-pointer  ${
         isPlaylistPinnedLocally ? "border-teal-500 border-4" : ""
       }`}

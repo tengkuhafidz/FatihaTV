@@ -1,0 +1,29 @@
+name: E2E Tests
+on: [push]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-16.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v1
+        with:
+          build: npm run build
+          start: npm run serve
+          wait-on: 'http://localhost:9000'
+        env:
+          GATSBY_YOUTUBE_API_KEY: ${{ secrets.STG_YOUTUBE_API_KEY }}
+      - uses: actions/upload-artifact@v1
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+      # Test run video was always captured, so this action uses "always()" condition
+      - uses: actions/upload-artifact@v1
+        if: always()
+        with:
+          name: cypress-videos
+          path: cypress/videos

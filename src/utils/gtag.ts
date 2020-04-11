@@ -6,7 +6,7 @@ declare global {
 
 export const gtagEventClick = (
   action: string,
-  parameters?: Record<string, object>
+  parameters?: Record<string, string>
 ): void => {
   const { NODE_ENV } = process.env;
   const isDevEnv = NODE_ENV === "development";

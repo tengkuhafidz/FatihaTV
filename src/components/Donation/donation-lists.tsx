@@ -1,14 +1,26 @@
 import React, { ReactElement, useState } from "react";
-import donationListingData from "../../data/donation-methods-data.json";
 import SingleDonationCard from "./single-donation-card";
 import SearchInput from "../search-input";
 import { gtagEventClick } from "../../utils/gtag";
 import { DonationListingModel, GtagCategories, InputEvent } from "../../models";
 import { getFuseFilterResult } from "../../utils";
+import { useStaticQuery, graphql } from "gatsby";
 
 const DonationLists = (): ReactElement => {
   const [searchTerm, setSearchTerm] = useState("");
-
+  const data = useStaticQuery(graphql`
+    {
+      allOrganisation {
+        nodes {
+          bankType
+          bankAccount
+          organisationName
+          paynowUen
+        }
+      }
+    }
+  `);
+  const donationListingData = data.allOrganisation.nodes;
   const getSearchFilterResult = (
     donationListing: DonationListingModel[]
   ): DonationListingModel[] => {

@@ -1,14 +1,30 @@
 import moment from "moment";
 import React, { ReactElement, useState } from "react";
-import LiveSessionsData from "../../data/live-sessions-data.json";
 import SingleLiveSession from "./single-live-session";
 import { GtagCategories, InputEvent, LiveSessionModel } from "../../models";
 import SearchInput from "../search-input";
 import { gtagEventClick } from "../../utils/gtag";
 import { getFuseFilterResult } from "../../utils";
+import { useStaticQuery, graphql } from "gatsby";
 
 const LiveSessions = (): ReactElement => {
   const [searchTerm, setSearchTerm] = useState("");
+  const data = useStaticQuery(graphql`
+    {
+      allLiveSession {
+        nodes {
+          Date
+          Link
+          Mosque
+          Speaker
+          Time
+          Title
+        }
+      }
+    }
+  `);
+
+  const LiveSessionsData = data.allLiveSession.nodes;
 
   const isUpcoming = (dateWithoutYear: string, time: string): boolean => {
     const currentYear = moment().get("year");

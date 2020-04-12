@@ -31,9 +31,12 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-playlist",
+      resolve: "gatsby-source-data",
       options: {
-        apiKey: process.env.GATSBY_YOUTUBE_API_KEY,
+        youtubeApiKey: process.env.GATSBY_YOUTUBE_API_KEY,
+        sheetsApiKey: process.env.GATSBY_SHEETS_API_KEY
+          ? process.env.GATSBY_SHEETS_API_KEY
+          : process.env.GATSBY_YOUTUBE_API_KEY,
         useLocal: process.env.GATSBY_USE_LOCAL_DATA || false,
       },
     },

@@ -141,7 +141,7 @@ const getPlaylistsFromYoutube = async (orgData, apiKey) => {
             id: playlist.id,
             title: playlist.snippet.title,
             organisation: playlist.snippet.channelTitle,
-            donationMethod: "Paynow to UEN " + orgData.paynowUEN,
+            donationMethod: "Paynow to UEN " + org.paynowUen,
             language: tags.language.join(','),
             tags: tags.category.join(','),
             platform: "YouTube",

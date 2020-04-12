@@ -5,20 +5,15 @@ import { isPlaylistPinnedOnLocalStorage } from "../../utils";
 
 interface Props {
   playlists: PlaylistModel[];
-  handleTagFilterClick: (e: SpanEvent, tag: string) => void;
 }
 
-const CategorisedPlaylists: React.FC<Props> = ({
-  playlists,
-  handleTagFilterClick,
-}) => {
+const CategorisedPlaylists: React.FC<Props> = ({ playlists }) => {
   const renderPlaylists = (): ReactElement[] => {
     return playlists.map(playlist => (
       <SinglePlaylist
         playlist={playlist}
         key={playlist.id}
         isPlaylistPinnedLocally={isPlaylistPinnedOnLocalStorage(playlist.id)}
-        handleTagFilterClick={handleTagFilterClick}
       />
     ));
   };

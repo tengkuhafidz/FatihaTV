@@ -1,12 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React, { ReactElement, useState } from "react";
 import "react-multi-carousel/lib/styles.css";
-import {
-  GtagCategories,
-  InputEvent,
-  PlaylistModel,
-  SpanEvent,
-} from "../../models";
+import { GtagCategories, InputEvent, PlaylistModel } from "../../models";
 import {
   getFuseFilterResult,
   isPlaylistPinnedOnLocalStorage,
@@ -16,7 +11,6 @@ import SearchInput from "../search-input";
 import CategorisedPlaylists from "./categorised-playlists";
 
 const PlaylistsSection = (): ReactElement => {
-  const [tagFilter, setTagFilter] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
   const data = useStaticQuery(graphql`
     query AllPlaylistsQuery {
@@ -77,28 +71,16 @@ const PlaylistsSection = (): ReactElement => {
   };
 
   const getFilteredPlaylists = (): PlaylistModel[] => {
-    const playlistsFilteredByTag: PlaylistModel[] = tagFilter
-      ? playlistsData.filter(playlist => playlist.tags.includes(tagFilter))
-      : playlistsData;
-
     const playlistsFilteredBySearch: PlaylistModel[] = searchTerm
-      ? getSearchFilterResult(playlistsFilteredByTag)
-      : playlistsFilteredByTag;
+      ? getSearchFilterResult(playlistsData)
+      : playlistsData;
 
     return playlistsFilteredBySearch;
   };
 
-  const playlistsToDisplay: PlaylistModel[] =
-    !tagFilter && !searchTerm ? playlistsData : getFilteredPlaylists();
-
-  const handleTagFilterClick = (e: SpanEvent, tag: string): void => {
-    e.stopPropagation();
-    setTagFilter(tag);
-    gtagEventClick("filter_by_tag", {
-      event_category: GtagCategories.Engagement,
-      event_label: tag,
-    });
-  };
+  const playlistsToDisplay: PlaylistModel[] = !searchTerm
+    ? playlistsData
+    : getFilteredPlaylists();
 
   const handleSearchFilter = (e: InputEvent): void => {
     e.preventDefault();
@@ -125,33 +107,10 @@ const PlaylistsSection = (): ReactElement => {
 
   const playlists = sortPinnedPlaylistFirst(playlistsToDisplay);
 
-  const renderCurrentTagFilter = (): ReactElement => {
-    if (tagFilter) {
-      return (
-        <p className="mx-auto mb-8 rounded bg-gray-800 px-2 py-2 w-xs text-white font-semibold text-lg">
-          Current Filter:
-          <span className="text-teal-500"> #{tagFilter} </span>
-          &middot;&nbsp;
-          <span
-            className="font-light hover:font-semibold cursor-pointer"
-            onClick={(e): void => handleTagFilterClick(e, "")}
-          >
-            clear
-          </span>
-        </p>
-      );
-    }
-    return <></>;
-  };
-
   return (
     <div className="container mx-auto px-8 pt-8 pb-32" id="playlists">
       <SearchInput handleSearchFilter={handleSearchFilter} />
-      {renderCurrentTagFilter()}
-      <CategorisedPlaylists
-        playlists={playlists}
-        handleTagFilterClick={handleTagFilterClick}
-      />
+      <CategorisedPlaylists playlists={playlists} />
     </div>
   );
 };

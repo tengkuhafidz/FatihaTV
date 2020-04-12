@@ -141,7 +141,7 @@ const getPlaylistsFromYoutube = async (orgData, apiKey) => {
             id: playlist.id,
             title: playlist.snippet.title,
             organisation: playlist.snippet.channelTitle,
-            donationMethod: "<Donation Method>",
+            donationMethod: "Paynow to UEN " + orgData.paynowUEN,
             language: tags.language.join(','),
             tags: tags.category.join(','),
             platform: "YouTube",
@@ -156,7 +156,7 @@ const getPlaylistsFromYoutube = async (orgData, apiKey) => {
               playlistId: video.snippet.playlistId,
               title: video.snippet.title,
               asatizah: "<Asatizah name>", // TODO: Parse from description/title?
-              language: "english",
+              language: tags.language[0],  // TODO: Frontend needs to take an array instead.
               addedOn: video.snippet.publishedAt,
               videoUrl:
                 "https://www.youtube.com/embed/" + video.snippet.resourceId.videoId,

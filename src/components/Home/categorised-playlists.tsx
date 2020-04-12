@@ -2,11 +2,7 @@ import React, { ReactElement } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { PlaylistModel } from "../../models";
-import {
-  isPlaylistPinnedOnLocalStorage,
-  isMobileDevice,
-  isMobileOrTableDevice,
-} from "../../utils";
+import { isMobileDevice, isPlaylistPinnedOnLocalStorage } from "../../utils";
 import SinglePlaylist from "./single-playlist";
 
 interface Props {

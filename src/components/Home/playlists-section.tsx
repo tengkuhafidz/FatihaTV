@@ -111,30 +111,31 @@ const PlaylistsSection = (): ReactElement => {
     const categories: object[] = [
       {
         name: "Short Videos",
-        ref: "tags",
+        refs: ["short"],
       },
       {
-        name: "Quran & Tafsir",
-        ref: "to",
+        name: "Quran & Hadith",
+        refs: ["quran", "hadith", "kitab"],
       },
       {
-        name: "Hadith & Sirah",
-        ref: "be",
+        name: "Interactive & Podcast Format",
+        refs: ["currentaffairs", "podcast"],
       },
       {
-        name: "Practicing Islam",
-        ref: "implemented",
+        name: "Practicing Islam & Spirituality",
+        refs: ["howto", "currentaffairs"],
       },
       {
-        name: "General Lecture",
-        ref: "general",
+        name: "General Lectures",
+        refs: ["general"],
       },
     ];
 
     return categories.map(
       (category, index): ReactElement => {
         const categorisedPlaylists: PlaylistModel[] = playlists.filter(
-          (playlist: PlaylistModel) => playlist.tags.includes(category.ref)
+          (playlist: PlaylistModel) =>
+            category.refs.some(ref => playlist.tags.includes(ref))
         );
         if (categorisedPlaylists.length > 0) {
           return (

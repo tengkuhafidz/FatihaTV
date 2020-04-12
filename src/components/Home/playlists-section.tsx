@@ -41,7 +41,7 @@ const PlaylistsSection = (): ReactElement => {
   `);
 
   const playlistsData: PlaylistModel[] = data.allPlaylist.edges.map(
-    (datum: any) => {
+    (datum: object) => {
       return datum.node;
     }
   );
@@ -57,7 +57,7 @@ const PlaylistsSection = (): ReactElement => {
       "title",
       "videos.title",
     ];
-    const fuseFilterResults: any[] = getFuseFilterResult(
+    const fuseFilterResults: object[] = getFuseFilterResult(
       playlists,
       filterByKeys,
       searchTerm
@@ -107,11 +107,53 @@ const PlaylistsSection = (): ReactElement => {
 
   const playlists = sortPinnedPlaylistFirst(playlistsToDisplay);
 
+  const renderCategoryPlaylists = (): ReactElement[] => {
+    const categories: object[] = [
+      {
+        name: "Short Videos",
+        ref: "tags",
+      },
+      {
+        name: "Quran & Tafsir",
+        ref: "to",
+      },
+      {
+        name: "Hadith & Sirah",
+        ref: "be",
+      },
+      {
+        name: "Practicing Islam",
+        ref: "implemented",
+      },
+      {
+        name: "General Lecture",
+        ref: "general",
+      },
+    ];
+
+    return categories.map(
+      (category, index): ReactElement => {
+        const categorisedPlaylists: PlaylistModel[] = playlists.filter(
+          (playlist: PlaylistModel) => playlist.tags.includes(category.ref)
+        );
+        if (categorisedPlaylists.length > 0) {
+          return (
+            <CategorisedPlaylists
+              playlists={categorisedPlaylists}
+              categoryName={category.name}
+              key={index}
+            />
+          );
+        }
+        return <></>;
+      }
+    );
+  };
+
   return (
     <div className="mx-auto pl-8 pt-8 pb-32 w-full " id="playlists">
       <SearchInput handleSearchFilter={handleSearchFilter} />
-      <CategorisedPlaylists playlists={playlists} />
-      <CategorisedPlaylists playlists={playlists} />
+      {renderCategoryPlaylists()}
     </div>
   );
 };

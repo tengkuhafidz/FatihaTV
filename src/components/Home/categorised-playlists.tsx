@@ -7,9 +7,10 @@ import SinglePlaylist from "./single-playlist";
 
 interface Props {
   playlists: PlaylistModel[];
+  categoryName: string;
 }
 
-const CategorisedPlaylists: React.FC<Props> = ({ playlists }) => {
+const CategorisedPlaylists: React.FC<Props> = ({ playlists, categoryName }) => {
   const carouselResponsiveOption = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -48,8 +49,8 @@ const CategorisedPlaylists: React.FC<Props> = ({ playlists }) => {
   };
 
   return (
-    <div className="pb-8 mb-8 relative">
-      <h3 className="text-xl font-semibold mb-2">Category Title</h3>
+    <div className="pb-4 md:pb-8 mb-4 md:mb-2 relative">
+      <h3 className="text-xl font-semibold mb-2">{categoryName}</h3>
       <Carousel
         responsive={carouselResponsiveOption}
         ssr={true}

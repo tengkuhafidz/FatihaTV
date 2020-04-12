@@ -22,7 +22,7 @@ const DonationBanner: React.FC<Props> = ({ showBanner }) => {
 
   return (
     <div
-      className="flex items-center bg-pink-400 text-white text-sm font-bold px-4 py-3 hover:shadow-xl cursor-pointer"
+      className="flex items-center bg-pink-400 text-white text-sm font-bold px-8 py-3 hover:shadow-xl cursor-pointer"
       role="alert"
       onClick={handleBannerClick}
     >

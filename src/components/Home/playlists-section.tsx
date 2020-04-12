@@ -108,8 +108,9 @@ const PlaylistsSection = (): ReactElement => {
   const playlists = sortPinnedPlaylistFirst(playlistsToDisplay);
 
   return (
-    <div className="container mx-auto px-8 pt-8 pb-32" id="playlists">
+    <div className="mx-auto pl-8 pt-8 pb-32 w-full " id="playlists">
       <SearchInput handleSearchFilter={handleSearchFilter} />
+      <CategorisedPlaylists playlists={playlists} />
       <CategorisedPlaylists playlists={playlists} />
     </div>
   );

@@ -16,7 +16,7 @@ const SinglePlaylist: React.FunctionComponent<Props> = ({
   return (
     <div
       data-cy="playlist-card"
-      className={`rounded overflow-hidden shadow-lg hover:shadow-2xl bg-white align-center cursor-pointer ${
+      className={`overflow-hidden align-center cursor-pointer ${
         isPlaylistPinnedLocally ? "border-teal-500 border-4" : ""
       }`}
       onClick={(): Promise<void> =>
@@ -24,9 +24,9 @@ const SinglePlaylist: React.FunctionComponent<Props> = ({
       }
     >
       <img className="w-full z-10" src={thumbnailUrl} alt={title} />
-      <div className="px-6 py-4">
-        <div className="font-bold text-xl leading-tight">{title}</div>
-        <p className="text-gray-600 text-base">
+      <div>
+        <div className="font-semibold leading-tight">{title}</div>
+        <p className="text-gray-600 text-sm">
           {organisation} &middot; {videos.length}{" "}
           {videos.length === 1 ? "video " : "videos"}
         </p>

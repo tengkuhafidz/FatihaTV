@@ -4,8 +4,9 @@ const Youtube = require("./youtube").Youtube;
 const Sheets = require("./sheets").Sheets;
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const fs = require("fs");
+const tagList = require('./tags.json');
 
-const dataDir = './src/data/'
+const dataDir = './src/data/';
 
 const saveData = (data, name) => {
   try {
@@ -105,6 +106,25 @@ const getOrganisationData = async (apiKey, useLocal) => {
   return orgData;
 }
 
+const getValidTags = playlist => {
+  const desc = playlist.snippet.description
+  const tags = desc.match(/#(\w+)/g);
+  let langTags = []
+  let categoryTags = []
+  if(tags !== null){
+    for(tag of tags){
+      let tagStr = tag.substr(1);
+      if(tagList.language[tagStr] !== undefined){
+        langTags.push(tagStr)
+      }
+      else if(tagList.category[tagStr] !== undefined){
+        categoryTags.push(tagStr)
+      }
+    }
+  }
+  return { language: langTags, category: categoryTags }
+}
+
 const getPlaylistsFromYoutube = async (orgData, apiKey) => {
   const yt = new Youtube(apiKey);
   let allPlaylistWithVideos = [];
@@ -113,35 +133,39 @@ const getPlaylistsFromYoutube = async (orgData, apiKey) => {
     if(org.youtubeId){
       const channelPlaylists = await yt.getChannelPlaylists(org.youtubeId);
       const playlistArr = [];
-
       for (playlist of channelPlaylists) {
-        const playlistObj = {
-          id: playlist.id,
-          title: playlist.snippet.title,
-          organisation: playlist.snippet.channelTitle,
-          donationMethod: "<Donation Method>", // TODO: Pull from some nap.
-          tags: "tags,to,be,implemented", // TODO: Parse from description?
-          platform: "YouTube",
-          pageUrl: org.youtubeUrl || "",
-          thumbnailUrl: playlist.snippet.thumbnails.medium.url, // Encountered error: thumbnails key (i.e. thumbnails.standard) may not exist.
-        };
-
-        const playlistVideos = await yt.getPlaylistVideos(playlist.id);
-        const videosArr = playlistVideos.map(video => {
-          return {
-            id: video.snippet.resourceId.videoId,
-            playlistId: video.snippet.playlistId,
-            title: video.snippet.title,
-            asatizah: "<Asatizah name>", // TODO: Parse from description/title?
-            language: "english",
-            addedOn: video.snippet.publishedAt,
-            videoUrl:
-              "https://www.youtube.com/embed/" + video.snippet.resourceId.videoId,
+        const tags = getValidTags(playlist);
+        // Only process the playlist if it has valid tags.
+        if(tags.category.length > 0){
+          const playlistObj = {
+            id: playlist.id,
+            title: playlist.snippet.title,
+            organisation: playlist.snippet.channelTitle,
+            donationMethod: "<Donation Method>",
+            language: tags.language.join(','),
+            tags: tags.category.join(','),
+            platform: "YouTube",
+            pageUrl: org.youtubeUrl || "",
+            thumbnailUrl: playlist.snippet.thumbnails.medium.url, // Encountered error: thumbnails key (i.e. thumbnails.standard) may not exist.
           };
-        });
 
-        playlistObj.videos = videosArr;
-        playlistArr.push(playlistObj);
+          const playlistVideos = await yt.getPlaylistVideos(playlist.id);
+          const videosArr = playlistVideos.map(video => {
+            return {
+              id: video.snippet.resourceId.videoId,
+              playlistId: video.snippet.playlistId,
+              title: video.snippet.title,
+              asatizah: "<Asatizah name>", // TODO: Parse from description/title?
+              language: "english",
+              addedOn: video.snippet.publishedAt,
+              videoUrl:
+                "https://www.youtube.com/embed/" + video.snippet.resourceId.videoId,
+            };
+          });
+
+          playlistObj.videos = videosArr;
+          playlistArr.push(playlistObj);
+        }
       }
 
       allPlaylistWithVideos = [...allPlaylistWithVideos, ...playlistArr];

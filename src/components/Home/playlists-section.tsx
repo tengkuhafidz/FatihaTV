@@ -1,21 +1,21 @@
+import { graphql, useStaticQuery } from "gatsby";
 import React, { ReactElement, useState } from "react";
-// import playlistsData from "../../data/merged-playlist-video-data.json";
-import { useStaticQuery, graphql } from "gatsby";
-import {
-  getFuseFilterResult,
-  isPlaylistPinnedOnLocalStorage,
-} from "../../utils";
-import { gtagEventClick } from "../../utils/gtag";
-import SinglePlaylist from "./single-playlist";
+import "react-multi-carousel/lib/styles.css";
 import {
   GtagCategories,
   InputEvent,
   PlaylistModel,
   SpanEvent,
 } from "../../models";
+import {
+  getFuseFilterResult,
+  isPlaylistPinnedOnLocalStorage,
+} from "../../utils";
+import { gtagEventClick } from "../../utils/gtag";
 import SearchInput from "../search-input";
+import CategorisedPlaylists from "./categorised-playlists";
 
-const Playlists = (): ReactElement => {
+const PlaylistsSection = (): ReactElement => {
   const [tagFilter, setTagFilter] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
   const data = useStaticQuery(graphql`
@@ -46,9 +46,11 @@ const Playlists = (): ReactElement => {
     }
   `);
 
-  const playlistsData = data.allPlaylist.edges.map(datum => {
-    return datum.node;
-  });
+  const playlistsData: PlaylistModel[] = data.allPlaylist.edges.map(
+    (datum: any) => {
+      return datum.node;
+    }
+  );
 
   const getSearchFilterResult = (
     playlists: PlaylistModel[]
@@ -61,7 +63,7 @@ const Playlists = (): ReactElement => {
       "title",
       "videos.title",
     ];
-    const fuseFilterResults = getFuseFilterResult(
+    const fuseFilterResults: any[] = getFuseFilterResult(
       playlists,
       filterByKeys,
       searchTerm
@@ -121,17 +123,7 @@ const Playlists = (): ReactElement => {
     });
   };
 
-  const renderPlaylists = (): ReactElement[] => {
-    const playlists = sortPinnedPlaylistFirst(playlistsToDisplay);
-    return playlists.map(playlist => (
-      <SinglePlaylist
-        playlist={playlist}
-        key={playlist.id}
-        isPlaylistPinnedLocally={isPlaylistPinnedOnLocalStorage(playlist.id)}
-        handleTagFilterClick={handleTagFilterClick}
-      />
-    ));
-  };
+  const playlists = sortPinnedPlaylistFirst(playlistsToDisplay);
 
   const renderCurrentTagFilter = (): ReactElement => {
     if (tagFilter) {
@@ -156,11 +148,12 @@ const Playlists = (): ReactElement => {
     <div className="container mx-auto px-8 pt-8 pb-32" id="playlists">
       <SearchInput handleSearchFilter={handleSearchFilter} />
       {renderCurrentTagFilter()}
-      <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
-        {renderPlaylists()}
-      </div>
+      <CategorisedPlaylists
+        playlists={playlists}
+        handleTagFilterClick={handleTagFilterClick}
+      />
     </div>
   );
 };
 
-export default Playlists;
+export default PlaylistsSection;

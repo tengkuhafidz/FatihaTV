@@ -2,7 +2,7 @@ import { Link } from "gatsby";
 import React, { ReactElement } from "react";
 import BottomCta from "../components/bottom-cta";
 import Hero from "../components/hero";
-import Playlists from "../components/Home/playlists";
+import PlaylistsSection from "../components/Home/playlists-section";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
@@ -36,7 +36,7 @@ const HomePage = (): ReactElement => (
     <p className="text-gray-600 text-center mt-8 font-light text-sm">
       Last Updated: 2nd April 2020
     </p>
-    <Playlists />
+    <PlaylistsSection />
     <BottomCta />
   </Layout>
 );

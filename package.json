@@ -33,6 +33,7 @@
     "react-facebook-player": "^0.1.0",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.9.0",
+    "react-multi-carousel": "^2.5.5",
     "react-player": "^1.15.3",
     "react-youtube": "^7.11.1",
     "smooth-scroll": "^16.1.3",

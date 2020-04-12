@@ -115,6 +115,9 @@ export const getFuseFilterResult = (
     keys: filterByKeys,
   };
 
-  const fuse = new Fuse(donationListing, options);
+  const fuse: Fuse<any, Fuse.IFuseOptions<any>> = new Fuse(
+    donationListing,
+    options
+  );
   return fuse.search(searchTerm);
 };

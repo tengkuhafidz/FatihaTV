@@ -59,7 +59,7 @@ const getLiveSessions = async (apiKey, useLocal) => {
     orgData = loadData(dataPath);
   } else {
     if (useLocal) console.log(">>> Local live sessions data not found.");
-    console.log(">>> Retrieving data from Google Sheets.");
+    console.log(">>> Retrieving live sessions data from Google Sheets.");
     orgData = await getLiveSessionsFromSheets(apiKey);
     if (useLocal) {
       saveData(orgData, dataPath)
@@ -94,7 +94,7 @@ const getOrganisationData = async (apiKey, useLocal) => {
     orgData = loadData(dataPath);
   } else {
     if (useLocal) console.log(">>> Local organisation data not found.");
-    console.log(">>> Retrieving data from Google Sheets.");
+    console.log(">>> Retrieving organisation data from Google Sheets.");
     orgData = await getOrganisationDataFromSheets(apiKey);
     if (useLocal) {
       saveData(orgData, dataPath)

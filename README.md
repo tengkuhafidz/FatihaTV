@@ -12,13 +12,9 @@ This is also my first tech project with my wife - hence the name dedication. :P
 
 ## Environment Variables
 
-### `GATSBY_YOUTUBE_API_KEY` 
+### `GATSBY_GOOGLE_API_KEY`
 
-Set this to an API KEY with access to Google's Youtube Data API v3
-
-### `GATSBY_SHEETS_API_KEY` 
-
-Set this to an API KEY with access to Google Sheets API. Can be the same as `GATSBY_YOUTUBE_API_KEY`, but must be explicitly set.
+Set this to an api key with access to both Google Sheets API v4 and Youtube Data API v3
 
 ### `GATSBY_USE_LOCAL_DATA`
 

@@ -2,7 +2,11 @@ import React, { ReactElement } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { PlaylistModel } from "../../models";
-import { isPlaylistPinnedOnLocalStorage } from "../../utils";
+import {
+  isPlaylistPinnedOnLocalStorage,
+  isMobileDevice,
+  isMobileOrTableDevice,
+} from "../../utils";
 import SinglePlaylist from "./single-playlist";
 
 interface Props {
@@ -38,6 +42,8 @@ const CategorisedPlaylists: React.FC<Props> = ({ playlists, categoryName }) => {
     },
   };
 
+  const shouldShowDotNavigation = isMobileDevice() ? false : true;
+
   const renderPlaylists = (): ReactElement[] => {
     return playlists.map(playlist => (
       <SinglePlaylist
@@ -49,15 +55,14 @@ const CategorisedPlaylists: React.FC<Props> = ({ playlists, categoryName }) => {
   };
 
   return (
-    <div className="pb-4 md:pb-8 mb-4 md:mb-2 relative">
+    <div className="md:pb-8 md:mb-2 relative">
       <h3 className="text-xl font-semibold mb-2">{categoryName}</h3>
       <Carousel
         responsive={carouselResponsiveOption}
-        ssr={true}
         itemClass="pr-1"
         partialVisible
         draggable={false}
-        showDots={true}
+        showDots={shouldShowDotNavigation}
         renderDotsOutside={true}
         removeArrowOnDeviceType="mobile"
       >

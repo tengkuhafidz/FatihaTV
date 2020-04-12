@@ -45,6 +45,13 @@ export const getSocialMediaShareUrls = (pageUrl: string): SocialMediaUrls => {
 };
 
 export const isMobileDevice = (): boolean => {
+  if (window !== undefined) {
+    return window.innerWidth <= 600;
+  }
+  return false;
+};
+
+export const isMobileOrTableDevice = (): boolean => {
   const toMatch = [
     /Android/i,
     /webOS/i,

@@ -55,7 +55,7 @@ const DonationLists = (): ReactElement => {
     return donationsListingToBeDisplayed.map(donationData => (
       <SingleDonationCard
         donationData={donationData}
-        key={donationData.paynow_uen}
+        key={donationData.paynowUen}
       />
     ));
   };

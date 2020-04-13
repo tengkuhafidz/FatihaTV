@@ -45,10 +45,8 @@ export const getSocialMediaShareUrls = (pageUrl: string): SocialMediaUrls => {
 };
 
 export const isMobileDevice = (): boolean => {
-  if (typeof window !== undefined) {
-    return window.innerWidth <= 600;
-  }
-  return false;
+  const hasWindow = typeof window !== "undefined";
+  return hasWindow ? window.innerWidth <= 600 : false;
 };
 
 export const isMobileOrTableDevice = (): boolean => {

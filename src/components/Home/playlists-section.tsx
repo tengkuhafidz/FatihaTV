@@ -114,16 +114,16 @@ const PlaylistsSection = (): ReactElement => {
         refs: ["short"],
       },
       {
-        name: "Quran & Hadith",
+        name: "Quran, Hadith & Kitab Lectures",
         refs: ["quran", "hadith", "kitab"],
       },
       {
-        name: "Interactive & Podcast Format",
+        name: "Current Affairs & Podcast Format",
         refs: ["currentaffairs", "podcast"],
       },
       {
         name: "Practicing Islam & Spirituality",
-        refs: ["howto", "currentaffairs"],
+        refs: ["howto", "spirituality"],
       },
       {
         name: "General Lectures",

@@ -45,7 +45,7 @@ export const getSocialMediaShareUrls = (pageUrl: string): SocialMediaUrls => {
 };
 
 export const isMobileDevice = (): boolean => {
-  if (window !== undefined) {
+  if (typeof window !== undefined) {
     return window.innerWidth <= 600;
   }
   return false;

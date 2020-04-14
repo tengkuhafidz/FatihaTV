@@ -1,4 +1,6 @@
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 import React, { ReactElement } from "react";
+import { FaDonate } from "react-icons/fa";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import VideoInPlaylist from "../components/Watch/video-in-playlist";
@@ -27,20 +29,6 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
     ));
   };
 
-  const renderDonationMethod = (): ReactElement => {
-    if (donationMethod) {
-      return (
-        <p className="text-xl flex flex-wrap">
-          <span className="font-semibold">
-            Donate to {playlist.organisation}:
-          </span>
-          <span className="text-gray-600 ml-1">{playlist.donationMethod}</span>
-        </p>
-      );
-    }
-    return <></>;
-  };
-
   return (
     <Layout>
       <SEO
@@ -57,7 +45,16 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
                 <h1 className="text-3xl leading-none">
                   {playlist.title}: {currentVideo.title}{" "}
                 </h1>
-                {renderDonationMethod()}
+              </div>
+              <div className="w-full md:w-1/5">
+                <OutboundLink
+                  className={`bg-teal-500 hover:bg-teal-400 text-white py-2 px-4 rounded md:float-right mt-4 md:mt-auto md:w-auto uppercase inline border-b-4 border-teal-600`}
+                  href="https://ourmasjid.sg/donate"
+                  target="_blank"
+                >
+                  Donate To Mosque
+                  <FaDonate className="inline -mt-1 ml-2" />
+                </OutboundLink>
               </div>
             </div>
           </div>

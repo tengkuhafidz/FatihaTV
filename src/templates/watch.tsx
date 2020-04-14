@@ -1,17 +1,16 @@
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 import React, { ReactElement, useState } from "react";
 import Layout from "../components/layout";
-import VideoPlayer from "../components/Watch/video-player";
-import VideoInPlaylist from "../components/Watch/video-in-playlist";
-import { OutboundLink } from "gatsby-plugin-google-gtag";
 import SEO from "../components/seo";
-import { FaMapPin } from "react-icons/fa";
+import VideoInPlaylist from "../components/Watch/video-in-playlist";
+import VideoPlayer from "../components/Watch/video-player";
+import { GtagCategories, PlaylistModel, VideoModel } from "../models";
 import {
   addToLocalPinnedPlaylist,
   isPlaylistPinnedOnLocalStorage,
   removeFromLocalPinnedPlaylist,
 } from "../utils";
 import { gtagEventClick } from "../utils/gtag";
-import { GtagCategories, PlaylistModel, VideoModel } from "../models";
 
 interface Props {
   pageContext: {
@@ -27,6 +26,7 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
   const isPlaylistPinnedLocally: boolean = isPlaylistPinnedOnLocalStorage(
     playlist.id
   );
+
   const [isPlaylistPinned, setIsPlaylistPinned] = useState(
     isPlaylistPinnedLocally
   );
@@ -87,7 +87,6 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
               <div className="w-full md:w-4/5">
                 <h1 className="text-3xl leading-none">
                   {playlist.title}: {currentVideo.title}{" "}
-                  <span className="text-xl">by {currentVideo.asatizah}</span>
                 </h1>
                 <p className="text-xl">
                   <span className="font-semibold">Source:&nbsp;</span>
@@ -100,26 +99,6 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
                   </OutboundLink>
                 </p>
                 {renderDonationMethod()}
-              </div>
-              <div className="w-full md:w-1/5">
-                <button
-                  className={`bg-teal-500 hover:bg-teal-400 text-white py-2 px-4 rounded md:float-right mt-4 md:mt-auto md:w-auto uppercase inline border-b-4 border-teal-600 ${
-                    isPlaylistPinned ? "hidden" : "block"
-                  }`}
-                  onClick={handlePinPlaylist}
-                >
-                  <FaMapPin className="inline -mt-1 mr-2" />
-                  Pin Playlist
-                </button>
-                <button
-                  className={`bg-gray-500 hover:bg-gray-400 text-white py-2 px-4 rounded md:float-right mt-4 md:mt-auto md:w-auto uppercase inline border-b-4 border-gray-800 ${
-                    isPlaylistPinned ? "block" : "hidden"
-                  }`}
-                  onClick={handleUnpinPlaylist}
-                >
-                  <FaMapPin className="inline -mt-1 mr-2" />
-                  Unpin Playlist
-                </button>
               </div>
             </div>
           </div>

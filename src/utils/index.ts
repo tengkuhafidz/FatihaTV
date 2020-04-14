@@ -1,4 +1,5 @@
 import Fuse from "fuse.js";
+import { PlayedPlaylistsModel } from "../models";
 
 export const enableSmoothScroll = (): void => {
   if (typeof window !== "undefined") {
@@ -71,11 +72,6 @@ export const isMobileOrTableDevice = (): boolean => {
  * PLAYED PLAYLIST - For continue watching category
  */
 
-interface PlayedPlaylistsModel {
-  playlistId: string;
-  videoId: string;
-}
-
 const getLocalStorageItem = (itemName: string): string => {
   const hasLocalStorageReady = typeof Storage !== "undefined";
   if (hasLocalStorageReady) {
@@ -97,17 +93,23 @@ const updatePlayedPlaylists = (
   const playlistIndexInPlayedPlaylists: number = playedPlaylists.findIndex(
     playlist => playlist.playlistId === playlistId
   );
-  const playlistExistsinPlayedPlaylists: boolean =
+  const playlistExistsInPlayedPlaylists: boolean =
     playlistIndexInPlayedPlaylists >= 0;
 
-  if (playlistExistsinPlayedPlaylists) {
-    playedPlaylists[playlistIndexInPlayedPlaylists].videoId = videoId;
-  } else if (playedPlaylists.length >= 12) {
-    playedPlaylists.pop();
-    playedPlaylists.unshift({ playlistId, videoId });
-  } else {
-    playedPlaylists.unshift({ playlistId, videoId });
+  console.log(
+    "playlistExistsInPlayedPlaylists",
+    playlistExistsInPlayedPlaylists
+  );
+
+  if (playlistExistsInPlayedPlaylists) {
+    playedPlaylists.splice(playlistIndexInPlayedPlaylists, 1);
   }
+
+  if (playedPlaylists.length >= 12) {
+    playedPlaylists.pop();
+  }
+
+  playedPlaylists.unshift({ playlistId, videoId });
 
   return playedPlaylists;
 };

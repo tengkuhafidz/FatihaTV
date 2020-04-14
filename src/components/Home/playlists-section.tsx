@@ -1,8 +1,13 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React, { ReactElement, useState } from "react";
 import "react-multi-carousel/lib/styles.css";
-import { GtagCategories, InputEvent, PlaylistModel } from "../../models";
-import { getFuseFilterResult } from "../../utils";
+import {
+  GtagCategories,
+  InputEvent,
+  PlaylistModel,
+  PlayedPlaylistsModel,
+} from "../../models";
+import { getFuseFilterResult, getPlayedPlaylists } from "../../utils";
 import { gtagEventClick } from "../../utils/gtag";
 import SearchInput from "../search-input";
 import CategorisedPlaylists from "./categorised-playlists";
@@ -88,7 +93,34 @@ const PlaylistsSection = (): ReactElement => {
     });
   };
 
-  const renderCategoryPlaylists = (): ReactElement[] => {
+  const renderPlayedPlaylists = (): ReactElement => {
+    const playedPlaylists: PlayedPlaylistsModel[] = getPlayedPlaylists();
+
+    if (playedPlaylists.length > 0) {
+      const videoIds: string[] = [];
+      const formattedPlayedPlaylists: PlaylistModel[] = [];
+      playedPlaylists.forEach(playedPlaylist => {
+        playlistsToDisplay.forEach(playlist => {
+          if (playedPlaylist.playlistId === playlist.id) {
+            formattedPlayedPlaylists.push(playlist);
+            videoIds.push(playedPlaylist.videoId);
+          }
+        });
+      });
+
+      return (
+        <CategorisedPlaylists
+          playlists={formattedPlayedPlaylists}
+          videoIds={videoIds}
+          categoryName={"Continue Watching"}
+        />
+      );
+    }
+
+    return <></>;
+  };
+
+  const renderPlaylistsByCategory = (): ReactElement[] => {
     const categories: object[] = [
       {
         name: "Short Videos",
@@ -135,7 +167,8 @@ const PlaylistsSection = (): ReactElement => {
   return (
     <div className="mx-auto pl-8 pt-8 pb-32 w-full " id="playlists">
       <SearchInput handleSearchFilter={handleSearchFilter} />
-      {renderCategoryPlaylists()}
+      {renderPlayedPlaylists()}
+      {renderPlaylistsByCategory()}
     </div>
   );
 };

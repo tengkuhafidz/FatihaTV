@@ -21,6 +21,11 @@ export interface VideoModel {
   videoUrl: string;
 }
 
+export interface PlayedPlaylistsModel {
+  playlistId: string;
+  videoId: string;
+}
+
 export interface LiveSessionModel {
   Date: string;
   Time: string;

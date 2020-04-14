@@ -7,10 +7,15 @@ import SinglePlaylist from "./single-playlist";
 
 interface Props {
   playlists: PlaylistModel[];
+  videoIds?: string[];
   categoryName: string;
 }
 
-const CategorisedPlaylists: React.FC<Props> = ({ playlists, categoryName }) => {
+const CategorisedPlaylists: React.FC<Props> = ({
+  playlists,
+  videoIds,
+  categoryName,
+}) => {
   const carouselResponsiveOption = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -41,6 +46,15 @@ const CategorisedPlaylists: React.FC<Props> = ({ playlists, categoryName }) => {
   const shouldShowDotNavigation = isMobileDevice() ? false : true;
 
   const renderPlaylists = (): ReactElement[] => {
+    if (videoIds) {
+      return playlists.map((playlist, index) => (
+        <SinglePlaylist
+          playlist={playlist}
+          videoId={videoIds[index]}
+          key={playlist.id}
+        />
+      ));
+    }
     return playlists.map(playlist => (
       <SinglePlaylist playlist={playlist} key={playlist.id} />
     ));

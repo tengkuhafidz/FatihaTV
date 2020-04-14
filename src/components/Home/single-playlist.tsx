@@ -1,24 +1,18 @@
 import { navigate } from "gatsby";
 import React from "react";
-import { PlaylistModel, SpanEvent } from "../../models";
+import { PlaylistModel } from "../../models";
 
 interface Props {
   playlist: PlaylistModel;
-  isPlaylistPinnedLocally: boolean;
 }
 
-const SinglePlaylist: React.FunctionComponent<Props> = ({
-  playlist,
-  isPlaylistPinnedLocally,
-}) => {
+const SinglePlaylist: React.FC<Props> = ({ playlist }) => {
   const { title, thumbnailUrl, organisation, videos, id } = playlist;
 
   return (
     <div
       data-cy="playlist-card"
-      className={`overflow-hidden align-center cursor-pointer ${
-        isPlaylistPinnedLocally ? "border-teal-500 border-4" : ""
-      }`}
+      className={`overflow-hidden align-center cursor-pointer`}
       onClick={(): Promise<void> =>
         navigate(`/watch/${id}/${playlist.videos[0].id}`)
       }

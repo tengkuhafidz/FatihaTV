@@ -44,6 +44,10 @@ export const getSocialMediaShareUrls = (pageUrl: string): SocialMediaUrls => {
   };
 };
 
+/**
+ * DEVICE CHECK
+ */
+
 export const isMobileDevice = (): boolean => {
   const hasWindow = typeof window !== "undefined";
   return hasWindow ? window.innerWidth <= 600 : false;
@@ -64,37 +68,65 @@ export const isMobileOrTableDevice = (): boolean => {
 };
 
 /**
- * LOCALLY PINNED PLAYLIST
+ * PLAYED PLAYLIST - For continue watching category
  */
 
-export const getLocalPinnedPlaylist = (): string[] => {
+interface PlayedPlaylistsModel {
+  playlistId: string;
+  videoId: string;
+}
+
+const getLocalStorageItem = (itemName: string): string => {
   const hasLocalStorageReady = typeof Storage !== "undefined";
   if (hasLocalStorageReady) {
-    const localStoragePinnedPlaylists =
-      localStorage.getItem("pinnedPlaylists") || "";
-    return localStoragePinnedPlaylists
-      ? JSON.parse(localStoragePinnedPlaylists)
-      : [];
+    return localStorage.getItem(itemName) || "";
   }
-  return [];
+  return "";
 };
 
-export const addToLocalPinnedPlaylist = (playlistId: string): void => {
-  const localPinnedPlaylists = getLocalPinnedPlaylist();
-  localPinnedPlaylists.push(playlistId);
-  localStorage.setItem("pinnedPlaylists", JSON.stringify(localPinnedPlaylists));
+export const getPlayedPlaylists = (): PlayedPlaylistsModel[] => {
+  const playedPlaylists = getLocalStorageItem("playedPlaylists");
+  return playedPlaylists ? JSON.parse(playedPlaylists) : [];
 };
 
-export const removeFromLocalPinnedPlaylist = (playlistId: string): void => {
-  const localPinnedPlaylists = getLocalPinnedPlaylist();
-  const playlistIndex = localPinnedPlaylists.indexOf(playlistId);
-  if (playlistIndex !== -1) localPinnedPlaylists.splice(playlistIndex, 1);
-  localStorage.setItem("pinnedPlaylists", JSON.stringify(localPinnedPlaylists));
+const updatePlayedPlaylists = (
+  playedPlaylists: PlayedPlaylistsModel[],
+  playlistId: string,
+  videoId: string
+): PlayedPlaylistsModel[] => {
+  const playlistIndexInPlayedPlaylists: number = playedPlaylists.findIndex(
+    playlist => playlist.playlistId === playlistId
+  );
+  const playlistExistsinPlayedPlaylists: boolean =
+    playlistIndexInPlayedPlaylists >= 0;
+
+  if (playlistExistsinPlayedPlaylists) {
+    playedPlaylists[playlistIndexInPlayedPlaylists].videoId = videoId;
+  } else if (playedPlaylists.length >= 12) {
+    playedPlaylists.pop();
+    playedPlaylists.unshift({ playlistId, videoId });
+  } else {
+    playedPlaylists.unshift({ playlistId, videoId });
+  }
+
+  return playedPlaylists;
 };
 
-export const isPlaylistPinnedOnLocalStorage = (playlistId: string): boolean => {
-  const localPinnedPlaylists: string[] = getLocalPinnedPlaylist();
-  return localPinnedPlaylists.includes(playlistId);
+export const addToPlayedPlaylists = (
+  playlistId: string,
+  videoId: string
+): void => {
+  const playedPlaylists: PlayedPlaylistsModel[] = getPlayedPlaylists();
+  const updatedPlayedPlaylists = updatePlayedPlaylists(
+    playedPlaylists,
+    playlistId,
+    videoId
+  );
+
+  localStorage.setItem(
+    "playedPlaylists",
+    JSON.stringify(updatedPlayedPlaylists)
+  );
 };
 
 /**

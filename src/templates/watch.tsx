@@ -1,16 +1,9 @@
-import { OutboundLink } from "gatsby-plugin-google-gtag";
-import React, { ReactElement, useState } from "react";
+import React, { ReactElement } from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import VideoInPlaylist from "../components/Watch/video-in-playlist";
 import VideoPlayer from "../components/Watch/video-player";
-import { GtagCategories, PlaylistModel, VideoModel } from "../models";
-import {
-  addToLocalPinnedPlaylist,
-  isPlaylistPinnedOnLocalStorage,
-  removeFromLocalPinnedPlaylist,
-} from "../utils";
-import { gtagEventClick } from "../utils/gtag";
+import { PlaylistModel, VideoModel } from "../models";
 
 interface Props {
   pageContext: {
@@ -22,32 +15,6 @@ interface Props {
 const WatchPage: React.FC<Props> = ({ pageContext }) => {
   const { playlist, currentVideo } = pageContext;
   const { videos, donationMethod } = playlist;
-
-  const isPlaylistPinnedLocally: boolean = isPlaylistPinnedOnLocalStorage(
-    playlist.id
-  );
-
-  const [isPlaylistPinned, setIsPlaylistPinned] = useState(
-    isPlaylistPinnedLocally
-  );
-
-  const handlePinPlaylist = (): void => {
-    setIsPlaylistPinned(true);
-    addToLocalPinnedPlaylist(playlist.id);
-    gtagEventClick("pin_playlist", {
-      event_category: GtagCategories.Engagement,
-      event_label: playlist.title,
-    });
-  };
-
-  const handleUnpinPlaylist = (): void => {
-    setIsPlaylistPinned(false);
-    removeFromLocalPinnedPlaylist(playlist.id);
-    gtagEventClick("unpin_playlist", {
-      event_category: GtagCategories.Engagement,
-      event_label: playlist.title,
-    });
-  };
 
   const renderPlaylistVideos = (): ReactElement[] => {
     return videos.map(video => (
@@ -64,7 +31,9 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
     if (donationMethod) {
       return (
         <p className="text-xl flex flex-wrap">
-          <span className="font-semibold">To donate:</span>
+          <span className="font-semibold">
+            Donate to {playlist.organisation}:
+          </span>
           <span className="text-gray-600 ml-1">{playlist.donationMethod}</span>
         </p>
       );
@@ -81,23 +50,13 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
       />
       <div className="grid xl:grid-cols-4 gap-4 m-8 pb-16">
         <div className="xl:col-span-3 mb-8">
-          <VideoPlayer video={currentVideo} />
+          <VideoPlayer playlist={playlist} video={currentVideo} />
           <div className="mt-4">
             <div className="flex flex-wrap">
               <div className="w-full md:w-4/5">
                 <h1 className="text-3xl leading-none">
                   {playlist.title}: {currentVideo.title}{" "}
                 </h1>
-                <p className="text-xl">
-                  <span className="font-semibold">Source:&nbsp;</span>
-                  <OutboundLink
-                    href={playlist.pageUrl}
-                    target="_blank"
-                    className="text-gray-700 underline"
-                  >
-                    {playlist.organisation}
-                  </OutboundLink>
-                </p>
                 {renderDonationMethod()}
               </div>
             </div>

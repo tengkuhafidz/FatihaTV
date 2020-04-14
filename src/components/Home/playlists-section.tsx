@@ -2,10 +2,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import React, { ReactElement, useState } from "react";
 import "react-multi-carousel/lib/styles.css";
 import { GtagCategories, InputEvent, PlaylistModel } from "../../models";
-import {
-  getFuseFilterResult,
-  isPlaylistPinnedOnLocalStorage,
-} from "../../utils";
+import { getFuseFilterResult } from "../../utils";
 import { gtagEventClick } from "../../utils/gtag";
 import SearchInput from "../search-input";
 import CategorisedPlaylists from "./categorised-playlists";
@@ -91,22 +88,6 @@ const PlaylistsSection = (): ReactElement => {
     });
   };
 
-  const sortPinnedPlaylistFirst = (
-    playlists: PlaylistModel[]
-  ): PlaylistModel[] => {
-    return playlists.sort((currPlaylist, nextPlaylist) => {
-      if (
-        isPlaylistPinnedOnLocalStorage(currPlaylist.id) &&
-        isPlaylistPinnedOnLocalStorage(nextPlaylist.id)
-      )
-        return 0;
-      else if (isPlaylistPinnedOnLocalStorage(currPlaylist.id)) return -1;
-      else return 0;
-    });
-  };
-
-  const playlists = sortPinnedPlaylistFirst(playlistsToDisplay);
-
   const renderCategoryPlaylists = (): ReactElement[] => {
     const categories: object[] = [
       {
@@ -133,7 +114,7 @@ const PlaylistsSection = (): ReactElement => {
 
     return categories.map(
       (category, index): ReactElement => {
-        const categorisedPlaylists: PlaylistModel[] = playlists.filter(
+        const categorisedPlaylists: PlaylistModel[] = playlistsToDisplay.filter(
           (playlist: PlaylistModel) =>
             category.refs.some(ref => playlist.tags.includes(ref))
         );

@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { PlaylistModel } from "../../models";
-import { isMobileDevice, isPlaylistPinnedOnLocalStorage } from "../../utils";
+import { isMobileDevice } from "../../utils";
 import SinglePlaylist from "./single-playlist";
 
 interface Props {
@@ -42,11 +42,7 @@ const CategorisedPlaylists: React.FC<Props> = ({ playlists, categoryName }) => {
 
   const renderPlaylists = (): ReactElement[] => {
     return playlists.map(playlist => (
-      <SinglePlaylist
-        playlist={playlist}
-        key={playlist.id}
-        isPlaylistPinnedLocally={isPlaylistPinnedOnLocalStorage(playlist.id)}
-      />
+      <SinglePlaylist playlist={playlist} key={playlist.id} />
     ));
   };
 

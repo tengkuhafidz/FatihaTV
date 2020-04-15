@@ -9,11 +9,12 @@ import {
 } from "../../models";
 import { getFuseFilterResult, getPlayedPlaylists } from "../../utils";
 import { gtagEventClick } from "../../utils/gtag";
-import SearchInput from "../search-input";
+import SearchInput, { LanguageCode } from "../search-input";
 import CategorisedPlaylists from "./categorised-playlists";
 
 const PlaylistsSection = (): ReactElement => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedLanguage, setSelectedLanguage] = useState<LanguageCode>("all");
   const data = useStaticQuery(graphql`
     query AllPlaylistsQuery {
       allPlaylist {
@@ -27,6 +28,7 @@ const PlaylistsSection = (): ReactElement => {
             tags
             thumbnailUrl
             title
+            language
             videos {
               addedOn
               asatizah
@@ -77,12 +79,17 @@ const PlaylistsSection = (): ReactElement => {
       ? getSearchFilterResult(playlistsData)
       : playlistsData;
 
-    return playlistsFilteredBySearch;
+    const playlistsFilteredByLanguage =
+      selectedLanguage === "all"
+        ? playlistsFilteredBySearch
+        : playlistsFilteredBySearch.filter(playlist =>
+            playlist.language.split(",").includes(selectedLanguage)
+          );
+
+    return playlistsFilteredByLanguage;
   };
 
-  const playlistsToDisplay: PlaylistModel[] = !searchTerm
-    ? playlistsData
-    : getFilteredPlaylists();
+  const playlistsToDisplay: PlaylistModel[] = getFilteredPlaylists();
 
   const handleSearchFilter = (e: InputEvent): void => {
     e.preventDefault();
@@ -166,7 +173,12 @@ const PlaylistsSection = (): ReactElement => {
 
   return (
     <div className="mx-auto pl-8 pt-8 pb-32 w-full " id="playlists">
-      <SearchInput handleSearchFilter={handleSearchFilter} />
+      <SearchInput
+        handleSearchFilter={handleSearchFilter}
+        showLanguageSelector={true}
+        handleLanguageSelected={setSelectedLanguage}
+        selectedLanguage={selectedLanguage}
+      />
       {renderPlayedPlaylists()}
       {renderPlaylistsByCategory()}
     </div>

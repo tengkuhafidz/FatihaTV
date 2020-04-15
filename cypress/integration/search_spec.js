@@ -7,6 +7,6 @@ describe("Given user is on homepage, When user types into the search box,", () =
 
     cy.get('[data-cy="playlist-card"]')
       .first()
-      .should("contain", "Kuliah Tafsir by Ustaz Fatris");
+      .should("contain", "Ustaz Fatris");
   });
 });

@@ -55,7 +55,10 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
   className = "",
 }) => (
   <div className={`language-dropdown relative ${className}`}>
-    <button className="flex bg-gray-300 text-gray-700 py-2 px-3 rounded md:rounded-l-none shadow appearance-none inline-flex items-center h-10 iphone:w-full">
+    <button
+      className="flex bg-gray-300 text-gray-700 py-2 px-3 rounded md:rounded-l-none shadow appearance-none inline-flex items-center h-10 iphone:w-full"
+      data-cy="language-selector"
+    >
       <span className="mr-1 font-semibold">Language: </span>
       <span>{Languages[selectedLanguage]}</span>
       <span className="flex-grow">&nbsp;</span>
@@ -68,6 +71,7 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({
       {Object.keys(Languages).map(code => (
         <li key={code}>
           <button
+            data-cy="language-selector-choice"
             className="flex justify-between bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap w-full"
             onClick={(): void =>
               handleLanguageSelected &&

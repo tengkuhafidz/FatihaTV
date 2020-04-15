@@ -56,12 +56,7 @@ const PlaylistsSection = (): ReactElement => {
       filterByKeys,
       searchTerm
     );
-
-    const fuseFilteredPlaylists: PlaylistModel[] = [];
-    fuseFilterResults.forEach(result =>
-      fuseFilteredPlaylists.push(result.item as PlaylistModel)
-    );
-    return fuseFilteredPlaylists;
+    return fuseFilterResults.map(result => result.item);
   };
 
   const getFilteredPlaylists = (): PlaylistModel[] => {
@@ -73,7 +68,7 @@ const PlaylistsSection = (): ReactElement => {
       selectedLanguage === "all"
         ? playlistsFilteredBySearch
         : playlistsFilteredBySearch.filter(playlist =>
-            playlist.language.split(",").includes(selectedLanguage)
+            playlist.language.includes(selectedLanguage)
           );
 
     return playlistsFilteredByLanguage;

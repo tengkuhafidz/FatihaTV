@@ -159,6 +159,7 @@ const getPlaylistsFromYoutube = async (orgData, apiKey) => {
                 title: video.snippet.title,
                 description: video.snippet.description,
                 publishedAt: video.snippet.publishedAt,
+                thumbnailUrl: video.snippet.thumbnails.medium.url,
                 youtubeMeta: video,
               });
               if(!latestDate || video.snippet.publishedAt > latestDate){

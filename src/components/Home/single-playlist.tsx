@@ -8,14 +8,18 @@ interface Props {
 }
 
 const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
-  const { title, thumbnailUrl, organisationName, videos, id } = playlist;
+  const { title, organisationName, videos, id } = playlist;
 
   const handleClick = (): void => {
     const pagePath = videoId
       ? `/watch/${id}/${videoId}`
-      : `/watch/${id}/${playlist.videos[0].id}`;
+      : `/watch/${id}/${playlist.videos[videos.length - 1].id}`;
     navigate(pagePath);
   };
+
+  const thumbnailUrl = videoId
+    ? videos.find(video => video.id === videoId)?.thumbnailUrl
+    : videos[videos.length - 1].thumbnailUrl;
 
   return (
     <div

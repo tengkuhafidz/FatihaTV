@@ -34,6 +34,7 @@ const PlaylistsSection = (): ReactElement => {
             id
             publishedAt
             title
+            thumbnailUrl
           }
         }
       }

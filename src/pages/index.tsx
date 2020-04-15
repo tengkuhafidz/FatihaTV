@@ -11,7 +11,7 @@ const HomePage = (): ReactElement => (
     <SEO title="Local Islamic Videos" />
     <Hero
       title="Watch local Islamic content"
-      subtext="Our local asatizah have been hard at work in producing online contents to ensure that we can continue to seek religious knowledge in this uncertain time. We curate them here to support their efforts."
+      subtext="Our local asatizah have been hard at work in producing online content to ensure that we can continue to seek religious knowledge in this uncertain time. We curate them here to support their efforts."
     />
     <div className="max-w-xs md:max-w-sm mx-auto">
       <ul className="flex">

@@ -16,6 +16,7 @@ export interface VideoModel {
   title: string;
   description: string;
   publishedAt: string;
+  thumbnailUrl: string;
 }
 
 export interface PlayedPlaylistsModel {

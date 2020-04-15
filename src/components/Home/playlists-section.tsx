@@ -157,7 +157,11 @@ const PlaylistsSection = (): ReactElement => {
       (category, index): ReactElement => {
         const categorisedPlaylists: PlaylistModel[] = playlistsToDisplay.filter(
           (playlist: PlaylistModel) =>
-            category.refs.some(ref => playlist.tags.includes(ref))
+            category.refs.some(ref =>
+              playlist.tags
+                .slice(0, Math.min(3, playlist.tags.length)) // Only take the first 2 tags
+                .includes(ref)
+            )
         );
         if (categorisedPlaylists.length > 0) {
           return (

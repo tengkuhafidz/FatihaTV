@@ -33,13 +33,13 @@ const LivePage = (): ReactElement => (
             className="text-center block border border-teal-500 rounded py-2 px-4 bg-teal-500 hover:bg-teal-500 text-white"
             href="#liveSessions"
           >
-            Upcoming Lives
+            Live Talks
           </a>
         </li>
       </ul>
     </div>
     <p className="text-gray-600 text-center mt-8 font-light text-sm">
-      Last Updated: 4th April 2020 &middot; Source: &nbsp;
+      Source: &nbsp;
       <OutboundLink
         target="_blank"
         className="underline"

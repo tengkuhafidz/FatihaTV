@@ -28,14 +28,11 @@ const HomePage = (): ReactElement => (
             to={"/live"}
             className="text-center block border border-teal-500 rounded hover:border-gray-200 text-teal-500 hover:bg-teal-500 hover:text-white py-2 px-4 cursor-pointer"
           >
-            Upcoming Lives
+            Live Talks
           </Link>
         </li>
       </ul>
     </div>
-    <p className="text-gray-600 text-center mt-8 font-light text-sm">
-      Last Updated: 2nd April 2020
-    </p>
     <PlaylistsSection />
     <BottomCta />
   </Layout>

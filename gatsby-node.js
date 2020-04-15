@@ -4,23 +4,22 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(
     `
       {
-        allPlaylist {
-          edges {
-            node {
-              channelTitle
-              donationUrl
+        allPlaylist(sort: { fields: updatedAt, order: DESC }) {
+          nodes {
+            channelTitle
+            donationUrl
+            id
+            updatedAt
+            language
+            organisationName
+            publishedAt
+            tags
+            thumbnailUrl
+            title
+            videos {
               id
-              language
-              organisationName
               publishedAt
-              tags
-              thumbnailUrl
               title
-              videos {
-                id
-                publishedAt
-                title
-              }
             }
           }
         }
@@ -35,7 +34,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   // Create a page for each video in every playlist.
-  result.data.allPlaylist.edges.forEach(({ node: playlist }) => {
+  result.data.allPlaylist.nodes.forEach(playlist => {
     playlist.videos.forEach(currentVideo => {
       createPage({
         path: `/watch/${playlist.id}/${currentVideo.id}`,

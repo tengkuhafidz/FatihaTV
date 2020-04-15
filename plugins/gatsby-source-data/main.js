@@ -151,6 +151,7 @@ const getPlaylistsFromYoutube = async (orgData, apiKey) => {
 
           const playlistVideos = await yt.getPlaylistVideos(playlist.id);
           const videosArr = []
+          let latestDate;
           playlistVideos.forEach(video => {
             if (video.snippet.title !== 'Private video') {
               videosArr.push({
@@ -160,11 +161,15 @@ const getPlaylistsFromYoutube = async (orgData, apiKey) => {
                 publishedAt: video.snippet.publishedAt,
                 youtubeMeta: video,
               });
+              if(!latestDate || video.snippet.publishedAt > latestDate){
+                latestDate = video.snippet.publishedAt
+              }
             }
           });
 
           if (videosArr.length > 0){
             playlistObj.videos = videosArr;
+            playlistObj.updatedAt = latestDate;
             playlistArr.push(playlistObj);
           }
         }

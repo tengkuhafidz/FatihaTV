@@ -18,40 +18,35 @@ const PlaylistsSection = (): ReactElement => {
   const [selectedLanguage, setSelectedLanguage] = useState<LanguageCode>("all");
   const data = useStaticQuery(graphql`
     query AllPlaylistsQuery {
-      allPlaylist {
-        edges {
-          node {
-            channelTitle
-            donationUrl
+      allPlaylist(sort: { fields: updatedAt, order: DESC }) {
+        nodes {
+          channelTitle
+          donationUrl
+          id
+          updatedAt
+          language
+          organisationName
+          publishedAt
+          tags
+          thumbnailUrl
+          title
+          videos {
             id
-            language
-            organisationName
             publishedAt
-            tags
-            thumbnailUrl
             title
-            videos {
-              id
-              publishedAt
-              title
-            }
           }
         }
       }
     }
   `);
 
-  const playlistsData: PlaylistModel[] = data.allPlaylist.edges.map(
-    (datum: object) => {
-      return datum.node;
-    }
-  );
+  const playlistsData: PlaylistModel[] = data.allPlaylist.nodes;
 
   const getSearchFilterResult = (
     playlists: PlaylistModel[]
   ): PlaylistModel[] => {
     const filterByKeys = [
-      "organisation",
+      "organisationName",
       "videos.language",
       "title",
       "videos.title",

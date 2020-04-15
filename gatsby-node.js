@@ -7,22 +7,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         allPlaylist {
           edges {
             node {
-              donationMethod
+              channelTitle
+              donationUrl
               id
-              organisation
-              pageUrl
-              platform
+              language
+              organisationName
+              publishedAt
               tags
               thumbnailUrl
               title
               videos {
-                addedOn
-                asatizah
                 id
-                language
-                playlistId
+                publishedAt
                 title
-                videoUrl
               }
             }
           }

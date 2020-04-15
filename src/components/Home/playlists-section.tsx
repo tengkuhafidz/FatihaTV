@@ -21,23 +21,19 @@ const PlaylistsSection = (): ReactElement => {
       allPlaylist {
         edges {
           node {
-            donationMethod
+            channelTitle
+            donationUrl
             id
-            organisation
-            pageUrl
-            platform
+            language
+            organisationName
+            publishedAt
             tags
             thumbnailUrl
             title
-            language
             videos {
-              addedOn
-              asatizah
               id
-              language
-              playlistId
+              publishedAt
               title
-              videoUrl
             }
           }
         }
@@ -56,8 +52,6 @@ const PlaylistsSection = (): ReactElement => {
   ): PlaylistModel[] => {
     const filterByKeys = [
       "organisation",
-      "videos.asatizah",
-      "videos.tags",
       "videos.language",
       "title",
       "videos.title",

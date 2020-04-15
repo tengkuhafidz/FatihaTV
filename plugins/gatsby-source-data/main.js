@@ -5,7 +5,6 @@ const Sheets = require("./sheets").Sheets;
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const fs = require("fs");
 const tagList = require('./tags.json');
-
 const dataDir = './src/data/';
 
 const saveData = (data, name) => {
@@ -37,8 +36,8 @@ const dataExists = name => {
 const getLiveSessionsFromSheets = async apiKey => {
   const sheets = new Sheets(apiKey);
   const values = await sheets.getLiveSessions();
-  values.shift() // Get rid of the first row which is just the title
-  const keys = values.shift();
+  values.shift().shift() // Get rid of the first row which is just the title
+  const keys = ['Date', 'Time', 'Mosque',	'Title', 'Speaker', 'Link']
   let arr = [];
   for (let val of values){
     const obj = {}
@@ -140,31 +139,34 @@ const getPlaylistsFromYoutube = async (orgData, apiKey) => {
           const playlistObj = {
             id: playlist.id,
             title: playlist.snippet.title,
-            organisation: playlist.snippet.channelTitle,
-            donationMethod: "Paynow to UEN " + org.paynowUen,
-            language: tags.language.join(','),
-            tags: tags.category.join(','),
-            platform: "YouTube",
-            pageUrl: org.youtubeUrl || "",
+            channelTitle: playlist.snippet.channelTitle,
+            publishedAt: playlist.snippet.publishedAt,
+            organisationName: org.organisationName,
+            donationUrl: org.donationUrl,
+            language: tags.language,
+            tags: tags.category,
             thumbnailUrl: playlist.snippet.thumbnails.medium.url, // Encountered error: thumbnails key (i.e. thumbnails.standard) may not exist.
-          };
+            youtubeMeta: playlist,
+          };        
 
           const playlistVideos = await yt.getPlaylistVideos(playlist.id);
-          const videosArr = playlistVideos.map(video => {
-            return {
-              id: video.snippet.resourceId.videoId,
-              playlistId: video.snippet.playlistId,
-              title: video.snippet.title,
-              asatizah: "<Asatizah name>", // TODO: Parse from description/title?
-              language: tags.language[0],  // TODO: Frontend needs to take an array instead.
-              addedOn: video.snippet.publishedAt,
-              videoUrl:
-                "https://www.youtube.com/embed/" + video.snippet.resourceId.videoId,
-            };
+          const videosArr = []
+          playlistVideos.forEach(video => {
+            if (video.snippet.title !== 'Private video') {
+              videosArr.push({
+                id: video.snippet.resourceId.videoId,
+                title: video.snippet.title,
+                description: video.snippet.description,
+                publishedAt: video.snippet.publishedAt,
+                youtubeMeta: video,
+              });
+            }
           });
 
-          playlistObj.videos = videosArr;
-          playlistArr.push(playlistObj);
+          if (videosArr.length > 0){
+            playlistObj.videos = videosArr;
+            playlistArr.push(playlistObj);
+          }
         }
       }
 

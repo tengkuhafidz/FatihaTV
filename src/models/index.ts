@@ -7,6 +7,7 @@ export interface PlaylistModel {
   platform: string;
   pageUrl: string;
   thumbnailUrl: string;
+  language: string;
   videos: VideoModel[];
 }
 

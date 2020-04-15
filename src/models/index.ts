@@ -27,6 +27,11 @@ export interface PlayedPlaylistsModel {
   videoId: string;
 }
 
+export interface PlaylistsAndVideoIds {
+  formattedPlayedPlaylists: PlayedPlaylistsModel;
+  videoIds: string[];
+}
+
 export interface LiveSessionModel {
   Date: string;
   Time: string;

@@ -6,6 +6,7 @@ import {
   InputEvent,
   PlaylistModel,
   PlayedPlaylistsModel,
+  PlaylistsAndVideoIds,
 } from "../../models";
 import { getFuseFilterResult, getPlayedPlaylists } from "../../utils";
 import { gtagEventClick } from "../../utils/gtag";
@@ -100,20 +101,35 @@ const PlaylistsSection = (): ReactElement => {
     });
   };
 
+  const getFormattedPlaylistsAndVideoIds = (
+    playedPlaylists: PlayedPlaylistsModel[]
+  ): PlaylistsAndVideoIds => {
+    const videoIds: string[] = [];
+    const formattedPlayedPlaylists: PlaylistModel[] = [];
+
+    playedPlaylists.forEach(playedPlaylist => {
+      playlistsToDisplay.forEach(playlist => {
+        if (playedPlaylist.playlistId === playlist.id) {
+          formattedPlayedPlaylists.push(playlist);
+          videoIds.push(playedPlaylist.videoId);
+        }
+      });
+    });
+
+    return {
+      formattedPlayedPlaylists,
+      videoIds,
+    };
+  };
+
   const renderPlayedPlaylists = (): ReactElement => {
     const playedPlaylists: PlayedPlaylistsModel[] = getPlayedPlaylists();
 
     if (playedPlaylists.length > 0 && playlistsToDisplay.length > 0) {
-      const videoIds: string[] = [];
-      const formattedPlayedPlaylists: PlaylistModel[] = [];
-      playedPlaylists.forEach(playedPlaylist => {
-        playlistsToDisplay.forEach(playlist => {
-          if (playedPlaylist.playlistId === playlist.id) {
-            formattedPlayedPlaylists.push(playlist);
-            videoIds.push(playedPlaylist.videoId);
-          }
-        });
-      });
+      const {
+        formattedPlayedPlaylists,
+        videoIds,
+      } = getFormattedPlaylistsAndVideoIds(playedPlaylists);
 
       return videoIds.length ? (
         <CategorisedPlaylists

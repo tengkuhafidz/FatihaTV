@@ -103,7 +103,7 @@ const PlaylistsSection = (): ReactElement => {
   const renderPlayedPlaylists = (): ReactElement => {
     const playedPlaylists: PlayedPlaylistsModel[] = getPlayedPlaylists();
 
-    if (playedPlaylists.length > 0) {
+    if (playedPlaylists.length > 0 && playlistsToDisplay.length > 0) {
       const videoIds: string[] = [];
       const formattedPlayedPlaylists: PlaylistModel[] = [];
       playedPlaylists.forEach(playedPlaylist => {
@@ -115,12 +115,14 @@ const PlaylistsSection = (): ReactElement => {
         });
       });
 
-      return (
+      return videoIds.length ? (
         <CategorisedPlaylists
           playlists={formattedPlayedPlaylists}
           videoIds={videoIds}
           categoryName={"Continue Watching"}
         />
+      ) : (
+        <></>
       );
     }
 

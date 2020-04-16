@@ -6,6 +6,7 @@ import SearchInput from "../search-input";
 import { gtagEventClick } from "../../utils/gtag";
 import { getFuseFilterResult } from "../../utils";
 import { useStaticQuery, graphql } from "gatsby";
+import NoResults from "../no-results";
 
 const LiveSessions = (): ReactElement => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -74,10 +75,19 @@ const LiveSessions = (): ReactElement => {
     );
   };
 
+  const renderResults = (): ReactElement => {
+    if (filteredSessions.length > 0) {
+      return (
+        <div className="grid md:grid-cols-2 gap-8">{renderLiveSessions()}</div>
+      );
+    }
+    return <NoResults />;
+  };
+
   return (
     <div className="container mx-auto px-8 pt-8 pb-32" id="liveSessions">
       <SearchInput handleSearchFilter={handleSearchFilter} />
-      <div className="grid md:grid-cols-2 gap-8">{renderLiveSessions()}</div>
+      {renderResults()}
     </div>
   );
 };

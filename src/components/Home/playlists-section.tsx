@@ -12,6 +12,7 @@ import { getFuseFilterResult, getPlayedPlaylists } from "../../utils";
 import { gtagEventClick } from "../../utils/gtag";
 import SearchInput, { LanguageCode } from "../search-input";
 import CategorisedPlaylists from "./categorised-playlists";
+import NoResults from "../no-results";
 
 const PlaylistsSection = (): ReactElement => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -178,6 +179,14 @@ const PlaylistsSection = (): ReactElement => {
     );
   };
 
+  const renderResults = (): ReactElement[] | ReactElement => {
+    return playlistsToDisplay.length > 0 ? (
+      renderPlaylistsByCategory()
+    ) : (
+      <NoResults />
+    );
+  };
+
   return (
     <div className="mx-auto pl-8 pt-8 pb-32 w-full " id="playlists">
       <SearchInput
@@ -187,7 +196,7 @@ const PlaylistsSection = (): ReactElement => {
         selectedLanguage={selectedLanguage}
       />
       {renderPlayedPlaylists()}
-      {renderPlaylistsByCategory()}
+      {renderResults()}
     </div>
   );
 };

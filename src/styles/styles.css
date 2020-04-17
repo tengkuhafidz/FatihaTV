@@ -6,7 +6,13 @@ html {
     scroll-behavior: smooth;
 }
 
-.language-dropdown:hover .language-dropdown-menu {
+@media (hover:hover) {
+    .language-dropdown:hover .language-dropdown-menu {
+        display: block;
+    }
+}
+
+.language-dropdown-menu.visible {
     display: block;
 }
 

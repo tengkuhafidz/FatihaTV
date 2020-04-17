@@ -146,8 +146,8 @@ const getPlaylistsFromYoutube = async (orgData, apiKey) => {
   })
 
   // Flatten array of arrays. Now its a single array of playlists.
-  let playlists = channelPlaylists.flat(1)
-
+  let playlists = channelPlaylists.reduce((acc, val) => acc.concat(val), []);
+  
   // Add tags to playlists. And filter out playlists with no valid tags.
   playlists = playlists
     .map(playlist => {

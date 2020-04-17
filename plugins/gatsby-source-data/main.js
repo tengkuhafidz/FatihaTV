@@ -130,8 +130,8 @@ const getPlaylistsFromYoutube = async (orgData, apiKey) => {
   // Only keep orgs with youtubeId
   orgData = orgData.filter(org => !!org.youtubeId)
 
-  // Create array of promises to get playlists from org channels.
-  const getPlaylists = orgData.map(channel => yt.getChannelPlaylists(channel.youtubeId))
+  // Create array of promises to get playlists from org youtube channels.
+  const getPlaylists = orgData.map(org => yt.getChannelPlaylists(org.youtubeId))
 
   // Get all playlists on each channel.
   let channelPlaylists = await Promise.all(getPlaylists)
@@ -145,11 +145,10 @@ const getPlaylistsFromYoutube = async (orgData, apiKey) => {
     }))
   })
 
-  // Flatten array of arrays. Now its a single array of playlists.
-  let playlists = channelPlaylists.reduce((acc, val) => acc.concat(val), []);
-  
+  // Flatten array of arrays. Now its a single array of playlists. 
   // Add tags to playlists. And filter out playlists with no valid tags.
-  playlists = playlists
+  let playlists = channelPlaylists
+    .reduce((acc, val) => acc.concat(val), [])
     .map(playlist => {
       let tags = getValidTags(playlist)
       return {

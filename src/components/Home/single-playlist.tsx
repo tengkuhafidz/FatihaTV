@@ -14,7 +14,7 @@ const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
     title,
     updatedAt,
     organisationName,
-    childrenVideo: videos,
+    childrenVideo: videos, 
     thumbnailUrl,
   } = playlist;
 

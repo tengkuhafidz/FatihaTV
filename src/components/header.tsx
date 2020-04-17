@@ -66,6 +66,7 @@ const Header = (): ReactElement => {
           <OutboundLink
             href={facebookShareUrl}
             target="_blank"
+            rel="noopener"
             className="block px-4 py-2 text-gray-800 hover:bg-teal-500 hover:text-gray-100"
           >
             <FaFacebookSquare className="-mt-1 inline align-middle mr-2" />
@@ -74,6 +75,7 @@ const Header = (): ReactElement => {
           <OutboundLink
             href={whatsappShareUrl}
             target="_blank"
+            rel="noopener"
             className="block px-4 py-2 text-gray-800 hover:bg-teal-500 hover:text-gray-100"
           >
             <FaWhatsapp className="-mt-1 inline align-middle mr-2" />
@@ -82,6 +84,7 @@ const Header = (): ReactElement => {
           <OutboundLink
             href={telegramShareUrl}
             target="_blank"
+            rel="noopener"
             className="block px-4 py-2 text-gray-800 hover:bg-teal-500 hover:text-gray-100"
           >
             <FaTelegramPlane className="-mt-1 inline align-middle mr-2" />
@@ -90,6 +93,7 @@ const Header = (): ReactElement => {
           <OutboundLink
             href={twitterShareUrl}
             target="_blank"
+            rel="noopener"
             className="block px-4 py-2 text-gray-800 hover:bg-teal-500 hover:text-gray-100"
           >
             <FaTwitter className="-mt-1 inline align-middle mr-2" />

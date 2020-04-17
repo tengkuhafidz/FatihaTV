@@ -39,6 +39,20 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-remote-images",
+      options: {
+        nodeType: "Playlist",
+        imagePath: "thumbnailUrl",
+      },
+    },
+    {
+      resolve: "gatsby-plugin-remote-images",
+      options: {
+        nodeType: "Video",
+        imagePath: "thumbnailUrl",
+      },
+    },
+    {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: "kuliah.sg",
@@ -52,5 +66,7 @@ module.exports = {
         icon: "static/app-icon.png", // This path is relative to the root of the site.
       },
     },
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
   ],
 };

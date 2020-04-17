@@ -10,6 +10,10 @@ As such, to support their work, my wife and I have curated some of their videos 
 
 This is also my first tech project with my wife - hence the name dedication. :P
 
+## Prerequisites
+- python 2.7
+- Node.js 10.13.0 or higher (required for Gatsby)
+
 ## Environment Variables
 
 ### `GATSBY_GOOGLE_API_KEY`
@@ -19,6 +23,11 @@ Set this to an api key with access to both Google Sheets API v4 and Youtube Data
 ### `GATSBY_USE_LOCAL_DATA`
 
 Set this to true if you want to cache YouTube data and use it instead of calling the API at every build. It will use the API if local file does not exist (i.e. first time.) Default is false, and will call YouTube on build every time (i.e. for production).
+
+Install dependencies:
+```bash
+$ npm i
+```
 
 After setting up env variables, run:
 

@@ -25,7 +25,7 @@ const LiveSessions = (): ReactElement => {
     }
   `);
 
-  const LiveSessionsData = data.allLiveSession.nodes;
+  const LiveSessionsData: LiveSessionModel[] = data.allLiveSession.nodes;
 
   const isUpcoming = (dateWithoutYear: string, time: string): boolean => {
     const currentYear = moment().get("year");

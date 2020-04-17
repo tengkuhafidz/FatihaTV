@@ -37,7 +37,7 @@ export class Sheets {
   */
 
   getOrganisationData = async (): Promise<Record<string, string>[]> => {
-    const res = await axios.get(this.url('1l0YvEG8IpYFZ0KZLw6Y4jzbRrCWv5aLZjrFYyNulwPg', 'A:F'));
+    const res = await axios.get(this.url('1l0YvEG8IpYFZ0KZLw6Y4jzbRrCWv5aLZjrFYyNulwPg', 'A:D'));
     return res.data.values;
   }
 

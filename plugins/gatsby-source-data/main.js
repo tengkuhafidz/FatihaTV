@@ -5,7 +5,6 @@ const Sheets = require("./sheets").Sheets;
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const fs = require("fs");
 const tagList = require('./tags.json');
-
 const dataDir = './src/data/';
 
 const saveData = (data, name) => {
@@ -36,19 +35,19 @@ const dataExists = name => {
 
 const getLiveSessionsFromSheets = async apiKey => {
   const sheets = new Sheets(apiKey);
-  const values = await sheets.getLiveSessions();
-  values.shift() // Get rid of the first row which is just the title
-  const keys = values.shift();
-  let arr = [];
-  for (let val of values){
-    const obj = {}
-    for (let i=0; i < val.length; i++){
-      obj[keys[i]] = val[i]
+  let liveSessions = await sheets.getLiveSessions();
+  liveSessions = liveSessions.slice(2) // Get rid of first two rows  
+  
+  return liveSessions.map(session => (
+    {
+      Date: session[0].split(', ')[1],
+      Time: session[1],
+      Mosque: session[2],
+      Title: session[3],
+      Speaker: session[4],
+      Link: session[5],
     }
-    obj['Date'] = obj['Date'].split(', ')[1] // Remove the day
-    arr.push(obj)
-  }
-  return arr;
+  ))
 }
 
 
@@ -127,53 +126,85 @@ const getValidTags = playlist => {
 
 const getPlaylistsFromYoutube = async (orgData, apiKey) => {
   const yt = new Youtube(apiKey);
-  let allPlaylistWithVideos = [];
 
-  for (org of orgData) {
-    if(org.youtubeId){
-      const channelPlaylists = await yt.getChannelPlaylists(org.youtubeId);
-      const playlistArr = [];
-      for (playlist of channelPlaylists) {
-        const tags = getValidTags(playlist);
-        // Only process the playlist if it has valid tags.
-        if(tags.category.length > 0){
-          const playlistObj = {
-            id: playlist.id,
-            title: playlist.snippet.title,
-            organisation: playlist.snippet.channelTitle,
-            donationMethod: "Paynow to UEN " + org.paynowUen,
-            language: tags.language.join(','),
-            tags: tags.category.join(','),
-            platform: "YouTube",
-            pageUrl: org.youtubeUrl || "",
-            thumbnailUrl: playlist.snippet.thumbnails.medium.url, // Encountered error: thumbnails key (i.e. thumbnails.standard) may not exist.
-          };
+  // Only keep orgs with youtubeId
+  orgData = orgData.filter(org => !!org.youtubeId)
 
-          const playlistVideos = await yt.getPlaylistVideos(playlist.id);
-          const videosArr = playlistVideos.map(video => {
-            return {
-              id: video.snippet.resourceId.videoId,
-              playlistId: video.snippet.playlistId,
-              title: video.snippet.title,
-              asatizah: "<Asatizah name>", // TODO: Parse from description/title?
-              language: tags.language[0],  // TODO: Frontend needs to take an array instead.
-              addedOn: video.snippet.publishedAt,
-              videoUrl:
-                "https://www.youtube.com/embed/" + video.snippet.resourceId.videoId,
-            };
-          });
+  // Create array of promises to get playlists from org youtube channels.
+  const getPlaylists = orgData.map(org => yt.getChannelPlaylists(org.youtubeId))
 
-          playlistObj.videos = videosArr;
-          playlistArr.push(playlistObj);
-        }
+  // Get all playlists on each channel.
+  let channelPlaylists = await Promise.all(getPlaylists)
+
+  // Add organisationName and donationUrl to channelPlaylists.
+  channelPlaylists = channelPlaylists.map(playlists => {
+    return playlists.map((playlist, index) => ({
+      ...playlist,
+      organisationName: orgData[index].organisationName,
+      donationUrl: orgData[index].donationUrl,
+    }))
+  })
+
+  // Flatten array of arrays. Now its a single array of playlists. 
+  // Add tags to playlists. And filter out playlists with no valid tags.
+  let playlists = channelPlaylists
+    .reduce((acc, val) => acc.concat(val), [])
+    .map(playlist => {
+      let tags = getValidTags(playlist)
+      return {
+        ...playlist,
+        language: tags.language,
+        tags: tags.category,
       }
+    })
+    .filter(playlist => playlist.tags.length > 0)
 
-      allPlaylistWithVideos = [...allPlaylistWithVideos, ...playlistArr];
-    }
-  }
+  // Create array of promises to get videos from playlists.
+  const getVideos = playlists.map(playlist => yt.getPlaylistVideos(playlist.id));
+  
+  // Get all videos of each playlist.
+  let playlistVideos = await Promise.all(getVideos);
+
+  // Filter out private videos, and reshape video object.
+  playlistVideos = playlistVideos.map(videos => {
+    return (
+      videos
+        .filter(video => video.snippet.title !== 'Private video')
+        .map(video => ({
+          id: video.snippet.resourceId.videoId,
+          title: video.snippet.title,
+          description: video.snippet.description,
+          publishedAt: video.snippet.publishedAt,
+          thumbnailUrl: video.snippet.thumbnails.medium.url,
+          donationUrl: video.donationUrl,
+        }))
+    )
+  })
+  
+  // Reshape playlist object in array of playlists.
+  // Also include videos key, which is taken from playlistVideos
+  playlists = playlists
+    .map((playlist, index) => {
+      const updatedAt = playlistVideos[index].reduce((date, video) =>
+        video.publishedAt > date ? video.publishedAt : date, new Date(0).toISOString())
+      return {
+        id: playlist.id,
+        title: playlist.snippet.title,
+        channelTitle: playlist.snippet.channelTitle,
+        publishedAt: playlist.snippet.publishedAt,
+        thumbnailUrl: playlist.snippet.thumbnails.medium.url,
+        organisationName: playlist.organisationName,
+        donationUrl: playlist.donationUrl,
+        tags: playlist.tags,
+        language: playlist.language,
+        updatedAt,
+        videos: playlistVideos[index],
+      }
+    })
+    .filter(playlist => playlist.videos.length > 0)
 
   console.log(">>> YouTube API Quota Units used:", yt.usedQuota);
-  return allPlaylistWithVideos;
+  return playlists;
 };
 
 const getPlaylists = async (orgData, youtubeApiKey, useLocal) => {

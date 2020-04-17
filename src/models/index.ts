@@ -1,25 +1,22 @@
 export interface PlaylistModel {
   id: string;
   title: string;
-  organisation: string;
-  donationMethod: string;
-  tags: string;
-  platform: string;
-  pageUrl: string;
+  channelTitle: string;
+  publishedAt: string;
+  organisationName: string;
+  donationUrl: string;
+  language: string[];
+  tags: string[];
   thumbnailUrl: string;
-  language: string;
   videos: VideoModel[];
 }
 
 export interface VideoModel {
   id: string;
-  playlistId: string;
-  episodeNumber?: string;
   title: string;
-  asatizah: string;
-  language: string;
-  addedOn: string;
-  videoUrl: string;
+  description: string;
+  publishedAt: string;
+  thumbnailUrl: string;
 }
 
 export interface PlayedPlaylistsModel {
@@ -28,7 +25,7 @@ export interface PlayedPlaylistsModel {
 }
 
 export interface PlaylistsAndVideoIds {
-  formattedPlayedPlaylists: PlayedPlaylistsModel;
+  formattedPlayedPlaylists: PlaylistModel[];
   videoIds: string[];
 }
 

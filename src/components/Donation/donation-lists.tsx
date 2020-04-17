@@ -12,10 +12,7 @@ const DonationLists = (): ReactElement => {
     {
       allOrganisation {
         nodes {
-          bankType
-          bankAccount
           organisationName
-          paynowUen
         }
       }
     }

@@ -16,7 +16,7 @@ interface Props {
 
 const WatchPage: React.FC<Props> = ({ pageContext }) => {
   const { playlist, currentVideo } = pageContext;
-  const { videos, donationMethod } = playlist;
+  const { videos, donationUrl } = playlist;
 
   const renderPlaylistVideos = (): ReactElement[] => {
     return videos.map(video => (
@@ -33,7 +33,7 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
     <Layout>
       <SEO
         title={playlist.title}
-        description={`${currentVideo.title} by ${currentVideo.asatizah}`}
+        description={currentVideo.title}
         image={playlist.thumbnailUrl}
       />
       <div className="grid xl:grid-cols-4 gap-4 m-8 pb-16">
@@ -49,7 +49,7 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
               <div className="w-full md:w-1/5">
                 <OutboundLink
                   className={`bg-teal-500 hover:bg-teal-400 text-white py-2 px-4 rounded md:float-right mt-4 md:mt-auto md:w-auto uppercase inline border-b-4 border-teal-600`}
-                  href="https://ourmasjid.sg/donate"
+                  href={donationUrl}
                   target="_blank"
                 >
                   Donate To Mosque

@@ -18,46 +18,36 @@ const PlaylistsSection = (): ReactElement => {
   const [selectedLanguage, setSelectedLanguage] = useState<LanguageCode>("all");
   const data = useStaticQuery(graphql`
     query AllPlaylistsQuery {
-      allPlaylist {
-        edges {
-          node {
-            donationMethod
+      allPlaylist(sort: { fields: updatedAt, order: DESC }) {
+        nodes {
+          channelTitle
+          donationUrl
+          id
+          updatedAt
+          language
+          organisationName
+          publishedAt
+          tags
+          thumbnailUrl
+          title
+          videos {
             id
-            organisation
-            pageUrl
-            platform
-            tags
-            thumbnailUrl
+            publishedAt
             title
-            language
-            videos {
-              addedOn
-              asatizah
-              id
-              language
-              playlistId
-              title
-              videoUrl
-            }
+            thumbnailUrl
           }
         }
       }
     }
   `);
 
-  const playlistsData: PlaylistModel[] = data.allPlaylist.edges.map(
-    (datum: object) => {
-      return datum.node;
-    }
-  );
+  const playlistsData: PlaylistModel[] = data.allPlaylist.nodes;
 
   const getSearchFilterResult = (
     playlists: PlaylistModel[]
   ): PlaylistModel[] => {
     const filterByKeys = [
-      "organisation",
-      "videos.asatizah",
-      "videos.tags",
+      "organisationName",
       "videos.language",
       "title",
       "videos.title",
@@ -67,12 +57,7 @@ const PlaylistsSection = (): ReactElement => {
       filterByKeys,
       searchTerm
     );
-
-    const fuseFilteredPlaylists: PlaylistModel[] = [];
-    fuseFilterResults.forEach(result =>
-      fuseFilteredPlaylists.push(result.item as PlaylistModel)
-    );
-    return fuseFilteredPlaylists;
+    return fuseFilterResults.map(result => result.item);
   };
 
   const getFilteredPlaylists = (): PlaylistModel[] => {
@@ -84,7 +69,7 @@ const PlaylistsSection = (): ReactElement => {
       selectedLanguage === "all"
         ? playlistsFilteredBySearch
         : playlistsFilteredBySearch.filter(playlist =>
-            playlist.language.split(",").includes(selectedLanguage)
+            playlist.language.includes(selectedLanguage)
           );
 
     return playlistsFilteredByLanguage;
@@ -173,7 +158,11 @@ const PlaylistsSection = (): ReactElement => {
       (category, index): ReactElement => {
         const categorisedPlaylists: PlaylistModel[] = playlistsToDisplay.filter(
           (playlist: PlaylistModel) =>
-            category.refs.some(ref => playlist.tags.includes(ref))
+            category.refs.some(ref =>
+              playlist.tags
+                .slice(0, Math.min(3, playlist.tags.length)) // Only take the first 2 tags
+                .includes(ref)
+            )
         );
         if (categorisedPlaylists.length > 0) {
           return (

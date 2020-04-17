@@ -64,7 +64,7 @@ const NoResults: React.FC = () => (
         No Results Found
       </h2>
       <p className="text-gray-600">
-        Please try another search and filter combination
+        Please try another search/filter combination
       </p>
     </div>
   </div>

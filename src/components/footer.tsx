@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 
 const Footer = (): ReactElement => (
   <div className="text-white bg-gray-800">
-    <div className="p-16 grid md:grid-cols-3 gap-8">
+    <div className="py-16 px-8 md:p-16 grid md:grid-cols-3 gap-8">
       <div className="hidden md:block">
         <h4 className="font-semibold text-xl mb-4">About</h4>
         <p className="text-gray-200">

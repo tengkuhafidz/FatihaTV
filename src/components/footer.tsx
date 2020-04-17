@@ -3,7 +3,7 @@ import React, { ReactElement } from "react";
 const Footer = (): ReactElement => (
   <div className="text-white bg-gray-800">
     <div className="py-16 px-8 md:p-16 grid md:grid-cols-3 gap-8">
-      <div className="hidden md:block">
+      <div className="hidden md:block" id="footer-about">
         <h4 className="font-semibold text-xl mb-4">About</h4>
         <p className="text-gray-200">
           {" "}
@@ -11,7 +11,7 @@ const Footer = (): ReactElement => (
           qeklnf eqohf qelnf qeofh qenf qeohnf qejhf qeufg qekfgqe f.
         </p>
       </div>
-      <div className="mx-auto">
+      <div className="mx-auto" id="footer-collaborators">
         <h4 className="font-semibold text-xl text-center mb-4">
           In Collaboration With
         </h4>
@@ -24,7 +24,7 @@ const Footer = (): ReactElement => (
           className="h-32 inline opacity-75"
         />
       </div>
-      <div>
+      <div id="footer-subscribe">
         <h4 className="font-semibold text-xl mb-4 text-center md:text-left">
           Subscribe to Newsletter
         </h4>

@@ -137,8 +137,8 @@ const getPlaylistsFromYoutube = async (orgData, apiKey) => {
   let channelPlaylists = await Promise.all(getPlaylists)
 
   // Add organisationName and donationUrl to channelPlaylists.
-  channelPlaylists = channelPlaylists.map(playlists => {
-    return playlists.map((playlist, index) => ({
+  channelPlaylists = channelPlaylists.map((playlists, index) => {
+    return playlists.map(playlist => ({
       ...playlist,
       organisationName: orgData[index].organisationName,
       donationUrl: orgData[index].donationUrl,
@@ -176,7 +176,6 @@ const getPlaylistsFromYoutube = async (orgData, apiKey) => {
           description: video.snippet.description,
           publishedAt: video.snippet.publishedAt,
           thumbnailUrl: video.snippet.thumbnails.medium.url,
-          donationUrl: video.donationUrl,
         }))
     )
   })

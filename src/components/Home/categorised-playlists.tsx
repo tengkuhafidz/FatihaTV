@@ -28,9 +28,9 @@ const CategorisedPlaylists: React.FC<Props> = ({
     },
     desktop: {
       breakpoint: { max: 2048, min: 1024 },
-      items: 6,
-      slidesToSlide: 6,
-      partialVisibilityGutter: 10,
+      items: 5,
+      slidesToSlide: 5,
+      partialVisibilityGutter: 0,
     },
     tablet: {
       breakpoint: { max: 1024, min: 640 },
@@ -73,9 +73,8 @@ const CategorisedPlaylists: React.FC<Props> = ({
       ) : (
         <Carousel
           responsive={carouselResponsiveOption}
-          itemClass="pr-1"
-          partialVisible
           draggable={false}
+          partialVisbile
           showDots={shouldShowDotNavigation}
           renderDotsOutside={true}
           removeArrowOnDeviceType="mobile"

@@ -78,11 +78,14 @@ const NewsletterForm: React.FC = () => {
   };
 
   return (
-    <div id="footer-subscribe">
-      <h4 className="font-semibold text-xl mb-4 text-center md:text-left">
+    <div
+      id="footer-subscribe"
+      className="w-full md:w-3/4 lg:w-full mx-auto mt-4 lg:mt-0"
+    >
+      <h4 className="font-semibold text-xl mb-4 text-center lg:text-left">
         Subscribe to Newsletter
       </h4>
-      <p className="hidden md:block text-gray-200">
+      <p className="hidden lg:block text-gray-200">
         Get updated on beneficial content and our latest features
       </p>
       <div className="mt-4">
@@ -90,9 +93,9 @@ const NewsletterForm: React.FC = () => {
           className={`${hasSubmitted ? "hidden" : "block"}`}
           onSubmit={(e): Promise<void> => handleSubmission(e)}
         >
-          <div className={`flex items-center`}>
+          <div className={`flex items-center `}>
             <input
-              className={`bg-gray-200 rounded-l w-full py-2 md:py-3 px-2 text-gray-800 leading-tight focus:outline-none focus:bg-white border-2 focus:border-teal-500 ${
+              className={`bg-gray-200 rounded-l w-full py-2 lg:py-3 px-2 text-gray-800 leading-tight focus:outline-none focus:bg-white border-2 focus:border-teal-500 ${
                 hasError ? "border-red-500" : "border-gray-200"
               }`}
               id="inline-full-name"
@@ -102,7 +105,7 @@ const NewsletterForm: React.FC = () => {
               value={userEmail}
             />
             <button
-              className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 border-4 text-white py-1 md:py-2 px-2 rounded-r"
+              className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 border-4 text-white py-1 lg:py-2 px-2 rounded-r"
               type="button"
               onClick={(e): Promise<void> => handleSubmission(e)}
             >

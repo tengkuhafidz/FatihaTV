@@ -5,8 +5,8 @@ import { FaEnvelope } from "react-icons/fa";
 
 const Footer = (): ReactElement => (
   <div className="text-white bg-gray-800">
-    <div className="py-16 px-8 md:p-16 grid md:grid-cols-3 gap-8">
-      <div className="hidden md:block" id="footer-about">
+    <div className="py-16 px-8 lg:p-16 grid lg:grid-cols-3 gap-8">
+      <div className="hidden lg:block" id="footer-about">
         <h4 className="font-semibold text-xl mb-4">About</h4>
         <p className="text-gray-200">
           kuliah.sg is a one-stop platform for local Islamic online content. We

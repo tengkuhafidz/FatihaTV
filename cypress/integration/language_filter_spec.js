@@ -16,6 +16,9 @@ describe("Given user is on homepage, When user clicks on Language,", () => {
   it("And selects Tamil, the results should filter in only Tamil playlist", () => {
     cy.visit(Cypress.env("baseUrl"));
 
+    cy.get('[data-cy="language-selector"]')
+      .scrollIntoView({ offset: { top: 500, left: 0 } })
+      .click();
     cy.get('[data-cy="language-selector-choice"]')
       .contains("Tamil")
       .click({ force: true });

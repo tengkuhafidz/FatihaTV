@@ -98,7 +98,7 @@ const NewsletterForm: React.FC = () => {
               id="inline-full-name"
               type="email"
               placeholder="Your Email"
-              onChange={(e): Promise<void> => handleEmailInput(e)}
+              onChange={(e): void => handleEmailInput(e)}
               value={userEmail}
             />
             <button

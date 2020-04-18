@@ -21,25 +21,25 @@ const CategorisedPlaylists: React.FC<Props> = ({
 
   const carouselResponsiveOption = {
     superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
+      breakpoint: { max: 8000, min: 2048 },
       items: 8,
       slidesToSlide: 8,
       partialVisibilityGutter: 45,
     },
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+      breakpoint: { max: 2048, min: 1024 },
       items: 6,
       slidesToSlide: 6,
       partialVisibilityGutter: 10,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 1024, min: 640 },
       items: 4,
       slidesToSlide: 4,
       partialVisibilityGutter: 10,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 640, min: 0 },
       items: 2,
       slidesToSlide: 2,
       partialVisibilityGutter: 10,

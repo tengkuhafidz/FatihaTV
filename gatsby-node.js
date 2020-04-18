@@ -12,13 +12,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             updatedAt
             language
             organisationName
-            publishedAt
+            publishedAt(formatString: "D MMM YYYY")
             tags
             thumbnailUrl
             title
             videos {
               id
-              publishedAt
+              publishedAt(formatString: "D MMM YYYY")
               title
             }
           }

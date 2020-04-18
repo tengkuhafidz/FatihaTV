@@ -36,7 +36,10 @@ const VideoInPlaylist: React.FC<Props> = ({
     >
       <div className="px-6 py-2">
         {renderCurrentlyPlaying()}
-        <div className="font-bold text-lg">{video.title}</div>
+        <div>
+          <p className="font-semibold leading-tight">{video.title}</p>
+          <p className="text-gray-600">{video.publishedAt}</p>
+        </div>
       </div>
     </div>
   );

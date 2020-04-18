@@ -8,7 +8,7 @@ interface Props {
 }
 
 const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
-  const { title, organisationName, videos, id } = playlist;
+  const { title, organisationName, videos, publishedAt, id } = playlist;
 
   const handleClick = (): void => {
     const pagePath = videoId
@@ -30,8 +30,9 @@ const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
       <img className="w-full z-10" src={thumbnailUrl} alt={title} />
       <div>
         <div className="font-semibold leading-tight truncate">{title}</div>
-        <p className="text-gray-600 text-sm">
-          {organisationName} &middot; {videos.length}{" "}
+        <p className="text-gray-600 text-sm truncate">{organisationName}</p>
+        <p className="text-gray-600 text-sm truncate">
+          {publishedAt} &middot; {videos.length}{" "}
           {videos.length === 1 ? "video " : "videos"}
         </p>
       </div>

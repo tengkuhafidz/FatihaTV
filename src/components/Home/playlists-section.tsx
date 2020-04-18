@@ -27,7 +27,7 @@ const PlaylistsSection = (): ReactElement => {
           updatedAt
           language
           organisationName
-          publishedAt
+          publishedAt(fromNow: true)
           tags
           thumbnailUrl
           title

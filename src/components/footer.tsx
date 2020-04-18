@@ -10,7 +10,7 @@ const Footer = (): ReactElement => (
         <h4 className="font-semibold text-xl mb-4">About</h4>
         <p className="text-gray-200">
           kuliah.sg is a one-stop platform for local Islamic online content. We
-          were inspired by our local asatizah who have been tirelessly producing
+          were inspired by our asatizah who have been tirelessly producing
           online content for our benefit. So we curate them here to support
           their efforts.
         </p>

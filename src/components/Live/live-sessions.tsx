@@ -30,7 +30,7 @@ const LiveSessions = (): ReactElement => {
   const isUpcoming = (dateWithoutYear: string, time: string): boolean => {
     const currentYear = moment().get("year");
     const dateTimeWithYear = `${dateWithoutYear} ${currentYear} ${time}`;
-    return moment(dateTimeWithYear).isAfter();
+    return moment(dateTimeWithYear, "D MMM YYYY hh:mm A").isAfter();
   };
 
   const upcomingLiveSessions: LiveSessionModel[] = LiveSessionsData.filter(

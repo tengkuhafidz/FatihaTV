@@ -4,6 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 import { PlaylistModel } from "../../models";
 import { isMobileDevice } from "../../utils";
 import SinglePlaylist from "./single-playlist";
+import { useMediaQuery } from "react-responsive";
 
 interface Props {
   playlists: PlaylistModel[];
@@ -16,6 +17,8 @@ const CategorisedPlaylists: React.FC<Props> = ({
   videoIds,
   categoryName,
 }) => {
+  const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
+
   const carouselResponsiveOption = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -63,17 +66,23 @@ const CategorisedPlaylists: React.FC<Props> = ({
   return (
     <div className="md:pb-8 md:mb-2 relative">
       <h3 className="text-xl font-semibold mb-2">{categoryName}</h3>
-      <Carousel
-        responsive={carouselResponsiveOption}
-        itemClass="pr-1"
-        partialVisible
-        draggable={false}
-        showDots={shouldShowDotNavigation}
-        renderDotsOutside={true}
-        removeArrowOnDeviceType="mobile"
-      >
-        {renderPlaylists()}
-      </Carousel>
+      {isMobile ? (
+        <div className="overflow-hidden overflow-x-scroll whitespace-no-wrap">
+          {renderPlaylists()}
+        </div>
+      ) : (
+        <Carousel
+          responsive={carouselResponsiveOption}
+          itemClass="pr-1"
+          partialVisible
+          draggable={false}
+          showDots={shouldShowDotNavigation}
+          renderDotsOutside={true}
+          removeArrowOnDeviceType="mobile"
+        >
+          {renderPlaylists()}
+        </Carousel>
+      )}
     </div>
   );
 };

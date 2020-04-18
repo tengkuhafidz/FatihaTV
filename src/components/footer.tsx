@@ -1,5 +1,7 @@
 import React, { ReactElement } from "react";
 import NewsletterForm from "./footer/newsletter-form";
+import { OutboundLink } from "gatsby-plugin-google-gtag";
+import { FaEnvelope } from "react-icons/fa";
 
 const Footer = (): ReactElement => (
   <div className="text-white bg-gray-800">
@@ -7,9 +9,10 @@ const Footer = (): ReactElement => (
       <div className="hidden md:block" id="footer-about">
         <h4 className="font-semibold text-xl mb-4">About</h4>
         <p className="text-gray-200">
-          {" "}
-          euqghf q;ehf o;qeuhqefb qehbfg qebhfge qfhqeoifh qef qeklfn qeo;hfn
-          qeklnf eqohf qelnf qeofh qenf qeohnf qejhf qeufg qekfgqe f.
+          kuliah.sg is a one-stop platform for local Islamic online content. We
+          were inspired by our local asatizah who have been tirelessly producing
+          online content for our benefit. So we curate them here to support
+          their efforts.
         </p>
       </div>
       <div className="mx-auto" id="footer-collaborators">
@@ -28,7 +31,16 @@ const Footer = (): ReactElement => (
       <NewsletterForm />
     </div>
     <div className="py-4 bg-gray-900 text-gray-200">
-      <p className="text-center font-light text-sm">&copy; 2020 kuliah.sg</p>
+      <p className="text-center font-light text-sm">
+        &copy; 2020 kuliah.sg |{" "}
+        <OutboundLink
+          href="mailto:hello@kuliah.sg"
+          className="hover:text-teal-500"
+        >
+          <FaEnvelope className="inline ml-1 mr-1 hover:text-teal-500" />
+          hello@kuliah.sg
+        </OutboundLink>
+      </p>
     </div>
   </div>
 );

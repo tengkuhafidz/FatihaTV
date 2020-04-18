@@ -74,7 +74,6 @@ const CategorisedPlaylists: React.FC<Props> = ({
         <Carousel
           responsive={carouselResponsiveOption}
           draggable={false}
-          partialVisbile
           showDots={shouldShowDotNavigation}
           renderDotsOutside={true}
           removeArrowOnDeviceType="mobile"

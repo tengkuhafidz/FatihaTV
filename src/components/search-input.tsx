@@ -25,7 +25,11 @@ const SearchInput: React.FC<Props> = ({
   selectedLanguage = "all",
   handleLanguageSelected,
 }) => (
-  <div className="md:max-w-2xl mx-auto pr-8 md:flex md:flex-row mb-8 md:flex-wrap">
+  <div
+    className={`md:max-w-2xl mx-auto ${
+      showLanguageSelector ? "pr-8" : ""
+    } md:flex md:flex-row mb-8 md:flex-wrap`}
+  >
     <input
       className="shadow appearance-none border rounded md:rounded-r-none flex-1 py-2 px-3 text-gray-700 focus:outline-none focus:border-teal-500 h-10 iphone:w-full"
       id="search"

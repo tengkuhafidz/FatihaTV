@@ -51,3 +51,4 @@ export enum GtagCategories {
 export type InputEvent = React.ChangeEvent<HTMLInputElement>;
 export type ButtonEvent = React.MouseEvent<HTMLButtonElement>;
 export type SpanEvent = React.MouseEvent<HTMLSpanElement>;
+export type FormEvent = React.FormEvent<HTMLFormElement>;

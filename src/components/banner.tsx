@@ -1,8 +1,5 @@
-import React from "react";
-import { navigate } from "gatsby";
-import { gtagEventClick } from "../utils/gtag";
-import { GtagCategories } from "../models";
 import { OutboundLink } from "gatsby-plugin-google-gtag";
+import React from "react";
 
 interface Props {
   showBanner: boolean;

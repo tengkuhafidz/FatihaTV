@@ -1,4 +1,5 @@
 import React, { ReactElement } from "react";
+import NewsletterForm from "./footer/newsletter-form";
 
 const Footer = (): ReactElement => (
   <div className="text-white bg-gray-800">
@@ -24,30 +25,7 @@ const Footer = (): ReactElement => (
           className="h-32 inline opacity-75"
         />
       </div>
-      <div id="footer-subscribe">
-        <h4 className="font-semibold text-xl mb-4 text-center md:text-left">
-          Subscribe to Newsletter
-        </h4>
-        <p className="hidden md:block text-gray-200">
-          Get updated on our content and features
-        </p>
-        <form className="w-full max-w-sm mt-4">
-          <div className="flex items-center">
-            <input
-              className="bg-gray-200 rounded-l w-full py-2 md:py-3 px-2 text-gray-800 leading-tight focus:outline-none focus:bg-white border-2 border-gray-200 focus:border-teal-500"
-              id="inline-full-name"
-              type="text"
-              placeholder="Your Email"
-            />
-            <button
-              className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 border-4 text-white py-1 md:py-2 px-2 rounded-r"
-              type="button"
-            >
-              Subscribe
-            </button>
-          </div>
-        </form>
-      </div>
+      <NewsletterForm />
     </div>
     <div className="py-4 bg-gray-900 text-gray-200">
       <p className="text-center font-light text-sm">&copy; 2020 kuliah.sg</p>

@@ -13,7 +13,7 @@ interface Props {
 }
 
 const Layout: React.FC<Props> = ({ children, showBanner = false }) => (
-  <div className="min-h-screen bg-gray-100 overflow-x-hidden">
+  <div className="min-h-screen bg-gray-200 overflow-x-hidden">
     <Header />
     <DonationBanner showBanner={showBanner} />
     <main>{children}</main>

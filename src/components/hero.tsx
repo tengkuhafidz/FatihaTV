@@ -12,8 +12,8 @@ const Hero: React.FC<Props> = ({
   subtext,
 }) => (
   <div className="max-w-xs md:max-w-2xl mx-auto md:text-center pt-8 py-16">
-    <h1 className="font-sans md:font-light md:tracking-wider text-2xl md:text-5xl text-gray-800 leading-tight">
-      {title} &nbsp;
+    <h1 className="font-sans md:font-light text-2xl md:text-5xl text-gray-800 leading-tight">
+      <span className="block">{title}</span>
       <span className="font-normal text-teal-500 tracking-normal">
         {secondTitle}
       </span>

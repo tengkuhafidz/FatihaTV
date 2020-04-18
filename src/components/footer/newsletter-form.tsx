@@ -83,7 +83,7 @@ const NewsletterForm: React.FC = () => {
         Subscribe to Newsletter
       </h4>
       <p className="hidden md:block text-gray-200">
-        Get updated the latest content and features
+        Get updated on beneficial content and our latest features
       </p>
       <div className="mt-4">
         <form

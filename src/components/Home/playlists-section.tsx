@@ -202,7 +202,7 @@ const PlaylistsSection = (): ReactElement => {
   };
 
   return (
-    <div className="mx-auto pl-8 pt-8 pb-32 w-full " id="playlists">
+    <div className="mx-auto pl-8 pt-8 pb-32 w-full" id="playlists">
       <SearchInput
         handleSearchFilter={handleSearchFilter}
         showLanguageSelector={true}

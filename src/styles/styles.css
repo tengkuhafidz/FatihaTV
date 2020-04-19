@@ -47,4 +47,5 @@ html {
 
 .thumbnail {
   min-width: 245px !important;
+  padding-right: 16px;
 }

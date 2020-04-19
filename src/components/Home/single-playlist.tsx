@@ -1,7 +1,13 @@
 import { navigate } from "gatsby";
 import Img from "gatsby-image";
 import React from "react";
-import { PlaylistModel, VideoModel, LocalImageModel } from "../../models";
+import {
+  PlaylistModel,
+  VideoModel,
+  LocalImageModel,
+  GtagCategories,
+} from "../../models";
+import { gtagEventClick } from "../../utils/gtag";
 
 interface Props {
   playlist: PlaylistModel;
@@ -11,10 +17,20 @@ interface Props {
 const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
   const { id, title, publishedAt, organisationName, childrenVideo } = playlist;
 
+  const trackPlaylistClick = (): void => {
+    gtagEventClick("playlist_click", {
+      event_category: GtagCategories.Engagement,
+      event_label: playlist.title,
+    });
+  };
+
   const handleClick = (): void => {
     const pagePath = videoId
       ? `/watch/${id}/${videoId}`
       : `/watch/${id}/${childrenVideo[childrenVideo.length - 1].id}`;
+
+    trackPlaylistClick();
+
     navigate(pagePath);
   };
 

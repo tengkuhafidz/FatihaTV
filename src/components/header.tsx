@@ -58,7 +58,7 @@ const Header = (): ReactElement => {
 
       <div>
         <button
-          className="block text-sm px-4 py-3 border rounded border-gray-200 text-gray-200 hover:border-teal-500 hover:text-white hover:bg-teal-500 lg:mt-0 uppercase"
+          className="block text-sm px-2 py-2 border rounded border-gray-200 text-gray-200 hover:border-teal-500 hover:text-white hover:bg-teal-500 lg:mt-0 uppercase"
           onClick={handleShareDropdownClick}
         >
           Share page

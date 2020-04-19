@@ -2,7 +2,6 @@ import React, { ReactElement } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { PlaylistModel } from "../../models";
-import { isMobileDevice } from "../../utils";
 import SinglePlaylist from "./single-playlist";
 import { useMediaQuery } from "react-responsive";
 
@@ -17,7 +16,7 @@ const CategorisedPlaylists: React.FC<Props> = ({
   videoIds,
   categoryName,
 }) => {
-  const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 770px)" });
 
   const carouselResponsiveOption = {
     superLargeDesktop: {
@@ -31,18 +30,18 @@ const CategorisedPlaylists: React.FC<Props> = ({
       slidesToSlide: 5,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 640 },
+      breakpoint: { max: 1024, min: 770 },
       items: 4,
       slidesToSlide: 4,
     },
     mobile: {
-      breakpoint: { max: 640, min: 0 },
+      breakpoint: { max: 770, min: 0 },
       items: 2,
       slidesToSlide: 2,
     },
   };
 
-  const shouldShowDotNavigation = isMobileDevice() ? false : true;
+  const shouldShowDotNavigation = isMobile ? false : true;
 
   const renderPlaylists = (): ReactElement[] => {
     if (videoIds) {

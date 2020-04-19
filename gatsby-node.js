@@ -35,7 +35,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Create a page for each video in every playlist.
   result.data.allPlaylist.nodes.forEach(playlist => {
-    playlist.videos.forEach(currentVideo => {
+    playlist.childrenVideo.forEach(currentVideo => {
       createPage({
         path: `/watch/${playlist.id}/${currentVideo.id}`,
         component: require.resolve("./src/templates/watch.tsx"),

@@ -1,12 +1,29 @@
 import React, { useState, ReactElement } from "react";
 import { addSubscriber } from "../../api/moosend";
-import { ButtonEvent, FormEvent, InputEvent } from "../../models";
+import {
+  ButtonEvent,
+  FormEvent,
+  InputEvent,
+  GtagCategories,
+} from "../../models";
+import { gtagEventClick } from "../../utils/gtag";
 
 const NewsletterForm: React.FC = () => {
   const [userEmail, setUserEmail] = useState("");
   const [hasError, setHasError] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [isSuccessful, setIsSuccessful] = useState(true);
+
+  const trackSubmission = (email: string, isSuccessful: boolean): void => {
+    const event: string = isSuccessful
+      ? "subscribe_success"
+      : "subscribe_failure";
+
+    gtagEventClick(event, {
+      event_category: GtagCategories.Engagement,
+      event_label: email,
+    });
+  };
 
   const isValidEmail = (email: string): boolean => {
     const re = /\S+@\S+\.\S+/;
@@ -26,6 +43,7 @@ const NewsletterForm: React.FC = () => {
 
     if (isValidEmail(submittedEmail)) {
       const subscriptionResult: boolean = await addSubscriber(submittedEmail);
+      trackSubmission(submittedEmail, subscriptionResult);
       setIsSuccessful(subscriptionResult);
       setHasSubmitted(true);
       setUserEmail("");

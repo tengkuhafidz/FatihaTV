@@ -1,3 +1,5 @@
+import { FluidObject } from "gatsby-image";
+
 export interface PlaylistModel {
   id: string;
   title: string;
@@ -18,7 +20,14 @@ export interface VideoModel {
   description: string;
   publishedAt: string;
   thumbnailUrl: string;
+  localImage: LocalImageModel;
 }
+
+export type LocalImageModel = {
+  childImageSharp: {
+    fluid: FluidObject | FluidObject[] | undefined;
+  };
+};
 
 export interface PlayedPlaylistsModel {
   playlistId: string;

@@ -1,7 +1,7 @@
 import { navigate } from "gatsby";
-import React from "react";
-import { PlaylistModel } from "../../models";
 import Img from "gatsby-image";
+import React from "react";
+import { PlaylistModel, VideoModel, LocalImageModel } from "../../models";
 
 interface Props {
   playlist: PlaylistModel;
@@ -9,25 +9,18 @@ interface Props {
 }
 
 const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
-  const {
-    id,
-    title,
-    publishedAt,
-    organisationName,
-    childrenVideo: videos, 
-    thumbnailUrl,
-  } = playlist;
+  const { id, title, publishedAt, organisationName, childrenVideo } = playlist;
 
   const handleClick = (): void => {
     const pagePath = videoId
       ? `/watch/${id}/${videoId}`
-      : `/watch/${id}/${videos[videos.length - 1].id}`;
+      : `/watch/${id}/${childrenVideo[childrenVideo.length - 1].id}`;
     navigate(pagePath);
   };
 
   const thumbnailMeta = videoId
-    ? videos.find(video => video.id === videoId)?.localImage
-    : videos[videos.length - 1].localImage;
+    ? childrenVideo.find(video => video.id === videoId)?.localImage
+    : childrenVideo[childrenVideo.length - 1].localImage;
 
   return (
     <div
@@ -37,7 +30,7 @@ const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
     >
       <Img
         className="w-full z-10"
-        fluid={thumbnailMeta.childImageSharp.fluid}
+        fluid={thumbnailMeta?.childImageSharp.fluid}
         alt={title}
       />
       <div>
@@ -48,8 +41,8 @@ const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
           {organisationName}
         </p>
         <p className="text-gray-600 text-sm truncate">
-          {publishedAt} &middot; {videos.length}{" "}
-          {videos.length === 1 ? "video " : "videos"}
+          {publishedAt} &middot; {childrenVideo.length}{" "}
+          {childrenVideo.length === 1 ? "video " : "videos"}
         </p>
       </div>
     </div>

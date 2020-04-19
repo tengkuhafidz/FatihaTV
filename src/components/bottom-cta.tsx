@@ -42,7 +42,7 @@ const BottomCta = (): ReactElement => {
           COVID-19 Support
         </strong>
         <span className="block sm:inline text-gray-200 ml-2">
-          Contribute in #kitacare crowdfunding.{" "}
+          Contribute to #kitacare crowdfunding.{" "}
         </span>
         <button
           className="p-1 float-right ml-2 -mt-1"

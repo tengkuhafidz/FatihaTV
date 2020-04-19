@@ -1,5 +1,25 @@
 const { getPlaylists, getOrganisationData, getLiveSessions } = require('./main')
 
+exports.onCreateNode = async ({ node, actions }) => {
+  if (node.internal.type !== 'Playlist') {
+    return
+  }
+
+  const { createNode, createParentChildLink } = actions
+  node.videos.map(video => Object.assign({}, video, {
+    parent: node.id,
+    children: [],
+    internal: {
+      type: 'Video',
+      content: JSON.stringify(video),
+      contentDigest: `${node.internal.contentDigest}`,
+    },
+  })).forEach(childNode => {
+    createNode(childNode)
+    createParentChildLink({ parent: node, child: childNode })
+  })
+}
+
 exports.sourceNodes = async (
   { actions, createNodeId, createContentDigest },
   configOptions
@@ -10,7 +30,7 @@ exports.sourceNodes = async (
   const processPlaylistDatum = (datum) => {
     const nodeData = Object.assign({}, datum, {
       parent: null,
-      children: [],
+      children: datum.videos.map(v => v.id),
       internal: {
         type: 'Playlist',
         content: JSON.stringify(datum),

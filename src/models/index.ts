@@ -9,7 +9,7 @@ export interface PlaylistModel {
   language: string[];
   tags: string[];
   thumbnailUrl: string;
-  videos: VideoModel[];
+  childrenVideo: VideoModel[];
 }
 
 export interface VideoModel {

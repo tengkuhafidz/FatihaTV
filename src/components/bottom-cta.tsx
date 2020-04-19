@@ -58,6 +58,7 @@ const BottomCta = (): ReactElement => {
           className="bg-white hover:bg-gray-200 text-gray-800 py-1 px-4 rounded float-right -mt-1 cursor-pointer"
           href="https://www.giving.sg/pergas/gracious_package"
           target="_blank"
+          rel="noopener"
         >
           Learn More
         </OutboundLink>

@@ -1,6 +1,7 @@
 import { navigate } from "gatsby";
 import React from "react";
 import { PlaylistModel } from "../../models";
+import Img from "gatsby-image";
 
 interface Props {
   playlist: PlaylistModel;
@@ -8,18 +9,25 @@ interface Props {
 }
 
 const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
-  const { title, organisationName, videos, updatedAt, id } = playlist;
+  const {
+    id,
+    title,
+    publishedAt,
+    organisationName,
+    childrenVideo: videos, 
+    thumbnailUrl,
+  } = playlist;
 
   const handleClick = (): void => {
     const pagePath = videoId
       ? `/watch/${id}/${videoId}`
-      : `/watch/${id}/${playlist.videos[videos.length - 1].id}`;
+      : `/watch/${id}/${videos[videos.length - 1].id}`;
     navigate(pagePath);
   };
 
-  const thumbnailUrl = videoId
-    ? videos.find(video => video.id === videoId)?.thumbnailUrl
-    : videos[videos.length - 1].thumbnailUrl;
+  const thumbnailMeta = videoId
+    ? videos.find(video => video.id === videoId)?.localImage
+    : videos[videos.length - 1].localImage;
 
   return (
     <div
@@ -27,7 +35,11 @@ const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
       className={`overflow-hidden align-center cursor-pointer inline-block pr-4 md:w-full`}
       onClick={handleClick}
     >
-      <img className="w-48 md:w-full z-10" src={thumbnailUrl} alt={title} />
+      <Img
+        className="w-full z-10"
+        fluid={thumbnailMeta.childImageSharp.fluid}
+        alt={title}
+      />
       <div>
         <div className="mt-2 font-semibold w-48 md:w-full leading-tight truncate capitalize">
           {title.toLowerCase()}
@@ -35,10 +47,9 @@ const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
         <p className="text-gray-600 text-sm truncate capitalize">
           {organisationName}
         </p>
-        <p className="-mt-1 text-gray-600  text-sm truncate">
-          {videos.length} {videos.length === 1 ? "video " : "videos"} &middot;
-          &nbsp;
-          {updatedAt}
+        <p className="text-gray-600 text-sm truncate">
+          {publishedAt} &middot; {videos.length}{" "}
+          {videos.length === 1 ? "video " : "videos"}
         </p>
       </div>
     </div>

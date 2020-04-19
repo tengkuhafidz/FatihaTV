@@ -11,7 +11,11 @@ const DonationBanner: React.FC<Props> = ({ showBanner }) => {
   }
 
   return (
-    <OutboundLink href="https://ourmasjid.sg/donate" target="_blank">
+    <OutboundLink
+      href="https://ourmasjid.sg/donate"
+      target="_blank"
+      rel="noopener"
+    >
       <div
         className="flex items-center bg-pink-400 text-white text-sm font-bold px-8 py-3 hover:shadow-xl cursor-pointer"
         role="alert"

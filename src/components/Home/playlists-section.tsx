@@ -30,12 +30,26 @@ const PlaylistsSection = (): ReactElement => {
           publishedAt(fromNow: true)
           tags
           thumbnailUrl
+          localImage {
+            childImageSharp {
+              fluid(maxWidth: 320, quality: 60) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           title
-          videos {
+          childrenVideo {
             id
             publishedAt
             title
             thumbnailUrl
+            localImage {
+              childImageSharp {
+                fluid(maxWidth: 320, quality: 60) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
@@ -49,9 +63,9 @@ const PlaylistsSection = (): ReactElement => {
   ): PlaylistModel[] => {
     const filterByKeys = [
       "organisationName",
-      "videos.language",
+      "childrenVideo.language",
       "title",
-      "videos.title",
+      "childrenVideo.title",
     ];
     const fuseFilterResults: object[] = getFuseFilterResult(
       playlists,

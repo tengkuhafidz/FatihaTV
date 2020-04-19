@@ -1,11 +1,20 @@
 import { OutboundLink } from "gatsby-plugin-google-gtag";
 import React from "react";
+import { gtagEventClick } from "../utils/gtag";
+import { GtagCategories } from "../models";
 
 interface Props {
   showBanner: boolean;
 }
 
 const DonationBanner: React.FC<Props> = ({ showBanner }) => {
+  const handleBannerClick = (): void => {
+    gtagEventClick("click_donation_banner", {
+      event_category: GtagCategories.Engagement,
+      event_label: "https://ourmasjid.sg/donate",
+    });
+  };
+
   if (!showBanner) {
     return <></>;
   }
@@ -15,6 +24,7 @@ const DonationBanner: React.FC<Props> = ({ showBanner }) => {
       href="https://ourmasjid.sg/donate"
       target="_blank"
       rel="noopener"
+      onClick={handleBannerClick}
     >
       <div
         className="flex items-center bg-pink-400 text-white text-sm font-bold px-8 py-3 hover:shadow-xl cursor-pointer"

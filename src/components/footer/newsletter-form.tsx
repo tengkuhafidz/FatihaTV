@@ -61,7 +61,7 @@ const NewsletterForm: React.FC = () => {
           <div>
             <p className="font-bold">Submission Successful!</p>
             <p className="text-sm">
-              Thank you for subscribing to our mailing list.&nbsp;
+              Thank you for joining to our newsletter.&nbsp;
               <span
                 className="text-teal-500"
                 onClick={(): void => setHasSubmitted(false)}
@@ -101,7 +101,7 @@ const NewsletterForm: React.FC = () => {
       className="w-full md:w-3/4 lg:w-full mx-auto mt-4 lg:mt-0"
     >
       <h4 className="font-semibold text-xl mb-4 text-center lg:text-left">
-        Subscribe to Newsletter
+        Join our Newsletter
       </h4>
       <p className="hidden lg:block text-gray-200">
         Get updated on beneficial content and our latest features

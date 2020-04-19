@@ -1,9 +1,9 @@
 import React from "react";
 import { enableSmoothScroll } from "../utils";
+import BackToTop from "./back-to-top";
 import DonationBanner from "./banner";
 import Footer from "./footer";
 import Header from "./header";
-import BackToTop from "./back-to-top";
 
 enableSmoothScroll();
 

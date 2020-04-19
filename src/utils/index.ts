@@ -49,11 +49,6 @@ export const getSocialMediaShareUrls = (pageUrl: string): SocialMediaUrls => {
  * DEVICE CHECK
  */
 
-export const isMobileDevice = (): boolean => {
-  const hasWindow = typeof window !== "undefined";
-  return hasWindow ? window.innerWidth <= 600 : false;
-};
-
 export const isMobileOrTableDevice = (): boolean => {
   const toMatch = [
     /Android/i,

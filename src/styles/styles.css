@@ -6,10 +6,6 @@ html {
     scroll-behavior: smooth;
 }
 
-#playlists {
-  padding-right: 2.1rem;
-}
-
 @media (hover:hover) {
     .language-dropdown:hover .language-dropdown-menu {
         display: block;
@@ -28,6 +24,7 @@ html {
   min-width: 40px !important;
   min-height: 40px !important;
   top: calc(50% - 51px); /* 0.5 * (height of arrow + height of text box - 62px ) */
+  opacity: 0.8;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -41,4 +38,13 @@ html {
 
 .react-multiple-carousel__arrow::before {
   color: #909090 !important;
+}
+
+.react-multiple-carousel__arrow:hover {
+  background: #EDF2F7 !important;
+  opacity: 1;
+}
+
+.thumbnail {
+  min-width: 245px;
 }

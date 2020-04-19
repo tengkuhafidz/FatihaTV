@@ -8,7 +8,7 @@ const BottomCta = (): ReactElement => {
   const hasLocalSotrage: boolean = typeof Storage !== "undefined";
   const localHasClosedCta: boolean =
     hasLocalSotrage &&
-    (localStorage.getItem("hasClosedCta") === "true" || false);
+    (localStorage.getItem("hasClosedKitaCareCta") === "true" || false);
 
   const [hasClosedCta, setHasClosedCta] = useState(localHasClosedCta);
 
@@ -29,7 +29,7 @@ const BottomCta = (): ReactElement => {
 
   const closeCta = (): void => {
     setHasClosedCta(true);
-    localStorage.setItem("hasClosedCta", "true");
+    localStorage.setItem("hasClosedKitaCareCta", "true");
     trackBottomCtaClose();
   };
 
@@ -42,7 +42,7 @@ const BottomCta = (): ReactElement => {
           COVID-19 Support
         </strong>
         <span className="block sm:inline text-gray-200 ml-2">
-          Contribute in #kitacare crowdfunding.{" "}
+          Contribute to #kitacare crowdfunding.{" "}
         </span>
         <button
           className="p-1 float-right ml-2 -mt-1"

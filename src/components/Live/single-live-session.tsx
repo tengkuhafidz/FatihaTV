@@ -85,7 +85,7 @@ const SingleLiveSession: React.FC<Props> = ({ liveSession }) => {
             className="bg-transparent hover:bg-gray-800 text-gray-600 font-semibold hover:text-white py-2 px-4 border border-gray-600 hover:border-transparent rounded"
             target="_blank"
             href={getCalendarLink()}
-            onClick={trackCalanderAdd}
+            onClick={trackCalenderAdd}
           >
             Add to Calendar
           </OutboundLink>

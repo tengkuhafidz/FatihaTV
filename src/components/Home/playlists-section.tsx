@@ -164,11 +164,11 @@ const PlaylistsSection = (): ReactElement => {
         refs: ["currentaffairs", "podcast", "interactive"],
       },
       {
-        name: "Practicing Islam & Spirituality",
+        name: "Practising Islam & Spirituality",
         refs: ["howto", "spiritual"],
       },
       {
-        name: "Kitab Studeis & General Lectures",
+        name: "Kitab Studies & General Lectures",
         refs: ["kitab", "general"],
       },
     ];

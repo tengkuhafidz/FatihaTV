@@ -89,7 +89,9 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
         <div className="xl:col-span-1 xl:pl-8">
           <h1 className="text-xl md:text-3xl font-semibold mb-4">
             Playlist Videos
-            <span className="text-lg md:text-2xl">({videos.length})</span>
+            <span className="text-lg md:text-2xl">
+              ({childrenVideo.length})
+            </span>
           </h1>
           <div className="h-3/4-screen overflow-auto pb-16" ref={videosListRef}>
             {renderPlaylistVideos()}

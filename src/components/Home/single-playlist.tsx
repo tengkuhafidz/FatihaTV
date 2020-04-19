@@ -51,7 +51,7 @@ const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
         <p className="text-gray-600 text-sm truncate capitalize">
           {organisationName}
         </p>
-        <p className="text-gray-600 text-sm truncate">
+        <p className="text-gray-600 text-sm truncate -mt-1">
           {publishedAt} &middot; {childrenVideo.length}{" "}
           {childrenVideo.length === 1 ? "video " : "videos"}
         </p>

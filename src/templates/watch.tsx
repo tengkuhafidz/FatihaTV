@@ -1,5 +1,5 @@
 import { OutboundLink } from "gatsby-plugin-google-gtag";
-import React, { ReactElement } from "react";
+import React, { createRef, ReactElement, useEffect, useRef } from "react";
 import { FaDonate } from "react-icons/fa";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -18,15 +18,37 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
   const { playlist, currentVideo } = pageContext;
   const { videos, donationUrl } = playlist;
 
+  const videosListRef = createRef<HTMLDivElement>();
+  const videosRef = useRef(videos.map(video => createRef<HTMLDivElement>()));
+
+  useEffect(() => {
+    const currentVideoIndex = videos.findIndex(
+      video => video.id === currentVideo.id
+    );
+
+    const videosListEl = videosListRef.current;
+    const firstVideoEl = videosRef.current[0].current;
+    const currentVideoEl = videosRef.current[currentVideoIndex].current;
+
+    if (videosListEl && firstVideoEl && currentVideoEl) {
+      const topOfCurrentVideo: number =
+        currentVideoEl.offsetTop - firstVideoEl.offsetTop || 0;
+      videosListEl.scrollTop = topOfCurrentVideo;
+    }
+  });
+
   const renderPlaylistVideos = (): ReactElement[] => {
-    return videos.map(video => (
-      <VideoInPlaylist
-        playlistId={playlist.id}
-        video={video}
-        currentVideo={currentVideo}
-        key={video.id}
-      />
-    ));
+    return videos.map((video, index) => {
+      return (
+        <div ref={videosRef.current[index]} key={video.id}>
+          <VideoInPlaylist
+            playlistId={playlist.id}
+            video={video}
+            currentVideo={currentVideo}
+          />
+        </div>
+      );
+    });
   };
 
   return (
@@ -67,7 +89,7 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
             Playlist Videos
             <span className="text-lg md:text-2xl">({videos.length})</span>
           </h1>
-          <div className="h-3/4-screen overflow-auto pb-16">
+          <div className="h-3/4-screen overflow-auto pb-16" ref={videosListRef}>
             {renderPlaylistVideos()}
           </div>
         </div>

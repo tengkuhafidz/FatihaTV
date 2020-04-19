@@ -1,4 +1,4 @@
-# kuliah.sg[https://kuliah.sg]
+# [kuliah.sg](https://kuliah.sg)
 
 UPDATE: version 2.0 of this project is being developed and maintained by MSOCIETY. 
 

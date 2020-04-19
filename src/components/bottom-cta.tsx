@@ -8,7 +8,7 @@ const BottomCta = (): ReactElement => {
   const hasLocalSotrage: boolean = typeof Storage !== "undefined";
   const localHasClosedCta: boolean =
     hasLocalSotrage &&
-    (localStorage.getItem("hasClosedCta") === "true" || false);
+    (localStorage.getItem("hasClosedKitaCareCta") === "true" || false);
 
   const [hasClosedCta, setHasClosedCta] = useState(localHasClosedCta);
 
@@ -29,7 +29,7 @@ const BottomCta = (): ReactElement => {
 
   const closeCta = (): void => {
     setHasClosedCta(true);
-    localStorage.setItem("hasClosedCta", "true");
+    localStorage.setItem("hasClosedKitaCareCta", "true");
     trackBottomCtaClose();
   };
 

@@ -1,7 +1,8 @@
 import moment from "moment";
 import React from "react";
 import { OutboundLink } from "gatsby-plugin-google-gtag";
-import { LiveSessionModel } from "../../models";
+import { LiveSessionModel, GtagCategories } from "../../models";
+import { gtagEventClick } from "../../utils/gtag";
 
 interface Props {
   liveSession: LiveSessionModel;
@@ -46,6 +47,13 @@ const SingleLiveSession: React.FC<Props> = ({ liveSession }) => {
     };
   };
 
+  const trackCalenderAdd = (): void => {
+    gtagEventClick("add_live_to_calendar", {
+      event_category: GtagCategories.Engagement,
+      event_label: `${Title} by ${Mosque}`,
+    });
+  };
+
   return (
     <div className="max-w-sm w-full lg:min-w-full lg:flex shadow-lg hover:shadow-2xl">
       <div className="lg:w-48 flex-none rounded-t lg:rounded-t-none lg:rounded-l text-center bg-gray-800 text-gray-200 pt-4 pb-8">
@@ -77,6 +85,7 @@ const SingleLiveSession: React.FC<Props> = ({ liveSession }) => {
             className="bg-transparent hover:bg-gray-800 text-gray-600 font-semibold hover:text-white py-2 px-4 border border-gray-600 hover:border-transparent rounded"
             target="_blank"
             href={getCalendarLink()}
+            onClick={trackCalanderAdd}
           >
             Add to Calendar
           </OutboundLink>

@@ -16,13 +16,15 @@ interface Props {
 
 const WatchPage: React.FC<Props> = ({ pageContext }) => {
   const { playlist, currentVideo } = pageContext;
-  const { videos, donationUrl } = playlist;
+  const { childrenVideo, donationUrl } = playlist;
 
   const videosListRef = createRef<HTMLDivElement>();
-  const videosRef = useRef(videos.map(video => createRef<HTMLDivElement>()));
+  const videosRef = useRef(
+    childrenVideo.map(video => createRef<HTMLDivElement>())
+  );
 
   useEffect(() => {
-    const currentVideoIndex = videos.findIndex(
+    const currentVideoIndex: number = childrenVideo.findIndex(
       video => video.id === currentVideo.id
     );
 
@@ -38,7 +40,7 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
   });
 
   const renderPlaylistVideos = (): ReactElement[] => {
-    return videos.map((video, index) => {
+    return childrenVideo.map((video, index) => {
       return (
         <div ref={videosRef.current[index]} key={video.id}>
           <VideoInPlaylist

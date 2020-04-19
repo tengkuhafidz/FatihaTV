@@ -1,12 +1,7 @@
 import { navigate } from "gatsby";
 import Img from "gatsby-image";
 import React from "react";
-import {
-  PlaylistModel,
-  VideoModel,
-  LocalImageModel,
-  GtagCategories,
-} from "../../models";
+import { GtagCategories, PlaylistModel } from "../../models";
 import { gtagEventClick } from "../../utils/gtag";
 
 interface Props {

@@ -38,5 +38,5 @@ $ npm run develop
 
 ## Support our asatizah
 
-- Contribute to Pergas fundraising: https://www.giving.sg/pergas/gracious_package
+- Contribute to #kitacare fundraising: https://masjidwaktanjong.give.asia/campaign/kita-care-3219/donate?#/
 - Contribute to mosques: https://kuliah.sg/donation-listing

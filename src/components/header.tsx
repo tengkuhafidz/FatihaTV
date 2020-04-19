@@ -34,6 +34,13 @@ const Header = (): ReactElement => {
     }
   };
 
+  const trackSharePage = (sharePlatform: string): void => {
+    gtagEventClick(sharePlatform, {
+      event_category: GtagCategories.Engagement,
+      event_label: currentUrl,
+    });
+  };
+
   const handleShareDropdownClick = (): void => {
     setIsOpen(!isOpen);
     trackOpenShareDropdown();
@@ -68,6 +75,7 @@ const Header = (): ReactElement => {
             target="_blank"
             rel="noopener"
             className="block px-4 py-2 text-gray-800 hover:bg-teal-500 hover:text-gray-100"
+            onClick={(): void => trackSharePage("share_facebook")}
           >
             <FaFacebookSquare className="-mt-1 inline align-middle mr-2" />
             Facebook
@@ -77,6 +85,7 @@ const Header = (): ReactElement => {
             target="_blank"
             rel="noopener"
             className="block px-4 py-2 text-gray-800 hover:bg-teal-500 hover:text-gray-100"
+            onClick={(): void => trackSharePage("share_whatsapp")}
           >
             <FaWhatsapp className="-mt-1 inline align-middle mr-2" />
             Whatsapp
@@ -86,6 +95,7 @@ const Header = (): ReactElement => {
             target="_blank"
             rel="noopener"
             className="block px-4 py-2 text-gray-800 hover:bg-teal-500 hover:text-gray-100"
+            onClick={(): void => trackSharePage("share_telegram")}
           >
             <FaTelegramPlane className="-mt-1 inline align-middle mr-2" />
             Telegram
@@ -95,6 +105,7 @@ const Header = (): ReactElement => {
             target="_blank"
             rel="noopener"
             className="block px-4 py-2 text-gray-800 hover:bg-teal-500 hover:text-gray-100"
+            onClick={(): void => trackSharePage("share_twitter")}
           >
             <FaTwitter className="-mt-1 inline align-middle mr-2" />
             Twitter

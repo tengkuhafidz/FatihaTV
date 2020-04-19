@@ -14,7 +14,7 @@ exports.onCreateNode = async ({ node, actions }) => {
       content: JSON.stringify(video),
       contentDigest: `${node.internal.contentDigest}`,
     },
-  })).map(childNode => {
+  })).forEach(childNode => {
     createNode(childNode)
     createParentChildLink({ parent: node, child: childNode })
   })

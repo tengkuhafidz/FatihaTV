@@ -42,6 +42,7 @@ html {
 
 .react-multiple-carousel__arrow:hover {
   background: #EDF2F7 !important;
+  opacity: 1;
 }
 
 .thumbnail {

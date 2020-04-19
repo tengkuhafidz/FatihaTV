@@ -43,7 +43,7 @@ const Header = (): ReactElement => {
     <nav className="flex items-center justify-between flex-wrap p-6 bg-gray-800 w-full">
       <div
         className="flex items-center flex-shrink-0 mr-6 cursor-pointer"
-        onClick={(): void => navigate("/")}
+        onClick={(): Promise<void> => navigate("/")}
       >
         <img src="/kuliahsg-logo-long-light.png" className="h-12" />
       </div>

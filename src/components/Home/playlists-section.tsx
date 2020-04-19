@@ -148,24 +148,28 @@ const PlaylistsSection = (): ReactElement => {
   const renderPlaylistsByCategory = (): ReactElement[] => {
     const categories: object[] = [
       {
-        name: "Short Videos",
+        name: "Short Videos - Under 10 Minutes",
         refs: ["short"],
       },
       {
-        name: "Quran, Hadith & Kitab Lectures",
-        refs: ["quran", "hadith", "kitab"],
+        name: "Quran & Its Sciences",
+        refs: ["quran"],
       },
       {
-        name: "Current Affairs & Podcast Format",
-        refs: ["currentaffairs", "podcast"],
+        name: "Legacy of Rasulullah PBUH",
+        refs: ["hadith"],
+      },
+      {
+        name: "Podcast & Current Affairs",
+        refs: ["currentaffairs", "podcast", "interactive"],
       },
       {
         name: "Practicing Islam & Spirituality",
-        refs: ["howto", "spirituality"],
+        refs: ["howto", "spiritual"],
       },
       {
-        name: "General Lectures",
-        refs: ["general"],
+        name: "Kitab Studeis & General Lectures",
+        refs: ["kitab", "general"],
       },
     ];
 

@@ -15,7 +15,15 @@ const BottomCta = (): ReactElement => {
   const trackBottomCtaClose = (): void => {
     gtagEventClick("close_bottom_cta", {
       event_category: GtagCategories.Engagement,
-      event_label: "pergas_crowdfunding_cta",
+      event_label: "kitacare_crowdfunding_cta",
+    });
+  };
+
+  const trackCtaClick = (): void => {
+    gtagEventClick("click_cta_link", {
+      event_category: GtagCategories.Engagement,
+      event_label:
+        "https://masjidwaktanjong.give.asia/campaign/kita-care-3219#/",
     });
   };
 
@@ -31,10 +39,10 @@ const BottomCta = (): ReactElement => {
     <div className="fixed bottom-0 pb-8 w-full hidden md:block pointer-events-none">
       <div className="bg-gray-900 p-4 md:max-w-screen-sm rounded-lg mx-auto shadow-lg pointer-events-auto border border-gray-100">
         <strong className="font-semibold text-white text-lg">
-          Support our asatizah.
+          COVID-19 Support
         </strong>
         <span className="block sm:inline text-gray-200 ml-2">
-          Contribute in Pergas&apos; crowdfunding.{" "}
+          Contribute in #kitacare crowdfunding.{" "}
         </span>
         <button
           className="p-1 float-right ml-2 -mt-1"
@@ -56,9 +64,10 @@ const BottomCta = (): ReactElement => {
         </button>
         <OutboundLink
           className="bg-white hover:bg-gray-200 text-gray-800 py-1 px-4 rounded float-right -mt-1 cursor-pointer"
-          href="https://www.giving.sg/pergas/gracious_package"
+          href="https://masjidwaktanjong.give.asia/campaign/kita-care-3219#/"
           target="_blank"
           rel="noopener"
+          onClick={trackCtaClick}
         >
           Learn More
         </OutboundLink>

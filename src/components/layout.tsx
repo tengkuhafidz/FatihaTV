@@ -27,11 +27,11 @@ const Layout: React.FC<Props> = ({ children, showBanner = false }) => (
         type="text/javascript"
         src="https://cdn.birdseed.io/widget.js"
       ></script>
-      <div
-        id="birdseed-widget-container"
-        data-token="64c3d69ae1d63222e211a82aefc2ea8f"
-      ></div>
     </Helmet>
+    <div
+      id="birdseed-widget-container"
+      data-token="64c3d69ae1d63222e211a82aefc2ea8f"
+    ></div>
   </div>
 );
 

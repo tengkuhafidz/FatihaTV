@@ -16,7 +16,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             tags
             thumbnailUrl
             title
-            videos {
+            childrenVideo {
               id
               publishedAt(formatString: "D MMM YYYY")
               title

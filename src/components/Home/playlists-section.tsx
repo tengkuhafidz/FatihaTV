@@ -24,7 +24,7 @@ const PlaylistsSection = (): ReactElement => {
           channelTitle
           donationUrl
           id
-          updatedAt
+          updatedAt(fromNow: true)
           language
           organisationName
           publishedAt(fromNow: true)

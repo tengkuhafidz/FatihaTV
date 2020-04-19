@@ -3,6 +3,7 @@ export interface PlaylistModel {
   title: string;
   channelTitle: string;
   publishedAt: string;
+  updatedAt: string;
   organisationName: string;
   donationUrl: string;
   language: string[];

@@ -30,7 +30,7 @@ const CategorisedPlaylists: React.FC<Props> = ({
       breakpoint: { max: 2048, min: 1024 },
       items: 5,
       slidesToSlide: 5,
-      partialVisibilityGutter: 0,
+      partialVisibilityGutter: 10,
     },
     tablet: {
       breakpoint: { max: 1024, min: 640 },
@@ -64,8 +64,8 @@ const CategorisedPlaylists: React.FC<Props> = ({
   };
 
   return (
-    <div className="md:pb-8 md:mb-2 relative">
-      <h3 className="text-xl font-semibold mb-2">{categoryName}</h3>
+    <div className="mt-8 md:pb-8 relative">
+      <h3 className="text-xl font-semibold mb-4">{categoryName}</h3>
       {isMobile ? (
         <div className="overflow-hidden overflow-x-scroll whitespace-no-wrap">
           {renderPlaylists()}

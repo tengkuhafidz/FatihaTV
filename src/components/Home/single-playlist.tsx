@@ -40,7 +40,7 @@ const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
       onClick={handleClick}
     >
       <Img
-        className="w-full z-10"
+        className="w-full z-10 thumbnail"
         fluid={thumbnailMeta?.childImageSharp.fluid}
         alt={title}
       />

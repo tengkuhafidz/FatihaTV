@@ -36,7 +36,7 @@ const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
   return (
     <div
       data-cy="playlist-card"
-      className={`overflow-hidden align-center cursor-pointer inline-block pr-4 md:w-full`}
+      className={`overflow-hidden align-center cursor-pointer inline-block pr-4 thumbnail md:w-full`}
       onClick={handleClick}
     >
       <Img

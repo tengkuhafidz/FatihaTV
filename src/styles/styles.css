@@ -46,5 +46,5 @@ html {
 }
 
 .thumbnail {
-  min-width: 245px;
+  min-width: 245px !important;
 }

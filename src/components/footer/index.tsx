@@ -30,11 +30,11 @@ const Footer = (): ReactElement => {
             In Collaboration With
           </h4>
           <img
-            src="https://media.devlabs.academy/file/kuliahsg/assets/ourmosque_logo.png"
+            src="https://media.devlabs.academy/file/h_128/kuliahsg/assets/ourmosque_logo.png"
             className="h-32 inline"
           />
           <img
-            src="https://media.devlabs.academy/file/kuliahsg/assets/msociety_logo.png"
+            src="https://media.devlabs.academy/file/h_128/kuliahsg/assets/msociety_logo.png"
             className="h-32 inline opacity-75"
           />
         </div>

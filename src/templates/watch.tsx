@@ -77,8 +77,8 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
           </div>
         </div>
         <div className="xl:col-span-1 xl:pl-8">
-          <h1 className="text-xl md:text-3xl font-semibold mb-4">
-            Playlist Videos
+          <h1 className="text-gray-200 text-xl md:text-3xl font-semibold mb-4">
+            Playlist Videos&nbsp;
             <span className="text-lg md:text-2xl">
               ({childrenVideo.length})
             </span>

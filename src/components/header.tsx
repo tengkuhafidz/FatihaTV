@@ -53,7 +53,7 @@ const Header = (): ReactElement => {
         onClick={(): Promise<void> => navigate("/")}
       >
         <img
-          src="https://media.devlabs.academy/file/h_48/FatihaTV/fatihatv-logo-long-light.png"
+          src="https://media.devlabs.academy/file/h_48/FatihaTV/assets/fatihatv-logo-long-light.png"
           className="h-12"
         />
       </div>

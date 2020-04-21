@@ -19,7 +19,7 @@ const Footer = (): ReactElement => {
         <div className="hidden lg:block" id="footer-about">
           <h4 className="font-semibold text-xl mb-4">About</h4>
           <p className="text-gray-200">
-            DeenTube is a platform that compiles popular Islamic online content.
+            FatihaTV is a platform that compiles popular Islamic online content.
           </p>
           <p className="text-gray-200">
             This is an initiative by&nbsp;
@@ -46,7 +46,7 @@ const Footer = (): ReactElement => {
       </div>
       <div className="py-4 bg-black text-gray-200">
         <p className="text-center font-light text-sm">
-          <span className="mr-2">&copy; 2020 DeenTube</span>|
+          <span className="mr-2">&copy; 2020 FatihaTV</span>|
           <OutboundLink
             href="mailto:hello@kuliah.sg"
             className="hover:text-teal-500"

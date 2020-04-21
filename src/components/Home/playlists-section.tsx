@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React, { ReactElement, useState } from "react";
 import "react-multi-carousel/lib/styles.css";
-import YoutubeChannelsData from "../../data/youtube-channels.json";
+import YoutubeChannelsData from "../../json-data/youtube-channels.json";
 import {
   GtagCategories,
   InputEvent,

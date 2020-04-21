@@ -1,4 +1,4 @@
-const ytChannels = require("../../src/data/youtube-channels.json");
+const ytChannels = require("../../src/json-data/youtube-channels.json");
 const Youtube = require("./youtube").Youtube;
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const fs = require("fs");

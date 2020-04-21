@@ -10,7 +10,7 @@ module.exports = {
     titleTemplate: "%s | FatihaTV",
     description: "Watch local Islamic contents from the comfort of your home.",
     author: "Hafidz & Fatiha",
-    url: "https://www.fatihatv.com", // No trailing slash allowed!
+    url: "https://fatihatv.com", // No trailing slash allowed!
     image: "/share-banner.jpg" // Path to your image you placed in the 'static' folder
   },
   plugins: [

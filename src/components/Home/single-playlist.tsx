@@ -10,12 +10,12 @@ interface Props {
 }
 
 const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
-  const { id, title, publishedAt, organisationName, childrenVideo } = playlist;
+  const { id, title, updatedAt, channelTitle, childrenVideo } = playlist;
 
   const trackPlaylistClick = (): void => {
     gtagEventClick("playlist_click", {
       event_category: GtagCategories.Engagement,
-      event_label: playlist.title,
+      event_label: playlist.title
     });
   };
 
@@ -45,14 +45,14 @@ const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
         alt={title}
       />
       <div>
-        <div className="mt-2 font-semibold w-48 md:w-full leading-tight truncate capitalize">
+        <div className="mt-2 text-gray-200 font-semibold w-48 md:w-full leading-tight truncate capitalize">
           {title.toLowerCase()}
         </div>
         <p className="text-gray-600 text-sm truncate capitalize">
-          {organisationName}
+          {channelTitle}
         </p>
         <p className="text-gray-600 text-sm truncate -mt-1">
-          {publishedAt} &middot; {childrenVideo.length}{" "}
+          {updatedAt} &middot; {childrenVideo.length}{" "}
           {childrenVideo.length === 1 ? "video " : "videos"}
         </p>
       </div>

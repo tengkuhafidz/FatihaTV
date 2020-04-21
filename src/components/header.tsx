@@ -5,7 +5,7 @@ import {
   FaFacebookSquare,
   FaTelegramPlane,
   FaTwitter,
-  FaWhatsapp,
+  FaWhatsapp
 } from "react-icons/fa";
 import { getSocialMediaShareUrls } from "../utils";
 import { gtagEventClick } from "../utils/gtag";
@@ -20,7 +20,7 @@ const Header = (): ReactElement => {
     facebookShareUrl,
     whatsappShareUrl,
     telegramShareUrl,
-    twitterShareUrl,
+    twitterShareUrl
   } = getSocialMediaShareUrls(currentUrl);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +29,7 @@ const Header = (): ReactElement => {
     if (isOpen) {
       gtagEventClick("open_share_dropdown", {
         event_category: GtagCategories.Engagement,
-        event_label: currentUrl,
+        event_label: currentUrl
       });
     }
   };
@@ -37,7 +37,7 @@ const Header = (): ReactElement => {
   const trackSharePage = (sharePlatform: string): void => {
     gtagEventClick(sharePlatform, {
       event_category: GtagCategories.Engagement,
-      event_label: currentUrl,
+      event_label: currentUrl
     });
   };
 
@@ -47,13 +47,13 @@ const Header = (): ReactElement => {
   };
 
   return (
-    <nav className="flex items-center justify-between flex-wrap p-6 bg-gray-800 w-full">
+    <nav className="flex items-center justify-between flex-wrap p-6 bg-black w-full">
       <div
         className="flex items-center flex-shrink-0 mr-6 cursor-pointer"
         onClick={(): Promise<void> => navigate("/")}
       >
         <img
-          src="https://media.devlabs.academy/file/h_48/kuliahsg/assets/kuliahsg-logo-long-light.png"
+          src="https://media.devlabs.academy/file/h_48/FatihaTV/fatihatv-logo-long-light.png"
           className="h-12"
         />
       </div>

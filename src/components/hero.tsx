@@ -9,10 +9,10 @@ interface Props {
 const Hero: React.FC<Props> = ({
   title,
   secondTitle = "from the comfort of your home.",
-  subtext,
+  subtext
 }) => (
   <div className="max-w-xs md:max-w-2xl mx-auto md:text-center pt-8 py-16">
-    <h1 className="font-sans md:font-light text-2xl md:text-5xl text-gray-800 leading-tight">
+    <h1 className="font-sans md:font-light text-2xl md:text-5xl text-gray-200 leading-tight">
       <span className="block">{title}</span>
       <span className="font-normal text-teal-500 tracking-normal">
         {secondTitle}

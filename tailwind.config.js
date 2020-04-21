@@ -6,14 +6,14 @@ module.exports = {
       sm: "640px",
       md: "768px",
       lg: "1024px",
-      xl: "1280px",
+      xl: "1280px"
     },
     extend: {
       height: {
-        "3/4-screen": "75vh",
-      },
-    },
+        "3/4-screen": "75vh"
+      }
+    }
   },
   variants: {},
-  plugins: [],
+  plugins: []
 };

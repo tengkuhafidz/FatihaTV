@@ -15,7 +15,7 @@ const BottomCta = (): ReactElement => {
   const trackBottomCtaClose = (): void => {
     gtagEventClick("close_bottom_cta", {
       event_category: GtagCategories.Engagement,
-      event_label: "kitacare_crowdfunding_cta",
+      event_label: "kitacare_crowdfunding_cta"
     });
   };
 
@@ -23,7 +23,7 @@ const BottomCta = (): ReactElement => {
     gtagEventClick("click_cta_link", {
       event_category: GtagCategories.Engagement,
       event_label:
-        "https://masjidwaktanjong.give.asia/campaign/kita-care-3219#/",
+        "https://masjidwaktanjong.give.asia/campaign/kita-care-3219#/"
     });
   };
 

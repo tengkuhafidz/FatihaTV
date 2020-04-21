@@ -8,8 +8,8 @@ export const addSubscriber = async (email: string): Promise<boolean> => {
   const request = {
     Email: email,
     CustomFields: {
-      source: "website",
-    },
+      source: "website"
+    }
   };
   const resp = await axios.post(url, request);
   return resp.status === 200 ? true : false;

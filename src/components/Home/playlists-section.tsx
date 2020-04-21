@@ -1,34 +1,32 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React, { ReactElement, useState } from "react";
 import "react-multi-carousel/lib/styles.css";
+import YoutubeChannelsData from "../../data/youtube-channels.json";
 import {
   GtagCategories,
   InputEvent,
-  PlaylistModel,
   PlayedPlaylistsModel,
+  PlaylistModel,
   PlaylistsAndVideoIds,
+  YoutubeChannelModel
 } from "../../models";
 import { getFuseFilterResult, getPlayedPlaylists } from "../../utils";
 import { gtagEventClick } from "../../utils/gtag";
-import SearchInput, { LanguageCode } from "../search-input";
-import CategorisedPlaylists from "./categorised-playlists";
 import NoResults from "../no-results";
+import SearchInput from "../search-input";
+import CategorisedPlaylists from "./categorised-playlists";
 
 const PlaylistsSection = (): ReactElement => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedLanguage, setSelectedLanguage] = useState<LanguageCode>("all");
   const data = useStaticQuery(graphql`
     query AllPlaylistsQuery {
       allPlaylist(sort: { fields: updatedAt, order: DESC }) {
         nodes {
           channelTitle
-          donationUrl
+          channelId
           id
           updatedAt(fromNow: true)
-          language
-          organisationName
           publishedAt(fromNow: true)
-          tags
           thumbnailUrl
           localImage {
             childImageSharp {
@@ -61,12 +59,7 @@ const PlaylistsSection = (): ReactElement => {
   const getSearchFilterResult = (
     playlists: PlaylistModel[]
   ): PlaylistModel[] => {
-    const filterByKeys = [
-      "organisationName",
-      "childrenVideo.language",
-      "title",
-      "childrenVideo.title",
-    ];
+    const filterByKeys = ["channelTitle", "title", "childrenVideo.title"];
     const fuseFilterResults: object[] = getFuseFilterResult(
       playlists,
       filterByKeys,
@@ -80,14 +73,7 @@ const PlaylistsSection = (): ReactElement => {
       ? getSearchFilterResult(playlistsData)
       : playlistsData;
 
-    const playlistsFilteredByLanguage =
-      selectedLanguage === "all"
-        ? playlistsFilteredBySearch
-        : playlistsFilteredBySearch.filter(playlist =>
-            playlist.language.includes(selectedLanguage)
-          );
-
-    return playlistsFilteredByLanguage;
+    return playlistsFilteredBySearch;
   };
 
   const playlistsToDisplay: PlaylistModel[] = getFilteredPlaylists();
@@ -97,7 +83,7 @@ const PlaylistsSection = (): ReactElement => {
     setSearchTerm(e.target.value);
     gtagEventClick("search_playlists", {
       event_category: GtagCategories.Engagement,
-      event_label: e.target.value,
+      event_label: e.target.value
     });
   };
 
@@ -118,7 +104,7 @@ const PlaylistsSection = (): ReactElement => {
 
     return {
       formattedPlayedPlaylists,
-      videoIds,
+      videoIds
     };
   };
 
@@ -128,7 +114,7 @@ const PlaylistsSection = (): ReactElement => {
     if (playedPlaylists.length > 0 && playlistsToDisplay.length > 0) {
       const {
         formattedPlayedPlaylists,
-        videoIds,
+        videoIds
       } = getFormattedPlaylistsAndVideoIds(playedPlaylists);
 
       return videoIds.length ? (
@@ -146,55 +132,20 @@ const PlaylistsSection = (): ReactElement => {
   };
 
   const renderPlaylistsByCategory = (): ReactElement[] => {
-    const categories: object[] = [
-      {
-        name: "Short Videos - Under 10 Minutes",
-        refs: ["short"],
-      },
-      {
-        name: "Quran & Its Sciences",
-        refs: ["quran"],
-      },
-      {
-        name: "Legacy of Rasulullah PBUH",
-        refs: ["hadith"],
-      },
-      {
-        name: "Podcast & Current Affairs",
-        refs: ["currentaffairs", "podcast", "interactive"],
-      },
-      {
-        name: "Practising Islam & Spirituality",
-        refs: ["howto", "spiritual"],
-      },
-      {
-        name: "Kitab Studies & General Lectures",
-        refs: ["kitab", "general"],
-      },
-    ];
+    const youtubeChannels: YoutubeChannelModel[] = YoutubeChannelsData as YoutubeChannelModel[];
 
-    return categories.map(
-      (category, index): ReactElement => {
-        const categorisedPlaylists: PlaylistModel[] = playlistsToDisplay.filter(
-          (playlist: PlaylistModel) =>
-            category.refs.some(ref =>
-              playlist.tags
-                .slice(0, Math.min(3, playlist.tags.length)) // Only take the first 2 tags
-                .includes(ref)
-            )
-        );
-        if (categorisedPlaylists.length > 0) {
-          return (
-            <CategorisedPlaylists
-              playlists={categorisedPlaylists}
-              categoryName={category.name}
-              key={index}
-            />
-          );
-        }
-        return <></>;
-      }
-    );
+    return youtubeChannels.map((channel, index) => {
+      const playlistsInChannel = playlistsToDisplay.filter(
+        playlist => playlist.channelId === channel.id
+      );
+      return (
+        <CategorisedPlaylists
+          playlists={playlistsInChannel}
+          categoryName={channel.title}
+          key={index}
+        />
+      );
+    });
   };
 
   const renderResults = (): ReactElement[] | ReactElement => {
@@ -207,12 +158,7 @@ const PlaylistsSection = (): ReactElement => {
 
   return (
     <div className="mx-auto pl-8 pt-8 pb-32 w-full" id="playlists">
-      <SearchInput
-        handleSearchFilter={handleSearchFilter}
-        showLanguageSelector={true}
-        handleLanguageSelected={setSelectedLanguage}
-        selectedLanguage={selectedLanguage}
-      />
+      <SearchInput handleSearchFilter={handleSearchFilter} />
       {renderPlayedPlaylists()}
       {renderResults()}
     </div>

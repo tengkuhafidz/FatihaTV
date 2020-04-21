@@ -14,7 +14,7 @@ interface Props {
 const CategorisedPlaylists: React.FC<Props> = ({
   playlists,
   videoIds,
-  categoryName,
+  categoryName
 }) => {
   const isMobile = useMediaQuery({ query: "(max-width: 770px)" });
 
@@ -22,23 +22,23 @@ const CategorisedPlaylists: React.FC<Props> = ({
     superLargeDesktop: {
       breakpoint: { max: 8000, min: 2048 },
       items: 8,
-      slidesToSlide: 8,
+      slidesToSlide: 8
     },
     desktop: {
       breakpoint: { max: 2048, min: 1024 },
       items: 5,
-      slidesToSlide: 5,
+      slidesToSlide: 5
     },
     tablet: {
       breakpoint: { max: 1024, min: 770 },
       items: 4,
-      slidesToSlide: 4,
+      slidesToSlide: 4
     },
     mobile: {
       breakpoint: { max: 770, min: 0 },
       items: 2,
-      slidesToSlide: 2,
-    },
+      slidesToSlide: 2
+    }
   };
 
   const shouldShowDotNavigation = isMobile ? false : true;
@@ -60,7 +60,9 @@ const CategorisedPlaylists: React.FC<Props> = ({
 
   return (
     <div className="mt-8 md:pb-8 relative">
-      <h3 className="text-xl font-semibold mb-4">{categoryName}</h3>
+      <h3 className="text-gray-200 text-xl font-semibold mb-4">
+        {categoryName}
+      </h3>
       {isMobile ? (
         <div className="overflow-hidden overflow-x-scroll whitespace-no-wrap">
           {renderPlaylists()}

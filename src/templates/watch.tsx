@@ -16,7 +16,7 @@ interface Props {
 
 const WatchPage: React.FC<Props> = ({ pageContext }) => {
   const { playlist, currentVideo } = pageContext;
-  const { childrenVideo, donationUrl } = playlist;
+  const { childrenVideo } = playlist;
 
   const videosListRef = createRef<HTMLDivElement>();
   const videosRef = useRef(
@@ -66,22 +66,12 @@ const WatchPage: React.FC<Props> = ({ pageContext }) => {
           <div className="mt-8">
             <div className="flex flex-wrap">
               <div className="w-full md:w-4/6">
-                <h1 className="text-xl md:text-3xl font-semibold leading-none">
+                <h1 className="text-xl text-gray-200 md:text-3xl font-semibold leading-none">
                   {playlist.title}: {currentVideo.title}{" "}
                 </h1>
-                <p className=" md:text-xl text-gray-600 mt-2 leading-tight">
+                <p className=" md:text-xl text-gray-500 mt-2 leading-tight">
                   Published at {currentVideo.publishedAt}
                 </p>
-              </div>
-              <div className="w-full md:w-2/6 mt-8 md:mt-0">
-                <OutboundLink
-                  className={`bg-teal-500 hover:bg-teal-400 text-white py-3 px-4 rounded md:float-right mt-4 md:mt-auto md:w-auto uppercase inline border-b-4 border-teal-600`}
-                  href={donationUrl}
-                  target="_blank"
-                >
-                  Donate To Mosque
-                  <FaDonate className="inline -mt-1 ml-2" />
-                </OutboundLink>
               </div>
             </div>
           </div>

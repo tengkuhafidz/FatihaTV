@@ -15,7 +15,7 @@ const SEO: React.FC<Props> = ({
   lang = "en",
   meta = [],
   title,
-  image,
+  image
 }) => {
   const { site } = useStaticQuery(
     graphql`
@@ -38,55 +38,55 @@ const SEO: React.FC<Props> = ({
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: metaDescription
         },
         {
           name: `image`,
-          content: metaImage,
+          content: metaImage
         },
         {
           property: `og:title`,
-          content: title,
+          content: title
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: metaDescription
         },
         {
           property: `og:image`,
-          content: metaImage,
+          content: metaImage
         },
         {
           property: `og:type`,
-          content: `website`,
+          content: `website`
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary`
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: site.siteMetadata.author
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: title
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: metaDescription
         },
         {
           name: `twitter:image`,
-          content: metaImage,
-        },
+          content: metaImage
+        }
       ].concat(meta)}
     />
   );

@@ -1,6 +1,6 @@
-# [kuliah.sg](https://kuliah.sg)
+# [FatihaTV](https://fatihatv.cin)
 
-UPDATE: version 2.0 of this project is being developed and maintained by MSOCIETY. 
+International Version
 
 ------------------
 

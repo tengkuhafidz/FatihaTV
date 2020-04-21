@@ -32,21 +32,10 @@ export class Youtube {
   usedQuota = 0;
 
   getChannel = async (channelId: string): Promise<void> => {
-    // For ease of calculating quota cost.
     const part = [
-      // "auditDetails", //4 - Requires special perms
-      // "contentDetails", //2
-      // "brandingSettings", //2
-      // "contentOwnerDetails", //2
-      "id", //0
-      // "localizations", //2
-      "snippet", //2
-      // "status", //2
-      // "topicDetails", //2
-      // "statistics", //2
+      "snippet",
     ];
     const cost = 3;
-    // Valid params: categoryId, forUsername, id, managedByMe, mine, maxResults.
     const params = {
       id: channelId,
       maxResults: "50",
@@ -58,12 +47,8 @@ export class Youtube {
 
   getChannelPlaylists = async (channelId: string): Promise<void> => {
     const part = [
-      // "contentDetails", //2,
-      "id", //0,
-      // "localizations", //2,
-      // "player", //0,
-      "snippet", //2,
-      // "status", //2,
+      "id",
+      "snippet",
     ];
     const cost = 3;
     const params = {
@@ -88,10 +73,8 @@ export class Youtube {
 
   getPlaylistVideos = async (playlistId: string): Promise<void> => {
     const part = [
-      // "contentDetails", //2,
-      "id", //0,
-      "snippet", //2,
-      // "status", //2,
+      "id",
+      "snippet",
     ];
     const cost = 3;
     const params = {

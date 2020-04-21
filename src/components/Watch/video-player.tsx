@@ -15,14 +15,14 @@ const VideoPlayer: React.FC<Props> = ({ playlist, video }) => {
 
     gtagEventClick("play_video", {
       event_category: GtagCategories.Engagement,
-      event_label: `${playlist.title}: ${video.title}`,
+      event_label: `${playlist.title}: ${video.title}`
     });
   };
 
   const trackVideoEnded = (): void => {
     gtagEventClick("ended_video", {
       event_category: GtagCategories.Engagement,
-      event_label: `${playlist.title}: ${video.title}`,
+      event_label: `${playlist.title}: ${video.title}`
     });
   };
 

@@ -4,7 +4,7 @@ import {
   ButtonEvent,
   FormEvent,
   InputEvent,
-  GtagCategories,
+  GtagCategories
 } from "../../models";
 import { gtagEventClick } from "../../utils/gtag";
 
@@ -21,7 +21,7 @@ const NewsletterForm: React.FC = () => {
 
     gtagEventClick(event, {
       event_category: GtagCategories.Engagement,
-      event_label: email,
+      event_label: email
     });
   };
 

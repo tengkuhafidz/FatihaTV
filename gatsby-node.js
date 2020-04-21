@@ -7,13 +7,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         allPlaylist(sort: { fields: updatedAt, order: DESC }) {
           nodes {
             channelTitle
-            donationUrl
+            channelId
             id
             updatedAt
-            language
-            organisationName
             publishedAt(formatString: "D MMM YYYY")
-            tags
             thumbnailUrl
             title
             childrenVideo {
@@ -39,7 +36,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       createPage({
         path: `/watch/${playlist.id}/${currentVideo.id}`,
         component: require.resolve("./src/templates/watch.tsx"),
-        context: { playlist, currentVideo },
+        context: { playlist, currentVideo }
       });
     });
   });

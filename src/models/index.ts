@@ -4,12 +4,9 @@ export interface PlaylistModel {
   id: string;
   title: string;
   channelTitle: string;
+  channelId: string;
   publishedAt: string;
   updatedAt: string;
-  organisationName: string;
-  donationUrl: string;
-  language: string[];
-  tags: string[];
   thumbnailUrl: string;
   childrenVideo: VideoModel[];
 }
@@ -39,23 +36,14 @@ export interface PlaylistsAndVideoIds {
   videoIds: string[];
 }
 
-export interface LiveSessionModel {
-  Date: string;
-  Time: string;
-  Mosque: string;
-  Title: string;
-  Speaker: string;
-  Link: string;
-}
-
-export interface DonationListingModel {
-  organisationName: string;
-  paynowUen: string;
-  bankAccount: string;
+export interface YoutubeChannelModel {
+  id: string;
+  user: string;
+  title: string;
 }
 
 export enum GtagCategories {
-  Engagement = "engagement",
+  Engagement = "engagement"
 }
 
 export type InputEvent = React.ChangeEvent<HTMLInputElement>;

@@ -41,7 +41,7 @@ export const getSocialMediaShareUrls = (pageUrl: string): SocialMediaUrls => {
     facebookShareUrl: getFacebookShareUrl(pageUrl),
     whatsappShareUrl: getWhatsappShareUrl(pageUrl),
     telegramShareUrl: getTelegramShareUrl(pageUrl),
-    twitterShareUrl: getTwitterShareUrl(pageUrl),
+    twitterShareUrl: getTwitterShareUrl(pageUrl)
   };
 };
 
@@ -55,7 +55,7 @@ export const isMobileOrTableDevice = (): boolean => {
     /webOS/i,
     /iPhone/i,
     /BlackBerry/i,
-    /Windows Phone/i,
+    /Windows Phone/i
   ];
 
   return toMatch.some(toMatchItem => {
@@ -90,11 +90,6 @@ const updatePlayedPlaylists = (
   );
   const playlistExistsInPlayedPlaylists: boolean =
     playlistIndexInPlayedPlaylists >= 0;
-
-  console.log(
-    "playlistExistsInPlayedPlaylists",
-    playlistExistsInPlayedPlaylists
-  );
 
   if (playlistExistsInPlayedPlaylists) {
     playedPlaylists.splice(playlistIndexInPlayedPlaylists, 1);
@@ -146,7 +141,7 @@ export const getFuseFilterResult = (
     threshold: 0.4,
     location: 0,
     distance: 100,
-    keys: filterByKeys,
+    keys: filterByKeys
   };
 
   const fuse: Fuse<any, Fuse.IFuseOptions<any>> = new Fuse(

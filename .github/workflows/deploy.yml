@@ -15,3 +15,7 @@ jobs:
         env:
           NETLIFY_HOOK_URL: ${{ secrets.STG_BUILD_HOOKS_URL }}
         run: curl -X POST -d {} "$NETLIFY_HOOK_URL"
+      - name: Build on global
+        env:
+          NETLIFY_HOOK_URL: ${{ secrets.GLOBAL_BUILD_HOOKS_URL }}
+        run: curl -X POST -d {} "$NETLIFY_HOOK_URL"

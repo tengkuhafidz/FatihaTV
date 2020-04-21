@@ -86,8 +86,6 @@ const getPlaylistsFromYoutube = async (apiKey) => {
       }
     })
 
-    console.log("!!!! playlist", playlists[0])
-
   console.log(">>> YouTube API Quota Units used:", yt.usedQuota);
   return playlists;
 };

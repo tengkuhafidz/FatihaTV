@@ -8,10 +8,11 @@ import SEO from "../components/seo";
 
 const HomePage = (): ReactElement => (
   <Layout showBanner>
-    <SEO title="Local Islamic Videos" />
+    <SEO title="Islamic Videos" />
     <Hero
-      title="Watch local Islamic content"
-      subtext="Our local asatizah have been hard at work in producing online content to ensure that we can continue to seek religious knowledge in this uncertain time. We curate them here to support their efforts."
+      title="Want a productive Ramadan?"
+      secondTitle="Watch beneficial content on FatihaTV."
+      subtext="This Ramdan, let's pledge to consume more beneficial content than entertainment. We organise playlists from reputable Islamic Youtube channels in one platform so that we can watch them here with no distractions."
     />
     <PlaylistsSection />
     <BottomCta />

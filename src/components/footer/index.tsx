@@ -19,17 +19,17 @@ const Footer = (): ReactElement => {
         <div className="hidden lg:block" id="footer-about">
           <h4 className="font-semibold text-xl mb-4">About</h4>
           <p className="text-gray-200">
-            FatihaTV is a platform that compiles popular Islamic online content.
-          </p>
-          <p className="text-gray-200">
-            This is an initiative by&nbsp;
+            FatihaTV is an initiative by the{" "}
             <OutboundLink
               href="https://kuliah.sg"
               className="cursor-pointer text-teal-500 hover:text-teal-600"
             >
               kuliah.sg
             </OutboundLink>
-            &nbsp;team
+            &nbsp;team. We organise beneficial content from reputable Islamic
+            Youtube channels on one platform. We hope that this can help us
+            maximise our time in consuming beneficial content without other
+            distractions.
           </p>
         </div>
         <div

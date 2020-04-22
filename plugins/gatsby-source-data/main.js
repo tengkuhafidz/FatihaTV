@@ -169,7 +169,7 @@ const getPlaylistsFromYoutube = async (orgData, apiKey) => {
   playlistVideos = playlistVideos.map(videos => {
     return (
       videos
-        .filter(video => video.snippet.title !== 'Private video' && video.snippet.title !== 'Deleted video')
+        .filter(video => video.snippet.title !== 'Private video' && video.snippet.title !== 'Deleted video' && video.snippet.thumbnails && video.snippet.thumbnails.medium)
         .map(video => ({
           id: video.snippet.resourceId.videoId,
           title: video.snippet.title,

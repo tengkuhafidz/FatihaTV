@@ -15,6 +15,7 @@ import { gtagEventClick } from "../../utils/gtag";
 import NoResults from "../no-results";
 import SearchInput from "../search-input";
 import CategorisedPlaylists from "./categorised-playlists";
+import moment from "moment";
 
 const PlaylistsSection = (): ReactElement => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -25,7 +26,7 @@ const PlaylistsSection = (): ReactElement => {
           channelTitle
           channelId
           id
-          updatedAt(fromNow: true)
+          updatedAt
           publishedAt(fromNow: true)
           thumbnailUrl
           localImage {
@@ -77,6 +78,26 @@ const PlaylistsSection = (): ReactElement => {
   };
 
   const playlistsToDisplay: PlaylistModel[] = getFilteredPlaylists();
+
+  const getRamadanPlaylists = (): PlaylistModel[] => {
+    const filterByKeys = ["title", "childrenVideo.title"];
+    const filterTerm = "ramadan";
+    const fuseFilterResults: object[] = getFuseFilterResult(
+      playlistsToDisplay,
+      filterByKeys,
+      filterTerm
+    );
+    const ramadanPlaylists = fuseFilterResults.map(result => result.item);
+    return ramadanPlaylists.sort((a, b) => {
+      console.log(
+        "b.updatedAt - a.updatedAt",
+        moment(b.updatedAt) - moment(a.updatedAt),
+        a,
+        b
+      );
+      return moment(b.updatedAt) - moment(a.updatedAt);
+    });
+  };
 
   const handleSearchFilter = (e: InputEvent): void => {
     e.preventDefault();
@@ -131,6 +152,20 @@ const PlaylistsSection = (): ReactElement => {
     return <></>;
   };
 
+  const renderRamadanPlaylists = (): ReactElement => {
+    const ramadanPlaylists: PlaylistModel[] = getRamadanPlaylists();
+
+    if (ramadanPlaylists.length > 0) {
+      return (
+        <CategorisedPlaylists
+          playlists={ramadanPlaylists}
+          categoryName="Ramadan Specials"
+        />
+      );
+    }
+    return <></>;
+  };
+
   const renderPlaylistsByCategory = (): ReactElement[] => {
     const youtubeChannels: YoutubeChannelModel[] = YoutubeChannelsData as YoutubeChannelModel[];
 
@@ -160,6 +195,7 @@ const PlaylistsSection = (): ReactElement => {
     <div className="mx-auto pl-8 pt-8 pb-32 w-full" id="playlists">
       <SearchInput handleSearchFilter={handleSearchFilter} />
       {renderPlayedPlaylists()}
+      {renderRamadanPlaylists()}
       {renderResults()}
     </div>
   );

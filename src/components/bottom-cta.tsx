@@ -37,7 +37,7 @@ const BottomCta = (): ReactElement => {
 
   return (
     <div className="fixed bottom-0 pb-8 w-full hidden md:block pointer-events-none">
-      <div className="bg-gray-900 p-4 md:max-w-screen-sm rounded-lg mx-auto shadow-lg pointer-events-auto border border-gray-100">
+      <div className="bg-gray-800 p-4 md:max-w-screen-sm rounded-lg mx-auto shadow-lg pointer-events-auto border border-gray-100">
         <strong className="font-semibold text-white text-lg">
           COVID-19 Support
         </strong>

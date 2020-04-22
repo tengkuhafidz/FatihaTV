@@ -3,6 +3,7 @@ import Img from "gatsby-image";
 import React from "react";
 import { GtagCategories, PlaylistModel } from "../../models";
 import { gtagEventClick } from "../../utils/gtag";
+import moment from "moment";
 
 interface Props {
   playlist: PlaylistModel;
@@ -29,9 +30,19 @@ const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
     navigate(pagePath);
   };
 
-  const thumbnailMeta = videoId
-    ? childrenVideo.find(video => video.id === videoId)?.localImage
-    : childrenVideo[childrenVideo.length - 1].localImage;
+  const relevantVideo = videoId
+    ? childrenVideo.find(video => video.id === videoId)
+    : childrenVideo[childrenVideo.length - 1];
+  if (
+    !relevantVideo ||
+    !relevantVideo.localImage ||
+    !relevantVideo.localImage.childImageSharp ||
+    !relevantVideo.localImage.childImageSharp.fluid
+  ) {
+    return <></>;
+  }
+
+  const thumbnailFluid = relevantVideo?.localImage?.childImageSharp?.fluid;
 
   return (
     <div
@@ -41,7 +52,7 @@ const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
     >
       <Img
         className="w-full z-10 thumbnail"
-        fluid={thumbnailMeta?.childImageSharp.fluid}
+        fluid={thumbnailFluid}
         alt={title}
       />
       <div>
@@ -52,7 +63,7 @@ const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
           {channelTitle}
         </p>
         <p className="text-gray-600 text-sm truncate -mt-1">
-          {updatedAt} &middot; {childrenVideo.length}{" "}
+          {moment(updatedAt).fromNow()} &middot; {childrenVideo.length}{" "}
           {childrenVideo.length === 1 ? "video " : "videos"}
         </p>
       </div>

@@ -3,6 +3,7 @@ import Img from "gatsby-image";
 import React from "react";
 import { GtagCategories, PlaylistModel } from "../../models";
 import { gtagEventClick } from "../../utils/gtag";
+import moment from "moment";
 
 interface Props {
   playlist: PlaylistModel;
@@ -52,7 +53,7 @@ const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
           {organisationName}
         </p>
         <p className="text-gray-600 text-sm truncate -mt-1">
-          {updatedAt} &middot; {childrenVideo.length}{" "}
+          {moment(updatedAt).fromNow()} &middot; {childrenVideo.length}{" "}
           {childrenVideo.length === 1 ? "video " : "videos"}
         </p>
       </div>

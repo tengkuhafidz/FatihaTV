@@ -13,6 +13,7 @@ import { gtagEventClick } from "../../utils/gtag";
 import SearchInput, { LanguageCode } from "../search-input";
 import CategorisedPlaylists from "./categorised-playlists";
 import NoResults from "../no-results";
+import moment from "moment";
 
 const PlaylistsSection = (): ReactElement => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -24,7 +25,7 @@ const PlaylistsSection = (): ReactElement => {
           channelTitle
           donationUrl
           id
-          updatedAt(fromNow: true)
+          updatedAt
           language
           organisationName
           publishedAt(fromNow: true)
@@ -95,7 +96,10 @@ const PlaylistsSection = (): ReactElement => {
       filterByKeys,
       filterTerm
     );
-    return fuseFilterResults.map(result => result.item);
+    const ramadanPlaylists = fuseFilterResults.map(result => result.item);
+    return ramadanPlaylists.sort(
+      (a, b) => moment(b.updatedAt) - moment(a.updatedAt)
+    );
   };
 
   const handleSearchFilter = (e: InputEvent): void => {
@@ -151,7 +155,7 @@ const PlaylistsSection = (): ReactElement => {
     return <></>;
   };
 
-  const renderRamadhanPlaylists = (): ReactElement => {
+  const renderRamadanPlaylists = (): ReactElement => {
     const ramadanPlaylists: PlaylistModel[] = getRamadanPlaylists();
 
     if (ramadanPlaylists.length > 0) {
@@ -234,7 +238,7 @@ const PlaylistsSection = (): ReactElement => {
         selectedLanguage={selectedLanguage}
       />
       {renderPlayedPlaylists()}
-      {renderRamadhanPlaylists()}
+      {renderRamadanPlaylists()}
       {renderResults()}
     </div>
   );

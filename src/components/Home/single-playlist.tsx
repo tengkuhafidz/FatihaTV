@@ -49,11 +49,7 @@ const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
       className={`overflow-hidden align-center cursor-pointer inline-block thumbnail md:w-full`}
       onClick={handleClick}
     >
-      <Img
-        className="w-full z-10 thumbnail"
-        fluid={thumbnailFluid}
-        alt={title}
-      />
+      <Img className="w-full z-10" fluid={thumbnailFluid} alt={title} />
       <div>
         <div className="mt-2 font-semibold w-48 md:w-full leading-tight truncate capitalize">
           {title.toLowerCase()}

@@ -88,15 +88,9 @@ const PlaylistsSection = (): ReactElement => {
       filterTerm
     );
     const ramadanPlaylists = fuseFilterResults.map(result => result.item);
-    return ramadanPlaylists.sort((a, b) => {
-      console.log(
-        "b.updatedAt - a.updatedAt",
-        moment(b.updatedAt) - moment(a.updatedAt),
-        a,
-        b
-      );
-      return moment(b.updatedAt) - moment(a.updatedAt);
-    });
+    return ramadanPlaylists.sort(
+      (a, b) => moment(b.updatedAt) - moment(a.updatedAt)
+    );
   };
 
   const handleSearchFilter = (e: InputEvent): void => {

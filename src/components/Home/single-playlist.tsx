@@ -10,7 +10,7 @@ interface Props {
 }
 
 const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
-  const { id, title, publishedAt, organisationName, childrenVideo } = playlist;
+  const { id, title, updatedAt, organisationName, childrenVideo } = playlist;
 
   const trackPlaylistClick = (): void => {
     gtagEventClick("playlist_click", {
@@ -52,7 +52,7 @@ const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
           {organisationName}
         </p>
         <p className="text-gray-600 text-sm truncate -mt-1">
-          {publishedAt} &middot; {childrenVideo.length}{" "}
+          {updatedAt} &middot; {childrenVideo.length}{" "}
           {childrenVideo.length === 1 ? "video " : "videos"}
         </p>
       </div>

@@ -30,10 +30,19 @@ const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
     navigate(pagePath);
   };
 
-  const thumbnailMeta = videoId
-    ? childrenVideo.find(video => video.id === videoId)?.localImage
-    : childrenVideo[childrenVideo.length - 1].localImage;
+  const relevantVideo = videoId
+    ? childrenVideo.find(video => video.id === videoId)
+    : childrenVideo[childrenVideo.length - 1];
+  if (
+    !relevantVideo ||
+    !relevantVideo.localImage ||
+    !relevantVideo.localImage.childImageSharp ||
+    !relevantVideo.localImage.childImageSharp.fluid
+  ) {
+    return <></>;
+  }
 
+  const thumbnailFluid = relevantVideo?.localImage?.childImageSharp?.fluid;
   return (
     <div
       data-cy="playlist-card"
@@ -42,7 +51,7 @@ const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
     >
       <Img
         className="w-full z-10 thumbnail"
-        fluid={thumbnailMeta?.childImageSharp.fluid}
+        fluid={thumbnailFluid}
         alt={title}
       />
       <div>

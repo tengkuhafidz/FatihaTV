@@ -61,12 +61,7 @@ const PlaylistsSection = (): ReactElement => {
   const getSearchFilterResult = (
     playlists: PlaylistModel[]
   ): PlaylistModel[] => {
-    const filterByKeys = [
-      "organisationName",
-      "childrenVideo.language",
-      "title",
-      "childrenVideo.title",
-    ];
+    const filterByKeys = ["organisationName", "title", "childrenVideo.title"];
     const fuseFilterResults: object[] = getFuseFilterResult(
       playlists,
       filterByKeys,
@@ -91,6 +86,17 @@ const PlaylistsSection = (): ReactElement => {
   };
 
   const playlistsToDisplay: PlaylistModel[] = getFilteredPlaylists();
+
+  const getRamadanPlaylists = (): PlaylistModel[] => {
+    const filterByKeys = ["title", "childrenVideo.title"];
+    const filterTerm = "ramadan";
+    const fuseFilterResults: object[] = getFuseFilterResult(
+      playlistsToDisplay,
+      filterByKeys,
+      filterTerm
+    );
+    return fuseFilterResults.map(result => result.item);
+  };
 
   const handleSearchFilter = (e: InputEvent): void => {
     e.preventDefault();
@@ -142,6 +148,20 @@ const PlaylistsSection = (): ReactElement => {
       );
     }
 
+    return <></>;
+  };
+
+  const renderRamadhanPlaylists = (): ReactElement => {
+    const ramadanPlaylists: PlaylistModel[] = getRamadanPlaylists();
+
+    if (ramadanPlaylists.length > 0) {
+      return (
+        <CategorisedPlaylists
+          playlists={ramadanPlaylists}
+          categoryName="Ramadan Specials"
+        />
+      );
+    }
     return <></>;
   };
 
@@ -214,6 +234,7 @@ const PlaylistsSection = (): ReactElement => {
         selectedLanguage={selectedLanguage}
       />
       {renderPlayedPlaylists()}
+      {renderRamadhanPlaylists()}
       {renderResults()}
     </div>
   );

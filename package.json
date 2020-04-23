@@ -1,7 +1,7 @@
 {
   "name": "fatiha-tv",
   "private": true,
-  "description": "Watch local Islamic contents from the comfort of your home.",
+  "description": "Watch beneficial content on FatihaTV.",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {

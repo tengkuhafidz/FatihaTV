@@ -16,7 +16,7 @@ const CategorisedPlaylists: React.FC<Props> = ({
   videoIds,
   categoryName,
 }) => {
-  const isMobile = useMediaQuery({ query: "(max-width: 770px)" });
+  const isMobile = useMediaQuery({ maxWidth: 770 });
 
   const carouselResponsiveOption = {
     superLargeDesktop: {
@@ -41,8 +41,6 @@ const CategorisedPlaylists: React.FC<Props> = ({
     },
   };
 
-  const shouldShowDotNavigation = isMobile ? false : true;
-
   const renderPlaylists = (): ReactElement[] => {
     if (videoIds) {
       return playlists.map((playlist, index) => (
@@ -58,24 +56,32 @@ const CategorisedPlaylists: React.FC<Props> = ({
     ));
   };
 
+  const renderMobileCarousel = (): ReactElement => {
+    return (
+      <div className="overflow-hidden overflow-x-scroll whitespace-no-wrap">
+        {renderPlaylists()}
+      </div>
+    );
+  };
+
+  const renderCarousel = (): ReactElement => {
+    return (
+      <Carousel
+        responsive={carouselResponsiveOption}
+        draggable={false}
+        showDots={true}
+        renderDotsOutside={true}
+        removeArrowOnDeviceType="mobile"
+      >
+        {renderPlaylists()}
+      </Carousel>
+    );
+  };
+
   return (
     <div className="mt-8 md:pb-8 relative">
       <h3 className="text-xl font-semibold mb-4">{categoryName}</h3>
-      {isMobile ? (
-        <div className="overflow-hidden overflow-x-scroll whitespace-no-wrap">
-          {renderPlaylists()}
-        </div>
-      ) : (
-        <Carousel
-          responsive={carouselResponsiveOption}
-          draggable={false}
-          showDots={shouldShowDotNavigation}
-          renderDotsOutside={true}
-          removeArrowOnDeviceType="mobile"
-        >
-          {renderPlaylists()}
-        </Carousel>
-      )}
+      {isMobile ? renderMobileCarousel() : renderCarousel()}
     </div>
   );
 };

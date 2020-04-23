@@ -19,10 +19,10 @@ const Footer = (): ReactElement => {
         <div className="hidden lg:block" id="footer-about">
           <h4 className="font-semibold text-xl mb-4">About</h4>
           <p className="text-gray-200">
-            kuliah.sg is a one-stop platform for local Islamic online content.
-            We were inspired by our asatizah who have been tirelessly producing
-            online content for our benefit. So we curate them here to support
-            their efforts.
+            kuliah.sg is a one-stop platform for Islamic online content by the
+            mosques in Singapore. We were inspired by our asatizah who have been
+            tirelessly producing online content for our benefit. So we curate
+            them here to support their efforts.
           </p>
         </div>
         <div className="mx-auto" id="footer-collaborators">

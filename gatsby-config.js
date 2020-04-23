@@ -55,8 +55,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "kuliah.sg",
-        short_name: "kuliah.sg",
+        name: "FatihaTV",
+        short_name: "FatihaTV",
         start_url: "/",
         background_color: "#F7FAFC",
         theme_color: "#38B2AC",

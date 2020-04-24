@@ -112,7 +112,7 @@ const getValidTags = playlist => {
   let categoryTags = []
   if(tags !== null){
     for(tag of tags){
-      let tagStr = tag.substr(1);
+      let tagStr = tag.substr(1).toLowerCase();
       if(tagList.language[tagStr] !== undefined){
         langTags.push(tagStr)
       }

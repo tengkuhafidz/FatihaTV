@@ -1,8 +1,11 @@
-const ytChannels = require("../../src/json-data/youtube-channels.json");
+const ytGeneralChannels = require("../../src/yt-channel-data/general-channels.json");
+const ytKidsChannels = require("../../src/yt-channel-data/kids-channels.json");
+const ytChannels = [...ytGeneralChannels, ...ytKidsChannels];
 const Youtube = require("./youtube").Youtube;
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const fs = require("fs");
 const dataDir = './src/data/';
+const moment = require("moment");
 
 const saveData = (data, name) => {
   try {
@@ -51,9 +54,14 @@ const getPlaylistsFromYoutube = async (apiKey) => {
 
   // Filter out private videos, and reshape video object.
   playlistVideos = playlistVideos.map(videos => {
+    const isVideoAvailable = (video) => (video.snippet && video.snippet.title !== 'Private video' && video.snippet.title !== 'Deleted video' && video.snippet.thumbnails && video.snippet.thumbnails.medium)
+    const isWithinTwoYears = (publishedAt) => {
+      const startOfLastTwoYears = moment().subtract(2, 'year').startOf("year")
+      return moment(publishedAt).isAfter(startOfLastTwoYears)
+    }
     return (
       videos
-        .filter(video => (video.snippet && video.snippet.title !== 'Private video' && video.snippet.title !== 'Deleted video' && video.snippet.thumbnails && video.snippet.thumbnails.medium))
+        .filter(video => isVideoAvailable(video) && isWithinTwoYears(video.snippet.publishedAt))
         .map(video => {
           return (
             {
@@ -85,6 +93,8 @@ const getPlaylistsFromYoutube = async (apiKey) => {
         videos: playlistVideos[index],
       }
     })
+    .filter(playlist => playlist.videos.length > 0)
+
 
   console.log(">>> YouTube API Quota Units used:", yt.usedQuota);
   return playlists;

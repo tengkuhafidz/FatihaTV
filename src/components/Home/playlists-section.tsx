@@ -1,7 +1,9 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React, { ReactElement, useState } from "react";
 import "react-multi-carousel/lib/styles.css";
-import YoutubeChannelsData from "../../json-data/youtube-channels.json";
+import GeneralYoutubeChannelsData from "../../yt-channel-data/general-channels.json";
+import KidsYoutubeChannelsData from "../../yt-channel-data/kids-channels.json";
+
 import {
   GtagCategories,
   InputEvent,
@@ -17,7 +19,11 @@ import SearchInput from "../search-input";
 import CategorisedPlaylists from "./categorised-playlists";
 import moment from "moment";
 
-const PlaylistsSection = (): ReactElement => {
+interface Props {
+  audience: string;
+}
+
+const PlaylistsSection: React.FC<Props> = ({ audience }): ReactElement => {
   const [searchTerm, setSearchTerm] = useState("");
   const data = useStaticQuery(graphql`
     query AllPlaylistsQuery {
@@ -29,26 +35,12 @@ const PlaylistsSection = (): ReactElement => {
           updatedAt
           publishedAt(fromNow: true)
           thumbnailUrl
-          localImage {
-            childImageSharp {
-              fluid(maxWidth: 320, quality: 60) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
           title
           childrenVideo {
             id
             publishedAt
             title
             thumbnailUrl
-            localImage {
-              childImageSharp {
-                fluid(maxWidth: 320, quality: 60) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
           }
         }
       }
@@ -77,7 +69,14 @@ const PlaylistsSection = (): ReactElement => {
     return playlistsFilteredBySearch;
   };
 
-  const playlistsToDisplay: PlaylistModel[] = getFilteredPlaylists();
+  const isForKids: boolean = audience === "kids";
+  const ytChannelData: YoutubeChannelModel[] = isForKids
+    ? KidsYoutubeChannelsData
+    : GeneralYoutubeChannelsData;
+
+  const playlistsToDisplay: PlaylistModel[] = getFilteredPlaylists().filter(
+    playlist => ytChannelData.some(channel => playlist.channelId === channel.id)
+  );
 
   const getRamadanPlaylists = (): PlaylistModel[] => {
     const filterByKeys = ["title", "childrenVideo.title"];
@@ -161,9 +160,7 @@ const PlaylistsSection = (): ReactElement => {
   };
 
   const renderPlaylistsByCategory = (): ReactElement[] => {
-    const youtubeChannels: YoutubeChannelModel[] = YoutubeChannelsData as YoutubeChannelModel[];
-
-    return youtubeChannels.map((channel, index) => {
+    return ytChannelData.map((channel, index) => {
       const playlistsInChannel = playlistsToDisplay.filter(
         playlist => playlist.channelId === channel.id
       );

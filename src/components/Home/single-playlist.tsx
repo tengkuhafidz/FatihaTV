@@ -1,6 +1,6 @@
 import { navigate } from "gatsby";
 import Img from "gatsby-image";
-import React from "react";
+import React, { ReactElement } from "react";
 import { GtagCategories, PlaylistModel } from "../../models";
 import { gtagEventClick } from "../../utils/gtag";
 import moment from "moment";
@@ -33,16 +33,28 @@ const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
   const relevantVideo = videoId
     ? childrenVideo.find(video => video.id === videoId)
     : childrenVideo[childrenVideo.length - 1];
-  if (
-    !relevantVideo ||
-    !relevantVideo.localImage ||
-    !relevantVideo.localImage.childImageSharp ||
-    !relevantVideo.localImage.childImageSharp.fluid
-  ) {
-    return <></>;
-  }
 
-  const thumbnailFluid = relevantVideo?.localImage?.childImageSharp?.fluid;
+  const renderThumbnail = (): ReactElement => {
+    const hasLocalImage =
+      relevantVideo &&
+      relevantVideo.localImage &&
+      relevantVideo.localImage.childImageSharp &&
+      relevantVideo.localImage.childImageSharp.fluid;
+
+    if (hasLocalImage) {
+      const thumbnailFluid = relevantVideo?.localImage?.childImageSharp?.fluid;
+      return (
+        <Img
+          className="w-full z-10 thumbnail"
+          fluid={thumbnailFluid}
+          alt={title}
+        />
+      );
+    } else {
+      const thumbnailUrl = relevantVideo?.thumbnailUrl;
+      return <img className="w-full z-10 thumbnail" src={thumbnailUrl} />;
+    }
+  };
 
   return (
     <div
@@ -50,11 +62,7 @@ const SinglePlaylist: React.FC<Props> = ({ playlist, videoId }) => {
       className={`overflow-hidden align-center cursor-pointer inline-block thumbnail md:w-full`}
       onClick={handleClick}
     >
-      <Img
-        className="w-full z-10 thumbnail"
-        fluid={thumbnailFluid}
-        alt={title}
-      />
+      {renderThumbnail()}
       <div>
         <div className="mt-2 text-gray-200 font-semibold w-48 md:w-full leading-tight truncate capitalize">
           {title.toLowerCase()}

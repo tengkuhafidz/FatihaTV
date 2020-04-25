@@ -32,14 +32,17 @@ const Footer = (): ReactElement => {
             distractions.
           </p>
         </div>
-        <div
-          className="mx-auto m-0 align-center text-center"
-          id="footer-collaborators"
-        >
-          <h4 className="font-semibold text-xl mb-4">In Collaboration With</h4>
+        <div className="mx-auto" id="footer-collaborators">
+          <h4 className="font-semibold text-xl text-center mb-4">
+            Supported by
+          </h4>
+          <img
+            src="https://media.devlabs.academy/file/h_128/FatihaTV/assets/ramadan-logo.png"
+            className="h-32 inline"
+          />
           <img
             src="https://media.devlabs.academy/file/h_128/kuliahsg/assets/msociety_logo.png"
-            className="h-32 inline opacity-75 block"
+            className="h-32 inline opacity-75"
           />
         </div>
         <NewsletterForm />

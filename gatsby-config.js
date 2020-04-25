@@ -8,8 +8,7 @@ module.exports = {
   siteMetadata: {
     title: "FatihaTV",
     titleTemplate: "%s | FatihaTV",
-    description:
-      "Watch beneficial content this Ramadan without other distractions.",
+    description: "Watch beneficial content this Ramadan without distractions.",
     author: "Hafidz & Fatiha",
     url: "https://fatihatv.com", // No trailing slash allowed!
     image: "/share-banner.jpg" // Path to your image you placed in the 'static' folder

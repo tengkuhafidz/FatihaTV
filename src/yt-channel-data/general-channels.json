@@ -5,11 +5,6 @@
     "title": "Yasir Qadhi"
   },
   {
-    "id": "UCVp5Ze24V2iFiUY1y0WtRaA",
-    "user": "qalaminstitute",
-    "title": "Qalam Institute"
-  },
-  {
     "id": "UCjNY1NRozZEWKPHMp992gjg",
     "user": "productivemuslim",
     "title": "ProductiveMuslim"
@@ -25,8 +20,23 @@
     "title": "AlMaghrib Institute"
   },
   {
+    "id": "UCVp5Ze24V2iFiUY1y0WtRaA",
+    "user": "qalaminstitute",
+    "title": "Qalam Institute"
+  },
+  {
     "id": "UCHGAqdQBKTVON_FUCIYCh3Q",
     "user": "",
     "title": "MercifulServant"
+  },
+  {
+    "id": "UCRtiU-lpcBSi-ipFKyfIkug",
+    "user": "",
+    "title": "Bayyinah Institute"
+  },
+  {
+    "id": "UCNdUFOtzSx3FS71pHkQLxhQ",
+    "user": "",
+    "title": "FreeQuranEducation"
   }
 ]

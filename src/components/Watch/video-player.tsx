@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import YouTube from "react-youtube";
 import { GtagCategories, VideoModel, PlaylistModel } from "../../models";
 import { gtagEventClick } from "../../utils/gtag";
@@ -10,9 +10,11 @@ interface Props {
 }
 
 const VideoPlayer: React.FC<Props> = ({ playlist, video }) => {
-  const trackVideoPlay = (): void => {
+  useEffect(() => {
     addToPlayedPlaylists(playlist.id, video.id);
+  });
 
+  const trackVideoPlay = (): void => {
     gtagEventClick("play_video", {
       event_category: GtagCategories.Engagement,
       event_label: `${playlist.title}: ${video.title}`
@@ -27,6 +29,7 @@ const VideoPlayer: React.FC<Props> = ({ playlist, video }) => {
   };
 
   const handleVideoPlayed = (): void => {
+    addToPlayedPlaylists(playlist.id, video.id);
     trackVideoPlay();
   };
 

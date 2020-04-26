@@ -21,6 +21,18 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
+        {/* Birdseed Widget */}
+        <script
+          defer
+          id="io.birdseed.script-tag"
+          type="text/javascript"
+          src="https://cdn.birdseed.io/widget.js"
+        ></script>
+        <div
+          id="birdseed-widget-container"
+          data-token="64c3d69ae1d63222e211a82aefc2ea8f"
+        ></div>
+        {/* Swarmify Plugin */}
         <script
           data-cfasync="false"
           dangerouslySetInnerHTML={{
@@ -39,7 +51,6 @@ export default function HTML(props) {
                   `
           }}
         />
-
         <script
           async
           data-cfasync="false"

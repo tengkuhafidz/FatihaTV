@@ -73,7 +73,6 @@ const CategorisedPlaylists: React.FC<Props> = ({
           draggable={false}
           showDots={shouldShowDotNavigation}
           renderDotsOutside={true}
-          removeArrowOnDeviceType="mobile"
         >
           {renderPlaylists()}
         </Carousel>

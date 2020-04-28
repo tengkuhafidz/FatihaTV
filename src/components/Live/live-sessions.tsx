@@ -27,13 +27,18 @@ const LiveSessions = (): ReactElement => {
 
   const LiveSessionsData: LiveSessionModel[] = data.allLiveSession.nodes;
 
-  const isUpcoming = (dateWithoutYear: string, time: string): boolean => {
-    const currentYear = moment().get("year");
-    const dateTimeWithYear = `${dateWithoutYear} ${currentYear} ${time}`;
-    return moment(dateTimeWithYear, "D MMM YYYY hh:mm A").isAfter();
+  const getSortedLiveSessions = (): LiveSessionModel[] => {
+    return LiveSessionsData.sort((a, b) => {
+      return moment(a.Date).diff(b.Date);
+    });
   };
 
-  const upcomingLiveSessions: LiveSessionModel[] = LiveSessionsData.filter(
+  const isUpcoming = (date: string, time: string): boolean => {
+    const dateTimeWithTime = `${date} ${time}`;
+    return moment(dateTimeWithTime, "D MMM YYYY hh:mm A").isAfter();
+  };
+
+  const upcomingLiveSessions: LiveSessionModel[] = getSortedLiveSessions().filter(
     session => isUpcoming(session.Date, session.Time)
   );
 

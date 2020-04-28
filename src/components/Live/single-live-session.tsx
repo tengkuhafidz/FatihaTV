@@ -10,7 +10,7 @@ interface Props {
 
 interface FormattedDate {
   displayDay: string;
-  numericDay: RegExpMatchArray | null;
+  numericDay: string;
   month: string;
 }
 
@@ -18,8 +18,7 @@ const SingleLiveSession: React.FC<Props> = ({ liveSession }) => {
   const { Time, Mosque, Title, Speaker, Link, Date: date } = liveSession;
 
   const getDateTime = (): string => {
-    const currentYear = moment().get("year");
-    const dateTime = `${date} ${currentYear} ${Time}`;
+    const dateTime = `${date} ${Time}`;
     return moment(dateTime).format("YYYYMMDDTHHmmss");
   };
 
@@ -30,20 +29,19 @@ const SingleLiveSession: React.FC<Props> = ({ liveSession }) => {
   };
 
   const getFormattedDate = (): FormattedDate => {
-    const numberOnlyPattern = /\d+/g;
-    const displayDate = moment(getDateTime()).calendar(moment(), {
+    const displayDate = moment(date).calendar(moment(), {
       sameDay: "[Today]",
       nextDay: "[Tomorrow]",
       nextWeek: "dddd",
-      lastDay: "[Yesterday]",
-      lastWeek: "[Last] dddd",
       sameElse: "DD/MM/YYYY",
     });
 
     return {
-      displayDay: displayDate,
-      numericDay: date.match(numberOnlyPattern),
-      month: date.replace(numberOnlyPattern, ""),
+      displayDay: moment(date).isBefore(moment().add(7, "d"))
+        ? displayDate
+        : moment(date).fromNow(),
+      numericDay: moment(date).format("D"),
+      month: moment(date).format("MMM"),
     };
   };
 

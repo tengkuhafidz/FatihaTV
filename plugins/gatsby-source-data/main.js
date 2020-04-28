@@ -40,7 +40,7 @@ const getLiveSessionsFromSheets = async apiKey => {
   
   return liveSessions.map(session => (
     {
-      Date: session[0].split(', ')[1],
+      Date: session[0],
       Time: session[1],
       Mosque: session[2],
       Title: session[3],

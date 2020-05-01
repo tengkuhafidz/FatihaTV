@@ -44,6 +44,20 @@ const Footer = (): ReactElement => {
             src="https://media.devlabs.academy/file/h_128/kuliahsg/assets/msociety_logo.png"
             className="h-32 inline opacity-75"
           />
+          <p className="mt-4">
+            <OutboundLink
+              href="https://www.producthunt.com/posts/fatihatv?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-fatihatv"
+              target="_blank"
+            >
+              <img
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=195384&theme=dark"
+                alt="FatihaTV - Watch Islamic content without distractions this Ramadan | Product Hunt Embed"
+                style={{ width: 250, height: 54 }}
+                width="250px"
+                height="54px"
+              />
+            </OutboundLink>
+          </p>
         </div>
         <NewsletterForm />
       </div>

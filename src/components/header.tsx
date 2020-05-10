@@ -15,7 +15,7 @@ import { GtagCategories } from "../models";
 const Header = (): ReactElement => {
   // check if the site is on client side to ensure window is available
   const hasWindow = typeof window !== "undefined";
-  const currentUrl = hasWindow ? window.location.href : "https://kuliah.sg";
+  const currentUrl = hasWindow ? window.location.href : "https://fatihatv.com";
   const {
     facebookShareUrl,
     whatsappShareUrl,
